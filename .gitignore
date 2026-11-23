@@ -12,3 +12,6 @@ __pycache__/
 # Üretilen indeks dosyaları (yeniden kurulabilir)
 index/
 
+
+# Yeniden yazım önbelleği (yeniden üretilebilir)
+evals/cache/
