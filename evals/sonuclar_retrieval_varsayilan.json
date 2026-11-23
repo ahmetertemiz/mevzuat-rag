@@ -1,817 +1,2531 @@
-[
- {
-  "id": "S01",
-  "tur": "madde_dili",
-  "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
-  "siralar": [
-   2
-  ],
-  "ilk5": [
-   "TKHK:18",
-   "MSY:9",
-   "MSY:10",
-   "TKHK:48",
-   "TKHK:43"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "mesafeli sözleşmelerde cayma hakkı süresi",
-   "cayma süresinin başlangıcı malın teslimi",
-   "cayma hakkı ondört gün içinde gerekçe göstermeksizin"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007224,
-  "sure_sn": 1.86,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S02",
-  "tur": "madde_dili",
-  "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:11",
-   "TKHK:15",
-   "TKHK:57",
-   "TKHK:30",
-   "TKHK:51"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ayıplı mal tüketicinin seçimlik hakları",
-   "ayıplı malda sözleşmeden dönme bedel indirimi ücretsiz onarım",
-   "ayıpsız misli ile değiştirme hakkı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007316,
-  "sure_sn": 1.878,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S03",
-  "tur": "madde_dili",
-  "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:12",
-   "TKHK:16",
-   "TKHK:10",
-   "TKHK:Geçici 1",
-   "TKHK:47"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ayıplı maldan sorumluluk zamanaşımı süresi",
-   "ayıplı mal iki yıllık zamanaşımı teslim tarihi",
-   "ayıbın ağır kusur veya hile ile gizlenmesi zamanaşımı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007492,
-  "sure_sn": 2.206,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S04",
-  "tur": "madde_dili",
-  "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "ETK:6",
-   "ETK:8",
-   "ETK:7",
-   "ETK:2",
-   "ETK:11"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ticari elektronik ileti gönderiminde alıcının önceden onayı",
-   "ticari elektronik ileti onay alınmadan gönderilebilecek haller",
-   "ticari elektronik ileti onayının alınma şekli ve ispatı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007432,
-  "sure_sn": 1.423,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S05",
-  "tur": "madde_dili",
-  "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "KVKK:11",
-   "KVKK:9",
-   "KVKK:16",
-   "KVKK:10",
-   "KVKK:5"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ilgili kişinin hakları kişisel verilerin işlenmesi",
-   "veri sorumlusuna başvuru hakkı",
-   "kişisel verilerin silinmesi düzeltilmesi talebi",
-   "veri sorumlusuna başvuru usulü ve cevap süresi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007704,
-  "sure_sn": 2.252,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S06",
-  "tur": "madde_dili",
-  "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
-  "siralar": [
-   9
-  ],
-  "ilk5": [
-   "MSY:11",
-   "MSY:Ek",
-   "TKHK:18",
-   "TKHK:48",
-   "MSY:10"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "cayma hakkının istisnaları",
-   "cayma hakkı kullanılamayacak sözleşmeler mesafeli sözleşmeler",
-   "tüketicinin özel istekleri doğrultusunda hazırlanan mallar cayma hakkı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.00748,
-  "sure_sn": 2.104,
-  "@1": false,
-  "@3": false,
-  "@5": false
- },
- {
-  "id": "S07",
-  "tur": "madde_dili",
-  "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:18",
-   "TKHK:43",
-   "TKHK:21",
-   "TKHK:19",
-   "TKHK:24"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "taksitle satış sözleşmesinde cayma hakkı süresi",
-   "taksitle satış sözleşmesinden cayma bildirimi",
-   "taksitle satış sözleşmesi cayma hakkı on dört gün"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007292,
-  "sure_sn": 1.39,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S08",
-  "tur": "gunluk_dil",
-  "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "MSY:9",
-   "TKHK:24",
-   "MSY:11",
-   "TKHK:43",
-   "MSY:12"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "mesafeli sözleşmelerde cayma hakkı",
-   "cayma hakkı süresi on dört gün mal teslimi",
-   "cayma hakkı kullanımında bedel iadesi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007056,
-  "sure_sn": 1.321,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S09",
-  "tur": "gunluk_dil",
-  "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:10",
-   "TKHK:11",
-   "TKHK:74",
-   "MSY:9",
-   "TKHK:56"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ayıplı malda ispat yükü teslimden itibaren altı ay",
-   "ayıbın teslim tarihinde var olduğu karinesi",
-   "ayıplı mal tüketicinin seçimlik hakları",
-   "garanti süresi içinde arıza kullanım hatası"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007752,
-  "sure_sn": 1.749,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S10",
-  "tur": "gunluk_dil",
-  "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
-  "siralar": [
-   2
-  ],
-  "ilk5": [
-   "MSY:9",
-   "MSY:16",
-   "TKHK:30",
-   "TKHK:48",
-   "MSY:6"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "mesafeli sözleşmelerde satıcının ifa süresi otuz gün",
-   "siparişin süresinde teslim edilmemesi sözleşmenin feshi",
-   "malın teslimi ifa süresinin aşılması bedel iadesi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007472,
-  "sure_sn": 2.255,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S11",
-  "tur": "gunluk_dil",
-  "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:7",
-   "MSY:6",
-   "TKHK:47/A",
-   "MSY:Ek",
-   "TKHK:45"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "sipariş edilmeyen mal ve hizmet ödeme yükümlülüğü",
-   "talep edilmeyen mal gönderilmesi tüketicinin sorumluluğu",
-   "ataletle kabul sessiz kalma sözleşme kurulmaz"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007632,
-  "sure_sn": 2.523,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S12",
-  "tur": "gunluk_dil",
-  "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:6",
-   "TKHK:74",
-   "TKHK:17",
-   "TKHK:11",
-   "TKHK:10"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "satıştan kaçınma yasağı",
-   "vitrinde teşhir edilen malın satışından kaçınma",
-   "satışa sunulan malın tüketiciye satılması zorunluluğu"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007092,
-  "sure_sn": 1.67,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S13",
-  "tur": "gunluk_dil",
-  "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "ETK:8",
-   "ETK:2",
-   "ETK:11",
-   "ETK:7",
-   "MSY:4"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ticari elektronik ileti onay şartı",
-   "ticari elektronik iletiyi reddetme hakkı",
-   "ret bildirimi sonrası ileti gönderiminin durdurulması süresi",
-   "ileti yönetim sistemi onayın geri alınması"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.00754,
-  "sure_sn": 1.493,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S14",
-  "tur": "gunluk_dil",
-  "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
-  "siralar": [
-   3
-  ],
-  "ilk5": [
-   "KVKK:15",
-   "KVKK:14",
-   "KVKK:13",
-   "KVKK:5",
-   "KVKK:9"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "ilgili kişinin veri sorumlusuna başvurusu cevaplama süresi",
-   "veri sorumlusuna başvuru otuz gün içinde sonuçlandırma",
-   "ilgili kişinin kişisel verileri hakkında bilgi talep etme hakkı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007708,
-  "sure_sn": 2.734,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S15",
-  "tur": "gunluk_dil",
-  "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:80",
-   "TKHK:47/A",
-   "TKHK:77",
-   "KVKK:3",
-   "TKHK:58"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "piramit satış sistemi yasağı",
-   "doğrudan satış sistemi yeni katılımcı getirme kazanç",
-   "piramit satış sistemi tanımı ve unsurları"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.00708,
-  "sure_sn": 1.39,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S16",
-  "tur": "iki_madde",
-  "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
-  "siralar": [
-   5,
-   1
-  ],
-  "ilk5": [
-   "MSY:12",
-   "MSY:12/A",
-   "TKHK:43",
-   "MSY:9",
-   "MSY:13"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "cayma hakkı kullanıldığında tüketicinin malı geri gönderme süresi",
-   "cayma bildiriminden itibaren malın satıcıya iadesi",
-   "cayma hakkında satıcının bedeli iade yükümlülüğü süresi",
-   "mesafeli sözleşmede cayma halinde ödemelerin iadesi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.008228,
-  "sure_sn": 1.766,
-  "@1": false,
-  "@3": false,
-  "@5": true
- },
- {
-  "id": "S17",
-  "tur": "iki_madde",
-  "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
-  "siralar": [
-   2,
-   3
-  ],
-  "ilk5": [
-   "TKHK:57",
-   "TKHK:56",
-   "TKHK:11",
-   "TKHK:15",
-   "TKHK:58"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "garanti süresi içinde arızanın tekrarlanması",
-   "ayıplı mal tüketicinin seçimlik hakları",
-   "onarım sonrası malın yenisiyle değiştirilmesi bedel iadesi",
-   "garanti belgesi onarım süresi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007596,
-  "sure_sn": 2.3,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S18",
-  "tur": "iki_madde",
-  "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
-  "siralar": [
-   2,
-   1
-  ],
-  "ilk5": [
-   "TKHK:73/A",
-   "TKHK:68",
-   "TKHK:70",
-   "MSY:5",
-   "TKHK:73"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "tüketici hakem heyetine başvuru parasal sınır",
-   "tüketici hakem heyetlerinin görev alanı değeri",
-   "tüketici uyuşmazlıklarında dava şartı arabuluculuk",
-   "tüketici mahkemesinde dava açmadan önce arabulucuya başvuru zorunluluğu"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.008164,
-  "sure_sn": 2.459,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S19",
-  "tur": "iki_madde",
-  "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
-  "siralar": [
-   4,
-   5
-  ],
-  "ilk5": [
-   "MSY:12/A",
-   "MSY:12",
-   "MSY:9",
-   "MSY:17",
-   "MSY:16"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "mesafeli sözleşmede malın kaybolması veya hasarından satıcının sorumluluğu",
-   "taşıyıcıya teslimde hasar ve kayıp riski",
-   "mesafeli sözleşmelerde malın teslim süresi otuz gün",
-   "teslim süresinin aşılması durumunda tüketicinin sözleşmeyi feshi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.008272,
-  "sure_sn": 2.453,
-  "@1": false,
-  "@3": false,
-  "@5": true
- },
- {
-  "id": "S20",
-  "tur": "iki_madde",
-  "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
-  "siralar": [
-   5,
-   2
-  ],
-  "ilk5": [
-   "TKHK:48",
-   "MSY:7",
-   "MSY:12/A",
-   "MSY:12",
-   "MSY:5"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "mesafeli sözleşmelerde ön bilgilendirme yükümlülüğü",
-   "ön bilgilendirme içeriği satıcı bilgileri cayma hakkı",
-   "ön bilgilendirmenin teyidi elektronik ortamda",
-   "ön bilgilerin alındığının tüketici tarafından onaylanması ispat yükü"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.008268,
-  "sure_sn": 2.033,
-  "@1": false,
-  "@3": false,
-  "@5": true
- },
- {
-  "id": "S21",
-  "tur": "iki_madde",
-  "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
-  "siralar": [
-   1,
-   3
-  ],
-  "ilk5": [
-   "KVKK:7",
-   "KVKK:11",
-   "KVKK:13",
-   "KVKK:5",
-   "KVKK:9"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "kişisel verilerin silinmesi yok edilmesi anonim hale getirilmesi",
-   "ilgili kişinin hakları kişisel verilerin silinmesini isteme",
-   "veri sorumlusuna başvuru usul ve esasları",
-   "ilgili kişinin veri sorumlusuna yazılı başvurusu ve cevap süresi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.008188,
-  "sure_sn": 1.961,
-  "@1": false,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S22",
-  "tur": "cevapsiz",
-  "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
-  "siralar": [],
-  "ilk5": [
-   "TKHK:42",
-   "TKHK:45",
-   "TKHK:43",
-   "MSY:12",
-   "KVKK:12"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "kira sözleşmesinde güvence bedelinin iadesi",
-   "kiracının güvenlik teminatının geri verilmesi süresi",
-   "konut kirasında güvence bedeli ve kiraya verenin yükümlülüğü"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007352,
-  "sure_sn": 1.427,
-  "@1": false,
-  "@3": false,
-  "@5": false
- },
- {
-  "id": "S23",
-  "tur": "cevapsiz",
-  "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
-  "siralar": [],
-  "ilk5": [
-   "ETK:Ek 2",
-   "TKHK:54",
-   "TKHK:77",
-   "ETK:Ek 1",
-   "ETK:Ek 4"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "elektronik ticarette katma değer vergisi oranı",
-   "mesafeli satış sözleşmesinde vergiler dahil toplam fiyat",
-   "ön bilgilendirmede malın tüm vergiler dahil fiyatı"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007352,
-  "sure_sn": 1.682,
-  "@1": false,
-  "@3": false,
-  "@5": false
- },
- {
-  "id": "S24",
-  "tur": "cevapsiz",
-  "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
-  "siralar": [],
-  "ilk5": [
-   "KVKK:27",
-   "TKHK:37",
-   "TKHK:1",
-   "KVKK:14",
-   "TKHK:11"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "kıdem tazminatı hesaplanması",
-   "iş sözleşmesinin işveren tarafından feshi kıdem tazminatı",
-   "kıdem tazminatına esas ücret ve hizmet süresi"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007204,
-  "sure_sn": 1.873,
-  "@1": false,
-  "@3": false,
-  "@5": false
- },
- {
-  "id": "S25",
-  "tur": "cevapsiz",
-  "soru": "Trafik cezasına itiraz süresi kaç gündür?",
-  "siralar": [],
-  "ilk5": [
-   "ETK:12",
-   "TKHK:78",
-   "TKHK:70",
-   "TKHK:77/A",
-   "MSY:15"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "trafik idari para cezasına itiraz süresi",
-   "idari yaptırım kararına karşı sulh ceza hakimliğine başvuru süresi",
-   "2918 sayılı Karayolları Trafik Kanunu itiraz"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007288,
-  "sure_sn": 2.698,
-  "@1": false,
-  "@3": false,
-  "@5": false
- },
- {
-  "id": "S26",
-  "tur": "madde_numarasi",
-  "soru": "6502 sayılı kanunun 56. maddesi ne diyor?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "TKHK:56",
-   "TKHK:86",
-   "TKHK:83",
-   "TKHK:85",
-   "TKHK:2"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "6502 sayılı Kanun madde 56",
-   "6502 sayılı Tüketicinin Korunması Hakkında Kanun 56. madde"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.00674,
-  "sure_sn": 1.1,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S27",
-  "tur": "madde_numarasi",
-  "soru": "KVKK 5. madde",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "KVKK:5",
-   "KVKK:4",
-   "KVKK:3",
-   "KVKK:8",
-   "KVKK:2"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "KVKK madde 5 kişisel verilerin işlenme şartları",
-   "6698 sayılı Kanun madde 5 açık rıza",
-   "açık rıza aranmaksızın kişisel veri işlenmesi halleri"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007196,
-  "sure_sn": 2.653,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S28",
-  "tur": "madde_numarasi",
-  "soru": "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "ETK:Ek 2",
-   "ETK:1",
-   "ETK:Geçici 1",
-   "ETK:Geçici 2",
-   "ETK:8"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek madde 2",
-   "6563 sayılı Kanun ek madde 2",
-   "elektronik ticaret pazar yeri hizmet sağlayıcı yükümlülükleri"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.007596,
-  "sure_sn": 1.638,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S29",
-  "tur": "madde_numarasi",
-  "soru": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi",
-  "siralar": [
-   1
-  ],
-  "ilk5": [
-   "MSY:15",
-   "TKHK:49",
-   "MSY:1",
-   "MSY:21",
-   "MSY:14"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "Mesafeli Sözleşmeler Yönetmeliği madde 15",
-   "mesafeli sözleşmelerde cayma hakkının istisnaları"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.006848,
-  "sure_sn": 1.271,
-  "@1": true,
-  "@3": true,
-  "@5": true
- },
- {
-  "id": "S30",
-  "tur": "madde_numarasi",
-  "soru": "Tüketicinin Korunması Hakkında Kanun madde 73/A",
-  "siralar": [
-   2
-  ],
-  "ilk5": [
-   "TKHK:86",
-   "TKHK:73/A",
-   "TKHK:2",
-   "TKHK:83",
-   "TKHK:88"
-  ],
-  "yeniden_yazim": "uygulandı",
-  "sorgular": [
-   "Tüketicinin Korunması Hakkında Kanun madde 73/A",
-   "6502 sayılı Kanun madde 73/A",
-   "6502 sayılı Kanun ek madde idari yaptırım"
-  ],
-  "uyari": null,
-  "maliyet_usd": 0.009424,
-  "sure_sn": 3.115,
-  "@1": false,
-  "@3": true,
-  "@5": true
+{
+ "kosular": [
+  [
+   {
+    "id": "S01",
+    "tur": "madde_dili",
+    "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "MSY:11",
+     "TKHK:48",
+     "MSY:10",
+     "TKHK:18",
+     "TKHK:49"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "cayma hakkının kullanılması bildirim süresi mesafeli satış",
+     "mesafeli sözleşmeler cayma hakkı kullanılma koşulları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.825,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S02",
+    "tur": "madde_dili",
+    "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:15",
+     "TKHK:11",
+     "TKHK:10",
+     "TKHK:12",
+     "TKHK:13"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal seçimlik haklar",
+     "tüketicinin ayıplı maldan dolayı sözleşmeden dönme hakkı",
+     "ayıplı malda bedel indirimi ve onarım talebi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.405,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S03",
+    "tur": "madde_dili",
+    "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:16",
+     "TKHK:10",
+     "TKHK:47",
+     "TKHK:Geçici 1"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal zamanaşımı süresi",
+     "satıcının ayıptan sorumluluğu zamanaşımı",
+     "tüketici ayıplı mal değişim onarım hakkı zamanaşımı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000199,
+    "sure_sn": 1.217,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S04",
+    "tur": "madde_dili",
+    "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:6",
+     "ETK:8",
+     "ETK:7",
+     "ETK:Geçici 1",
+     "ETK:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti önceden onay",
+     "ticari elektronik iletişim izni alıcının rıza",
+     "elektronik ticaret ticari ileti gönderimi onay şartı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000195,
+    "sure_sn": 1.424,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S05",
+    "tur": "madde_dili",
+    "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:11",
+     "KVKK:10",
+     "KVKK:14",
+     "KVKK:22",
+     "KVKK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ilgili kişinin veri sorumlusuna başvuru hakları",
+     "kişisel verilerin işlenmesine ilişkin ilgili kişi hakları",
+     "veri sorumlusuna başvuru ve şikayet yolu"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.27,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S06",
+    "tur": "madde_dili",
+    "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+    "siralar": [
+     14
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:Ek",
+     "TKHK:18",
+     "MSY:14",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı sözleşmeler",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "tüketicinin cayma hakkı kapsamı dışında kalan mal ve hizmetler"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000206,
+    "sure_sn": 1.438,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S07",
+    "tur": "madde_dili",
+    "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:18",
+     "TKHK:43",
+     "MSY:9",
+     "MSY:11",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "cayma hakkı süresinin başlangıcı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000198,
+    "sure_sn": 1.784,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S08",
+    "tur": "gunluk_dil",
+    "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:9",
+     "MSY:11",
+     "MSY:12",
+     "TKHK:24",
+     "MSY:13"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli satışta malın iadesi ve cayma hakkı süresi",
+     "internetten satın alınan mal için cayma hakkının kullanılması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.747,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S09",
+    "tur": "gunluk_dil",
+    "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:10",
+     "TKHK:74",
+     "TKHK:47",
+     "TKHK:12",
+     "TKHK:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcıya ait",
+     "tüketici sözleşmesinde ayıbın ortaya çıkma zamanı",
+     "satılan malın ayıplı olduğunun ispatı tüketici"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000205,
+    "sure_sn": 1.961,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S10",
+    "tur": "gunluk_dil",
+    "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:16",
+     "TKHK:48",
+     "TKHK:30",
+     "MSY:6",
+     "MSY:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmede teslim süresi",
+     "satıcının edimi ifa etmemesi sözleşmeden dönme",
+     "siparişin teslim edilmemesi sözleşmeden dönme hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.359,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S11",
+    "tur": "gunluk_dil",
+    "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:7",
+     "MSY:Ek",
+     "MSY:6",
+     "MSY:11",
+     "ETK:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "talep edilmeden gönderilen mal veya hizmet",
+     "tüketicinin gönderilen mala ilişkin yükümlülüğü",
+     "sipariş dışı mal gönderimi ve bedel talebi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.086,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S12",
+    "tur": "gunluk_dil",
+    "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:6",
+     "TKHK:57",
+     "TKHK:10",
+     "TKHK:11",
+     "TKHK:76"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "satıcının mal satma yükümlülüğü",
+     "mağazada ürünün satışından kaçınma ve tüketicinin hakları",
+     "vitrin ve ilan edilen fiyattan satış zorunluluğu"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.398,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S13",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:8",
+     "ETK:7",
+     "ETK:11",
+     "ETK:5",
+     "ETK:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti gönderiminden vazgeçme hakkı",
+     "ticari elektronik ileti onay ve ret bildirimi",
+     "ticari iletişim izni geri alınması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 1.117,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S14",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:13",
+     "KVKK:14",
+     "KVKK:9",
+     "KVKK:15",
+     "MSY:12/A"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel verilere ilişkin bilgi talebi yanıt süresi",
+     "ilgili kişinin bilgi talep hakkı veri sorumlusu başvuru"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.00021,
+    "sure_sn": 1.2,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S15",
+    "tur": "gunluk_dil",
+    "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+    "siralar": [
+     3
+    ],
+    "ilk5": [
+     "TKHK:47/A",
+     "TKHK:63",
+     "TKHK:80",
+     "TKHK:66",
+     "TKHK:58"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "piramit satış sistemi haksız ticari uygulama",
+     "zincir satış ve yeni üye kazandırmaya dayalı kazanç yasağı",
+     "aldatıcı ticari uygulamalar ve tüketicinin korunması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000205,
+    "sure_sn": 1.271,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S16",
+    "tur": "iki_madde",
+    "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+    "siralar": [
+     4,
+     3
+    ],
+    "ilk5": [
+     "TKHK:24",
+     "TKHK:43",
+     "MSY:12",
+     "MSY:13",
+     "MSY:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "cayma hakkında malın geri gönderilmesi süresi",
+     "cayma hakkında satıcının bedeli iade etme süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.618,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S17",
+    "tur": "iki_madde",
+    "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+    "siralar": [
+     1,
+     3
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:57",
+     "TKHK:11",
+     "TKHK:58",
+     "TKHK:15"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "garanti süresi içinde onarılan ayıplı mal",
+     "ayıplı malın onarımı sonrası tüketicinin seçimlik hakları",
+     "tüketici malında garanti belgesi ve garanti kapsamında onarım"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.645,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S18",
+    "tur": "iki_madde",
+    "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+    "siralar": [
+     1,
+     2
+    ],
+    "ilk5": [
+     "TKHK:68",
+     "TKHK:73/A",
+     "TKHK:70",
+     "TKHK:66",
+     "TKHK:73"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyetine başvuru parasal sınır",
+     "tüketici uyuşmazlıklarında arabuluculuk dava şartı",
+     "tüketici mahkemesi görev parasal sınırı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.606,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S19",
+    "tur": "iki_madde",
+    "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+    "siralar": [
+     5,
+     6
+    ],
+    "ilk5": [
+     "MSY:12",
+     "MSY:12/A",
+     "MSY:9",
+     "TKHK:30",
+     "MSY:17"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde taşıma sırasında malın zararından satıcının sorumluluğu",
+     "satıcının siparişi teslim etme yükümlülüğü ve teslim süresi",
+     "mesafeli sözleşmede malın teslim edilmemesi halinde sözleşmeden dönme hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.00022,
+    "sure_sn": 1.649,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S20",
+    "tur": "iki_madde",
+    "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+    "siralar": [
+     4,
+     1
+    ],
+    "ilk5": [
+     "MSY:7",
+     "TKHK:48",
+     "MSY:8",
+     "MSY:5",
+     "MSY:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının ön bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde ön bilgilerin teyidi",
+     "elektronik ticarette sözleşme öncesi bilgilendirme"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.00021,
+    "sure_sn": 1.688,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S21",
+    "tur": "iki_madde",
+    "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+    "siralar": [
+     1,
+     2
+    ],
+    "ilk5": [
+     "KVKK:7",
+     "KVKK:13",
+     "KVKK:11",
+     "KVKK:16",
+     "KVKK:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "kişisel verilerin silinmesi ve yok edilmesi veri sorumlusuna başvuru",
+     "veri sorumlusuna başvuru usul ve esasları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.059,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S22",
+    "tur": "cevapsiz",
+    "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+    "siralar": [],
+    "ilk5": [
+     "MSY:12/A",
+     "TKHK:17",
+     "MSY:19",
+     "MSY:15",
+     "MSY:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kira sözleşmesinde depozito iadesi",
+     "kiralananın teslimi sonrası teminatın iadesi",
+     "konut kira sözleşmesinde güvence bedelinin iadesi süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000239,
+    "sure_sn": 1.989,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S23",
+    "tur": "cevapsiz",
+    "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:Ek 2",
+     "ETK:Ek 4",
+     "TKHK:68",
+     "ETK:Ek 1",
+     "MSY:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "internet üzerinden yapılan satışlarda katma değer vergisi oranı",
+     "elektronik ticaret mal satışı katma değer vergisi uygulaması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000191,
+    "sure_sn": 1.221,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S24",
+    "tur": "cevapsiz",
+    "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+    "siralar": [],
+    "ilk5": [
+     "KVKK:27",
+     "TKHK:37",
+     "TKHK:1",
+     "TKHK:51",
+     "TKHK:42"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kıdem tazminatı hesaplanması",
+     "iş sözleşmesinin feshi halinde kıdem tazminatı",
+     "işçinin kıdem tazminatına hak kazanma şartları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 1.207,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S25",
+    "tur": "cevapsiz",
+    "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:12",
+     "TKHK:77/A",
+     "TKHK:77",
+     "TKHK:70",
+     "TKHK:63"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "trafik idari para cezasına itiraz süresi",
+     "trafik cezasına karşı sulh ceza hakimliğine itiraz"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000185,
+    "sure_sn": 1.286,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S26",
+    "tur": "madde_numarasi",
+    "soru": "6502 sayılı kanunun 56. maddesi ne diyor?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:86",
+     "TKHK:56",
+     "TKHK:2",
+     "TKHK:83",
+     "TKHK:85"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici sözleşmelerinde cayma hakkı ve istisnalar"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000185,
+    "sure_sn": 1.435,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S27",
+    "tur": "madde_numarasi",
+    "soru": "KVKK 5. madde",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:5",
+     "KVKK:4",
+     "KVKK:1",
+     "KVKK:10",
+     "KVKK:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "KVKK madde 5 kişisel verilerin işlenme şartları",
+     "6698 sayılı Kanun madde 5 kişisel verilerin işlenmesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000188,
+    "sure_sn": 1.404,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S28",
+    "tur": "madde_numarasi",
+    "soru": "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:Ek 2",
+     "ETK:1",
+     "ETK:Geçici 1",
+     "ETK:14",
+     "ETK:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek madde 2",
+     "elektronik ticaret kanunu ek madde 2 düzenleme konusu"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 1.366,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S29",
+    "tur": "madde_numarasi",
+    "soru": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:15",
+     "TKHK:49",
+     "MSY:14",
+     "TKHK:48",
+     "MSY:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları",
+     "mesafeli sözleşmelerde cayma hakkı kullanılamayan haller"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.399,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S30",
+    "tur": "madde_numarasi",
+    "soru": "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:73/A",
+     "TKHK:82",
+     "TKHK:Geçici 1",
+     "TKHK:2",
+     "TKHK:86"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "tüketicinin korunması hakkında kanun 73/A hükmü",
+     "tüketici hakem heyeti ve tüketici mahkemesi başvuru usulü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.447,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   }
+  ],
+  [
+   {
+    "id": "S01",
+    "tur": "madde_dili",
+    "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "MSY:11",
+     "TKHK:48",
+     "MSY:10",
+     "TKHK:18",
+     "MSY:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "mesafeli sözleşmelerde tüketicinin cayma hakkı",
+     "cayma hakkının kullanılması bildirim süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000199,
+    "sure_sn": 1.38,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S02",
+    "tur": "madde_dili",
+    "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:11",
+     "TKHK:15",
+     "TKHK:10",
+     "TKHK:8",
+     "TKHK:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal tüketicinin seçimlik hakları",
+     "ayıplı malda sözleşmeden dönme ve bedel indirimi",
+     "ayıplı mal ücretsiz onarım veya değiştirme hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000202,
+    "sure_sn": 1.301,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S03",
+    "tur": "madde_dili",
+    "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:16",
+     "TKHK:10",
+     "TKHK:47",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal sorumluluğu zamanaşımı",
+     "tüketici satış sözleşmesinde ayıba karşı tekeffül zamanaşımı",
+     "satıcının ayıptan sorumluluğu dava zamanaşımı süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000206,
+    "sure_sn": 1.377,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S04",
+    "tur": "madde_dili",
+    "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:6",
+     "ETK:8",
+     "ETK:7",
+     "ETK:Geçici 1",
+     "ETK:4"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti gönderimi için alıcının önceden onayı",
+     "ticari elektronik iletişim izni ve ret hakkı",
+     "elektronik ticaret ticari ileti onay yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.597,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S05",
+    "tur": "madde_dili",
+    "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:11",
+     "KVKK:5",
+     "KVKK:14",
+     "KVKK:28",
+     "KVKK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ilgili kişinin veri sorumlusuna karşı hakları",
+     "kişisel verilerin işlenmesine ilişkin ilgili kişi başvuru hakkı",
+     "veri sorumlusuna başvuru ve itiraz hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000206,
+    "sure_sn": 1.814,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S06",
+    "tur": "madde_dili",
+    "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+    "siralar": [
+     14
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:Ek",
+     "TKHK:18",
+     "MSY:14",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı sözleşmeler",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "tüketicinin cayma hakkı kapsamı dışında kalan mal ve hizmetler"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000206,
+    "sure_sn": 1.28,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S07",
+    "tur": "madde_dili",
+    "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:18",
+     "TKHK:43",
+     "TKHK:24",
+     "MSY:11",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "tüketici kredili satış sözleşmesinden cayma"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.125,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S08",
+    "tur": "gunluk_dil",
+    "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:9",
+     "TKHK:24",
+     "TKHK:43",
+     "MSY:13"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli sözleşmede cayma hakkı süresi",
+     "cayma hakkının kullanılması ve bedel iadesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 1.099,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S09",
+    "tur": "gunluk_dil",
+    "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:10",
+     "TKHK:47",
+     "TKHK:12",
+     "TKHK:48",
+     "TKHK:74"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcı",
+     "tüketici malın ayıplı olduğunu ispat yükü",
+     "ayıplı malda satıcının sorumluluğu ve ispat külfeti"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000202,
+    "sure_sn": 1.304,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S10",
+    "tur": "gunluk_dil",
+    "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:48",
+     "MSY:9",
+     "MSY:17",
+     "MSY:11",
+     "MSY:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmede satıcının edim yükümlülüğü",
+     "mesafeli sözleşmede teslim süresi",
+     "satıcının teslim süresini aşması sözleşmeden dönme"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000199,
+    "sure_sn": 1.498,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S11",
+    "tur": "gunluk_dil",
+    "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:7",
+     "MSY:Ek",
+     "MSY:6",
+     "MSY:16",
+     "MSY:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "talep edilmeyen mal gönderimi tüketici sorumluluğu",
+     "siparişsiz mal teslimi ve bedel talebi",
+     "haksız ticari uygulama sipariş olmadan mal gönderilmesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000204,
+    "sure_sn": 1.39,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S12",
+    "tur": "gunluk_dil",
+    "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:6",
+     "ETK:9",
+     "MSY:12",
+     "TKHK:47",
+     "TKHK:79"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "satıcının malı satmaktan kaçınması hukuki sonuçları",
+     "mağaza vitrin ürününün satış yükümlülüğü ve icap",
+     "tüketicinin satın alma hakkı ve satıcının kabul yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000207,
+    "sure_sn": 1.747,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S13",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:8",
+     "ETK:7",
+     "ETK:11",
+     "ETK:2",
+     "ETK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti gönderimine itiraz ve red hakkı",
+     "ticari elektronik ileti onay ve ret bildirimi",
+     "tüketicinin ticari elektronik ileti alma iznini geri alması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000202,
+    "sure_sn": 1.511,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S14",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:13",
+     "KVKK:15",
+     "KVKK:14",
+     "KVKK:12",
+     "KVKK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel verilere ilişkin bilgi talebi veri sorumlusunun yükümlülüğü",
+     "kişisel verilerin korunması başvurusu cevaplandırma"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000211,
+    "sure_sn": 1.534,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S15",
+    "tur": "gunluk_dil",
+    "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:80",
+     "TKHK:47/A",
+     "TKHK:77",
+     "TKHK:58",
+     "ETK:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "piramit satış sistemi haksız ticari uygulama",
+     "zincir satış sistemi yasağı tüketici",
+     "yeni üye kazandırmaya dayalı kazanç sistemi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 1.2,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S16",
+    "tur": "iki_madde",
+    "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+    "siralar": [
+     4,
+     5
+    ],
+    "ilk5": [
+     "MSY:12/A",
+     "TKHK:24",
+     "MSY:11",
+     "MSY:13",
+     "MSY:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "cayma hakkında malın geri gönderilmesi ve bedel iadesi süresi",
+     "mesafeli satışta cayma bedelinin iadesi yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000212,
+    "sure_sn": 1.863,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S17",
+    "tur": "iki_madde",
+    "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+    "siralar": [
+     1,
+     2
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:11",
+     "TKHK:15",
+     "TKHK:57",
+     "TKHK:74"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "garanti süresi içinde onarılan ayıplı mal",
+     "tüketicinin ayıplı maldan doğan seçimlik hakları",
+     "tüketici malı onarım garanti belgesi ayıp"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000198,
+    "sure_sn": 1.411,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S18",
+    "tur": "iki_madde",
+    "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+    "siralar": [
+     1,
+     2
+    ],
+    "ilk5": [
+     "TKHK:68",
+     "TKHK:73/A",
+     "TKHK:70",
+     "TKHK:73",
+     "MSY:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyetine başvuru parasal sınır",
+     "tüketici uyuşmazlığı arabuluculuk dava şartı",
+     "tüketici mahkemesi parasal yetki sınırı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.004,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S19",
+    "tur": "iki_madde",
+    "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+    "siralar": [
+     5,
+     6
+    ],
+    "ilk5": [
+     "MSY:12",
+     "MSY:9",
+     "MSY:12/A",
+     "TKHK:30",
+     "MSY:17"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde taşıma sırasında malın zararı ve sorumluluk",
+     "satıcının ürünü teslim etme yükümlülüğü ve teslim süresi",
+     "sipariş edilen malın teslim edilmemesi halinde tüketicinin hakları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000214,
+    "sure_sn": 1.144,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S20",
+    "tur": "iki_madde",
+    "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+    "siralar": [
+     6,
+     8
+    ],
+    "ilk5": [
+     "MSY:6",
+     "MSY:8",
+     "TKHK:48",
+     "MSY:12",
+     "MSY:20"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının sözleşme öncesi bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmede ön bilgilendirmenin tüketiciye teyit edilmesi",
+     "elektronik ticarette satıcının bilgi verme yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.00022,
+    "sure_sn": 1.463,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S21",
+    "tur": "iki_madde",
+    "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+    "siralar": [
+     1,
+     2
+    ],
+    "ilk5": [
+     "KVKK:11",
+     "KVKK:13",
+     "KVKK:3",
+     "KVKK:7",
+     "KVKK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "veri sorumlusuna başvuru usulü ilgili kişi hakları",
+     "kişisel verilerin silinmesi yok edilmesi veya anonim hale getirilmesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000205,
+    "sure_sn": 1.269,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S22",
+    "tur": "cevapsiz",
+    "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+    "siralar": [],
+    "ilk5": [
+     "MSY:12/A",
+     "TKHK:45",
+     "TKHK:52",
+     "MSY:5",
+     "MSY:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kira sözleşmesinde depozito iadesi",
+     "konut kirasında teminat bedelinin iadesi",
+     "kira sözleşmesinin sona ermesinde kiraya verenin iade yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.393,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S23",
+    "tur": "cevapsiz",
+    "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:Ek 4",
+     "ETK:Ek 2",
+     "TKHK:68",
+     "ETK:12",
+     "TKHK:54"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "internet üzerinden yapılan satışlarda katma değer vergisi oranı",
+     "elektronik ticaret katma değer vergisi uygulaması",
+     "mesafeli satışta vergi oranı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000196,
+    "sure_sn": 1.386,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S24",
+    "tur": "cevapsiz",
+    "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+    "siralar": [],
+    "ilk5": [
+     "KVKK:27",
+     "TKHK:37",
+     "TKHK:1",
+     "TKHK:51",
+     "TKHK:31"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kıdem tazminatı hesaplanması",
+     "iş sözleşmesinin feshi ve kıdem tazminatı",
+     "işçinin haklı olmayan fesih tazminatı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000195,
+    "sure_sn": 1.131,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S25",
+    "tur": "cevapsiz",
+    "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:12",
+     "TKHK:77",
+     "TKHK:77/A",
+     "TKHK:70",
+     "TKHK:78"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "trafik cezasına itiraz süresi",
+     "idari para cezasına karşı itiraz başvurusu",
+     "karayolları trafik kanunu idari para cezası itiraz"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.00019,
+    "sure_sn": 0.999,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S26",
+    "tur": "madde_numarasi",
+    "soru": "6502 sayılı kanunun 56. maddesi ne diyor?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:83",
+     "TKHK:86",
+     "TKHK:2",
+     "TKHK:85"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici sözleşmelerinde kullanılan haksız şart düzenlemesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000186,
+    "sure_sn": 1.309,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S27",
+    "tur": "madde_numarasi",
+    "soru": "KVKK 5. madde",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:5",
+     "ETK:5",
+     "TKHK:5",
+     "KVKK:11",
+     "KVKK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "6698 sayılı Kanun madde 5",
+     "kişisel verilerin işlenme şartları",
+     "KVKK madde 5 veri işleme şartları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000185,
+    "sure_sn": 0.883,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S28",
+    "tur": "madde_numarasi",
+    "soru": "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:Ek 2",
+     "ETK:1",
+     "ETK:Geçici 1",
+     "ETK:Geçici 2",
+     "ETK:Ek 3"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde",
+     "elektronik ticaret kanunu ek madde 2 düzenleme kapsamı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 0.92,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S29",
+    "tur": "madde_numarasi",
+    "soru": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:15",
+     "TKHK:49",
+     "MSY:1",
+     "MSY:21",
+     "MSY:14"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000189,
+    "sure_sn": 0.857,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S30",
+    "tur": "madde_numarasi",
+    "soru": "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:73/A",
+     "TKHK:82",
+     "TKHK:86",
+     "TKHK:70",
+     "TKHK:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "tüketici hakem heyeti ayıplı mal ve hizmet uyuşmazlığı",
+     "tüketicinin korunması hakkında kanun ceza hükümleri"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000205,
+    "sure_sn": 1.039,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   }
+  ],
+  [
+   {
+    "id": "S01",
+    "tur": "madde_dili",
+    "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "MSY:11",
+     "TKHK:48",
+     "MSY:10",
+     "TKHK:18",
+     "MSY:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "mesafeli sözleşmelerde tüketicinin cayma hakkı",
+     "cayma hakkının kullanılmasına ilişkin bildirim süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.388,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S02",
+    "tur": "madde_dili",
+    "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:11",
+     "TKHK:15",
+     "TKHK:74",
+     "TKHK:12",
+     "TKHK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal seçimlik haklar",
+     "ayıplı mal satılanın değiştirilmesi veya bedel indirimi",
+     "tüketicinin sözleşmeden dönme hakkı ayıp"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000199,
+    "sure_sn": 1.381,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S03",
+    "tur": "madde_dili",
+    "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:16",
+     "TKHK:47",
+     "TKHK:Geçici 1",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal sorumluluğu zamanaşımı",
+     "satıcının ayıptan sorumluluğu zamanaşımı süresi",
+     "tüketici satış sözleşmesinde ayıp ihbarı ve zamanaşımı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000205,
+    "sure_sn": 1.255,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S04",
+    "tur": "madde_dili",
+    "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:6",
+     "ETK:8",
+     "ETK:7",
+     "ETK:Geçici 1",
+     "ETK:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti gönderimi için alıcının önceden onayı",
+     "ticari elektronik ileti gönderiminde izin ve ret hakkı",
+     "elektronik ticaret ticari iletişim ön onay şartı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.491,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S05",
+    "tur": "madde_dili",
+    "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:11",
+     "KVKK:5",
+     "KVKK:28",
+     "KVKK:9",
+     "KVKK:7"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verileri işlenen ilgili kişinin hakları",
+     "veri sorumlusuna başvuru ve kişisel veri işleme hakları",
+     "kişisel verilerin korunması ilgili kişinin talep hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.287,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S06",
+    "tur": "madde_dili",
+    "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+    "siralar": [
+     12
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:Ek",
+     "MSY:10",
+     "TKHK:48",
+     "MSY:14"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı mesafeli sözleşmeler istisnalar",
+     "mesafeli sözleşmelerde cayma hakkı istisnası",
+     "tüketicinin cayma hakkı kapsam dışı sözleşmeler"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000208,
+    "sure_sn": 1.18,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S07",
+    "tur": "madde_dili",
+    "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:18",
+     "TKHK:43",
+     "MSY:11",
+     "TKHK:21",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "taksitle satışta cayma hakkı süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000198,
+    "sure_sn": 1.153,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S08",
+    "tur": "gunluk_dil",
+    "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:9",
+     "MSY:12",
+     "TKHK:43",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli satışta cayma hakkının kullanılması ve bedel iadesi",
+     "internetten satın alınan malda cayma hakkı istisnaları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.164,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S09",
+    "tur": "gunluk_dil",
+    "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:10",
+     "TKHK:74",
+     "TKHK:47",
+     "TKHK:11",
+     "TKHK:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcı",
+     "tüketici malın ayıplı olduğunu ispat yükü",
+     "satılan malda ayıbın satış anında mevcut olması ispat"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.576,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S10",
+    "tur": "gunluk_dil",
+    "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:48",
+     "MSY:16",
+     "MSY:9",
+     "MSY:Ek",
+     "MSY:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının edimi ifa süresi",
+     "siparişin teslim edilmemesi sözleşmeden dönme hakkı",
+     "mesafeli sözleşmelerde teslim süresi ve ek süre verilmesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000208,
+    "sure_sn": 1.479,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S11",
+    "tur": "gunluk_dil",
+    "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:7",
+     "MSY:6",
+     "MSY:Ek",
+     "MSY:11",
+     "MSY:16"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "talep edilmeden gönderilen mal veya hizmet bedeli",
+     "tüketicinin sipariş etmediği mala ilişkin ödeme yükümlülüğü",
+     "haksız ve sipariş dışı ürün gönderimi tüketici hakları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000209,
+    "sure_sn": 1.598,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S12",
+    "tur": "gunluk_dil",
+    "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:6",
+     "TKHK:47",
+     "TKHK:10",
+     "TKHK:5",
+     "TKHK:48"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "satıcının mal satmaktan kaçınması hukuki durum",
+     "ilan edilen fiyattan mal satış yükümlülüğü",
+     "tüketici ile satıcı arasında satış sözleşmesinin kurulması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000202,
+    "sure_sn": 1.484,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S13",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:8",
+     "ETK:11",
+     "ETK:2",
+     "MSY:4",
+     "ETK:7"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti gönderiminden çıkma hakkı",
+     "ticari elektronik ileti onay ve ret bildirimi",
+     "ticari ileti gönderimine itiraz kişisel veri işleme"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000201,
+    "sure_sn": 1.142,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S14",
+    "tur": "gunluk_dil",
+    "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "KVKK:14",
+     "KVKK:13",
+     "KVKK:15",
+     "KVKK:12",
+     "KVKK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel verilerin korunması ilgili kişi bilgi talebi",
+     "veri sorumlusunun başvuruya cevap verme yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000208,
+    "sure_sn": 1.589,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S15",
+    "tur": "gunluk_dil",
+    "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:80",
+     "TKHK:47/A",
+     "TKHK:77",
+     "ETK:2",
+     "TKHK:45"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "piramit satış sistemi haksız ticari uygulama",
+     "zincir satış ve kademeli kazanç sistemi yasağı",
+     "ticari amaçlı tüketici aldatıcı yöntem kazanç vaadi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000203,
+    "sure_sn": 1.53,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S16",
+    "tur": "iki_madde",
+    "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+    "siralar": [
+     3,
+     4
+    ],
+    "ilk5": [
+     "TKHK:43",
+     "MSY:11",
+     "MSY:13",
+     "MSY:12",
+     "MSY:12/A"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "cayma hakkında ürünün geri gönderilmesi ve bedel iadesi süresi",
+     "mesafeli satışta satıcının cayma bedelini iade yükümlülüğü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000213,
+    "sure_sn": 1.201,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S17",
+    "tur": "iki_madde",
+    "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+    "siralar": [
+     1,
+     7
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:57",
+     "TKHK:57/A",
+     "TKHK:58",
+     "TKHK:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "garanti belgesi kapsamında ayıplı mal",
+     "tüketici ayıplı malda seçimlik haklar",
+     "garanti süresi içinde tekrar arızalanan mal"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000194,
+    "sure_sn": 0.919,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S18",
+    "tur": "iki_madde",
+    "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+    "siralar": [
+     4,
+     1
+    ],
+    "ilk5": [
+     "TKHK:73/A",
+     "MSY:5",
+     "TKHK:70",
+     "TKHK:68",
+     "TKHK:73"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyeti parasal sınır başvuru",
+     "tüketici uyuşmazlıklarında arabulucuya başvuru zorunluluğu",
+     "tüketici mahkemesi dava şartı arabuluculuk"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000207,
+    "sure_sn": 1.076,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S19",
+    "tur": "iki_madde",
+    "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+    "siralar": [
+     4,
+     7
+    ],
+    "ilk5": [
+     "MSY:12",
+     "MSY:12/A",
+     "MSY:9",
+     "MSY:17",
+     "TKHK:30"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde taşıma sırasında malın zararından satıcının sorumluluğu",
+     "mesafeli sözleşmelerde malın teslim süresi",
+     "satıcının malı teslim yükümlülüğü ve teslim süresinin aşılması"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000211,
+    "sure_sn": 1.082,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S20",
+    "tur": "iki_madde",
+    "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+    "siralar": [
+     4,
+     1
+    ],
+    "ilk5": [
+     "MSY:7",
+     "MSY:8",
+     "TKHK:48",
+     "MSY:5",
+     "MSY:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının ön bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde ön bilgilerin tüketiciye teyit edilmesi",
+     "elektronik ticarette sözleşme öncesi bilgilendirme"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000215,
+    "sure_sn": 1.121,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S21",
+    "tur": "iki_madde",
+    "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+    "siralar": [
+     2,
+     1
+    ],
+    "ilk5": [
+     "KVKK:13",
+     "KVKK:11",
+     "KVKK:7",
+     "KVKK:3",
+     "KVKK:Geçici 1"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "veri sorumlusuna başvuru usulü",
+     "kişisel verilerin silinmesi yok edilmesi veya anonim hale getirilmesi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.0002,
+    "sure_sn": 1.129,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S22",
+    "tur": "cevapsiz",
+    "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+    "siralar": [],
+    "ilk5": [
+     "MSY:12/A",
+     "MSY:5",
+     "TKHK:52",
+     "TKHK:17",
+     "MSY:15"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kira sözleşmesinde depozito iadesi",
+     "kiralananın teslimi ile teminat bedelinin geri verilmesi",
+     "kira ilişkisinin sona ermesinde teminat iadesi süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000235,
+    "sure_sn": 1.587,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S23",
+    "tur": "cevapsiz",
+    "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:Ek 4",
+     "ETK:Ek 2",
+     "TKHK:68",
+     "ETK:12",
+     "TKHK:54"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "internet üzerinden yapılan satışlarda katma değer vergisi oranı",
+     "elektronik ticaret katma değer vergisi uygulaması",
+     "mesafeli satışlarda vergi oranı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000197,
+    "sure_sn": 2.12,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S24",
+    "tur": "cevapsiz",
+    "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+    "siralar": [],
+    "ilk5": [
+     "KVKK:27",
+     "TKHK:37",
+     "TKHK:1",
+     "TKHK:51",
+     "MSY:14"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kıdem tazminatı hesaplanması",
+     "iş sözleşmesinin feshi halinde kıdem tazminatı",
+     "işçinin işten çıkarılması kıdem tazminatı hakkı"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000198,
+    "sure_sn": 1.237,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S25",
+    "tur": "cevapsiz",
+    "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+    "siralar": [],
+    "ilk5": [
+     "ETK:12",
+     "TKHK:77/A",
+     "TKHK:77",
+     "TKHK:78",
+     "TKHK:70"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "trafik idari para cezasına itiraz süresi",
+     "Karayolları Trafik Kanunu idari para cezasına karşı itiraz",
+     "idari para cezasına karşı sulh ceza hakimliğine itiraz süresi"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000293,
+    "sure_sn": 1.889,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "S26",
+    "tur": "madde_numarasi",
+    "soru": "6502 sayılı kanunun 56. maddesi ne diyor?",
+    "siralar": [
+     5
+    ],
+    "ilk5": [
+     "TKHK:16",
+     "TKHK:83",
+     "TKHK:86",
+     "TKHK:75",
+     "TKHK:56"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici sözleşmelerinde ayıplı mal ve hizmet hükümleri"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000187,
+    "sure_sn": 1.145,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "S27",
+    "tur": "madde_numarasi",
+    "soru": "KVKK 5. madde",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:5",
+     "ETK:5",
+     "KVKK:4",
+     "KVKK:10",
+     "KVKK:2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "6698 sayılı Kanun madde 5",
+     "kişisel verilerin işlenme şartları",
+     "KVKK kişisel veri işleme şartları açık rıza"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000187,
+    "sure_sn": 0.863,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S28",
+    "tur": "madde_numarasi",
+    "soru": "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "ETK:Ek 2",
+     "ETK:Geçici 2",
+     "ETK:1",
+     "ETK:Geçici 1",
+     "ETK:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde",
+     "elektronik ticaret kanunu ek madde 2 kapsam düzenlemesi",
+     "elektronik ticaret ek madde 2 hükmü"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000208,
+    "sure_sn": 0.94,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S29",
+    "tur": "madde_numarasi",
+    "soru": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:15",
+     "TKHK:49",
+     "MSY:1",
+     "MSY:21",
+     "MSY:14"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000189,
+    "sure_sn": 0.913,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "S30",
+    "tur": "madde_numarasi",
+    "soru": "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:73/A",
+     "TKHK:82",
+     "TKHK:71",
+     "TKHK:69",
+     "TKHK:86"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "tüketici hakem heyeti veya ayıplı mal ile ilgili yaptırım hükmü",
+     "Tüketicinin Korunması Hakkında Kanun 73/A idari para cezası"
+    ],
+    "uyari": null,
+    "atilan_sorgular": [],
+    "maliyet_usd": 0.000209,
+    "sure_sn": 1.243,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   }
+  ]
+ ],
+ "ozet": {
+  "@1": [
+   15,
+   17,
+   15
+  ],
+  "@3": [
+   22,
+   22,
+   19
+  ],
+  "@5": [
+   24,
+   23,
+   23
+  ]
  }
-]
+}
