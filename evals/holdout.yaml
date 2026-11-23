@@ -1,0 +1,20 @@
+# Holdout seti: SORULARI KULLANICI YAZAR.
+#
+# Kurallar:
+#   - Bu set geliştirme sırasında çalıştırılmaz. Hiçbir ayar bu setin sonuçlarına göre yapılmaz.
+#   - Yalnızca bir sürüm "bitti" ilan edilmeden önce, bir kez çalıştırılır ve sonuç kaydedilir.
+#   - Şema evals/retrieval.yaml ile aynıdır (id, tur, soru, dogru, not).
+#     id önerisi: H01, H02, ...
+#     tur: madde_dili | gunluk_dil | iki_madde | cevapsiz
+#     dogru: gereksinim listesi; her gereksinim kabul edilen alternatiflerin listesi,
+#            ör. - ["MSY:9", "TKHK:48"]
+#
+# Örnek (yorum satırı, çalıştırılmaz):
+#   - id: H01
+#     tur: gunluk_dil
+#     soru: "..."
+#     dogru:
+#       - ["BELGE:madde_no"]
+#     not: "..."
+
+sorular: []

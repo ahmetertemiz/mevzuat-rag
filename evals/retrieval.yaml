@@ -1,0 +1,202 @@
+# Arama değerlendirme seti (geliştirme seti)
+#
+# Bu sorular arama kodu yazılmadan ve hiçbir arama sonucu görülmeden yazıldı. Doğru maddeler
+# yalnızca madde metinleri (data/chunks.jsonl) okunarak belirlendi.
+#
+# Şema:
+#   id     : S01..S25
+#   tur    : madde_dili  - maddenin kendi kelimeleriyle sorulan
+#            gunluk_dil  - günlük dille sorulan
+#            iki_madde   - cevabı iki ayrı maddeye dayanan
+#            cevapsiz    - cevabı bu dört belgede olmayan
+#   soru   : sorgu metni
+#   dogru  : gereksinim listesi. Her gereksinim kabul edilen alternatif maddelerin listesidir
+#            ("BELGE:madde_no"). Bir gereksinim, alternatiflerden herhangi biri bulunursa karşılanır.
+#            Aynı hüküm birden çok belgede tekrarlandığında (ör. 14 günlük cayma hakkı hem
+#            TKHK m.48'de hem MSY m.9'da) alternatif olarak yazıldı.
+#            iki_madde sorularında iki gereksinim vardır. cevapsiz sorularında liste boştur.
+#   not    : doğru maddenin gerekçesi
+#
+# Belge kısa adları: TKHK (6502), ETK (6563), KVKK (6698), MSY (Mesafeli Sözleşmeler Yönetmeliği)
+
+sorular:
+  # ---------------------------------------------------------------- madde_dili (7)
+  - id: S01
+    tur: madde_dili
+    soru: "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?"
+    dogru:
+      - ["MSY:9", "TKHK:48"]
+    not: "MSY m.9/1 ve TKHK m.48/4: on dört gün."
+
+  - id: S02
+    tur: madde_dili
+    soru: "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?"
+    dogru:
+      - ["TKHK:11"]
+    not: "TKHK m.11/1: sözleşmeden dönme, bedel indirimi, ücretsiz onarım, ayıpsız misli ile değişim."
+
+  - id: S03
+    tur: madde_dili
+    soru: "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?"
+    dogru:
+      - ["TKHK:12"]
+    not: "TKHK m.12/1: teslimden itibaren iki yıl; konut/tatil amaçlı taşınmazda beş yıl."
+
+  - id: S04
+    tur: madde_dili
+    soru: "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?"
+    dogru:
+      - ["ETK:6"]
+    not: "ETK m.6/1: ancak önceden onay alınmak kaydıyla; esnaf ve tacirlere onaysız gönderilebilir."
+
+  - id: S05
+    tur: madde_dili
+    soru: "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?"
+    dogru:
+      - ["KVKK:11"]
+    not: "KVKK m.11/1 bentleri."
+
+  - id: S06
+    tur: madde_dili
+    soru: "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?"
+    dogru:
+      - ["MSY:15"]
+    not: "MSY m.15 cayma hakkının istisnaları."
+
+  - id: S07
+    tur: madde_dili
+    soru: "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?"
+    dogru:
+      - ["TKHK:18"]
+    not: "TKHK m.18/1: yedi gün."
+
+  # ---------------------------------------------------------------- gunluk_dil (8)
+  - id: S08
+    tur: gunluk_dil
+    soru: "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?"
+    dogru:
+      - ["MSY:9", "TKHK:48"]
+    not: "Gerekçesiz cayma hakkı: MSY m.9, TKHK m.48/4."
+
+  - id: S09
+    tur: gunluk_dil
+    soru: "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?"
+    dogru:
+      - ["TKHK:10"]
+    not: "TKHK m.10/1: teslimden itibaren altı ay içinde ortaya çıkan ayıp teslimde var sayılır, ispat satıcıda."
+
+  - id: S10
+    tur: gunluk_dil
+    soru: "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?"
+    dogru:
+      - ["MSY:16", "TKHK:48"]
+    not: "MSY m.16/1 ve TKHK m.48/3: mal satışlarında süre otuz günü geçemez."
+
+  - id: S11
+    tur: gunluk_dil
+    soru: "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?"
+    dogru:
+      - ["TKHK:7"]
+    not: "TKHK m.7: sipariş edilmeyen mal için tüketiciye karşı hak ileri sürülemez."
+
+  - id: S12
+    tur: gunluk_dil
+    soru: "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?"
+    dogru:
+      - ["TKHK:6"]
+    not: "TKHK m.6/1: teşhir edilen malın satışından kaçınılamaz."
+
+  - id: S13
+    tur: gunluk_dil
+    soru: "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?"
+    dogru:
+      - ["ETK:8"]
+    not: "ETK m.8: alıcının reddetme hakkı; talepten sonra üç iş günü içinde durdurulur."
+
+  - id: S14
+    tur: gunluk_dil
+    soru: "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?"
+    dogru:
+      - ["KVKK:13"]
+    not: "KVKK m.13/2: en geç otuz gün içinde ücretsiz sonuçlandırılır."
+
+  - id: S15
+    tur: gunluk_dil
+    soru: "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?"
+    dogru:
+      - ["TKHK:80"]
+    not: "TKHK m.80: piramit satış sisteminin kurulması, yayılması, tavsiyesi yasak."
+
+  # ---------------------------------------------------------------- iki_madde (6)
+  - id: S16
+    tur: iki_madde
+    soru: "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?"
+    dogru:
+      - ["MSY:13"]
+      - ["MSY:12"]
+    not: "Tüketicinin geri gönderme süresi MSY m.13/1; satıcının iade süresi MSY m.12/1."
+
+  - id: S17
+    tur: iki_madde
+    soru: "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?"
+    dogru:
+      - ["TKHK:56"]
+      - ["TKHK:11"]
+    not: "TKHK m.56/3 tekrar arızada diğer seçimlik haklara geçişi düzenler; haklar TKHK m.11'de sayılır."
+
+  - id: S18
+    tur: iki_madde
+    soru: "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?"
+    dogru:
+      - ["TKHK:68"]
+      - ["TKHK:73/A"]
+    not: "Parasal sınır TKHK m.68/1; dava şartı arabuluculuk TKHK m.73/A."
+
+  - id: S19
+    tur: iki_madde
+    soru: "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?"
+    dogru:
+      - ["MSY:17"]
+      - ["MSY:16", "TKHK:48"]
+    not: "Kayıp/hasar sorumluluğu MSY m.17; teslim süresi MSY m.16 / TKHK m.48/3."
+
+  - id: S20
+    tur: iki_madde
+    soru: "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?"
+    dogru:
+      - ["MSY:5"]
+      - ["MSY:7"]
+    not: "Ön bilgilendirme içeriği MSY m.5; ön bilgilerin teyidi MSY m.7."
+
+  - id: S21
+    tur: iki_madde
+    soru: "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?"
+    dogru:
+      - ["KVKK:11", "KVKK:7"]
+      - ["KVKK:13"]
+    not: "Silme talebi hakkı KVKK m.11/1-e (şartları m.7); başvuru usulü KVKK m.13/1."
+
+  # ---------------------------------------------------------------- cevapsiz (4)
+  - id: S22
+    tur: cevapsiz
+    soru: "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?"
+    dogru: []
+    not: "Kira hukuku (Türk Borçlar Kanunu); bu dört belgede yok."
+
+  - id: S23
+    tur: cevapsiz
+    soru: "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?"
+    dogru: []
+    not: "Vergi mevzuatı; bu dört belgede yok."
+
+  - id: S24
+    tur: cevapsiz
+    soru: "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?"
+    dogru: []
+    not: "İş hukuku; bu dört belgede yok."
+
+  - id: S25
+    tur: cevapsiz
+    soru: "Trafik cezasına itiraz süresi kaç gündür?"
+    dogru: []
+    not: "Karayolları Trafik Kanunu; bu dört belgede yok. 'itiraz süresi' ifadesi TKHK m.70 gibi maddelerle sözcük olarak örtüşebilir."
