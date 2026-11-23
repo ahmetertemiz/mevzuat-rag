@@ -51,7 +51,8 @@ ve yürürlüğe gireceği tarihi belirt.
 Bir satırda birden çok tutar varsa ve hangisinin hangi duruma ait olduğu madde metninden \
 çıkmıyorsa tutarları tablodaki sırayla listele ve hangisinin geçerli olduğunun ilgili maddeye göre \
 belirlendiğini söyle. Tutarların hangi yıla ait olduğunu belirt.
-8. Kısa ve açık yaz: en fazla 6 cümle, Türkçe.
+8. Uyarılar da cümleler gibi en az bir dayanak (parca_id + kelimesi kelimesine alıntı) taşısın. Dayanağı doğrulanamayan uyarı kullanıcıya gösterilmez; parçalarda olmayan yorum ya da çıkarımı uyarı olarak da yazma.
+9. Kısa ve açık yaz: en fazla 6 cümle, Türkçe.
 """
 
 OUTPUT_SCHEMA = {
@@ -86,8 +87,17 @@ OUTPUT_SCHEMA = {
                 "properties": {
                     "tur": {"type": "string", "enum": list(UYARI_TURLERI)},
                     "metin": {"type": "string"},
+                    "dayanaklar": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {"parca_id": {"type": "string"}, "alinti": {"type": "string"}},
+                            "required": ["parca_id", "alinti"],
+                            "additionalProperties": False,
+                        },
+                    },
                 },
-                "required": ["tur", "metin"],
+                "required": ["tur", "metin", "dayanaklar"],
                 "additionalProperties": False,
             },
         },
@@ -115,6 +125,7 @@ class Cevap:
     ust_not: str | None                           # cevabın ÜSTÜNDE gösterilir
     bulunamayan: list[str]
     uyarilar: list[dict]                          # [{"tur", "metin", "kaynak": "kod"|"model"}]
+    cikarilan_uyarilar: list[dict]                # doğrulanamayan model uyarıları (gösterilmez)
     kaynaklar: list[dict]                         # [{"parca_id", "atif"}]
     kapanis: str
     model_durumu: str                             # modelin kendi verdiği durum
@@ -169,35 +180,38 @@ def kod_uyarilari(dayanak_parcalari: list[dict], baglam: Baglam, arama: dict) ->
     return out
 
 
+def dogrula(metin: str, dayanaklar_ham: list[dict], baglam: Baglam) -> Cumle:
+    """Bir cümleyi ya da model uyarısını doğrular: her dayanağın alıntısı gösterilen parçada geçmeli,
+    metindeki sayılar alıntılarda ya da gösterilen parçalarda geçmeli."""
+    dayanaklar, ok, neden = [], True, None
+    for d in dayanaklar_ham or []:
+        p = baglam.by_id.get(d.get("parca_id", ""))
+        d_ok, d_neden = alinti_dogrula(d.get("alinti", ""), p)
+        dayanaklar.append({**d, "dogrulandi": d_ok, "neden": d_neden or None})
+        if not d_ok:
+            ok, neden = False, f"{d.get('parca_id')}: {d_neden}"
+    if not dayanaklar:
+        ok, neden = False, "dayanak yok"
+    hata: list[int] = []
+    if ok:
+        parcalar = [baglam.by_id[d["parca_id"]] for d in dayanaklar]
+        hata = sayi_tutarliligi(metin, [d["alinti"] for d in dayanaklar], parcalar, baglam.belgeler)
+        if hata:
+            ok, neden = False, f"kaynakta olmayan sayı: {', '.join(map(str, hata))}"
+    return Cumle(metin, dayanaklar, ok, neden, hata)
+
+
 def son_islem(ham: dict, baglam: Baglam, soru: str, arama: dict | None = None) -> dict:
     """Model çıktısını doğrular ve kullanıcıya gösterilecek cevabın alanlarını üretir."""
     arama = arama or {}
     gosterilen, cikarilan = [], []
     for c in ham.get("cumleler") or []:
-        dayanaklar, ok, neden = [], True, None
-        for d in c.get("dayanaklar") or []:
-            p = baglam.by_id.get(d.get("parca_id", ""))
-            d_ok, d_neden = alinti_dogrula(d.get("alinti", ""), p)
-            dayanaklar.append({**d, "dogrulandi": d_ok, "neden": d_neden or None})
-            if not d_ok:
-                ok, neden = False, f"{d.get('parca_id')}: {d_neden}"
-        if not dayanaklar:
-            ok, neden = False, "dayanak yok"
-        hata = []
-        if ok:
-            parcalar = [baglam.by_id[d["parca_id"]] for d in dayanaklar]
-            hata = sayi_tutarliligi(c.get("metin", ""), [d["alinti"] for d in dayanaklar], parcalar,
-                                    baglam.belgeler)
-            if hata:
-                ok, neden = False, f"kaynakta olmayan sayı: {', '.join(map(str, hata))}"
-        cm = Cumle(c.get("metin", ""), dayanaklar, ok, neden, hata)
-        (gosterilen if ok else cikarilan).append(cm)
+        cm = dogrula(c.get("metin", ""), c.get("dayanaklar") or [], baglam)
+        (gosterilen if cm.dogrulandi else cikarilan).append(cm)
 
     model_durumu = ham.get("durum") if ham.get("durum") in DURUMLAR else "bulunamadi"
     durum = model_durumu
-    ust_not = None
     if cikarilan:
-        ust_not = f"{len(cikarilan)} cümle kaynağında doğrulanamadığı için çıkarıldı."
         durum = "kismen_cevaplandi" if gosterilen else "bulunamadi"
         if model_durumu == "bulunamadi":
             durum = "bulunamadi"
@@ -208,13 +222,31 @@ def son_islem(ham: dict, baglam: Baglam, soru: str, arama: dict | None = None) -
     dayanak_parcalari = [baglam.by_id[i] for i in dayanak_ids]
     uyarilar = kod_uyarilari(dayanak_parcalari, baglam, arama)
     kod_turleri = {u["tur"] for u in uyarilar}
+    # Modelin uyarıları da cümlelerle aynı doğrulamadan geçer (alıntı + sayı tutarlılığı);
+    # doğrulanamayan uyarı gösterilmez. Kodun uyarıları belirlenimci olduğu için denetlenmez.
+    cikarilan_uyarilar = []
     for u in ham.get("uyarilar") or []:
-        if u.get("tur") not in kod_turleri:
-            uyarilar.append({"tur": u.get("tur", "diger"), "metin": u.get("metin", ""), "kaynak": "model"})
+        if u.get("tur") in kod_turleri:
+            continue
+        v = dogrula(u.get("metin", ""), u.get("dayanaklar") or [], baglam)
+        kayit = {"tur": u.get("tur", "diger"), "metin": u.get("metin", ""), "kaynak": "model",
+                 "dayanaklar": v.dayanaklar}
+        if v.dogrulandi:
+            uyarilar.append(kayit)
+        else:
+            cikarilan_uyarilar.append({**kayit, "neden": v.neden})
+
+    parcalar_not = []
+    if cikarilan:
+        parcalar_not.append(f"{len(cikarilan)} cümle")
+    if cikarilan_uyarilar:
+        parcalar_not.append(f"{len(cikarilan_uyarilar)} uyarı")
+    ust_not = (" ve ".join(parcalar_not) + " kaynağında doğrulanamadığı için çıkarıldı.") if parcalar_not else None
 
     return {
         "durum": durum, "cumleler": gosterilen, "cikarilan_cumleler": cikarilan, "ust_not": ust_not,
         "bulunamayan": list(ham.get("bulunamayan") or []), "uyarilar": uyarilar,
+        "cikarilan_uyarilar": cikarilan_uyarilar,
         "kaynaklar": [{"parca_id": i, "atif": _atif(baglam.by_id[i])} for i in dayanak_ids],
         "model_durumu": model_durumu,
     }
@@ -266,18 +298,20 @@ class Cevaplayici:
 
         resp = self._cagir(kullanici_mesaji(baglam, soru))
         ham: dict
+        bos = {"durum": "bulunamadi", "cumleler": [], "bulunamayan": [], "uyarilar": []}
+        sistem_uyarisi = None   # kodun ürettiği durum bildirimi (doğrulamaya tabi değil)
         if getattr(resp, "stop_reason", None) == "refusal":
-            ham = {"durum": "bulunamadi", "cumleler": [], "bulunamayan": [], "uyarilar": [
-                {"tur": "diger", "metin": "Model isteği reddetti; cevap üretilmedi."}]}
+            ham, sistem_uyarisi = bos, "Model isteği reddetti; cevap üretilmedi."
         else:
             text = next((b.text for b in resp.content if getattr(b, "type", "") == "text"), "{}")
             try:
                 ham = json.loads(text)
             except json.JSONDecodeError:
-                ham = {"durum": "bulunamadi", "cumleler": [], "bulunamayan": [], "uyarilar": [
-                    {"tur": "diger", "metin": "Model çıktısı okunamadı; cevap üretilmedi."}]}
+                ham, sistem_uyarisi = bos, "Model çıktısı okunamadı; cevap üretilmedi."
 
         sonuc = son_islem(ham, baglam, soru, arama)
+        if sistem_uyarisi:
+            sonuc["uyarilar"].append({"tur": "diger", "metin": sistem_uyarisi, "kaynak": "kod"})
         pin, pout = PRICES.get(self.model, (0.0, 0.0))
         u = resp.usage
         maliyet = (u.input_tokens * pin + u.output_tokens * pout) / 1e6 + (s.maliyet_usd or 0.0)

@@ -165,3 +165,53 @@ def test_tablo_atfi_olan_dayanakta_guncelleme_uyarisi(r):
     assert len(s["cumleler"]) == 1, [c.neden for c in s["cikarilan_cumleler"]]
     u = [x for x in s["uyarilar"] if x["tur"] == "tutar_guncellenir"]
     assert u and u[0]["kaynak"] == "kod" and "TKHK-tablo2026-1" in u[0]["metin"]
+
+
+# ------------------------------------------------------------------ model uyarılarının doğrulanması
+
+def _u(tur, metin, *dayanaklar):
+    return {"tur": tur, "metin": metin, "dayanaklar": [{"parca_id": p, "alinti": a} for p, a in dayanaklar]}
+
+
+def test_dogrulanan_model_uyarisi_gosterilir(r):
+    b = _baglam(r, "MSY-m9-1", "MSY-m10-1")
+    ham = {"durum": "cevaplandi", "cumleler": [GECERLI], "bulunamayan": [], "uyarilar": [
+        _u("diger", "Bilgilendirme yapılmazsa süre bir yıl sonra sona erer.",
+           ("MSY-m10-1", "cayma süresinin bittiği tarihten itibaren bir yıl sonra sona erer"))]}
+    s = son_islem(ham, b, "q")
+    assert [u["kaynak"] for u in s["uyarilar"]] == ["model"] and s["cikarilan_uyarilar"] == []
+    assert s["ust_not"] is None and s["durum"] == "cevaplandi"
+
+
+@pytest.mark.parametrize("uyari,neden", [
+    (_u("diger", "Kredi kartıyla ödeme bağlı kredi sayılmaz."), "dayanak yok"),                    # Sonnet A11 türü
+    (_u("diger", "Süre iki yıl sonra sona erer.",
+        ("MSY-m10-1", "cayma süresinin bittiği tarihten itibaren bir yıl sonra sona erer")), "sayı"),  # yanlış sayı
+    (_u("diger", "Uydurma alıntı.", ("MSY-m10-1", "bu cümle yönetmelikte hiç geçmiyor aslında")), "geçmiyor"),
+    (_u("diger", "Bağlam dışı parça.", ("TKHK-m11-1", "malın ayıplı olduğunun anlaşılması durumunda")), "bağlamda yok"),
+])
+def test_dogrulanamayan_model_uyarisi_gosterilmez(r, uyari, neden):
+    b = _baglam(r, "MSY-m9-1", "MSY-m10-1")
+    ham = {"durum": "cevaplandi", "cumleler": [GECERLI], "bulunamayan": [], "uyarilar": [uyari]}
+    s = son_islem(ham, b, "q")
+    assert not any(u["kaynak"] == "model" for u in s["uyarilar"])
+    assert len(s["cikarilan_uyarilar"]) == 1 and neden in s["cikarilan_uyarilar"][0]["neden"]
+    assert s["ust_not"] == "1 uyarı kaynağında doğrulanamadığı için çıkarıldı."
+    assert s["durum"] == "cevaplandi"   # uyarı çıkarılması cevabın durumunu düşürmez
+
+
+def test_cumle_ve_uyari_birlikte_cikarilinca_not(r):
+    b = _baglam(r, "MSY-m9-1")
+    bozuk = _c("Süre on gündür.", ("MSY-m9-1", "on gün içinde herhangi bir gerekçe"))
+    ham = {"durum": "cevaplandi", "cumleler": [GECERLI, bozuk], "bulunamayan": [],
+           "uyarilar": [_u("diger", "Dayanaksız.")]}
+    s = son_islem(ham, b, "q")
+    assert s["ust_not"] == "1 cümle ve 1 uyarı kaynağında doğrulanamadığı için çıkarıldı."
+    assert s["durum"] == "kismen_cevaplandi"
+
+
+def test_sema_ve_prompt_uyarilara_dayanak_ister():
+    from mevzuat_rag.answer import OUTPUT_SCHEMA, SYSTEM_PROMPT
+    item = OUTPUT_SCHEMA["properties"]["uyarilar"]["items"]
+    assert "dayanaklar" in item["required"]
+    assert "Uyarılar da cümleler gibi en az bir dayanak" in SYSTEM_PROMPT

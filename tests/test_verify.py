@@ -123,3 +123,31 @@ def test_sayi_tutarliligi_alintidaki_sayi_yeter():
 ])
 def test_ekli_birimler(metin, deger):
     assert sayilar(metin) == deger
+
+
+# ------------------------------------------------------------------ birimli sayı tutarlılığı
+
+def test_birim_farki_yakalanir():
+    p = {"metin": "(1) ... (2) Bu süre her halükarda bir yıl sonra sona erer.", "dipnotlar": [], "fikralar": [1, 2]}
+    # kaynakta "2" yalnız fıkra numarası; "iki yıl" süresi kaynakta yok
+    assert sayi_tutarliligi("Süre iki yıl sonra sona erer.", [], [p]) == [2]
+    assert sayi_tutarliligi("Süre bir yıl sonra sona erer.", [], [p]) == []
+
+
+def test_gun_ve_is_gunu_ayrilir():
+    p = {"metin": "talebin yöneltilmesinden itibaren otuz iş gününü geçemez", "dipnotlar": []}
+    assert sayi_tutarliligi("En fazla otuz iş günüdür.", [], [p]) == []
+    assert sayi_tutarliligi("En fazla 30 iş günüdür.", [], [p]) == []
+    assert sayi_tutarliligi("En fazla otuz gündür.", [], [p]) == [30]
+
+
+def test_tutar_birimiyle(parcalar):
+    t = parcalar["ETK-tablo2026-1"]
+    assert sayi_tutarliligi("Ceza 2.859 TL ile 28.620 TL arasındadır.", [], [t]) == []
+    assert sayi_tutarliligi("Ceza 2.859 gündür.", [], [t]) == [2859]
+
+
+def test_birimsiz_sayilar_deger_olarak_denetlenir(parcalar):
+    p = parcalar["ETK-m9-1"]   # dipnotta 12/2/2026 ve 2/3/2027
+    assert sayi_tutarliligi("Karar 2/3/2027 tarihinde yürürlüğe girer.", [], [p]) == []
+    assert sayi_tutarliligi("Karar 2/3/2028 tarihinde yürürlüğe girer.", [], [p]) == [2028]
