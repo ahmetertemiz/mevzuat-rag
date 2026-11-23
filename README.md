@@ -5,6 +5,8 @@ Cevaptaki her cümle, mevzuattan kelimesi kelimesine bir alıntıya dayanır. Al
 bulunamazsa cümle kullanıcıya gösterilmez. Cevap belgelerde yoksa araç bunu açıkça söyler; genel
 bilgiyle boşluk doldurmaz.
 
+- **Canlı demo:** https://mevzuat-rag.streamlit.app (kendi Anthropic API anahtarınızla çalışır;
+  örnek sorular anahtarsız görüntülenebilir)
 - **Arayüz:** `streamlit run streamlit_app.py` (Streamlit)
 - **Komut satırı:** `python ask.py "soru"`
 - **Hukuki tavsiye değildir.** Araç mevzuatın ne dediğini aktarır, somut olay hakkında görüş bildirmez.
@@ -236,7 +238,7 @@ Zayıf yanlar:
   - Sayaç UTC gününe göre sıfırlanır.
   - Kalıcı ve paylaşılan bir sınır gerekiyorsa API sağlayıcısının harcama sınırı da ayarlanmalı.
 
-**Streamlit Community Cloud'da yayın:**
+**Streamlit Community Cloud'da yayın** (yayındaki adres: https://mevzuat-rag.streamlit.app):
 
 1. Depoyu bağla. Ana dosya `streamlit_app.py`, bağımlılık dosyası `requirements.txt`.
 2. Secrets gerekmez: demo ziyaretçi anahtarıyla ve kayıtlı örnek cevaplarla çalışır.
