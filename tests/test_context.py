@@ -80,3 +80,53 @@ def test_tablo_atfi_yoksa_tablo_eklenmez(r):
 def test_etk_m12_dipnotu_etk_tablosunu_ekler(r):
     b = kur(_by_id(r, "ETK-m12-1"), "ceza", r)
     assert "ETK-tablo2026-1" in b.ek_parcalar and "TKHK-tablo2026-1" not in b.ek_parcalar
+
+
+# ------------------------------------------------------------------ atıf takibi (docs/kararlar.md)
+
+def test_madde_atiflari_ayni_belge_ve_fikra():
+    from mevzuat_rag.context import madde_atiflari
+    m = madde_atiflari("Bu Kanunun 40 ıncı maddesinin üçüncü fıkrası ile 47 nci maddesinin ikinci "
+                       "fıkrasında belirtilen yükümlülükler; 55 inci ve 56 ncı maddelerinde")
+    assert m == [("40", 3), ("47", 2), ("55", None), ("56", None)]
+
+
+def test_madde_atiflari_dis_atif_alinmaz():
+    from mevzuat_rag.context import madde_atiflari
+    assert madde_atiflari("213 sayılı Kanunun 107/A maddesi hükümlerine göre") == []
+    assert madde_atiflari("Türk Borçlar Kanununun 125 inci maddesi uygulanır") == []
+    assert madde_atiflari("Kanunun 48 inci maddesine aykırı") == []
+    assert madde_atiflari("on dört gün içinde") == []
+
+
+def _r():
+    from mevzuat_rag.retrieve import Retriever
+    return Retriever(load_model=False)
+
+
+def test_atif_takibi_ilgili_fikrayi_ekler():
+    r = _r()
+    m = {c["chunk_id"]: c for c in r.chunks}
+    soru = "iş yeri dışında kurulan sözleşme yetkilendirilmiş satıcı tarafından kurulmazsa ceza"
+    b = kur([m["TKHK-m77-2"], m["MSY-m9-1"]], soru, r, atif_takibi=True)
+    assert "TKHK-m47-1" in b.ek_parcalar                     # 47/2 -> fıkra 2'yi içeren parça
+    assert b.metin.count("numarayla bu maddeye atıf") <= 3
+    assert "TKHK-m77-2 parçası numarayla bu maddeye atıf yaptığı için eklendi" in b.metin
+
+
+def test_atif_takibi_sinirlari():
+    from mevzuat_rag.context import MAX_ATIF_EK, _atif_ekleri
+    r = _r()
+    m = {c["chunk_id"]: c for c in r.chunks}
+    ilk = [m["MSY-m9-1"], m["MSY-m10-1"], m["MSY-m11-1"], m["TKHK-m77-2"]]   # 77-2 dördüncü: izlenmez
+    assert all(kaynak["chunk_id"] != "TKHK-m77-2" for _, kaynak in _atif_ekleri(ilk, ilk, "soru", r))
+    ekler = _atif_ekleri([m["TKHK-m77-2"]], [m["TKHK-m77-2"]], "ceza", r)
+    assert len(ekler) == MAX_ATIF_EK
+    assert all(kaynak["chunk_id"] == "TKHK-m77-2" for _, kaynak in ekler)   # tek adım
+
+
+def test_atif_takibi_kapaliyken_ek_yok():
+    r = _r()
+    m = {c["chunk_id"]: c for c in r.chunks}
+    b = kur([m["TKHK-m77-2"]], "soru", r, atif_takibi=False)
+    assert "TKHK-m47-1" not in b.ek_parcalar

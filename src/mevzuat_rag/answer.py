@@ -314,12 +314,14 @@ def kullanici_mesaji(baglam: Baglam, soru: str) -> str:
 
 class Cevaplayici:
     def __init__(self, arayici=None, model: str = CEVAP_MODEL, effort: str = CEVAP_EFFORT,
-                 client=None, k: int = K_VARSAYILAN, timeout: float = 60.0):
+                 client=None, k: int = K_VARSAYILAN, timeout: float = 60.0,
+                 atif_takibi: bool | None = None):
         if arayici is None:
             from .pipeline import Arayici
             arayici = Arayici()
         self.arayici = arayici
         self.model, self.effort, self.k = model, effort, k
+        self.atif_takibi = atif_takibi   # None: context.ATIF_TAKIBI_VARSAYILAN
         if client is None:
             import anthropic
             load_dotenv()
@@ -347,7 +349,7 @@ class Cevaplayici:
         t0 = time.perf_counter()
         arama = {"yeniden_yazim": s.yeniden_yazim, "sorgular": s.sorgular, "uyari": s.uyari,
                  "maliyet_usd": s.maliyet_usd}
-        baglam = kur(s.hits, soru, self.arayici.retriever, k=self.k)
+        baglam = kur(s.hits, soru, self.arayici.retriever, k=self.k, atif_takibi=self.atif_takibi)
 
         mesaj = kullanici_mesaji(baglam, soru)
         bos = {"durum": "bulunamadi", "cumleler": [], "bulunamayan": [], "uyarilar": []}
