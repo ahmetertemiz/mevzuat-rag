@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -93,3 +94,24 @@ def test_varsayilan_hat_cok_kosu_ozeti(tmp_path):
 def test_ozet_bicimi():
     assert ev._ozet([12, 14, 13]) == "12 / 13 / 14"
     assert ev._ozet([21, 21]) == "21 / 21 / 21"
+
+
+def test_cevap_olcutleri():
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import eval_answers as ea
+    chunks = {"MSY-m9-1": {"belge_kisa_ad": "MSY", "madde_no": "9"},
+              "TKHK-m11-1": {"belge_kisa_ad": "TKHK", "madde_no": "11"}}
+    q = {"id": "X", "tur": "normal", "dayanak": [["MSY:9", "TKHK:48"]], "olgular": [["on dört gün", "14 gün"], ["yok"]]}
+    c = {"durum": "cevaplandi", "baglam_parcalari": ["MSY-m9-1", "TKHK-m11-1"],
+         "cumleler": [{"metin": "Süre 14 gündür.", "dayanaklar": [{"parca_id": "MSY-m9-1", "dogrulandi": True}]}],
+         "cikarilan_cumleler": [{"metin": "x", "dayanaklar": [{"parca_id": "TKHK-m11-1", "dogrulandi": False}]}],
+         "uyarilar": [], "maliyet_usd": 0.002, "sure_sn": 3.0, "arama": {"maliyet_usd": 0.0005}}
+    r = ea.olc(q, c, chunks)
+    assert r["madde_dogru"] and r["baglamda"] and not r["yanlis_ret"]
+    assert (r["olgu_bulunan"], r["olgu_toplam"]) == (1, 2)
+    assert (r["alinti_dogru"], r["alinti_toplam"]) == (1, 2)
+    assert (r["cumle_cikarilan"], r["cumle_toplam"]) == (1, 2)
+    assert r["maliyet"] == pytest.approx(0.0015)
+    qc = {"id": "Y", "tur": "cevapsiz", "dayanak": [], "olgular": []}
+    rc = ea.olc(qc, {**c, "durum": "bulunamadi", "cumleler": [], "cikarilan_cumleler": []}, chunks)
+    assert rc["dogru_ret"] and not rc["yanlis_ret"]

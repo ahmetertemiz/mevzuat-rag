@@ -109,9 +109,36 @@ maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzu
 Modeller: `bge-m3`, `granite-97m`, `granite-97m-fp32`, `e5-small`. Bellek ve süre:
 `reports/performans_<model>.md` (`scripts\benchmark_model.py --model <model>`).
 
+## Cevap üretimi
+
+```powershell
+.venv\Scripts\python ask.py "Bankadan çektiğim krediden vazgeçtim, kaç gün içinde cayabilirim?"
+.venv\Scripts\python ask.py "..." --json                    # tüm alanlar (çıkarılan cümleler dahil)
+.venv\Scripts\python ask.py "..." --model claude-sonnet-5-5
+```
+
+Akış: soru → arama (dondurulmuş varsayılan hat, ilk 8 parça) → bağlam (`context.py`) → model
+(JSON şeması) → doğrulama (`verify.py`) → cevap (`answer.py`, `Cevaplayici`).
+
+- **Bağlam:** belge sürüm bilgisi, parçalar (kimlik, bağlam başlığı, durum, resmî metin),
+  tekilleştirilmiş dipnotlar. Ceza tablosu bağlamdaysa bağlı madde parçalarından en ilgili 3'ü
+  eklenir. Yeniden yazılmış sorgular modele verilmez.
+- **Çıktı:** durum (`cevaplandi` / `kismen_cevaplandi` / `bulunamadi`), cümleler, her cümle için
+  parça kimliği ve kelimesi kelimesine alıntı, bulunamayan kısımlar, uyarılar.
+- **Doğrulama:** her alıntı gösterilen parçada aranır (boşluk, tire, tırnak, büyük harf farklarına
+  dayanıklı). Cümledeki süre, tutar, oran, tarih ve madde numaraları alıntıda ya da parçada geçmeli;
+  rakam ve yazı eşlenir ("14 gün" = "on dört gün"). Doğrulanamayan cümle **gösterilmez**; cevabın
+  üstüne "N cümle kaynağında doğrulanamadığı için çıkarıldı" notu konur ve durum en fazla
+  `kismen_cevaplandi` olur.
+- **Kod uyarıları** (modelden bağımsız): AYM iptal dipnotu, mülga hüküm, ceza tablosu belirsizliği,
+  aramanın düz BM25'e düşmesi. Sabit kapanış: hukuki tavsiye değildir.
+- Model: `CEVAP_MODEL` (şu an `claude-haiku-5-5`; Haiku/Sonnet karşılaştırması
+  [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md), seçim bekliyor).
+
 ## Değerlendirme
 
 ```powershell
+.venv\Scripts\python scripts\eval_answers.py --runs 3                            # cevap üretimi: Haiku ve Sonnet, 3'er koşu
 .venv\Scripts\python scripts\eval_retrieval.py                                   # dense / bm25 / hybrid (embedding kurulumu ister)
 .venv\Scripts\python scripts\eval_retrieval.py --varsayilan --runs 3             # varsayılan hat, canlı model çağrısı, 3 koşu
 ```
@@ -125,7 +152,8 @@ Modeller: `bge-m3`, `granite-97m`, `granite-97m-fp32`, `e5-small`. Bellek ve sü
 - Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md) (yöntemler),
   [evals/DENEYLER.md](evals/DENEYLER.md) (modeller × hibrit × yeniden yazım, bellek, süre, maliyet),
   [evals/MODEL_KARSILASTIRMA.md](evals/MODEL_KARSILASTIRMA.md) (yeniden yazım modeli, 3'er koşu),
-  [evals/RAPOR_retrieval_varsayilan.md](evals/RAPOR_retrieval_varsayilan.md) (varsayılan hat, tek koşu).
+  [evals/RAPOR_retrieval_varsayilan.md](evals/RAPOR_retrieval_varsayilan.md) (varsayılan hat, 3 koşu),
+  [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md) (cevap üretimi, `evals/answers.yaml`, 20 soru, elle okuma dahil).
 
 ## Bilinen sınırlar
 

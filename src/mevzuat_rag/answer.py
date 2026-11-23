@@ -247,8 +247,12 @@ class Cevaplayici:
         return self.client.messages.create(**kwargs)
 
     def cevapla(self, soru: str) -> Cevap:
+        return self.cevapla_aramayla(soru, self.arayici.ara(soru, k=self.k))
+
+    def cevapla_aramayla(self, soru: str, s) -> Cevap:
+        """Hazır bir arama sonucuyla (pipeline.SearchResult) cevap üretir. Değerlendirmede iki model
+        aynı aramayı (aynı yeniden yazılmış sorguları) paylaşsın diye ayrıldı."""
         t0 = time.perf_counter()
-        s = self.arayici.ara(soru, k=self.k)
         arama = {"yeniden_yazim": s.yeniden_yazim, "sorgular": s.sorgular, "uyari": s.uyari,
                  "maliyet_usd": s.maliyet_usd}
         baglam = kur(s.hits, soru, self.arayici.retriever, k=self.k)
