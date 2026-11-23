@@ -1,5 +1,6 @@
 """Arayüz mantığı (src/mevzuat_rag/arayuz.py) ve Streamlit sayfası (streamlit_app.py)."""
 import datetime as dt
+import os
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -130,3 +131,98 @@ def test_requirements_yayin_ortaminda_torch_ve_pymupdf_yok():
 def test_gizli_dosyalar_gitignore_icinde():
     gi = (ROOT / ".gitignore").read_text(encoding="utf-8")
     assert ".env" in gi and ".streamlit/secrets.toml" in gi
+
+
+# ------------------------------------------------------------------ Streamlit sayfası (AppTest, sahte API)
+
+GIZLI = "sk-ant-test-GIZLI-ANAHTAR-123"
+
+
+class _SahteAnthropic:
+    """anthropic.Anthropic yerine: yeniden yazımda sorgu, cevapta MSY m.9'a dayanan bir cümle döner."""
+    olusturulan: list = []
+
+    def __init__(self, api_key=None, **kw):
+        type(self).olusturulan.append(api_key)
+        self.messages = SimpleNamespace(create=self._create)
+        self.beta = SimpleNamespace(messages=SimpleNamespace(create=self._create))
+
+    def _create(self, **kw):
+        if "sorgular" in json.dumps(kw.get("output_config", {})):
+            out = {"sorgular": ["mesafeli sözleşme cayma hakkı süresi"]}
+        else:
+            out = {"durum": "cevaplandi", "bulunamayan": [], "uyarilar": [], "cumleler": [{
+                "metin": "Tüketici on dört gün içinde gerekçe göstermeden cayabilir.",
+                "dayanaklar": [{"parca_id": "MSY-m9-1",
+                                "alinti": "on dört gün içinde herhangi bir gerekçe göstermeksizin"}]}]}
+        return SimpleNamespace(stop_reason="end_turn", content=[SimpleNamespace(type="text", text=json.dumps(out))],
+                               usage=SimpleNamespace(input_tokens=100, output_tokens=50))
+
+
+@pytest.fixture
+def app(monkeypatch):
+    import anthropic
+    import streamlit as st
+    from streamlit.testing.v1 import AppTest
+
+    monkeypatch.setattr(anthropic, "Anthropic", _SahteAnthropic)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "")          # .env okunmasın (setdefault)
+    monkeypatch.delenv("GUNLUK_CAGRI_SINIRI", raising=False)
+    _SahteAnthropic.olusturulan = []
+    st.cache_resource.clear()
+
+    def yap(**env):
+        for k, v in env.items():
+            monkeypatch.setenv(k, v)
+        st.cache_resource.clear()
+        return AppTest.from_file(str(ROOT / "streamlit_app.py"), default_timeout=30)
+    yield yap
+    st.cache_resource.clear()
+
+
+def _metinler(at) -> str:
+    parcalar = []
+    for tur in ("markdown", "caption", "error", "warning", "info", "text", "title", "subheader"):
+        parcalar += [str(getattr(e, "value", "")) for e in getattr(at, tur)]
+    parcalar += [str(getattr(e, "label", "")) for e in at.button]
+    return "\n".join(parcalar)
+
+
+def test_anahtar_yoksa_sor_devre_disi(app):
+    at = app().run()
+    assert not at.exception
+    assert at.button[0].disabled
+    assert "Ortak anahtar tanımlı değil" in _metinler(at)
+
+
+def test_ornek_soru_cevap_ve_kaynak_gosterir(app):
+    at = app(ANTHROPIC_API_KEY="sahte-ortak").run()
+    at.button(key="ornek_0").click().run()            # örnek soru metni kutuya yazılır ve çalışır
+    assert not at.exception and at.text_area(key="soru").value.startswith("Abonelik")
+    at.text_area(key="soru").input("Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?")
+    at.button[0].click().run()
+    assert not at.exception
+    m = _metinler(at)
+    assert "on dört gün içinde gerekçe göstermeden cayabilir" in m
+    assert "Hukuki tavsiye değildir" in m and "2026-11-23" in m
+    assert "Bugün kalan ortak çağrı: **296 / 300**" in m   # iki soru × (yeniden yazım + cevap)
+    assert "MSY m.9/1" in str([b.proto for b in at.get("popover")])
+
+
+def test_gunluk_sinir_dolunca_cagri_yapilmaz(app):
+    at = app(ANTHROPIC_API_KEY="sahte-ortak", GUNLUK_CAGRI_SINIRI="1").run()
+    at.button(key="ornek_1").click().run()
+    assert not at.exception
+    assert any("Günlük sınır doldu" in str(e.proto.title) or "sınırı doldu" in e.value for e in at.error)
+    assert "on dört gün" not in _metinler(at)
+
+
+def test_ziyaretci_anahtari_kullanilir_ve_gorunmez(app):
+    at = app().run()
+    at.text_input(key="ziyaretci_anahtari").input(GIZLI).run()
+    at.button(key="ornek_2").click().run()
+    assert not at.exception
+    assert GIZLI in _SahteAnthropic.olusturulan              # istemciye verildi
+    assert GIZLI not in _metinler(at)                         # ekranda yok
+    assert GIZLI not in os.environ.get("ANTHROPIC_API_KEY", "")
+    assert "Sizin anahtarınız kullanılıyor" in _metinler(at)
