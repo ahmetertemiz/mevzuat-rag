@@ -1,4 +1,5 @@
 """Değerlendirme ölçütünün mantığı (model gerektirmez)."""
+import json
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -52,3 +53,43 @@ def test_soru_seti_bicimi():
     assert sum(q["tur"] == "cevapsiz" for q in qs) == 4
     assert all(q["dogru"] == [] for q in qs if q["tur"] == "cevapsiz")
     assert all(len(q["dogru"]) == 2 for q in qs if q["tur"] == "iki_madde")
+
+
+def test_varsayilan_hat_cok_kosu_ozeti(tmp_path):
+    """--varsayilan --runs N: her koşu ayrı ölçülür; en düşük / medyan / en yüksek raporlanır.
+    Sahte yazıcı koşudan koşuya farklı sorgu üretir (model çağrısı yok)."""
+    from mevzuat_rag.pipeline import Arayici
+    from mevzuat_rag.retrieve import Retriever
+    from mevzuat_rag.rewrite import Rewrite
+
+    class Degisken:
+        def __init__(self):
+            self.i = 0
+
+        def rewrite(self, q):
+            self.i += 1
+            # 1. koşu: yardımcı sorgu; 2. koşu: alakasız sorgu; 3. koşu: hata (düz BM25'e düşer)
+            kosu = (self.i - 1) // 2 + 1
+            if kosu == 3:
+                raise RuntimeError("API hatası")
+            sg = ["mesafeli sözleşmelerde cayma hakkı"] if kosu == 1 else ["xyzqw"]
+            return Rewrite(q, sg, "sahte", 1, 1, 0.0, 0.1, "end_turn", [])
+
+    qs = [
+        {"id": "A", "tur": "gunluk_dil", "soru": "ayakkabıyı beğenmedim geri verebilir miyim",
+         "dogru": [["MSY:9", "TKHK:48"]]},
+        {"id": "B", "tur": "madde_numarasi", "soru": "6502 m.48", "dogru": [["TKHK:48"]]},
+    ]
+    a = Arayici(retriever=Retriever(load_model=False), rewriter=Degisken())
+    ozet = ev.evaluate_default(qs, "test", runs=3, arayici=a, out_dir=tmp_path)
+    assert all(len(v) == 3 for v in ozet.values())
+    rapor = (tmp_path / "RAPOR_test_varsayilan.md").read_text(encoding="utf-8")
+    assert "en düşük / medyan / en yüksek" in rapor and "**3 koşu**" in rapor
+    data = json.loads((tmp_path / "sonuclar_test_varsayilan.json").read_text(encoding="utf-8"))
+    assert len(data["kosular"]) == 3
+    assert [r["yeniden_yazim"] for r in data["kosular"][2]] == ["başarısız", "başarısız"]
+
+
+def test_ozet_bicimi():
+    assert ev._ozet([12, 14, 13]) == "12 / 13 / 14"
+    assert ev._ozet([21, 21]) == "21 / 21 / 21"

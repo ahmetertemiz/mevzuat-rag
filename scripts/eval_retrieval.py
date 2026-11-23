@@ -208,18 +208,11 @@ def render(res: dict, questions: list[dict], cls: dict) -> str:
     return "\n".join(L) + "\n"
 
 
-def evaluate_default(questions: list[dict], stem: str) -> None:
-    """Varsayılan hattı (pipeline.Arayici) olduğu gibi ölçer: önbellek yok, her soru için canlı
-    yeniden yazım çağrısı; çağrı başarısız olursa üretimdeki gibi düz BM25. Tek koşu."""
-    from mevzuat_rag import config
-    from mevzuat_rag.pipeline import Arayici
-    from mevzuat_rag.rewrite import PROMPT_VERSION, REWRITE_MODEL
-
-    a = Arayici()
-    n = len(a.retriever.chunks)
+def _run_default(arayici, questions: list[dict]) -> list[dict]:
+    n = len(arayici.retriever.chunks)
     rows = []
     for q in questions:
-        s = a.ara(q["soru"], k=n)
+        s = arayici.ara(q["soru"], k=n)
         keys = [k for k, _ in ranked_articles(s.hits)]
         ranks = []
         for req in q["dogru"]:
@@ -227,36 +220,93 @@ def evaluate_default(questions: list[dict], stem: str) -> None:
             ranks.append(min(rr) if rr else None)
         row = {"id": q["id"], "tur": q["tur"], "soru": q["soru"], "siralar": ranks, "ilk5": keys[:5],
                "yeniden_yazim": s.yeniden_yazim, "sorgular": s.sorgular, "uyari": s.uyari,
-               "maliyet_usd": s.maliyet_usd, "sure_sn": s.yeniden_yazim_sn}
+               "atilan_sorgular": s.atilan_sorgular, "maliyet_usd": s.maliyet_usd,
+               "sure_sn": s.yeniden_yazim_sn}
         for k in KS:
             met = [x is not None and x <= k for x in ranks]
             row[f"@{k}"] = bool(met) and all(met)
         rows.append(row)
+    return rows
 
-    ans = [r for r in rows if r["tur"] != "cevapsiz"]
-    turler = [t for t in ("madde_dili", "gunluk_dil", "iki_madde", "madde_numarasi") if any(r["tur"] == t for r in ans)]
+
+def _ozet(vals: list[int]) -> str:
+    """en düşük / medyan / en yüksek"""
+    return f"{min(vals)} / {statistics.median(vals):g} / {max(vals)}"
+
+
+def evaluate_default(questions: list[dict], stem: str, runs: int = 1, arayici=None,
+                     out_dir: Path | None = None) -> dict:
+    """Varsayılan hattı (pipeline.Arayici) olduğu gibi ölçer: önbellek yok, her soru için canlı
+    yeniden yazım çağrısı; çağrı başarısız olursa üretimdeki gibi düz BM25. Model çıktısı koşudan
+    koşuya değiştiği için `runs` kez koşulur; en düşük, medyan ve en yüksek raporlanır."""
+    from mevzuat_rag import config
+    from mevzuat_rag.pipeline import Arayici
+    from mevzuat_rag.rewrite import PROMPT_VERSION, REWRITE_MODEL
+
+    out_dir = out_dir or (ROOT / "evals")
+    a = arayici or Arayici()
+    all_rows = []
+    for i in range(1, runs + 1):
+        rows = _run_default(a, questions)
+        all_rows.append(rows)
+        ans = [r for r in rows if r["tur"] != "cevapsiz"]
+        print(f"koşu {i}: " + "  ".join(f"@{k}={sum(r[f'@{k}'] for r in ans)}/{len(ans)}" for k in KS)
+              + f"  başarısız yazım={sum(r['yeniden_yazim'] != 'uygulandı' for r in rows)}")
+
+    ans_ids = [q["id"] for q in questions if q["tur"] != "cevapsiz"]
+    turler = [t for t in ("madde_dili", "gunluk_dil", "iki_madde", "madde_numarasi")
+              if any(q["tur"] == t for q in questions)]
+    per = [{r["id"]: r for r in rows} for rows in all_rows]
+
+    def count(p, ids, k):
+        return sum(p[i][f"@{k}"] for i in ids)
+
+    summary = {f"@{k}": [count(p, ans_ids, k) for p in per] for k in KS}
     L = [f"# Varsayılan hat değerlendirmesi: {stem}\n",
-         f"`python scripts/eval_retrieval.py --set evals/{stem}.yaml --varsayilan` ile üretildi. "
+         f"`python scripts/eval_retrieval.py --set evals/{stem}.yaml --varsayilan --runs {runs}` ile üretildi. "
          f"Hat: `{config.DEFAULT_SEARCH_MODE}` + yeniden yazım (`{REWRITE_MODEL}`, prompt v{PROMPT_VERSION}), "
-         "önbelleksiz, tek koşu.\n",
-         f"| @1 | @3 | @5 | Yeniden yazım başarısız | Toplam maliyet |", "|---|---|---|---|---|",
-         "| " + " | ".join(f"{sum(r[f'@{k}'] for r in ans)}/{len(ans)}" for k in KS)
-         + f" | {sum(r['yeniden_yazim'] != 'uygulandı' for r in rows)} | ${sum(r['maliyet_usd'] for r in rows):.4f} |", "",
-         "| Tür | n | @1 | @3 | @5 |", "|---|---|---|---|---|"]
+         f"önbelleksiz, **{runs} koşu**. Cevaplı soru: {len(ans_ids)}.\n",
+         "## Özet (en düşük / medyan / en yüksek)\n",
+         "| | @1 | @3 | @5 |", "|---|---|---|---|",
+         f"| Cevaplı {len(ans_ids)} soru | " + " | ".join(_ozet(summary[f'@{k}']) for k in KS) + " |"]
     for t in turler:
-        rr = [r for r in ans if r["tur"] == t]
-        L.append(f"| {TUR_AD[t]} | {len(rr)} | " + " | ".join(str(sum(r[f'@{k}'] for r in rr)) for k in KS) + " |")
-    L += ["", "| Soru | Tür | Sıra | İlk 3 | Sorgular / uyarı |", "|---|---|---|---|---|"]
-    for r in rows:
-        sira = ", ".join("–" if x is None else str(x) for x in r["siralar"]) or "—"
+        ids = [q["id"] for q in questions if q["tur"] == t]
+        L.append(f"| {TUR_AD[t]} (n={len(ids)}) | "
+                 + " | ".join(_ozet([count(p, ids, k) for p in per]) for k in KS) + " |")
+    L += ["", "## Koşular\n",
+          "| Koşu | @1 | @3 | @5 | Başarısız yazım | Atılan sorgu | Maliyet | Yazım süresi medyanı |",
+          "|---|---|---|---|---|---|---|---|"]
+    for i, rows in enumerate(all_rows, 1):
+        p = per[i - 1]
+        secs = [r["sure_sn"] for r in rows if r["sure_sn"] is not None]
+        L.append(f"| {i} | " + " | ".join(str(count(p, ans_ids, k)) for k in KS)
+                 + f" | {sum(r['yeniden_yazim'] != 'uygulandı' for r in rows)}"
+                 + f" | {sum(len(r['atilan_sorgular']) for r in rows)}"
+                 + f" | ${sum(r['maliyet_usd'] for r in rows):.4f}"
+                 + f" | {(statistics.median(secs) if secs else 0):.1f} sn |")
+    L += ["", "## Soru bazında doğru maddenin sırası (koşu sırasıyla)\n",
+          "| Soru | Tür | Sıralar | @5 |", "|---|---|---|---|"]
+    for q in questions:
+        if q["tur"] == "cevapsiz":
+            continue
+        cells = ["/".join("–" if x is None else str(x) for x in p[q["id"]]["siralar"]) for p in per]
+        L.append(f"| {q['id']} | {TUR_AD[q['tur']]} | {', '.join(cells)} | "
+                 + "".join("✓" if p[q["id"]]["@5"] else "✗" for p in per) + " |")
+    L += ["", "## Koşu 1: üretilen sorgular ve uyarılar\n",
+          "| Soru | Sorgular / uyarı | Atılan |", "|---|---|---|"]
+    for r in all_rows[0]:
         note = " · ".join(f"`{x}`" for x in r["sorgular"]) or (r["uyari"] or "")
-        L.append(f"| {r['id']} | {TUR_AD[r['tur']]} | {sira} | {', '.join(r['ilk5'][:3])} | {note} |")
-    out = ROOT / "evals" / f"RAPOR_{stem}_varsayilan.md"
+        dropped = "; ".join(f"`{d['sorgu']}` ({d['neden']})" for d in r["atilan_sorgular"])
+        L.append(f"| {r['id']} | {note} | {dropped} |")
+    out = out_dir / f"RAPOR_{stem}_varsayilan.md"
     out.write_text("\n".join(L) + "\n", encoding="utf-8", newline="\n")
-    (ROOT / "evals" / f"sonuclar_{stem}_varsayilan.json").write_text(
-        json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
-    print(f"rapor -> {out.relative_to(ROOT)}")
-    print("varsayılan " + "  ".join(f"@{k}={sum(r[f'@{k}'] for r in ans)}/{len(ans)}" for k in KS))
+    (out_dir / f"sonuclar_{stem}_varsayilan.json").write_text(
+        json.dumps({"kosular": all_rows, "ozet": summary}, ensure_ascii=False, indent=1),
+        encoding="utf-8", newline="\n")
+    print(f"rapor -> {out}")
+    print("özet (en düşük / medyan / en yüksek): "
+          + "  ".join(f"@{k}={_ozet(summary[f'@{k}'])}" for k in KS))
+    return summary
 
 
 def main() -> None:
@@ -266,13 +316,16 @@ def main() -> None:
     ap.add_argument("--set", default="evals/retrieval.yaml")
     ap.add_argument("--varsayilan", action="store_true",
                     help="yalnızca varsayılan hattı (BM25 + yeniden yazım, canlı model çağrısı) ölç")
+    ap.add_argument("--runs", type=int, default=1,
+                    help="--varsayilan için koşu sayısı; en düşük, medyan ve en yüksek raporlanır")
     args = ap.parse_args()
     qpath = ROOT / args.set
     questions = yaml.safe_load(qpath.read_text(encoding="utf-8"))["sorular"]
     if not questions:
         sys.exit(f"{args.set} boş.")
     if args.varsayilan:
-        return evaluate_default(questions, qpath.stem)
+        evaluate_default(questions, qpath.stem, runs=args.runs)
+        return
     r = Retriever()
     res = evaluate(r, questions)
     stem = qpath.stem

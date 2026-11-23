@@ -109,13 +109,15 @@ Modeller: `bge-m3`, `granite-97m`, `granite-97m-fp32`, `e5-small`. Bellek ve sü
 
 ```powershell
 .venv\Scripts\python scripts\eval_retrieval.py                                   # dense / bm25 / hybrid (embedding kurulumu ister)
-.venv\Scripts\python scripts\eval_retrieval.py --varsayilan                      # varsayılan hat, canlı model çağrısı
+.venv\Scripts\python scripts\eval_retrieval.py --varsayilan --runs 3             # varsayılan hat, canlı model çağrısı, 3 koşu
 ```
 
 - `evals/retrieval.yaml`: 30 soruluk geliştirme seti (25'i arama kodu yazılmadan, 5 madde numarası
   sorusu sonraki deneylerden önce commit'lendi). Seçenek karşılaştırmaları bu sette yapılır.
-- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar; seçilen yapılandırma bir kez
-  koşulur: `scripts\eval_retrieval.py --set evals/holdout.yaml --varsayilan`.
+- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar; seçilen yapılandırma (BM25 +
+  yeniden yazım, Haiku 5.5, prompt v3) koşulur. Yeniden yazım koşudan koşuya değiştiği için 3 koşu
+  yapılır; en düşük, medyan ve en yüksek raporlanır:
+  `scripts\eval_retrieval.py --set evals/holdout.yaml --varsayilan --runs 3`.
 - Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md) (yöntemler),
   [evals/DENEYLER.md](evals/DENEYLER.md) (modeller × hibrit × yeniden yazım, bellek, süre, maliyet),
   [evals/MODEL_KARSILASTIRMA.md](evals/MODEL_KARSILASTIRMA.md) (yeniden yazım modeli, 3'er koşu),
