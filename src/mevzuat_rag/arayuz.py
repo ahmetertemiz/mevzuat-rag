@@ -117,11 +117,30 @@ class GunlukSayac:
                 raise SinirAsildi("Günlük model çağrısı sınırına ulaşıldı.")
             self._sayi += 1
 
+    def iade(self) -> None:
+        """al() ile ayrılan bir hakkı geri verir (çağrı kimlik doğrulama ya da bağlantı hatasıyla
+        sonuçlandıysa). Gün değiştiyse yeni günün sayısından düşülmez."""
+        with self._kilit:
+            self._gun_kontrol()
+            self._sayi = max(0, self._sayi - 1)
+
+
+def sayilmayan_hata(e: BaseException) -> bool:
+    """Günlük sınırdan düşülmeyen hatalar: kimlik doğrulama (401/403) ve bağlantı (zaman aşımı dahil).
+    Bu çağrılar modelde işlem yapmadan biter."""
+    try:
+        import anthropic
+    except ImportError:
+        return False
+    return isinstance(e, (anthropic.AuthenticationError, anthropic.PermissionDeniedError,
+                          anthropic.APIConnectionError))
+
 
 class SayacliIstemci:
     """anthropic.Anthropic'i sarar: messages.create ve beta.messages.create her çağrıda sayaçtan pay
     alır (sayac None ise sayılmaz: ziyaretçinin kendi anahtarı). SDK'nın kendi ağ yeniden denemeleri
-    tek çağrı sayılır."""
+    tek çağrı sayılır. Kimlik doğrulama ve bağlantı hatasıyla biten çağrının payı geri verilir;
+    cagri_sayisi yalnız yanıt dönen çağrıları sayar."""
 
     def __init__(self, istemci, sayac: GunlukSayac | None):
         self._istemci, self._sayac = istemci, sayac
@@ -133,8 +152,14 @@ class SayacliIstemci:
         def create(**kw):
             if self._sayac is not None:
                 self._sayac.al()
+            try:
+                yanit = fn(**kw)
+            except Exception as e:
+                if self._sayac is not None and sayilmayan_hata(e):
+                    self._sayac.iade()   # kimlik doğrulama / bağlantı hatası sınırdan düşmez
+                raise
             self.cagri_sayisi += 1
-            return fn(**kw)
+            return yanit
         return create
 
 

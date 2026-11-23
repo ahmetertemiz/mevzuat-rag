@@ -303,3 +303,50 @@ def test_ziyaretci_anahtari_reddedilirse_anahtar_gecersiz(app, monkeypatch):
     at.button(key="sor").click().run()
     assert any("Anahtar geçersiz" in str(e.proto.title) for e in at.error)
     assert GIZLI not in _metinler(at)
+
+
+def test_kimlik_ve_baglanti_hatasi_sayactan_dusmez():
+    import anthropic
+    import httpx2 as httpx
+    req = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
+    hatalar = [anthropic.AuthenticationError("x", response=httpx.Response(401, request=req), body=None),
+               anthropic.APIConnectionError(request=req),
+               anthropic.APITimeoutError(request=req)]
+    s = GunlukSayac(10)
+    for h in hatalar:
+        def at(_h=h, **kw):
+            raise _h
+        ist = SayacliIstemci(SimpleNamespace(messages=SimpleNamespace(create=at),
+                                             beta=SimpleNamespace(messages=SimpleNamespace(create=at))), s)
+        with pytest.raises(type(h)):
+            ist.messages.create(model="x")
+        assert ist.cagri_sayisi == 0
+    assert s.kalan() == 10
+
+
+def test_diger_api_hatalari_sayactan_duser():
+    import anthropic
+    import httpx2 as httpx
+    req = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
+
+    def at(**kw):
+        raise anthropic.InternalServerError("x", response=httpx.Response(500, request=req), body=None)
+    s = GunlukSayac(10)
+    ist = SayacliIstemci(SimpleNamespace(messages=SimpleNamespace(create=at),
+                                         beta=SimpleNamespace(messages=SimpleNamespace(create=at))), s)
+    with pytest.raises(anthropic.InternalServerError):
+        ist.messages.create(model="x")
+    assert s.kalan() == 9   # model tarafında işlenmiş olabilecek çağrı sayılır
+
+
+def test_baglanti_hatasinda_arayuz_sayaci_dusmez(app, monkeypatch):
+    import anthropic
+    monkeypatch.setattr(anthropic, "Anthropic", _Baglantisiz)
+    at = app(ANTHROPIC_API_KEY="sahte-ortak").run()
+    at.text_area(key="soru").input("Cayma süresi kaç gün?")
+    at.button(key="sor").click().run()
+    assert not at.exception
+    m = _metinler(at)
+    assert any("Servise ulaşılamadı" in str(e.proto.title) for e in at.error)
+    assert "Bugün kalan ortak çağrı: **300 / 300**" in m
+
