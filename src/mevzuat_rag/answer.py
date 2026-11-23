@@ -153,6 +153,13 @@ def kod_uyarilari(dayanak_parcalari: list[dict], baglam: Baglam, arama: dict) ->
             m = p.get("mulga") or {}
             add("mulga", f"{p['belge_kisa_ad']} {p['madde_etiketi']} yürürlükten kaldırılmıştır "
                          f"(kaldırılma tarihi {m.get('tarih')}, dayanak: {m.get('dayanak')}).")
+        if any(d.get("tur") == "tablo_atfi" for d in p.get("dipnotlar") or []):
+            tablo = next((t for t in baglam.parcalar
+                          if t.get("tur") == "tablo" and t["belge_id"] == p["belge_id"]), None)
+            yer = f" ({tablo['chunk_id']}, {tablo.get('yil')} yılı)" if tablo else ""
+            add("tutar_guncellenir",
+                f"{p['belge_kisa_ad']} {p['madde_etiketi']}: madde metnindeki tutarlar her yıl güncellenir; "
+                f"güncel tutar idari para cezası tablosundadır{yer}.")
         if p.get("tur") == "tablo":
             add("ceza_tutari_belirsiz",
                 f"Tutarlar {p.get('yil')} yılı içindir. Tabloda bazı satırlarda aynı fıkra için birden çok "

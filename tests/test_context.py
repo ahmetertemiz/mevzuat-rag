@@ -63,3 +63,20 @@ def test_yeniden_yazilmis_sorgu_baglama_girmez(r):
     # bağlam yalnız soru ve parçalardan kurulur; kur() sorgu listesi almaz
     import inspect
     assert "sorgular" not in inspect.signature(kur).parameters
+
+
+def test_tablo_atfi_olan_dipnot_tabloyu_baglama_ekler(r):
+    """A03 hatası: m.77/2 parçası bağlamda, tablo değil -> tablo otomatik eklenir."""
+    b = kur(_by_id(r, "TKHK-m5-1", "TKHK-m77-1"), "haksız şart cezası", r)
+    assert "TKHK-tablo2026-1" in b.ek_parcalar
+    assert "Tutarlar her yıl güncellenir; güncel tutar bu tablodadır" in b.metin
+
+
+def test_tablo_atfi_yoksa_tablo_eklenmez(r):
+    b = kur(_by_id(r, "MSY-m9-1", "TKHK-m48-1"), "cayma", r)
+    assert not any(c.startswith(("TKHK-tablo", "ETK-tablo")) for c in b.ek_parcalar)
+
+
+def test_etk_m12_dipnotu_etk_tablosunu_ekler(r):
+    b = kur(_by_id(r, "ETK-m12-1"), "ceza", r)
+    assert "ETK-tablo2026-1" in b.ek_parcalar and "TKHK-tablo2026-1" not in b.ek_parcalar

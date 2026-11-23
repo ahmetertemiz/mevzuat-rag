@@ -153,3 +153,15 @@ def test_atif_bicimi(r):
     m = {c["chunk_id"]: c for c in r.chunks}
     assert _atif(m["TKHK-m57a-1"]) == "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 57/A"
     assert _atif(m["TKHK-m48-1"]).endswith("Madde 48, fıkra 1–5")
+
+
+def test_tablo_atfi_olan_dayanakta_guncelleme_uyarisi(r):
+    """A03: m.77/2'deki tutar dayanak gösterilirse 'tutarlar her yıl güncellenir' uyarısı kodla eklenir."""
+    b = _baglam(r, "TKHK-m5-1", "TKHK-m77-1", soru="haksız şart cezası")
+    ham = {"durum": "cevaplandi", "bulunamayan": [], "uyarilar": [], "cumleler": [
+        _c("Haksız şart çıkarılmazsa her bir sözleşme için iki yüz Türk Lirası idari para cezası uygulanır.",
+           ("TKHK-m77-1", "aykırılığın tespit edildiği her bir sözleşme için iki yüz Türk Lirası idari para cezası uygulanır"))]}
+    s = son_islem(ham, b, "q")
+    assert len(s["cumleler"]) == 1, [c.neden for c in s["cikarilan_cumleler"]]
+    u = [x for x in s["uyarilar"] if x["tur"] == "tutar_guncellenir"]
+    assert u and u[0]["kaynak"] == "kod" and "TKHK-tablo2026-1" in u[0]["metin"]

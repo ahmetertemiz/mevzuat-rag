@@ -43,6 +43,26 @@ def dipnot_id(parca: dict, no: str) -> str:
     return f"{parca['belge_kisa_ad']}-dn{no}"
 
 
+def _atif_yapilan_tablolar(parcalar: list[dict], retriever) -> list[dict]:
+    """Bağlamdaki bir parçanın dipnotu ceza tablosuna atıf yapıyorsa ('tablo_atfi'), aynı belgenin
+    tablo parçası. Ör. TKHK m.77 parçaları 'tutarlar için metin sonundaki tabloya bakınız' der;
+    tablo bağlamda yoksa model eski (metindeki) tutarı güncel sanabilir (A03 hatası)."""
+    var = {p["chunk_id"] for p in parcalar}
+    belgeler = [p["belge_id"] for p in parcalar
+                if any(d.get("tur") == "tablo_atfi" for d in p.get("dipnotlar") or [])]
+    out = []
+    for bid in dict.fromkeys(belgeler):
+        for c in retriever.chunks:
+            if c["belge_id"] == bid and c.get("tur") == "tablo" and c["chunk_id"] not in var:
+                out.append(c)
+                var.add(c["chunk_id"])
+    return out
+
+
+def tablo_atfi_var(p: dict) -> bool:
+    return any(d.get("tur") == "tablo_atfi" for d in p.get("dipnotlar") or [])
+
+
 def _tablo_ekleri(parcalar: list[dict], soru: str, retriever) -> list[dict]:
     """Bağlamdaki tablo parçalarının bağlı madde parçalarından, soruya BM25 skoru en yüksek olanlar."""
     var = {p["chunk_id"] for p in parcalar}
@@ -73,7 +93,10 @@ def kur(hits_or_chunks, soru: str, retriever=None, k: int = K_VARSAYILAN,
         belgeler: dict[str, dict] | None = None) -> Baglam:
     """hits_or_chunks: arama sonucu (Hit listesi) ya da parça sözlükleri, en iyiden kötüye."""
     parcalar = [getattr(h, "chunk", h) for h in hits_or_chunks][:k]
-    ekler = _tablo_ekleri(parcalar, soru, retriever) if retriever is not None else []
+    tablo_ekleri = _atif_yapilan_tablolar(parcalar, retriever) if retriever is not None else []
+    madde_ekleri = (_tablo_ekleri(parcalar + tablo_ekleri, soru, retriever)
+                    if retriever is not None else [])
+    ekler = tablo_ekleri + madde_ekleri
     tum = parcalar + ekler
     belgeler = belgeler if belgeler is not None else belge_kaydi()
 
@@ -95,10 +118,14 @@ def kur(hits_or_chunks, soru: str, retriever=None, k: int = K_VARSAYILAN,
                  f"{b.get('indirme_tarihi')} | PDF metin tarihi: {s.get('pdf_olusturma_tarihi')} | "
                  f"metindeki en son değişiklik notu: {son}")
     L.append("</belgeler>\n\n<parcalar>")
-    ek_ids = {p["chunk_id"] for p in ekler}
+    tablo_ids = {p["chunk_id"] for p in tablo_ekleri}
+    madde_ids = {p["chunk_id"] for p in madde_ekleri}
     for p in tum:
         L.append(f"[{p['chunk_id']}] {p['baglam_basligi']}")
-        if p["chunk_id"] in ek_ids:
+        if p["chunk_id"] in tablo_ids:
+            L.append("(Aramada çıkmadı; bağlamdaki bir maddenin dipnotu bu tabloya atıf yaptığı için "
+                     "eklendi. Tutarlar her yıl güncellenir; güncel tutar bu tablodadır.)")
+        if p["chunk_id"] in madde_ids:
             L.append("(Aramada çıkmadı; ceza tablosunun bağlı olduğu madde parçası olarak eklendi.)")
         L.append(f"Durum: {_durum(p)}")
         dn = [dipnot_id(p, d["no"]) for d in p.get("dipnotlar") or []]
