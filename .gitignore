@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Gizli anahtarlar
+.env
+
+# Üretilen indeks dosyaları (yeniden kurulabilir)
+index/
+
+# Geçici görseller / çalışma çıktıları
+reports/img/

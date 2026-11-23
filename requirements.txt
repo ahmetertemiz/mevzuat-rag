@@ -1,0 +1,8 @@
+# Belge işleme
+pymupdf==2.1
+PyYAML==6.0.4
+
+# Test
+pytest==9.2.0
+
+# Arama (3. adımda eklenecek): numpy, rank-bm25, sentence-transformers
