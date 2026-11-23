@@ -54,3 +54,36 @@ Uygulama ayrıntıları (ölçümden önce sabitlendi):
 Kural uygulandı (`evals/ARAMA_DENEYI.md`). Hiçbir yapılandırma kabul edilmedi; en iyi toplam kazanç +1.
 Varsayılan değişmedi: BM25 + yeniden yazım (Haiku 5.5, prompt v3), düz RRF, parça çeşitliliği yok.
 Arama `arama-donduruldu-2` etiketiyle yeniden donduruldu; holdout'a kadar değişmez.
+
+## Atıf takibi kabul kuralı (2026-11-23, ölçümden önce)
+
+Değişiklik (bağlam katmanı, `context.py`; arama modülleri değişmez): bağlamdaki bir parça aynı
+belgenin başka bir maddesine numarayla atıf yapıyorsa ("47 nci maddesinin ikinci fıkrası"), atıf
+yapılan maddenin ilgili parçası bağlama eklenir. Sınırlar:
+
+- Yalnız aramanın **ilk 3 parçasındaki** atıflar (ek parçaların atıfları değil).
+- En fazla **3 ek parça**; **tek adım** (eklenen parçanın atıfları izlenmez).
+- Yalnız **aynı belge** ("Bu Kanunun", "bu Yönetmeliğin" ya da belge adı olmadan madde numarası).
+  "... sayılı Kanunun", başka kanun adı ya da "Kanunu/Kanununun" ile başlayan atıflar dış atıf
+  sayılır ve izlenmez. Parçanın kendi maddesine atıf izlenmez.
+- **İlgili parça:** atıfta fıkra belirtilmişse (sıra sayısı sözcükle) o fıkrayı içeren parça; yoksa
+  maddenin ilk parçası. Bağlamda zaten olan parça eklenmez.
+- **Sıralama** (aday 3'ten fazlaysa): adayın soruya BM25 skoru (tablo eklemesindeki gibi), eşitlikte
+  atıf sırası.
+- Eklenen parça modele "(Aramada çıkmadı; bağlamdaki X parçası numarayla bu maddeye atıf yaptığı için
+  eklendi.)" notuyla verilir.
+
+**Kural:** İkisi birlikte sağlanırsa kabul, değilse geri alınır:
+
+- **(a)** İki geliştirme setinin toplamında (dev1 26 + dev2 15) **bağlam düzeyinde en az 2 soru kazanç**.
+  Sayım arama değişikliği kuralındaki gibi: her set 3 koşu, set başına medyan, toplam = iki medyanın
+  toplamı. Eşleştirilmiş: her koşuda yeniden yazım soru başına bir kez yapılır; atıf takipli ve
+  takipsiz bağlam aynı arama sonucundan kurulur.
+- **(b)** Cevap değerlendirmesinde (dev2, Haiku 5.5, 3 koşu) **yanlış olgu sayısında artış yok**.
+  Karşılaştırma eşleştirilmiş: her koşuda aynı aramayla Haiku hem takipsiz (mevcut sistem: üç kod
+  düzeltmesi ve liste bütünlüğü kuralı dahil) hem takipli bağlamla cevaplar; iki kolun 3 koşu
+  toplamı elle okumayla karşılaştırılır (ölçütler `evals/cevap_elle_okuma.yaml` ile aynı).
+  Takipli kolun toplamı takipsizden büyükse (b) sağlanmaz.
+
+Kabul edilirse atıf takibi varsayılan olur; sistem yeni bir etiketle dondurulur ve holdout bir kez
+koşulur.
