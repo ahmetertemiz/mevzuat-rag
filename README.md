@@ -31,6 +31,35 @@ python -m venv .venv
 .venv\Scripts\python -m pytest
 ```
 
+## Belge işleme
+
+```powershell
+.venv\Scripts\python scripts\build_chunks.py
+```
+
+Çıktılar:
+
+- `data/chunks.jsonl`: her satır bir parça. Önemli alanlar:
+  - `metin`: resmî metin (değişiklik notları dahil)
+  - `arama_metni`: bağlam başlığı + değişiklik notları temizlenmiş metin. Hem embedding hem BM25 bunu kullanır.
+  - `dipnotlar`: `[{no, tur, konum, metin}]`. `tur`: `aym_karari`, `tablo_atfi`, `yururluk`, `atif`, `degisiklik_gecmisi`. `konum`: madde başlığı / madde girişi / fıkra n. Cevap üretiminde modele bu alan verilecek.
+  - `indekse_dahil`: arama indeksine girip girmeyeceği.
+- `data/belgeler.json`: belge üstverisi (RG bilgisi, indirme tarihi, son değişiklik bilgileri).
+- `reports/dogrulama.md`: doğrulama raporu (sayımlar, uzunluklar, şüpheli parçalar, tablo kontrolü, örnekler).
+
+Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipnot ve üst simge dipnot işaretleri farklı puntoda olduğu için dipnotlar madde metninden ayrılır. Dipnot sayfa sonunda bir cümleyi bölse bile metin yeniden birleşir.
+
 ## Bilinen sınırlar
 
-_(belge işleme adımında doldurulacak)_
+- **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) çıkarılıyor ama
+  insan onayı gelene kadar `indekse_dahil: false`. 6502 tablosunda bazı satırlarda aynı fıkra için
+  birden çok tutar var. Hangi tutarın hangi duruma ait olduğu tabloda yazmıyor, 77. maddenin metninde.
+- **Dışarıda bırakılanlar:** kanunların sonundaki değişiklik/yürürlük tarihleri listeleri, KVKK
+  kadro cetveli, yönetmeliğin Resmî Gazete listesi (bu listenin son satırı yalnızca üstveriye işlendi).
+- **Mülga maddeler** kısa bir kayıt olarak indekste kalır (tarih ve dayanakla). Fıkra düzeyinde mülga
+  hükümler madde metninin içinde durur.
+- **Başlık dipnotları** (ör. 6502 m.77'nin 25–27 numaralı dipnotları) maddenin her parçasına kopyalanır.
+  Cevap üretiminde dipnotlar `(belge, no)` ile tekilleştirilmeli.
+- **Ayrıştırma bu dört PDF'in biçimine göre ayarlandı.** Punto farkı, `MADDE n –` kalıbı ve ek
+  başlıkları buna dahil. Yeni bir belge eklenirse doğrulama raporu yeniden incelenmeli.
+- **Tarih kapsamı:** metinler mevzuat.gov.tr'den 2026-11-23'te indirildi. Bu tarihten sonraki değişiklikleri içermez.

@@ -11,5 +11,3 @@ __pycache__/
 # Üretilen indeks dosyaları (yeniden kurulabilir)
 index/
 
-# Geçici görseller / çalışma çıktıları
-reports/img/
