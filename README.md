@@ -54,6 +54,9 @@ Sorgu yeniden yazımı için proje kökünde `.env` dosyası: `ANTHROPIC_API_KEY
 
 ## Belge işleme
 
+`requirements-build.txt` gerekir. Çıktı (`data/chunks.jsonl`) depoya commit'lenir; yayın ortamı
+onu olduğu gibi kullanır.
+
 ```powershell
 .venv\Scripts\python scripts\build_chunks.py
 ```

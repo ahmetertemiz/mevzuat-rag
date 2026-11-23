@@ -42,7 +42,7 @@ def suspicious(c: dict) -> list[str]:
         why.append("bozuk karakter")
     # bent etiketleri "a)", "1)" yalnız kapanış parantezi taşır; dengeyi onları çıkarıp ölç
     pm = re.sub(r"(?m)^\s*[a-zçğıöşü0-9]{1,2}\)", "", m)
-    pm = re.sub(r"[a-zçğıöşü]\)\s", " ", pm)
+    pm = re.sub(r"(?<!\()\b[a-zçğıöşü]\)\s", " ", pm)  # metin içi bent etiketi; "(a)" atıfı değil
     if pm.count("(") != pm.count(")"):
         why.append(f"parantez dengesiz ({pm.count('(')}/{pm.count(')')})")
     if c["tur"] == "madde" and c["parca"] == 1 and m[:1].islower():
