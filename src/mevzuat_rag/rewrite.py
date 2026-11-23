@@ -165,22 +165,39 @@ def load_dotenv(path: Path = config.ROOT / ".env") -> None:
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
+# Prompt v4 (deney seçeneği 3): v3'e tek bir genel kural eklenir. Belirli bir hukuki kavram eklenmez.
+OZGUN_IFADE_KURALI = (
+    "- Sorgulardan biri, kullanıcının sorusundaki kendi anahtar kelimelerini (ör. sorudaki ad ve "
+    "fiilleri) olduğu gibi korusun; hukuki terime çevirme. Diğer sorgular hukuki terimlerle yazılır.\n")
+SYSTEM_PROMPT_V4 = SYSTEM_PROMPT.replace("\n\nÖrnekler:\n", "\n" + OZGUN_IFADE_KURALI + "\nÖrnekler:\n", 1)
+
+
+def sistem_promptu(surum: int = PROMPT_VERSION) -> str:
+    if surum == 3:
+        return SYSTEM_PROMPT
+    if surum == 4:
+        return SYSTEM_PROMPT_V4
+    raise ValueError(f"desteklenmeyen prompt sürümü: {surum}")
+
+
 class QueryRewriter:
     def __init__(self, model: str = REWRITE_MODEL, effort: str = REWRITE_EFFORT,
-                 timeout: float = 20.0, max_retries: int = 2):
+                 timeout: float = 20.0, max_retries: int = 2, prompt_surumu: int = PROMPT_VERSION):
         import anthropic
 
         load_dotenv()
         self.client = anthropic.Anthropic(timeout=timeout, max_retries=max_retries)
         self.model = model
         self.effort = effort
+        self.prompt_surumu = prompt_surumu
+        self.system = sistem_promptu(prompt_surumu)
 
     def rewrite(self, question: str) -> Rewrite:
         t0 = time.perf_counter()
         kwargs = dict(
             model=self.model,
             max_tokens=4000,
-            system=SYSTEM_PROMPT,
+            system=getattr(self, "system", SYSTEM_PROMPT),
             messages=[{"role": "user", "content": f"Soru: {question}"}],
             output_config={"effort": self.effort,
                            "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},

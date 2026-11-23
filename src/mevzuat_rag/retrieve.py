@@ -142,22 +142,60 @@ class Retriever:
             orders.append(order)
         return orders, raw
 
+    @staticmethod
+    def _siralama(scores: np.ndarray) -> list[int]:
+        """Skoru sıfırdan büyük indeksler, en iyiden kötüye (skor 0 = hiçbir listede yok)."""
+        return [i for i in np.argsort(-scores, kind="stable") if scores[i] > 0]
+
+    def _cesitlendir(self, order: list[int], m: int) -> list[int]:
+        say: dict[str, int] = {}
+        once, sonra = [], []
+        for i in order:
+            c = self.chunks[i]
+            key = f"{c['belge_kisa_ad']}:{c['madde_no']}"
+            if say.get(key, 0) < m:
+                say[key] = say.get(key, 0) + 1
+                once.append(i)
+            else:
+                sonra.append(i)
+        return once + sonra
+
     def search(self, query: str, k: int = 5, mode: str = "hybrid",
-               extra_queries: list[str] | None = None) -> list[Hit]:
-        """extra_queries verilirse (sorgu yeniden yazımı) özgün sorgu ve ek sorgular ayrı ayrı
-        aranır; tüm sıralamalar ağırlıksız RRF ile birleştirilir."""
+               extra_queries: list[str] | None = None, birlestirme: str = "duz",
+               max_parca_madde: int | None = None) -> list[Hit]:
+        """extra_queries verilirse (sorgu yeniden yazımı) özgün sorgu ve ek sorgular ayrı ayrı aranır.
+
+        birlestirme:
+          "duz"         : tüm sıralamalar (özgün + her ek sorgu) tek bir ağırlıksız RRF'te birleşir.
+          "iki_asamali" : ek sorguların sıralamaları önce kendi aralarında RRF ile birleşir; çıkan tek
+                          sıralama özgün sorgunun sıralamasıyla 1:1 RRF'te birleşir. Böylece özgün
+                          sorgu, ek sorgu sayısından bağımsız olarak ağırlığın yarısını taşır.
+        max_parca_madde: verilirse sonuç listesinde aynı maddeden en fazla bu kadar parça öne alınır;
+                         fazlası listenin sonuna (kendi sıralarıyla) ertelenir (parça çeşitliliği)."""
         if mode not in MODES:
             raise ValueError(f"mode {MODES} içinden olmalı")
+        if birlestirme not in ("duz", "iki_asamali"):
+            raise ValueError("birlestirme 'duz' ya da 'iki_asamali' olmalı")
         n = len(self.chunks)
         orders, raw = self._orders(query, mode)
+        ek_orders: list[list[int]] = []
         for q in extra_queries or []:
-            orders += self._orders(q, mode)[0]
-        if len(orders) == 1:
-            scores = raw["dense"] if mode == "dense" else raw["bm25"]
-            order = orders[0]
-        else:
-            scores = rrf(orders, n)
+            ek_orders += self._orders(q, mode)[0]
+        if birlestirme == "iki_asamali" and ek_orders:
+            ozgun = orders[0] if len(orders) == 1 else self._siralama(rrf(orders, n))
+            ek = self._siralama(rrf(ek_orders, n))
+            scores = rrf([ozgun, ek], n)
             order = list(np.argsort(-scores, kind="stable"))
+        else:
+            orders = orders + ek_orders
+            if len(orders) == 1:
+                scores = raw["dense"] if mode == "dense" else raw["bm25"]
+                order = orders[0]
+            else:
+                scores = rrf(orders, n)
+                order = list(np.argsort(-scores, kind="stable"))
+        if max_parca_madde:
+            order = self._cesitlendir(order, max_parca_madde)
         d_rank = ({i: r for r, i in enumerate(np.argsort(-raw["dense"], kind="stable"), 1)}
                   if "dense" in raw else {})
         b_rank = ({i: r for r, i in enumerate(np.argsort(-raw["bm25"], kind="stable"), 1)}

@@ -117,3 +117,42 @@ def test_yeniden_yazim_promptu_kurallari():
     assert "en fazla 4" in rewrite.SYSTEM_PROMPT
     assert "her konu ve her alt soru için en az bir sorgu" in rewrite.SYSTEM_PROMPT
     assert rewrite.cache_path().name.endswith(f"_p{rewrite.PROMPT_VERSION}.json")
+
+
+# ------------------------------------------------------------------ deney seçenekleri (varsayılan dışı)
+
+def test_varsayilan_birlestirme_degismedi(bm25):
+    a = bm25.search("cayma hakkı", k=10, mode="bm25", extra_queries=["mesafeli sözleşme cayma"])
+    b = bm25.search("cayma hakkı", k=10, mode="bm25", extra_queries=["mesafeli sözleşme cayma"], birlestirme="duz")
+    assert [h.chunk["chunk_id"] for h in a] == [h.chunk["chunk_id"] for h in b]
+
+
+def test_iki_asamali_rrf_ozgun_sorgunun_agirligini_korur(bm25):
+    """Özgün sorgu 1. sırada bulsun; üç ek sorgu başka bir maddeyi öne çıkarsın.
+    Düz RRF'te özgünün birincisi geriye düşer, iki aşamalıda ilk sıralarda kalır."""
+    soru = "6502 m.80"                                    # TKHK-m80-1 özgün sorguda 1. sırada
+    ek = ["veri sorumlusuna başvuru", "kurula şikâyet", "veri sorumlusuna başvuru süresi"]
+    duz = [h.chunk["chunk_id"] for h in bm25.search(soru, k=50, mode="bm25", extra_queries=ek)]
+    iki = [h.chunk["chunk_id"] for h in bm25.search(soru, k=50, mode="bm25", extra_queries=ek,
+                                                     birlestirme="iki_asamali")]
+    # iki aşamalıda özgünün birincisi ilk 2'de (1. sıra, ek sorguların birincisiyle eşit skorda)
+    assert iki.index("TKHK-m80-1") <= 1
+    # düz RRF'te üç ek sorgunun listeleri onu ilk 50'nin dışına iter
+    assert "TKHK-m80-1" not in duz
+
+
+def test_parca_cesitliligi(bm25):
+    hits = bm25.search("6502 m.77 idari para cezası", k=8, mode="bm25", max_parca_madde=2)
+    from collections import Counter
+    say = Counter(f"{h.chunk['belge_kisa_ad']}:{h.chunk['madde_no']}" for h in hits)
+    assert max(say.values()) <= 2
+    tum = bm25.search("6502 m.77 idari para cezası", k=400, mode="bm25", max_parca_madde=2)
+    assert len(tum) == len(bm25.search("6502 m.77 idari para cezası", k=400, mode="bm25"))  # hiçbir parça kaybolmaz
+
+
+def test_prompt_v4_yalniz_genel_kural_ekler():
+    from mevzuat_rag.rewrite import PROMPT_VERSION, SYSTEM_PROMPT, SYSTEM_PROMPT_V4, sistem_promptu
+    assert PROMPT_VERSION == 3 and sistem_promptu() == SYSTEM_PROMPT
+    eklenen = SYSTEM_PROMPT_V4.replace(SYSTEM_PROMPT.split("\nÖrnekler:\n")[0], "", 1)
+    assert "kendi anahtar kelimelerini" in SYSTEM_PROMPT_V4
+    assert "yan sözleşme" not in SYSTEM_PROMPT_V4 and "yan sözleşme" not in eklenen
