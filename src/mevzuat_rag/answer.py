@@ -20,7 +20,7 @@ from .context import K_VARSAYILAN, Baglam, kur
 from .rewrite import PRICES, SERVER_FALLBACK_MODELS, load_dotenv
 from .verify import alinti_dogrula, sayi_tutarliligi
 
-CEVAP_MODEL = "claude-haiku-5-5"   # Haiku / Sonnet karşılaştırmasından sonra kesinleşecek
+CEVAP_MODEL = "claude-haiku-5-5"   # gürültü payı kuralıyla seçildi (docs/kararlar.md)
 CEVAP_EFFORT = "low"
 DURUMLAR = ("cevaplandi", "kismen_cevaplandi", "bulunamadi")
 UYARI_TURLERI = ("aym_iptal", "mulga", "ceza_tutari_belirsiz", "gecis_hukmu", "diger")

@@ -1,40 +1,188 @@
 # mevzuat-rag
 
-Türk e-ticaret ve tüketici mevzuatı üzerinde **kaynak göstererek** soru cevaplayan bir araç (RAG).
-Bu depo şu an yalnızca belge işleme ve arama katmanını hedefliyor; cevap üretimi sonraki aşamada.
+Türk tüketici ve e-ticaret mevzuatı hakkındaki soruları **kaynak göstererek** cevaplayan bir RAG aracı.
+Cevaptaki her cümle, mevzuattan kelimesi kelimesine bir alıntıya dayanır. Alıntı kaynakta
+bulunamazsa cümle kullanıcıya gösterilmez. Cevap belgelerde yoksa araç bunu açıkça söyler; genel
+bilgiyle boşluk doldurmaz.
 
-## Kapsam (docs_raw/)
+- **Arayüz:** `streamlit run streamlit_app.py` (Streamlit)
+- **Komut satırı:** `python ask.py "soru"`
+- **Hukuki tavsiye değildir.** Araç mevzuatın ne dediğini aktarır, somut olay hakkında görüş bildirmez.
 
-| Dosya | Belge |
+## Kapsam
+
+| Dosya (`docs_raw/`) | Belge |
 |---|---|
 | `1.5.6502.pdf` | 6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) |
 | `1.5.6563.pdf` | 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun (ETK) |
 | `1.5.6698.pdf` | 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) |
 | `7.5.20237.pdf` | Mesafeli Sözleşmeler Yönetmeliği (MSY) |
 
-Kaynak: mevzuat.gov.tr, indirme tarihi 2026-11-23. `docs_raw/` içindeki dosyalar değiştirilmez.
+Kaynak: mevzuat.gov.tr, **indirme tarihi 2026-11-23**. Bu tarihten sonraki değişiklikler kapsanmaz.
+`docs_raw/` içindeki dosyalar değiştirilmez.
 
-## Tasarım özeti
+## Mimari
 
-- **Parçalama:** madde bazlı; uzun maddeler fıkra, gerekirse bent sınırından bölünür. Her parça
-  belge, madde no, madde başlığı, fıkra aralığı, dipnotlar ve değişiklik notlarıyla birlikte tutulur.
-- **Varsayılan arama:** BM25 + sorgu yeniden yazımı. Soru bir model çağrısıyla mevzuat diline
-  çevrilmiş 2-4 sorguya dönüştürülür; özgün soru ve üretilen sorgular ayrı ayrı aranıp RRF ile
-  birleştirilir. Çağrı başarısız olursa düz BM25'e düşülür ve sonuç bunu belirtir.
-  torch ve embedding modeli gerekmez.
-- **İsteğe bağlı:** embedding (`bge-m3` vb.) ile yoğun ve hibrit arama (`requirements-embedding.txt`).
-- **Depolama:** veritabanı yok; `data/chunks.jsonl` (+ embedding kullanılırsa numpy dizisi).
-- Çekirdek mantık `src/mevzuat_rag/` altında, arayüzden bağımsız.
+```mermaid
+flowchart LR
+    S[Soru] --> Y["Yeniden yazım<br/>(Haiku 5.5, 2–4 sorgu,<br/>sayı denetimi)"]
+    Y --> B["BM25<br/>özgün soru + sorgular,<br/>RRF ile birleşim"]
+    S --> B
+    B --> K["Bağlam<br/>ilk 8 parça + atıf yapılan<br/>ceza tablosu, dipnotlar,<br/>belge sürümü"]
+    K --> C["Cevap<br/>(Haiku 5.5, JSON:<br/>cümle + parça kimliği + alıntı)"]
+    C --> D["Doğrulama<br/>alıntı, sayı, uyarı dayanağı,<br/>kod uyarıları"]
+    D --> A[Arayüz / CLI]
+```
+
+```
+soru → yeniden yazım → BM25 (+RRF) → bağlam → cevap (model) → doğrulama → kullanıcı
+```
+
+| Adım | Modül | Not |
+|---|---|---|
+| Parçalama | `scripts/build_chunks.py`, `chunk.py`, `extract.py` | Madde bazlı; uzun maddeler fıkra/bent sınırından bölünür. Dipnotlar punto farkıyla ayrılır. Çıktı `data/chunks.jsonl` depoda. |
+| Yeniden yazım | `rewrite.py` | Soru 2–4 mevzuat dili sorguya çevrilir. Soruda olmayan sayı içeren sorgu kodla atılır. Çağrı başarısız olursa düz BM25'e düşülür ve uyarı gösterilir. |
+| Arama | `retrieve.py`, `textnorm.py` | BM25, Türkçe küçük harf + F5 kırpma, madde numarası belirteçleri (`md:tkhk:48`). Özgün soru ve sorgular RRF (k=60) ile birleşir. torch gerekmez. |
+| Bağlam | `context.py` | İlk 8 parça. Bir parçanın dipnotu ceza tablosuna atıf yapıyorsa tablo eklenir; tablo bağlamdaysa bağlı madde parçaları (en fazla 3) eklenir. Dipnotlar tekilleştirilir. Yeniden yazılmış sorgular modele verilmez. |
+| Cevap | `answer.py` | JSON şeması: durum, cümleler (her biri parça kimliği + alıntı), bulunamayan kısımlar, uyarılar. |
+| Doğrulama | `verify.py`, `answer.py` | Aşağıda. |
+| Arayüz | `streamlit_app.py`, `arayuz.py` | Arayüz mantığı (atıf, sayaç, istemci) Streamlit'ten ayrı ve test edilir. |
+
+Veritabanı yok: ~200 parça bellekte BM25 ile aranır.
+
+## Doğrulama katmanları
+
+Modelin çıktısına güvenilmez; kullanıcıya giden her şey kodla denetlenir.
+
+1. **Alıntı denetimi.** Her cümlenin dayanağındaki alıntı (3–40 kelime), gösterilen parçada aranır.
+   Boşluk, tire, tırnak ve büyük/küçük harf farkları normalize edilir. Bağlamda olmayan parça
+   kimliği (uydurma kimlik) doğrulanamaz ve ayrıca sayılır.
+2. **Sayı tutarlılığı.** Cümledeki süre, tutar, oran, tarih ve madde numaraları alıntıda ya da
+   parçada birimiyle birlikte geçmeli. Rakam ve yazı eşlenir ("14 gün" = "on dört gün");
+   "iki yıl" bir fıkra numarası "(2)" ile eşleşmez.
+3. **Doğrulanamayan cümle gösterilmez.** Cevabın üstüne "N cümle kaynağında doğrulanamadığı için
+   çıkarıldı" notu konur ve durum en fazla "kısmen cevaplandı" olur. Hepsi çıkarsa
+   "belgelerde bulunamadı" olur.
+4. **Model uyarıları da doğrulanır.** Modelin uyarıları da dayanak ve alıntı taşımak zorundadır.
+   Doğrulanamayan uyarı gösterilmez.
+5. **Kod uyarıları (modelden bağımsız):**
+   - Anayasa Mahkemesi iptal dipnotu.
+   - Mülga hüküm. Bağlamın ilk 3 parçasındaysa ya da madde numarası soruda geçiyorsa, cümleler
+     doğrulanamasa bile gösterilir.
+   - Yıllık güncellenen tutar ("madde metnindeki tutar eski, güncel tutar tabloda").
+   - Ceza tablosundaki belirsizlik.
+   - Aramanın düz BM25'e düşmesi.
+6. **Okunamayan çıktı.** Model JSON'u okunamazsa bir kez yeniden denenir. Yine olmazsa "sistem
+   hatası" gösterilir; bu "belgelerde yok" ile karıştırılmaz.
+7. **Prompt kuralları** (kodla değil, modelle):
+   - Sorudaki gömülü talimatlar uygulanmaz.
+   - Hüküm kurulmaz, tavsiye verilmez.
+   - Sayılan haklar ve koşullar eksiltilmez; eksiltilirse kısmi olduğu belirtilir.
+   - Ceza tablosu tek başına kullanılmaz.
+
+## Değerlendirme sonuçları
+
+İki geliştirme seti ve proje sahibinin yazacağı ayrı bir holdout seti var. Bütün kararlar
+(kabul kuralları, gürültü payı) ölçümden **önce** [docs/kararlar.md](docs/kararlar.md)'ye kaydedildi.
+Yeniden yazım koşudan koşuya değiştiği için her ölçüm 3 koşu yapıldı. Tablolarda en düşük / medyan /
+en yüksek değer var.
+
+| Set | Rol | Soru |
+|---|---|---|
+| `evals/retrieval.yaml` (dev1) | Arama seçenekleri bu sette seçildi | 26 cevaplı + 4 cevapsız |
+| `evals/answers.yaml` (dev2) | Cevap üretimi ve teşhis; sonradan yazıldı, daha zor | 15 cevaplı + 5 cevapsız |
+| `evals/holdout.yaml` | Son doğrulama, sorular proje sahibinde | henüz koşulmadı |
+
+**Arama** (varsayılan hat; doğru maddenin ilk 8 parçada olması):
+
+| | dev1 (26) | dev2 (15) |
+|---|---|---|
+| Arama @8 | 24 / 24 / 25 (%92) | 10 / 10 / 11 (%67–73) |
+| Bağlam (tablo eklemesi dahil) | 24 / 24 / 25 | 12 / 12 / 12 (%80) |
+
+**İki set arasındaki fark büyük ve önemli.** dev1, arama seçeneklerinin seçildiği set; bu yüzden
+iyimser. dev2'de varsayılan hat düz BM25'ten bile biraz kötü (bağlam 12'ye 13). Kalan hataların
+çoğu yeniden yazımın soruyu yanlış hukuki kavrama çevirmesinden ve benzer maddelerin kalabalık
+etmesinden geliyor ([evals/ARAMA_TESHIS.md](evals/ARAMA_TESHIS.md)). Bu hataları hedefleyen üç
+değişiklik ölçüldü; hiçbiri önceden konan +3 eşiğini geçmedi ([evals/ARAMA_DENEYI.md](evals/ARAMA_DENEYI.md)).
+Holdout bu farkın hangi tarafa yakın olduğunu gösterecek.
+
+**Cevap üretimi** (dev2, Haiku 5.5, 3 koşu; [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md)):
+
+| Ölçüt | Haiku 5.5 (seçilen) | Sonnet 5.5 |
+|---|---|---|
+| Yanlış olgu (elle okuma, 3 koşuda 45 cevap) | **0** | 0 |
+| Madde doğruluğu (cevaplı 15) | 9 / 10 / 11 (%60–73) | 10 / 11 / 12 |
+| Yanlış reddetme (cevaplı 15) | 2 / 3 / 3 (%13–20) | 1 / 2 / 2 |
+| Olgu oranı | %58 / 67 / 75 | %67 / 71 / 71 |
+| Doğru reddetme (cevapsız 5) | 5 / 5 / 5 | 5 / 5 / 5 |
+| Gömülü talimatı uyguladı | 0 | 0 |
+| Liste eksik aktarılmış (elle) | 2 / 45 | 0 / 45 |
+| Maliyet / cevap (arama dahil) | ~$0,002 | ~$0,03 |
+| Süre / cevap | ~2,6 sn | ~4,2 sn |
+
+Zayıf yanlar:
+
+- **Madde doğruluğu %60–73.** Soruların yaklaşık üçte birinde cevap ya eksik ya da hiç yok.
+- **Yanlış reddetme %13–20.** Cevabı belgelerde olan bazı sorulara "bulunamadı" deniyor. Nedenleri:
+  - Gerekli madde bağlama gelmiyor (A10, A11).
+  - Cevap bir atıf zincirinin bütün halkalarını gerektiriyor (A15: m.47/2 → m.77/5 → tablo;
+    [evals/A15_teshis.md](evals/A15_teshis.md)).
+  - Doğrulayıcı alıntısı birebir olmayan cümleleri eliyor.
+
+  Araç yanlış bilgi vermek yerine susmayı seçiyor; bu tasarım gereği, ama bedeli kaçırılan cevaplar.
+- **Sonnet bu iki ölçütte biraz daha iyi.** Seçim yanlış olgu sayısına göre yapıldı; Sonnet ancak
+  en az 2 daha az yanlış olguyla seçilecekti, iki modelde de 0. Sonnet cevap başına ~18 kat pahalı.
+- **Liste bütünlüğü kuralı yeni.** Bu kural eklenmeden önceki 120 cevapta 2 eksik liste bulundu.
+  Kuralın etkisi henüz ölçülmedi.
+- **Örneklem küçük.** dev2'de bir soru ~%7 puan; koşular arası oynama 1–2 soru.
+
+## Arayüz ve yayın
+
+```powershell
+.venv\Scripts\streamlit run streamlit_app.py
+```
+
+- Örnek sorular, kaynaklı cümleler ("6502 m.24/1"; tıklanınca kelimesi kelimesine alıntı ve
+  maddenin tam metni) gösterilir.
+- "Belgelerde bulunamadı" ve "kısmen cevaplandı" ayrı gösterilir; bulunamayan kısım yazılır.
+- İptal kararı ve mülga uyarıları kırmızı ve en üstte. Altta kapsanan belgeler, indirme tarihi ve
+  "hukuki tavsiye değildir" notu var.
+- Yan paneldeki "Arama ayrıntıları" yeniden yazılan sorguları ve bağlama giren parçaları gösterir.
+
+**Anahtar ve sınır:**
+
+- **Ortak anahtar** `st.secrets["ANTHROPIC_API_KEY"]`'den, yoksa ortam değişkeninden ya da `.env`'den
+  okunur. `.env` ve `.streamlit/secrets.toml` git'e girmez.
+- **Günlük çağrı sınırı:** ortak anahtarla yapılan **her model çağrısı** sayılır: yeniden yazım,
+  cevap ve JSON okunamazsa yapılan ikinci deneme. Varsayılan sınır 300; `GUNLUK_CAGRI_SINIRI`
+  (secrets ya da ortam) ile değişir. Soru başına normalde 2 çağrı gider. Kalan hak 2'nin altına
+  düşünce soru çalıştırılmaz. SDK'nın ağ hatalarında yaptığı otomatik yeniden denemeler tek çağrı
+  sayılır.
+- **Sayaç bellekte tutulur.** Sunucu süreci yeniden başlarsa sıfırlanır. Birden çok süreç ya da kopya
+  çalışıyorsa her biri kendi sayacını tutar, yani gerçek üst sınır kopya sayısıyla çarpılır.
+  Sayaç UTC gününe göre sıfırlanır. Kalıcı ve paylaşılan bir sınır gerekiyorsa API sağlayıcısının
+  harcama sınırı da ayarlanmalı.
+- **Ziyaretçi kendi anahtarını girebilir** (yan panel, parola alanı). Bu anahtar:
+  - yalnız o oturumun istemcisine verilir;
+  - süreç ortamına, ekrana ya da günlüğe yazılmaz;
+  - ortak günlük sınırdan düşmez.
+
+  Hata mesajları genel tutulur ("anahtar geçersiz", "servise ulaşılamadı"); API'nin ham hata metni
+  gösterilmez.
+- Soru en fazla 500 karakter.
+
+**Yayın ortamı yalnızca `requirements.txt` ile çalışır.** Bu dosyada torch, sentence-transformers
+ve pymupdf yok; hazır `data/chunks.jsonl` kullanılır. Temiz bir ortamda bu dosyayla bütün testler
+geçer (PDF işleme ve embedding testleri atlanır).
 
 ## Kurulum
 
-Üç bağımlılık dosyası var; yayın ortamı yalnızca ilkini kurar:
-
 | Dosya | Ne için | Yayında |
 |---|---|---|
-| `requirements.txt` | Hazır `data/chunks.jsonl` ile BM25 + sorgu yeniden yazımı, testler | ✔ |
-| `requirements-build.txt` | PDF'lerden `chunks.jsonl` üretmek (`pymupdf`) ve belge işleme testleri | ✘ |
-| `requirements-embedding.txt` | Embedding modları, indeks kurma, deneyler, bellek ölçümleri (torch) | ✘ |
+| `requirements.txt` | Arama, cevap, arayüz, testler | ✔ |
+| `requirements-build.txt` | PDF'lerden `chunks.jsonl` üretmek (`pymupdf`) | ✘ |
+| `requirements-embedding.txt` | Embedding modları, deneyler (torch) | ✘ |
 
 ```powershell
 python -m venv .venv
@@ -43,143 +191,51 @@ python -m venv .venv
 .venv\Scripts\python -m pytest
 ```
 
-Temiz bir ortamda yalnızca `requirements.txt` ile kurulum yaklaşık 130 MB tutar; PDF işleme ve
-embedding testleri atlanır. Geliştirme için:
+Yerelde anahtar için proje kökünde `.env`: `ANTHROPIC_API_KEY=...`.
 
-```powershell
-.venv\Scripts\python -m pip install -r requirements-build.txt -r requirements-embedding.txt
-```
-
-Sorgu yeniden yazımı için proje kökünde `.env` dosyası: `ANTHROPIC_API_KEY=...` (git'e girmez).
-
-## Belge işleme
-
-`requirements-build.txt` gerekir. Çıktı (`data/chunks.jsonl`) depoya commit'lenir; yayın ortamı
-onu olduğu gibi kullanır.
-
-```powershell
-.venv\Scripts\python scripts\build_chunks.py
-```
-
-Çıktılar:
-
-- `data/chunks.jsonl`: her satır bir parça. Önemli alanlar:
-  - `metin`: resmî metin (değişiklik notları dahil)
-  - `arama_metni`: bağlam başlığı + değişiklik notları temizlenmiş metin. Hem embedding hem BM25 bunu kullanır.
-  - `dipnotlar`: `[{no, tur, konum, metin}]`. `tur`: `aym_karari`, `tablo_atfi`, `yururluk`, `atif`, `degisiklik_gecmisi`. `konum`: madde başlığı / madde girişi / fıkra n. Cevap üretiminde modele bu alan verilecek.
-  - `indekse_dahil`: arama indeksine girip girmeyeceği.
-- `data/belgeler.json`: belge üstverisi (RG bilgisi, indirme tarihi, son değişiklik bilgileri).
-- `reports/dogrulama.md`: doğrulama raporu (sayımlar, uzunluklar, şüpheli parçalar, tablo kontrolü, örnekler).
-
-Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipnot ve üst simge dipnot işaretleri farklı puntoda olduğu için dipnotlar madde metninden ayrılır. Dipnot sayfa sonunda bir cümleyi bölse bile metin yeniden birleşir.
-
-## Arama
-
-```powershell
-.venv\Scripts\python search.py "aldığım ürünü beğenmedim geri verebilir miyim"   # BM25 + yeniden yazım
-.venv\Scripts\python search.py "6502 m.48" --yeniden-yazma -k 3                     # yalnız BM25, model çağrısı yok
-```
-
-Çıktı, yeniden yazımın durumunu (`uygulandı` / `kapalı` / `başarısız`), üretilen sorguları,
-maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzuat_rag.pipeline.Arayici`.
-
-- **BM25:** Türkçe küçük harf + ilk 5 harf kırpma (F5) + küçük bir durak kelime listesi.
-  Madde numaraları özel belirtece çevrilir: `md:48`, `md:47/a`, `md:ek1`, `md:gecici2` ve belge
-  adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
-  üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
-- **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`, prompt v3): model `REWRITE_MODEL` (şu an
-  `claude-haiku-5-5`, sunucu tarafı fallback yok), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
-  konu için en az bir sorgu, en fazla 4. Sorgular yalnız konu ve kavram içerir: soruda geçmeyen
-  sayı (süre, tutar, oran, tarih, madde numarası) yazılmaz; yazılırsa kod o sorguyu atar ve
-  `SearchResult.atilan_sorgular` alanında belirtir. Belge kaydındaki (`data/belgeler.json`) kanun
-  numaraları, belge adları ve kısaltmaları bu denetimde serbesttir. Prompt değişince
-  `PROMPT_VERSION` artırılır.
-- **Arama ayarları dondu (2026-11-23):** holdout koşulana kadar yeniden yazım prompt'u, tokenizer
-  ve birleştirme mantığı değiştirilmez.
-- **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok. Skoru 0 olan BM25 sonuçları
-  birleşime girmez.
-
-### Embedding (isteğe bağlı)
-
-```powershell
-.venv\Scripts\python scripts\build_index.py --model bge-m3      # index/bge-m3/ (ilk çalıştırmada model iner)
-.venv\Scripts\python search.py "cayma hakkı" --mode hybrid --model bge-m3
-```
-
-Modeller: `bge-m3`, `granite-97m`, `granite-97m-fp32`, `e5-small`. Bellek ve süre:
-`reports/performans_<model>.md` (`scripts\benchmark_model.py --model <model>`).
-
-## Cevap üretimi
+## Komut satırı
 
 ```powershell
 .venv\Scripts\python ask.py "Bankadan çektiğim krediden vazgeçtim, kaç gün içinde cayabilirim?"
-.venv\Scripts\python ask.py "..." --json                    # tüm alanlar (çıkarılan cümleler dahil)
-.venv\Scripts\python ask.py "..." --model claude-sonnet-5-5
+.venv\Scripts\python ask.py "..." --json                  # bütün alanlar (çıkarılan cümleler dahil)
+.venv\Scripts\python search.py "aldığım ürünü beğenmedim geri verebilir miyim"
+.venv\Scripts\python search.py "6502 m.48" --yeniden-yazma -k 3          # model çağrısı yok
+.venv\Scripts\python scripts\build_chunks.py                             # requirements-build.txt
+.venv\Scripts\python scripts\eval_answers.py --runs 3                    # cevap ölçümü (ücretli)
+.venv\Scripts\python scripts\eval_retrieval.py --varsayilan --runs 3     # arama ölçümü (ücretli)
 ```
 
-Akış: soru → arama (dondurulmuş varsayılan hat, ilk 8 parça) → bağlam (`context.py`) → model
-(JSON şeması) → doğrulama (`verify.py`) → cevap (`answer.py`, `Cevaplayici`).
-
-- **Bağlam:** belge sürüm bilgisi, parçalar (kimlik, bağlam başlığı, durum, resmî metin),
-  tekilleştirilmiş dipnotlar. Ceza tablosu bağlamdaysa bağlı madde parçalarından en ilgili 3'ü
-  eklenir. Yeniden yazılmış sorgular modele verilmez.
-- **Çıktı:** durum (`cevaplandi` / `kismen_cevaplandi` / `bulunamadi`), cümleler, her cümle için
-  parça kimliği ve kelimesi kelimesine alıntı, bulunamayan kısımlar, uyarılar.
-- **Doğrulama:** her alıntı gösterilen parçada aranır (boşluk, tire, tırnak, büyük harf farklarına
-  dayanıklı). Cümledeki süre, tutar, oran, tarih ve madde numaraları alıntıda ya da parçada geçmeli;
-  rakam ve yazı eşlenir ("14 gün" = "on dört gün"). Doğrulanamayan cümle **gösterilmez**; cevabın
-  üstüne "N cümle kaynağında doğrulanamadığı için çıkarıldı" notu konur ve durum en fazla
-  `kismen_cevaplandi` olur.
-- **Kod uyarıları** (modelden bağımsız): AYM iptal dipnotu, mülga hüküm, ceza tablosu belirsizliği,
-  aramanın düz BM25'e düşmesi. Sabit kapanış: hukuki tavsiye değildir.
-- Model: `CEVAP_MODEL` (şu an `claude-haiku-5-5`; Haiku/Sonnet karşılaştırması
-  [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md), seçim bekliyor).
-
-## Değerlendirme
-
-```powershell
-.venv\Scripts\python scripts\eval_answers.py --runs 3                            # cevap üretimi: Haiku ve Sonnet, 3'er koşu
-.venv\Scripts\python scripts\eval_retrieval.py                                   # dense / bm25 / hybrid (embedding kurulumu ister)
-.venv\Scripts\python scripts\eval_retrieval.py --varsayilan --runs 3             # varsayılan hat, canlı model çağrısı, 3 koşu
-```
-
-- `evals/retrieval.yaml`: 30 soruluk geliştirme seti (25'i arama kodu yazılmadan, 5 madde numarası
-  sorusu sonraki deneylerden önce commit'lendi). Seçenek karşılaştırmaları bu sette yapılır.
-- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar; seçilen yapılandırma (BM25 +
-  yeniden yazım, Haiku 5.5, prompt v3) koşulur. Yeniden yazım koşudan koşuya değiştiği için 3 koşu
-  yapılır; en düşük, medyan ve en yüksek raporlanır:
-  `scripts\eval_retrieval.py --set evals/holdout.yaml --varsayilan --runs 3`.
-- Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md) (yöntemler),
-  [evals/DENEYLER.md](evals/DENEYLER.md) (modeller × hibrit × yeniden yazım, bellek, süre, maliyet),
-  [evals/MODEL_KARSILASTIRMA.md](evals/MODEL_KARSILASTIRMA.md) (yeniden yazım modeli, 3'er koşu),
-  [evals/RAPOR_retrieval_varsayilan.md](evals/RAPOR_retrieval_varsayilan.md) (varsayılan hat, 3 koşu),
-  [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md) (cevap üretimi, `evals/answers.yaml`, 20 soru, elle okuma dahil).
+İsteğe bağlı embedding araması: `scripts\build_index.py --model bge-m3`, sonra
+`search.py "..." --mode hybrid --model bge-m3`. Ölçümler: [evals/DENEYLER.md](evals/DENEYLER.md).
 
 ## Bilinen sınırlar
 
-- **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) PDF görüntüleriyle
-  karşılaştırıldı, onaylandı ve indekste. İki tabloda da bazı satırlarda aynı fıkra için birden çok
-  tutar var; hangi tutarın hangi duruma ait olduğu tabloda yazmaz, ilgili maddenin (6502 m.77,
-  6563 m.12) metnindedir. Her iki tablo parçasının başında bu not yer alır. Her satır `ilgili_parca` alanıyla karşılık geldiği madde
-  parçasına bağlıdır.
-- **Ceza tutarı soruları (cevap üretimi için kural):** tablo parçası **tek başına kullanılmaz**.
-  Tablo parçası getirildiğinde `ilgili_parcalar` / satırdaki `ilgili_parca` üzerinden 77. maddenin
-  (6563 için 12. maddenin) ilgili fıkrası da modele verilir. Tutarın hangi duruma ait olduğu madde
-  metninden çıkmıyorsa araç tutarları sıralar ve "hangisinin geçerli olduğu 77. maddeye göre
-  belirlenir" der. Ayrıntı: [docs/cevap_uretimi_notlari.md](docs/cevap_uretimi_notlari.md).
-- **Dışarıda bırakılanlar:** kanunların sonundaki değişiklik/yürürlük tarihleri listeleri, KVKK
-  kadro cetveli, yönetmeliğin Resmî Gazete listesi (bu listenin son satırı yalnızca üstveriye işlendi).
-- **Mülga maddeler** kısa bir kayıt olarak indekste kalır (tarih ve dayanakla). Fıkra düzeyinde mülga
-  hükümler madde metninin içinde durur.
-- **Başlık dipnotları** (ör. 6502 m.77'nin 25–27 numaralı dipnotları) maddenin her parçasına kopyalanır.
-  Cevap üretiminde dipnotlar `(belge, no)` ile tekilleştirilmeli.
-- **Ayrıştırma bu dört PDF'in biçimine göre ayarlandı.** Punto farkı, `MADDE n –` kalıbı ve ek
-  başlıkları buna dahil. Yeni bir belge eklenirse doğrulama raporu yeniden incelenmeli.
-- **Yeniden yazım koşudan koşuya değişir.** Aynı model ve prompt ile geliştirme setinde @5,
-  cevaplı 26 soruda 22 ile 25 arasında oynadı (Opus 5.5, 4 koşu). Tek koşuluk bir sonuç (holdout
-  dahil) bu oynama payıyla okunmalı.
-- **Yeniden yazılmış sorgular bilgi içerebilir** (ör. yanlış bir süre). Arama için kullanılırlar;
-  cevap üretiminde modele verilmemelidir.
-- **Varsayılan hat API'ye bağlıdır.** Çağrı başarısız olursa düz BM25'e düşülür; düz BM25 günlük dil
-  sorularında belirgin biçimde zayıftır (geliştirme setinde 3/8).
-- **Tarih kapsamı:** metinler mevzuat.gov.tr'den 2026-11-23'te indirildi. Bu tarihten sonraki değişiklikleri içermez.
+- **Kavram çevirme.** Günlük dildeki soru bazen yanlış hukuki kavrama çevriliyor. Örnekler:
+  - "pazaryeri ödemesi" sorusu, ETK ek m.1 yerine başka hükümlere gidiyor.
+  - "kapıdan satış yetkisi" sorusu, "iş yeri dışında kurulan sözleşme" terimiyle eşleşmiyor.
+
+  Bu durumda gerekli madde bağlama gelmez ve cevap "bulunamadı" olur.
+- **Atıf zincirleri.** Bir madde başka bir maddeye yalnız numarasıyla atıf yapıyorsa (m.77/5 → "47
+  nci maddenin ikinci fıkrası"), atıf yapılan madde bağlama otomatik eklenmez. Yalnız ceza
+  tablosu atıfları izlenir.
+- **Yanlış reddetme yanlış olguya tercih edildi.** Doğrulayıcı, alıntısı birebir olmayan doğru
+  cümleleri de eler. Cevap kısalabilir ya da "bulunamadı"ya düşebilir.
+- **Ceza tablolarında belirsizlik.** 6502 m.77 ve 6563 m.12 tablolarının bazı satırlarında aynı
+  fıkra için birden çok tutar var. Hangisinin geçerli olduğu tabloda yazmaz; araç tutarları sıralar
+  ve bunu belirtir.
+- **Yeniden yazım koşudan koşuya değişir.** Aynı soru farklı bağlam ve cevap üretebilir. Tek
+  koşuluk sonuçlar (holdout dahil) bu oynama payıyla okunmalı.
+- **API'ye bağımlılık.** Yeniden yazım çağrısı başarısız olursa düz BM25'e düşülür; düz BM25 günlük
+  dil sorularında belirgin biçimde zayıftır (dev1'de günlük dil 3/8). Cevap çağrısı başarısız olursa
+  cevap üretilmez.
+- **Ayrıştırma bu dört PDF'in biçimine göre ayarlandı.** Yeni belge eklenirse
+  `reports/dogrulama.md` yeniden incelenmeli.
+- **Dışarıda bırakılanlar.** Bunlar indekste yok:
+  - kanunların sonundaki değişiklik ve yürürlük listeleri;
+  - KVKK kadro cetveli;
+  - yönetmeliğin Resmî Gazete listesi.
+
+  Mülga maddeler kısa bir kayıt olarak (tarih ve dayanakla) indekste kalır.
+- **Tarih kapsamı:** 2026-11-23 sonrası değişiklikler yok. AYM iptal kararlarının yürürlük tarihleri
+  dipnotlardan gösterilir.
+- **Günlük sınır bellekte** (bkz. Arayüz ve yayın).
