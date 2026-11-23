@@ -139,7 +139,40 @@ def test_red_ve_bozuk_json_bulunamadi(r):
                                    usage=SimpleNamespace(input_tokens=1, output_tokens=1))
     cv = Cevaplayici(arayici=Arayici(retriever=r, rewriter=FakeRW()), client=Bozuk({}), model="claude-haiku-5-5")
     c = cv.cevapla("x")
-    assert c.durum == "bulunamadi" and any("okunamadı" in u["metin"] for u in c.uyarilar)
+    assert c.durum == "bulunamadi" and c.model_denemesi == 2
+    hata = [u for u in c.uyarilar if u["tur"] == "sistem_hatasi"]
+    assert len(hata) == 1 and "okunamadı" in hata[0]["metin"] and "yeniden deneyin" in hata[0]["metin"]
+
+
+def test_bozuk_json_bir_kez_yeniden_denenir(r):
+    iyi = {"durum": "cevaplandi", "cumleler": [GECERLI], "bulunamayan": [], "uyarilar": []}
+
+    class BirKezBozuk(FakeClient):
+        def _create(self, **kw):
+            self.calls.append(kw)
+            text = '{"durum": "cevap' if len(self.calls) == 1 else json.dumps(self.ham)
+            return SimpleNamespace(stop_reason="end_turn", content=[SimpleNamespace(type="text", text=text)],
+                                   usage=SimpleNamespace(input_tokens=4000, output_tokens=300))
+    client = BirKezBozuk(iyi)
+    cv = Cevaplayici(arayici=Arayici(retriever=r, rewriter=FakeRW()), client=client, model="claude-haiku-5-5")
+    c = cv.cevapla("Mesafeli sözleşmelerde cayma süresi nedir?")
+    assert len(client.calls) == 2 and c.model_denemesi == 2
+    assert not any(u["tur"] == "sistem_hatasi" for u in c.uyarilar)
+    tek = Cevaplayici(arayici=Arayici(retriever=r, rewriter=FakeRW()), client=FakeClient(iyi),
+                      model="claude-haiku-5-5").cevapla("Mesafeli sözleşmelerde cayma süresi nedir?")
+    assert tek.model_denemesi == 1
+    assert c.maliyet_usd > tek.maliyet_usd   # iki çağrının maliyeti de sayılır
+
+
+def test_ret_yeniden_denenmez(r):
+    class Ret(FakeClient):
+        def _create(self, **kw):
+            self.calls.append(kw)
+            return SimpleNamespace(stop_reason="refusal", content=[],
+                                   usage=SimpleNamespace(input_tokens=1, output_tokens=1))
+    client = Ret({})
+    c = Cevaplayici(arayici=Arayici(retriever=r, rewriter=FakeRW()), client=client, model="claude-haiku-5-5").cevapla("x")
+    assert len(client.calls) == 1 and any("reddetti" in u["metin"] for u in c.uyarilar)
 
 
 def test_kullanici_mesaji_soruyu_etiketler(r):
