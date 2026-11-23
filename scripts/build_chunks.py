@@ -90,7 +90,7 @@ def main() -> None:
     w("`python scripts/build_chunks.py` tarafından üretilir. Elle düzenlemeyin.\n")
     w(f"Toplam parça: **{len(all_chunks)}** "
       f"(indekse girecek: {sum(c['indekse_dahil'] for c in all_chunks)}, "
-      f"onay bekleyen tablo: {sum(c['tur'] == 'tablo' for c in all_chunks)})\n")
+      f"indeks dışı: {sum(not c['indekse_dahil'] for c in all_chunks)})\n")
 
     # 1. özet
     w("## 1. Belge başına özet\n")
@@ -180,13 +180,16 @@ def main() -> None:
     w("")
 
     # 7. tablolar
-    w("## 7. İdari para cezası tabloları — ONAY BEKLİYOR\n")
-    w("Bu tablolar `indekse_dahil: false` ile kaydedildi. Rakamları aşağıdaki sayfa görüntüleriyle "
-      "karşılaştırıp onay verilene kadar arama indeksine girmeyecekler.\n")
+    w("## 7. İdari para cezası tabloları\n")
+    w("Rakamlar sayfa görüntüleriyle karşılaştırıldı. Bir tablo yalnızca kullanıcı onayından sonra "
+      "indekse girer (`build.py` içindeki `APPROVED_TABLES`). Her satır, karşılık geldiği madde "
+      "parçasına `ilgili_parca` alanıyla bağlıdır.\n")
     for k, (d, r) in results.items():
         t = r.table
         if t is None:
             continue
+        tc = next(c for c in r.chunks if c["tur"] == "tablo")
+        links = [row["ilgili_parca"] for row in tc["satirlar"]]
         imgs = render_table_pages(d, t.sayfalar)
         same = Counter(t.hucre_sayilari) == Counter(t.ham_sayilar)
         w(f"### {k}: {t.baslik}\n")
@@ -194,13 +197,15 @@ def main() -> None:
         w(f"- Açıklama: {t.aciklama}")
         w(f"- Otomatik kontrol: hücrelerden okunan {len(t.hucre_sayilari)} sayı ile tutar sütunundaki "
           f"ham kelimelerden okunan {len(t.ham_sayilar)} sayı {'**aynı** ✅' if same else '**FARKLI** ❌'}")
+        w(f"- Durum: {'**indekste** (onaylandı)' if tc['indekse_dahil'] else '**indeks dışı** (onay bekliyor)'}")
+        w(f"- İlgili parçalar: {', '.join(f'`{x}`' for x in tc['ilgili_parcalar'])}")
         w("- Sayfa görüntüleri: " + ", ".join(f"[{Path(i).name}]({i})" for i in imgs) + "\n")
-        w("| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa |")
-        w("|---|---|---|---|---|---|---|")
-        for i, row in enumerate(t.satirlar, 1):
+        w("| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa | İlgili parça |")
+        w("|---|---|---|---|---|---|---|---|")
+        for i, (row, link) in enumerate(zip(t.satirlar, links), 1):
             bolum = "güncel" if row.bolum == "guncel" else "Geçici m.3 (değişiklik öncesi 77. madde)"
             w(f"| {i} | {bolum} | {md_escape(row.fikra or '')} | {row.bent or ''} | {row.alt_bent or ''} "
-              f"| {row.tutar} | {row.sayfa} |")
+              f"| {row.tutar} | {row.sayfa} | `{link}` |")
         w("")
     w("**Bilinen sınır (6502 tablosu):** Bazı satırlarda aynı fıkra/bent için birden çok tutar var "
       "(ör. dördüncü fıkra (a) bendi: 31.902.048 ve 22.329). Tablo hangi tutarın hangi duruma ait "

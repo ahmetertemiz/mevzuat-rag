@@ -2,7 +2,7 @@
 
 `python scripts/build_chunks.py` tarafından üretilir. Elle düzenlemeyin.
 
-Toplam parça: **217** (indekse girecek: 215, onay bekleyen tablo: 2)
+Toplam parça: **217** (indekse girecek: 217, indeks dışı: 0)
 
 ## 1. Belge başına özet
 
@@ -63,117 +63,121 @@ Yok.
 - **KVKK**: Kadro cetveli (teşkilat kadro listesi)
 - **MSY**: Resmî Gazete yayım/değişiklik listesi (yalnızca belge üstverisine işlendi)
 
-## 7. İdari para cezası tabloları — ONAY BEKLİYOR
+## 7. İdari para cezası tabloları
 
-Bu tablolar `indekse_dahil: false` ile kaydedildi. Rakamları aşağıdaki sayfa görüntüleriyle karşılaştırıp onay verilene kadar arama indeksine girmeyecekler.
+Rakamlar sayfa görüntüleriyle karşılaştırıldı. Bir tablo yalnızca kullanıcı onayından sonra indekse girer (`build.py` içindeki `APPROVED_TABLES`). Her satır, karşılık geldiği madde parçasına `ilgili_parca` alanıyla bağlıdır.
 
 ### TKHK: 6502 Sayılı Tüketicinin Korunması Hakkında Kanunun 77 nci Maddesindeki İdari Para Cezaları Miktarlarıyla İlgili Tablo
 
 - Yıl: **2026** · PDF sayfaları: 48, 49, 50
 - Açıklama: (23/12/2025 tarihli ve 33116 sayılı Resmî Gazete’de yayımlanan 6502 Sayılı Tüketicinin Korunması Hakkında Kanunun 77 nci Maddesine Göre 2026 Yılında Uygulanacak Olan İdari Para Cezalarına İlişkin Tebliği ile 6502 sayılı Tüketicinin Korunması Hakkında Kanunun 77 nci maddesinde düzenlenmiş olan idari para cezaları miktarları, 1/1/2026 tarihinden itibaren aşağıdaki şekilde uygulanacaktır.)
 - Otomatik kontrol: hücrelerden okunan 67 sayı ile tutar sütunundaki ham kelimelerden okunan 67 sayı **aynı** ✅
+- Durum: **indekste** (onaylandı)
+- İlgili parçalar: `TKHK-m77-1`, `TKHK-m77-2`, `TKHK-m77-3`, `TKHK-m77-4`, `TKHK-m77-5`, `TKHK-m77-6`, `TKHK-m77-7`, `TKHK-gecici3-1`
 - Sayfa görüntüleri: [TKHK_tablo_s48.png](img/TKHK_tablo_s48.png), [TKHK_tablo_s49.png](img/TKHK_tablo_s49.png), [TKHK_tablo_s50.png](img/TKHK_tablo_s50.png)
 
-| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa |
-|---|---|---|---|---|---|---|
-| 1 | güncel | Birinci fıkrasındaki ceza miktarı | (a) bendi |  | 3.973 | 48 |
-| 2 | güncel | Birinci fıkrasındaki ceza miktarı | (b) bendi |  | 3.973 | 48 |
-| 3 | güncel | İkinci fıkrasındaki ceza miktarı |  |  | 3.922 | 48 |
-| 4 | güncel | Üçüncü fıkrasındaki ceza miktarı |  |  | 19.827 | 49 |
-| 5 | güncel | Dördüncü fıkrasındaki ceza miktarı | (a) bendi |  | 31.902.048 | 49 |
-| 6 | güncel | Dördüncü fıkrasındaki ceza miktarı | (a) bendi |  | 22.329 | 49 |
-| 7 | güncel | Beşinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 49 |
-| 8 | güncel | Beşinci fıkrasındaki ceza miktarı |  |  | 446.627 | 49 |
-| 9 | güncel | Altıncı fıkrasındaki ceza miktarı |  |  | 3.922 | 49 |
-| 10 | güncel | Yedinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 49 |
-| 11 | güncel | Sekizinci fıkrasındaki ceza miktarları |  |  | 99.352.237 | 49 |
-| 12 | güncel | Sekizinci fıkrasındaki ceza miktarları |  |  | 9.935.181 | 49 |
-| 13 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 99.315 | 49 |
-| 14 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 1.987.014 | 49 |
-| 15 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 198.656 | 49 |
-| 16 | güncel | Onuncu fıkrasındaki ceza miktarları | (a) bendi |  | 3.190.204 | 49 |
-| 17 | güncel | Onuncu fıkrasındaki ceza miktarları | (a) bendi |  | 3.187 | 49 |
-| 18 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 1. alt bent | 2.013.887 | 49 |
-| 19 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 1. alt bent | 32.510 | 49 |
-| 20 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 2. alt bent | 32.510 | 49 |
-| 21 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 3. alt bent | 223.965 | 49 |
-| 22 | güncel | Onuncu fıkrasındaki ceza miktarları | (c) bendi |  | 3.973 | 49 |
-| 23 | güncel | On birinci fıkrasındaki ceza miktarı |  |  | 198.656 | 49 |
-| 24 | güncel | On ikinci fıkrasındaki ceza miktarı | (a) bendi |  | 198.679 | 49 |
-| 25 | güncel | On ikinci fıkrasındaki ceza miktarı | (a) bendi |  | 1.986.795 | 49 |
-| 26 | güncel | On ikinci fıkrasındaki ceza miktarı | (b) bendi |  | 3.991.652 | 49 |
-| 27 | güncel | On ikinci fıkrasındaki ceza miktarı | (b) bendi |  | 39.916.524 | 49 |
-| 28 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 99.339 | 49 |
-| 29 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 993.397 | 49 |
-| 30 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 1.995.826 | 49 |
-| 31 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 19.958.262 | 49 |
-| 32 | güncel | On ikinci fıkrasındaki ceza miktarı | (ç) bendi |  | 108.370 | 49 |
-| 33 | güncel | On ikinci fıkrasındaki ceza miktarı | (ç) bendi |  | 1.083.706 | 49 |
-| 34 | güncel | On ikinci fıkrasındaki ceza miktarı | (d) bendi |  | 1.083.706 | 49 |
-| 35 | güncel | On ikinci fıkrasındaki ceza miktarı | (d) bendi |  | 10.837.065 | 49 |
-| 36 | güncel | On ikinci fıkrasındaki ceza miktarı | (e) bendi |  | 1.083.706 | 49 |
-| 37 | güncel | On ikinci fıkrasındaki ceza miktarı | (e) bendi |  | 10.837.065 | 49 |
-| 38 | güncel | On ikinci fıkrasındaki ceza miktarı | (f) bendi |  | 505.729 | 49 |
-| 39 | güncel | On ikinci fıkrasındaki ceza miktarı | (f) bendi |  | 5.057.297 | 49 |
-| 40 | güncel | On ikinci fıkrasındaki ceza miktarı | (g) bendi |  | 108.370 | 49 |
-| 41 | güncel | On ikinci fıkrasındaki ceza miktarı | (g) bendi |  | 1.083.706 | 49 |
-| 42 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 108.370 | 49 |
-| 43 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 1.083.706 | 49 |
-| 44 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 1.083.706 | 49 |
-| 45 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 10.837.065 | 49 |
-| 46 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 6.380.408 | 49 |
-| 47 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 1.987.014 | 49 |
-| 48 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 99.315 | 50 |
-| 49 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 510.430 | 50 |
-| 50 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 10.837.065 | 50 |
-| 51 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 1.806.177 | 50 |
-| 52 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 90.308 | 50 |
-| 53 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 19.141.229 | 50 |
-| 54 | güncel | On altıncı fıkrasındaki ceza miktarı |  |  | 3.922 | 50 |
-| 55 | güncel | On yedinci fıkrasındaki ceza miktarı | (a) bendi |  | 6.274.500 | 50 |
-| 56 | güncel | On yedinci fıkrasındaki ceza miktarı | (a) bendi |  | 2.760 | 50 |
-| 57 | güncel | On yedinci fıkrasındaki ceza miktarı | (b) bendi |  | 1.254.900 | 50 |
-| 58 | güncel | On sekizinci fıkrasındaki ceza miktarının alt ve üst sınırları |  |  | 19.827-738.286 | 50 |
-| 59 | güncel | On dokuzuncu fıkrasındaki ceza miktarının alt ve üst sınırları |  |  | 510.430-765.649.243 | 50 |
-| 60 | Geçici m.3 (değişiklik öncesi 77. madde) | Üçüncü fıkrasındaki ceza miktarı |  |  | 19.827 | 50 |
-| 61 | Geçici m.3 (değişiklik öncesi 77. madde) | Dördüncü fıkrasındaki ceza miktarları |  |  | 397.376 | 50 |
-| 62 | Geçici m.3 (değişiklik öncesi 77. madde) | Dördüncü fıkrasındaki ceza miktarları |  |  | 19.827 | 50 |
-| 63 | Geçici m.3 (değişiklik öncesi 77. madde) | Beşinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 50 |
-| 64 | Geçici m.3 (değişiklik öncesi 77. madde) | Sekizinci fıkrasındaki ceza miktarları |  |  | 9.935.181 | 50 |
-| 65 | Geçici m.3 (değişiklik öncesi 77. madde) | On dokuzuncu fıkrasındaki ceza miktarının alt sınırı |  |  | 496.719 | 50 |
+| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa | İlgili parça |
+|---|---|---|---|---|---|---|---|
+| 1 | güncel | Birinci fıkrasındaki ceza miktarı | (a) bendi |  | 3.973 | 48 | `TKHK-m77-1` |
+| 2 | güncel | Birinci fıkrasındaki ceza miktarı | (b) bendi |  | 3.973 | 48 | `TKHK-m77-1` |
+| 3 | güncel | İkinci fıkrasındaki ceza miktarı |  |  | 3.922 | 48 | `TKHK-m77-1` |
+| 4 | güncel | Üçüncü fıkrasındaki ceza miktarı |  |  | 19.827 | 49 | `TKHK-m77-1` |
+| 5 | güncel | Dördüncü fıkrasındaki ceza miktarı | (a) bendi |  | 31.902.048 | 49 | `TKHK-m77-2` |
+| 6 | güncel | Dördüncü fıkrasındaki ceza miktarı | (a) bendi |  | 22.329 | 49 | `TKHK-m77-2` |
+| 7 | güncel | Beşinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 49 | `TKHK-m77-2` |
+| 8 | güncel | Beşinci fıkrasındaki ceza miktarı |  |  | 446.627 | 49 | `TKHK-m77-2` |
+| 9 | güncel | Altıncı fıkrasındaki ceza miktarı |  |  | 3.922 | 49 | `TKHK-m77-2` |
+| 10 | güncel | Yedinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 49 | `TKHK-m77-2` |
+| 11 | güncel | Sekizinci fıkrasındaki ceza miktarları |  |  | 99.352.237 | 49 | `TKHK-m77-2` |
+| 12 | güncel | Sekizinci fıkrasındaki ceza miktarları |  |  | 9.935.181 | 49 | `TKHK-m77-2` |
+| 13 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 99.315 | 49 | `TKHK-m77-3` |
+| 14 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 1.987.014 | 49 | `TKHK-m77-3` |
+| 15 | güncel | Dokuzuncu fıkrasındaki ceza miktarları |  |  | 198.656 | 49 | `TKHK-m77-3` |
+| 16 | güncel | Onuncu fıkrasındaki ceza miktarları | (a) bendi |  | 3.190.204 | 49 | `TKHK-m77-3` |
+| 17 | güncel | Onuncu fıkrasındaki ceza miktarları | (a) bendi |  | 3.187 | 49 | `TKHK-m77-3` |
+| 18 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 1. alt bent | 2.013.887 | 49 | `TKHK-m77-3` |
+| 19 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 1. alt bent | 32.510 | 49 | `TKHK-m77-3` |
+| 20 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 2. alt bent | 32.510 | 49 | `TKHK-m77-3` |
+| 21 | güncel | Onuncu fıkrasındaki ceza miktarları | (b) bendi | 3. alt bent | 223.965 | 49 | `TKHK-m77-3` |
+| 22 | güncel | Onuncu fıkrasındaki ceza miktarları | (c) bendi |  | 3.973 | 49 | `TKHK-m77-3` |
+| 23 | güncel | On birinci fıkrasındaki ceza miktarı |  |  | 198.656 | 49 | `TKHK-m77-3` |
+| 24 | güncel | On ikinci fıkrasındaki ceza miktarı | (a) bendi |  | 198.679 | 49 | `TKHK-m77-4` |
+| 25 | güncel | On ikinci fıkrasındaki ceza miktarı | (a) bendi |  | 1.986.795 | 49 | `TKHK-m77-4` |
+| 26 | güncel | On ikinci fıkrasındaki ceza miktarı | (b) bendi |  | 3.991.652 | 49 | `TKHK-m77-4` |
+| 27 | güncel | On ikinci fıkrasındaki ceza miktarı | (b) bendi |  | 39.916.524 | 49 | `TKHK-m77-4` |
+| 28 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 99.339 | 49 | `TKHK-m77-4` |
+| 29 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 993.397 | 49 | `TKHK-m77-4` |
+| 30 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 1.995.826 | 49 | `TKHK-m77-4` |
+| 31 | güncel | On ikinci fıkrasındaki ceza miktarı | (c) bendi |  | 19.958.262 | 49 | `TKHK-m77-4` |
+| 32 | güncel | On ikinci fıkrasındaki ceza miktarı | (ç) bendi |  | 108.370 | 49 | `TKHK-m77-4` |
+| 33 | güncel | On ikinci fıkrasındaki ceza miktarı | (ç) bendi |  | 1.083.706 | 49 | `TKHK-m77-4` |
+| 34 | güncel | On ikinci fıkrasındaki ceza miktarı | (d) bendi |  | 1.083.706 | 49 | `TKHK-m77-4` |
+| 35 | güncel | On ikinci fıkrasındaki ceza miktarı | (d) bendi |  | 10.837.065 | 49 | `TKHK-m77-4` |
+| 36 | güncel | On ikinci fıkrasındaki ceza miktarı | (e) bendi |  | 1.083.706 | 49 | `TKHK-m77-4` |
+| 37 | güncel | On ikinci fıkrasındaki ceza miktarı | (e) bendi |  | 10.837.065 | 49 | `TKHK-m77-4` |
+| 38 | güncel | On ikinci fıkrasındaki ceza miktarı | (f) bendi |  | 505.729 | 49 | `TKHK-m77-4` |
+| 39 | güncel | On ikinci fıkrasındaki ceza miktarı | (f) bendi |  | 5.057.297 | 49 | `TKHK-m77-4` |
+| 40 | güncel | On ikinci fıkrasındaki ceza miktarı | (g) bendi |  | 108.370 | 49 | `TKHK-m77-5` |
+| 41 | güncel | On ikinci fıkrasındaki ceza miktarı | (g) bendi |  | 1.083.706 | 49 | `TKHK-m77-5` |
+| 42 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 108.370 | 49 | `TKHK-m77-6` |
+| 43 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 1.083.706 | 49 | `TKHK-m77-6` |
+| 44 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 1.083.706 | 49 | `TKHK-m77-6` |
+| 45 | güncel | On üçüncü fıkrasındaki ceza miktarları |  |  | 10.837.065 | 49 | `TKHK-m77-6` |
+| 46 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 6.380.408 | 49 | `TKHK-m77-6` |
+| 47 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 1.987.014 | 49 | `TKHK-m77-6` |
+| 48 | güncel | On dördüncü fıkrasındaki ceza miktarları |  |  | 99.315 | 50 | `TKHK-m77-6` |
+| 49 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 510.430 | 50 | `TKHK-m77-6` |
+| 50 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 10.837.065 | 50 | `TKHK-m77-6` |
+| 51 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 1.806.177 | 50 | `TKHK-m77-6` |
+| 52 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 90.308 | 50 | `TKHK-m77-6` |
+| 53 | güncel | On beşinci fıkrasındaki ceza miktarları |  |  | 19.141.229 | 50 | `TKHK-m77-6` |
+| 54 | güncel | On altıncı fıkrasındaki ceza miktarı |  |  | 3.922 | 50 | `TKHK-m77-6` |
+| 55 | güncel | On yedinci fıkrasındaki ceza miktarı | (a) bendi |  | 6.274.500 | 50 | `TKHK-m77-7` |
+| 56 | güncel | On yedinci fıkrasındaki ceza miktarı | (a) bendi |  | 2.760 | 50 | `TKHK-m77-7` |
+| 57 | güncel | On yedinci fıkrasındaki ceza miktarı | (b) bendi |  | 1.254.900 | 50 | `TKHK-m77-7` |
+| 58 | güncel | On sekizinci fıkrasındaki ceza miktarının alt ve üst sınırları |  |  | 19.827-738.286 | 50 | `TKHK-m77-7` |
+| 59 | güncel | On dokuzuncu fıkrasındaki ceza miktarının alt ve üst sınırları |  |  | 510.430-765.649.243 | 50 | `TKHK-m77-7` |
+| 60 | Geçici m.3 (değişiklik öncesi 77. madde) | Üçüncü fıkrasındaki ceza miktarı |  |  | 19.827 | 50 | `TKHK-gecici3-1` |
+| 61 | Geçici m.3 (değişiklik öncesi 77. madde) | Dördüncü fıkrasındaki ceza miktarları |  |  | 397.376 | 50 | `TKHK-gecici3-1` |
+| 62 | Geçici m.3 (değişiklik öncesi 77. madde) | Dördüncü fıkrasındaki ceza miktarları |  |  | 19.827 | 50 | `TKHK-gecici3-1` |
+| 63 | Geçici m.3 (değişiklik öncesi 77. madde) | Beşinci fıkrasındaki ceza miktarı |  |  | 1.987.014 | 50 | `TKHK-gecici3-1` |
+| 64 | Geçici m.3 (değişiklik öncesi 77. madde) | Sekizinci fıkrasındaki ceza miktarları |  |  | 9.935.181 | 50 | `TKHK-gecici3-1` |
+| 65 | Geçici m.3 (değişiklik öncesi 77. madde) | On dokuzuncu fıkrasındaki ceza miktarının alt sınırı |  |  | 496.719 | 50 | `TKHK-gecici3-1` |
 
 ### ETK: 6563 Sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanunun 12 nci Maddesine Göre 2026 Yılında Uygulanacak Olan İdari Para Cezalarına İlişkin Tablo
 
 - Yıl: **2026** · PDF sayfaları: 19
 - Açıklama: 6563 sayılı Kanunun 12 nci maddesinde düzenlenen 1/1/2026 ile 31/12/2026 tarihleri arasında uygulanacak idari para cezası miktarları; Ticaret Bakanlığının 25/12/2025 tarihli ve 33118 sayılı Resmî Gazete’de yayımlanan Tebliği ile aşağıdaki şekilde düzenlenmiştir.
 - Otomatik kontrol: hücrelerden okunan 31 sayı ile tutar sütunundaki ham kelimelerden okunan 31 sayı **aynı** ✅
+- Durum: **indekste** (onaylandı)
+- İlgili parçalar: `ETK-m12-1`, `ETK-m12-2`, `ETK-m12-3`, `ETK-m12-4`, `ETK-m12-5`
 - Sayfa görüntüleri: [ETK_tablo_s19.png](img/ETK_tablo_s19.png)
 
-| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa |
-|---|---|---|---|---|---|---|
-| 1 | güncel | Birinci fıkrasının (a) bendindeki cezanın alt ve üst sınırları |  |  | 2.859-14.309 | 19 |
-| 2 | güncel | Birinci fıkrasının (b) bendindeki cezanın alt ve üst sınırları |  |  | 2.859-28.620 | 19 |
-| 3 | güncel | Birinci fıkrasının (c) bendindeki cezanın alt ve üst sınırları |  |  | 5.723-42.930 | 19 |
-| 4 | güncel | Birinci fıkrasının (ç) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 |
-| 5 | güncel | Birinci fıkrasının (d) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 |
-| 6 | güncel | Birinci fıkrasının (e) bendindeki cezanın alt ve üst sınırları |  |  | 143.102-715.516 | 19 |
-| 7 | güncel | Birinci fıkrasının (f) bendindeki cezanın alt ve üst sınırları |  |  | 143.102-715.516 | 19 |
-| 8 | güncel | Birinci fıkrasının (g) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 |
-| 9 | güncel | Birinci fıkrasındaki ceza tutarları | (ğ) bendi |  | En az 28.620 | 19 |
-| 10 | güncel | Birinci fıkrasındaki ceza tutarları | (h) bendi |  | 1.431.033 | 19 |
-| 11 | güncel | Birinci fıkrasındaki ceza tutarları | (ı) bendi |  | 28.620 | 19 |
-| 12 | güncel | Birinci fıkrasındaki ceza tutarları | (j) bendi |  | 858.620 | 19 |
-| 13 | güncel | Birinci fıkrasındaki ceza tutarları | (l) bendi |  | En az 286.206 | 19 |
-| 14 | güncel | Birinci fıkrasındaki ceza tutarları | (m) bendi |  | 28.620 | 19 |
-| 15 | güncel | Birinci fıkrasındaki ceza tutarları | (o) bendi |  | 28.620.688 | 19 |
-| 16 | güncel | Birinci fıkrasındaki ceza tutarları | (ö) bendi |  | 2.862.067 | 19 |
-| 17 | güncel | Birinci fıkrasındaki ceza tutarları | (p) bendi |  | 2.862.067 | 19 |
-| 18 | güncel | Birinci fıkrasındaki ceza tutarları | (s) bendi |  | 715.516 | 19 |
-| 19 | güncel | Birinci fıkrasındaki ceza tutarları | (ş) bendi |  | 57.241.378 | 19 |
-| 20 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 28.620.688 | 19 |
-| 21 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 57.241.378 | 19 |
-| 22 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 114.482.758 | 19 |
-| 23 | güncel | Altıncı fıkrasındaki ceza tutarı |  |  | En fazla 1.431.034.488 | 19 |
+| # | Bölüm | Fıkra | Bent | Alt bent | Tutar (TL) | Sayfa | İlgili parça |
+|---|---|---|---|---|---|---|---|
+| 1 | güncel | Birinci fıkrasının (a) bendindeki cezanın alt ve üst sınırları |  |  | 2.859-14.309 | 19 | `ETK-m12-1` |
+| 2 | güncel | Birinci fıkrasının (b) bendindeki cezanın alt ve üst sınırları |  |  | 2.859-28.620 | 19 | `ETK-m12-1` |
+| 3 | güncel | Birinci fıkrasının (c) bendindeki cezanın alt ve üst sınırları |  |  | 5.723-42.930 | 19 | `ETK-m12-1` |
+| 4 | güncel | Birinci fıkrasının (ç) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 | `ETK-m12-1` |
+| 5 | güncel | Birinci fıkrasının (d) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 | `ETK-m12-1` |
+| 6 | güncel | Birinci fıkrasının (e) bendindeki cezanın alt ve üst sınırları |  |  | 143.102-715.516 | 19 | `ETK-m12-1` |
+| 7 | güncel | Birinci fıkrasının (f) bendindeki cezanın alt ve üst sınırları |  |  | 143.102-715.516 | 19 | `ETK-m12-1` |
+| 8 | güncel | Birinci fıkrasının (g) bendindeki cezanın alt ve üst sınırları |  |  | 28.620-286.206 | 19 | `ETK-m12-1` |
+| 9 | güncel | Birinci fıkrasındaki ceza tutarları | (ğ) bendi |  | En az 28.620 | 19 | `ETK-m12-1` |
+| 10 | güncel | Birinci fıkrasındaki ceza tutarları | (h) bendi |  | 1.431.033 | 19 | `ETK-m12-2` |
+| 11 | güncel | Birinci fıkrasındaki ceza tutarları | (ı) bendi |  | 28.620 | 19 | `ETK-m12-2` |
+| 12 | güncel | Birinci fıkrasındaki ceza tutarları | (j) bendi |  | 858.620 | 19 | `ETK-m12-2` |
+| 13 | güncel | Birinci fıkrasındaki ceza tutarları | (l) bendi |  | En az 286.206 | 19 | `ETK-m12-2` |
+| 14 | güncel | Birinci fıkrasındaki ceza tutarları | (m) bendi |  | 28.620 | 19 | `ETK-m12-2` |
+| 15 | güncel | Birinci fıkrasındaki ceza tutarları | (o) bendi |  | 28.620.688 | 19 | `ETK-m12-2` |
+| 16 | güncel | Birinci fıkrasındaki ceza tutarları | (ö) bendi |  | 2.862.067 | 19 | `ETK-m12-2` |
+| 17 | güncel | Birinci fıkrasındaki ceza tutarları | (p) bendi |  | 2.862.067 | 19 | `ETK-m12-2` |
+| 18 | güncel | Birinci fıkrasındaki ceza tutarları | (s) bendi |  | 715.516 | 19 | `ETK-m12-3` |
+| 19 | güncel | Birinci fıkrasındaki ceza tutarları | (ş) bendi |  | 57.241.378 | 19 | `ETK-m12-3` |
+| 20 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 28.620.688 | 19 | `ETK-m12-4` |
+| 21 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 57.241.378 | 19 | `ETK-m12-4` |
+| 22 | güncel | Üçüncü fıkrasındaki ceza tutarları |  |  | 114.482.758 | 19 | `ETK-m12-4` |
+| 23 | güncel | Altıncı fıkrasındaki ceza tutarı |  |  | En fazla 1.431.034.488 | 19 | `ETK-m12-5` |
 
 **Bilinen sınır (6502 tablosu):** Bazı satırlarda aynı fıkra/bent için birden çok tutar var (ör. dördüncü fıkra (a) bendi: 31.902.048 ve 22.329). Tablo hangi tutarın hangi duruma ait olduğunu söylemiyor; bu bilgi 77. maddenin metninde. Tutarlar tabloda göründüğü sırayla tutuluyor.
 

@@ -113,12 +113,29 @@ def test_uzun_tanim_maddesi_giris_cumlesini_tasir(chunks):
     assert parts[-1]["metin"].rstrip().endswith("ifade eder.")
 
 
-def test_ceza_tablolari_onay_bekliyor(results, chunks):
+def test_ceza_tablolari_onayli_ve_bagli(results, chunks, by_id):
     tablolar = [c for c in chunks if c["tur"] == "tablo"]
     assert {c["belge_kisa_ad"] for c in tablolar} == {"TKHK", "ETK"}
     for c in tablolar:
-        assert c["indekse_dahil"] is False  # karar 2: onaydan önce indekse girmez
+        assert c["indekse_dahil"] is True  # kullanıcı onayı sonrası
         assert c["yil"] == 2026
+        for row in c["satirlar"]:
+            linked = by_id[row["ilgili_parca"]]
+            if row["bolum"] == "guncel":
+                assert row["fikra_no"] in linked["fikralar"], row
+                assert linked["madde_no"] == c["ilgili_madde"]
+            else:
+                assert linked["madde_no"] == "Geçici 3"
+        assert c["ilgili_parcalar"] == list(dict.fromkeys(r["ilgili_parca"] for r in c["satirlar"]))
+    # bent bazında bölünmüş 6563 m.12/1: bent satırı, o bendi içeren parçaya bağlanır
+    etk = next(c for c in tablolar if c["belge_kisa_ad"] == "ETK")
+    h = next(r for r in etk["satirlar"] if r["bent"] == "(h) bendi")
+    assert "h" in by_id[h["ilgili_parca"]]["bentler"]
+    # 6502 tablosu notu hem metnin hem arama metninin başında
+    tk = next(c for c in tablolar if c["belge_kisa_ad"] == "TKHK")
+    note = "Bir satırda birden çok tutar varsa"
+    assert tk["metin"].startswith(note)
+    assert tk["arama_metni"].split("\n", 1)[1].startswith(note)
     for kisa in ("TKHK", "ETK"):
         t = results[kisa].table
         assert Counter(t.hucre_sayilari) == Counter(t.ham_sayilar)

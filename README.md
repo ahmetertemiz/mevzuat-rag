@@ -51,9 +51,16 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
 
 ## Bilinen sınırlar
 
-- **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) çıkarılıyor ama
-  insan onayı gelene kadar `indekse_dahil: false`. 6502 tablosunda bazı satırlarda aynı fıkra için
-  birden çok tutar var. Hangi tutarın hangi duruma ait olduğu tabloda yazmıyor, 77. maddenin metninde.
+- **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) PDF görüntüleriyle
+  karşılaştırıldı, onaylandı ve indekste. 6502 tablosunda bazı satırlarda aynı fıkra için birden çok
+  tutar var; hangi tutarın hangi duruma ait olduğu tabloda yazmaz, 77. maddenin metnindedir. Tablo
+  parçasının başında bu not yer alır. Her satır `ilgili_parca` alanıyla karşılık geldiği madde
+  parçasına bağlıdır.
+- **Ceza tutarı soruları (cevap üretimi için kural):** tablo parçası **tek başına kullanılmaz**.
+  Tablo parçası getirildiğinde `ilgili_parcalar` / satırdaki `ilgili_parca` üzerinden 77. maddenin
+  (6563 için 12. maddenin) ilgili fıkrası da modele verilir. Tutarın hangi duruma ait olduğu madde
+  metninden çıkmıyorsa araç tutarları sıralar ve "hangisinin geçerli olduğu 77. maddeye göre
+  belirlenir" der. Ayrıntı: [docs/cevap_uretimi_notlari.md](docs/cevap_uretimi_notlari.md).
 - **Dışarıda bırakılanlar:** kanunların sonundaki değişiklik/yürürlük tarihleri listeleri, KVKK
   kadro cetveli, yönetmeliğin Resmî Gazete listesi (bu listenin son satırı yalnızca üstveriye işlendi).
 - **Mülga maddeler** kısa bir kayıt olarak indekste kalır (tarih ve dayanakla). Fıkra düzeyinde mülga

@@ -11,9 +11,16 @@ from . import chunk as ch
 from . import tables as tb
 from .config import MAX_CHUNK_WORDS, DOCS_RAW, DocSpec
 from .extract import ARTICLE_HEADER_RE, FN_TOKEN_RE, extract
-from .textnorm import tr_title
+from .textnorm import tr_lower, tr_title
 
 DATE_RE = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4})")
+
+# Kullanıcı onayı (2026-11-23): her iki tablonun rakamları PDF görüntüleriyle karşılaştırıldı.
+APPROVED_TABLES = {"6502", "6563"}
+TABLE_NOTES = {
+    "6502": ("Bir satırda birden çok tutar varsa hangisinin hangi duruma ait olduğu bu tabloda "
+             "yazmaz; 77. maddenin ilgili fıkrasına bakılmalıdır."),
+}
 
 
 @dataclass
@@ -217,8 +224,12 @@ def build_document(spec: DocSpec) -> DocResult:
         table = tb.extract_penalty_table(pdf, ex.appendix_start_page, " ".join(intro))
         if table:
             madde = "77 nci" if spec.numara == "6502" else "12 nci"
+            madde_no = madde.split()[0]
             ttext = tb.table_to_text(table, spec.numara, madde)
-            header = f"{tam_ad} ({spec.kisa_ad}) · {madde.split()[0]}. madde idari para cezaları tablosu ({table.yil})"
+            if spec.numara in TABLE_NOTES:
+                ttext = TABLE_NOTES[spec.numara] + "\n" + ttext
+            header = f"{tam_ad} ({spec.kisa_ad}) · {madde_no}. madde idari para cezaları tablosu ({table.yil})"
+            satirlar, ilgili = _link_table_rows(table, chunks, madde_no)
             chunks.append({
                 "belge_id": spec.belge_id, "belge_kisa_ad": spec.kisa_ad, "belge_adi": tam_ad,
                 "belge_turu": spec.tur,
@@ -229,10 +240,11 @@ def build_document(spec: DocSpec) -> DocResult:
                 "fikralar": [], "bentler": None, "parca": 1, "parca_sayisi": 1,
                 "degisiklik_notlari": [], "dipnotlar": [],
                 "sayfalar": table.sayfalar,
-                # İnsan onayı gelene kadar indekse girmez (karar 2).
-                "indekse_dahil": False,
+                # Rakamlar PDF görüntüsüyle karşılaştırıldı ve kullanıcı tarafından onaylandı.
+                "indekse_dahil": spec.numara in APPROVED_TABLES,
                 "baglam_basligi": header, "metin": ttext, "arama_metni": f"{header}\n{ttext}",
-                "satirlar": [r.__dict__ for r in table.satirlar],
+                "ilgili_parcalar": ilgili,
+                "satirlar": satirlar,
             })
 
     if is_reg:
@@ -277,6 +289,55 @@ def build_document(spec: DocSpec) -> DocResult:
         "dislanan_ekler": _excluded_appendix(app_text, is_reg),
     }
     return DocResult(meta=meta, chunks=chunks, diag=diag, table=table)
+
+
+ORDINAL_WORDS = {
+    "birinci": 1, "ikinci": 2, "üçüncü": 3, "dördüncü": 4, "beşinci": 5, "altıncı": 6,
+    "yedinci": 7, "sekizinci": 8, "dokuzuncu": 9, "onuncu": 10,
+}
+
+
+def _ordinal_fikra(label: str) -> int | None:
+    """'On dördüncü fıkrasındaki ...' -> 14, 'Birinci fıkrasının (a) ...' -> 1"""
+    low = tr_lower(label)
+    m = re.match(r"^(on\s+)?(\w+?)\s+fıkra", low)
+    if not m:
+        return None
+    if m.group(1) is None and m.group(2) == "onuncu":
+        return 10
+    base = ORDINAL_WORDS.get(m.group(2))
+    if base is None:
+        return None
+    return base + (10 if m.group(1) else 0)
+
+
+def _link_table_rows(table: tb.PenaltyTable, chunks: list[dict], madde_no: str) -> tuple[list[dict], list[str]]:
+    """Her tablo satırını, karşılık geldiği madde parçasına (chunk_id) bağlar.
+
+    Fıkra numarası satır etiketindeki sıra sayısından, bent harfi '(a) bendi' kalıbından okunur.
+    Madde bent sınırından bölündüyse bent eşleşmesi aranır. Geçici m.3 bölümündeki satırlar maddenin
+    değişiklik öncesi hâline ait; o metin PDF'te yok, bu yüzden Geçici Madde 3 parçasına bağlanır."""
+    art = [c for c in chunks if c["madde_no"] == madde_no and c["tur"] == "madde"]
+    gecici3 = [c["chunk_id"] for c in chunks if c["madde_no"] == "Geçici 3" and c["tur"] == "madde"]
+    rows, linked = [], []
+    for r in table.satirlar:
+        d = dict(r.__dict__)
+        if r.bolum != "guncel":
+            d["ilgili_parca"] = gecici3[0] if gecici3 else None
+            d["fikra_no"] = _ordinal_fikra(r.fikra or "")
+        else:
+            fno = _ordinal_fikra(r.fikra or "")
+            bm = re.search(r"\(([a-zçğıöşü])\) bend", " ".join(x for x in (r.fikra, r.bent) if x))
+            bent = bm.group(1) if bm else None
+            cands = [c for c in art if fno in c["fikralar"]]
+            if bent and len(cands) > 1:
+                cands = [c for c in cands if c["bentler"] and bent in c["bentler"]] or cands
+            d["fikra_no"] = fno
+            d["ilgili_parca"] = cands[0]["chunk_id"] if cands else None
+        rows.append(d)
+        if d["ilgili_parca"] and d["ilgili_parca"] not in linked:
+            linked.append(d["ilgili_parca"])
+    return rows, linked
 
 
 def _fikra_label(nos: list[int]) -> str:
