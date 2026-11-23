@@ -31,8 +31,8 @@ sys.path.insert(0, str(ROOT / "src"))
 from mevzuat_rag.retrieve import MODES, Retriever  # noqa: E402
 
 KS = (1, 3, 5)
-TURLER = ("madde_dili", "gunluk_dil", "iki_madde")
-TUR_AD = {"madde_dili": "Madde dili", "gunluk_dil": "Günlük dil", "iki_madde": "İki madde", "cevapsiz": "Cevapsız"}
+TURLER = ("madde_dili", "gunluk_dil", "iki_madde", "madde_numarasi")
+TUR_AD = {"madde_dili": "Madde dili", "madde_numarasi": "Madde numarası", "gunluk_dil": "Günlük dil", "iki_madde": "İki madde", "cevapsiz": "Cevapsız"}
 MODE_AD = {"dense": "Yalnız embedding", "bm25": "Yalnız BM25", "hybrid": "Hibrit (RRF)"}
 
 

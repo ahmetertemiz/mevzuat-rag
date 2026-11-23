@@ -6,6 +6,7 @@
 # Şema:
 #   id     : S01..S25
 #   tur    : madde_dili  - maddenin kendi kelimeleriyle sorulan
+#            madde_numarasi - madde numarası ya da kanun adıyla sorulan (S26-S30, sonradan eklendi)
 #            gunluk_dil  - günlük dille sorulan
 #            iki_madde   - cevabı iki ayrı maddeye dayanan
 #            cevapsiz    - cevabı bu dört belgede olmayan
@@ -200,3 +201,42 @@ sorular:
     soru: "Trafik cezasına itiraz süresi kaç gündür?"
     dogru: []
     not: "Karayolları Trafik Kanunu; bu dört belgede yok. 'itiraz süresi' ifadesi TKHK m.70 gibi maddelerle sözcük olarak örtüşebilir."
+
+  # ---------------------------------------------------------------- madde_numarasi (5)
+  # Sonradan eklendi (arama çalıştırılmadan önce, ayrı commit). Kullanıcının madde numarası ya da
+  # kanun adıyla sorduğu sorgular. Birim testlerdeki sorgularla (tests/test_search.py) aynı
+  # maddeleri kullanmamaya dikkat edildi.
+  - id: S26
+    tur: madde_numarasi
+    soru: "6502 sayılı kanunun 56. maddesi ne diyor?"
+    dogru:
+      - ["TKHK:56"]
+    not: "TKHK m.56 garanti belgesi."
+
+  - id: S27
+    tur: madde_numarasi
+    soru: "KVKK 5. madde"
+    dogru:
+      - ["KVKK:5"]
+    not: "KVKK m.5 kişisel verilerin işlenme şartları."
+
+  - id: S28
+    tur: madde_numarasi
+    soru: "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?"
+    dogru:
+      - ["ETK:Ek 2"]
+    not: "ETK ek m.2. Kanun numarası değil tam adıyla soruluyor."
+
+  - id: S29
+    tur: madde_numarasi
+    soru: "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi"
+    dogru:
+      - ["MSY:15"]
+    not: "MSY m.15 cayma hakkının istisnaları."
+
+  - id: S30
+    tur: madde_numarasi
+    soru: "Tüketicinin Korunması Hakkında Kanun madde 73/A"
+    dogru:
+      - ["TKHK:73/A"]
+    not: "TKHK m.73/A dava şartı olarak arabuluculuk. Kanun tam adıyla, harfli madde numarası."

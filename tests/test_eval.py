@@ -47,7 +47,8 @@ def test_soru_seti_bicimi():
         data = yaml.safe_load((ROOT / "evals" / name).read_text(encoding="utf-8"))
         assert "sorular" in data
     qs = yaml.safe_load((ROOT / "evals" / "retrieval.yaml").read_text(encoding="utf-8"))["sorular"]
-    assert len(qs) == 25
+    assert len(qs) == 30
+    assert sum(q["tur"] == "madde_numarasi" for q in qs) == 5
     assert sum(q["tur"] == "cevapsiz" for q in qs) == 4
     assert all(q["dogru"] == [] for q in qs if q["tur"] == "cevapsiz")
     assert all(len(q["dogru"]) == 2 for q in qs if q["tur"] == "iki_madde")
