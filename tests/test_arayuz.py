@@ -192,7 +192,7 @@ def test_anahtar_yoksa_sor_devre_disi(app):
     at = app().run()
     assert not at.exception
     assert at.button[0].disabled
-    assert "Ortak anahtar tanımlı değil" in _metinler(at)
+    assert "Bu demo kendi Anthropic API anahtarınızla çalışır" in _metinler(at)
 
 
 def test_ornek_soru_cevap_ve_kaynak_gosterir(app):
@@ -257,3 +257,49 @@ def test_anahtarsiz_ornek_soru_kayitli_cevabi_gosterir(app):
     assert ilk in m                                        # kayıtlı cümle aynı çizim koduyla gösterildi
     assert "6502 m.56" in str([b.proto for b in at.get("popover")])
     assert _SahteAnthropic.olusturulan == []               # hiçbir API istemcisi kurulmadı
+
+
+
+# ------------------------------------------------------------------ anahtar mesajları ve sayaç
+
+def _yanit(kod):
+    import httpx2 as httpx
+    return httpx.Response(kod, request=httpx.Request("POST", "https://api.anthropic.com/v1/messages"))
+
+
+class _Reddeden(_SahteAnthropic):
+    def _create(self, **kw):
+        import anthropic
+        raise anthropic.AuthenticationError("invalid x-api-key", response=_yanit(401), body=None)
+
+
+class _Baglantisiz(_SahteAnthropic):
+    def _create(self, **kw):
+        import anthropic
+        import httpx2 as httpx
+        raise anthropic.APIConnectionError(request=httpx.Request("POST", "https://api.anthropic.com/v1/messages"))
+
+
+def test_gecersiz_ortak_anahtar_ornek_soruda_kayitli_cevap_ve_sakin_not(app, monkeypatch):
+    import anthropic
+    monkeypatch.setattr(anthropic, "Anthropic", _Reddeden)
+    at = app(ANTHROPIC_API_KEY="gecersiz-ortak").run()
+    assert "Bu demo kendi Anthropic API anahtarınızla" not in _metinler(at)   # henüz denenmedi
+    at.button(key="ornek_0").click().run()
+    assert not at.exception
+    m = _metinler(at)
+    assert "Kayıtlı örnek cevap" in m and "Bu demo kendi Anthropic API anahtarınızla" in m
+    assert "Anahtar geçersiz" not in m and not at.error
+    at.run()                                              # ret bu çalıştırmada öğrenildi; sonrakinde
+    assert at.button(key="sor").disabled                  # ortak anahtar artık kullanılmıyor
+
+
+def test_ziyaretci_anahtari_reddedilirse_anahtar_gecersiz(app, monkeypatch):
+    import anthropic
+    monkeypatch.setattr(anthropic, "Anthropic", _Reddeden)
+    at = app().run()
+    at.text_input(key="ziyaretci_anahtari").input(GIZLI).run()
+    at.text_area(key="soru").input("Cayma süresi kaç gün?")
+    at.button(key="sor").click().run()
+    assert any("Anahtar geçersiz" in str(e.proto.title) for e in at.error)
+    assert GIZLI not in _metinler(at)

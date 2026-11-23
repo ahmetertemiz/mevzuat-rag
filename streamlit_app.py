@@ -67,6 +67,17 @@ def belgeler() -> dict[str, dict]:
 
 
 @st.cache_resource
+def ortak_durum() -> dict:
+    """Süreç genelinde: ortak anahtar bir kez reddedilirse (AuthenticationError) geçersiz sayılır ve
+    sunucu yeniden başlayana kadar kullanılmaz. Ziyaretçiye "anahtar geçersiz" denmez."""
+    return {"gecersiz": False}
+
+
+def ortak_kullanilabilir() -> bool:
+    return ortak_ham_istemci() is not None and not ortak_durum()["gecersiz"]
+
+
+@st.cache_resource
 def ornek_kayit() -> dict:
     return ornek_cevaplari_oku()
 
@@ -128,12 +139,13 @@ with st.sidebar:
 st.title("Mevzuat RAG", anchor=False)
 st.caption("Tüketici, e-ticaret, mesafeli sözleşmeler ve kişisel verilerin korunması mevzuatı hakkında "
            "kaynaklı cevaplar. Her cümle kelimesi kelimesine bir alıntıyla doğrulanır.")
+anahtar_notu_yeri = st.container()   # sayfa sonunda doldurulur (ortak anahtar bu çalıştırmada reddedilebilir)
 
 st.text_area("Sorunuz", key="soru", max_chars=SORU_AZAMI, height=90,
              placeholder="Ör. Mesafeli satışta satıcı ürünü en geç ne zaman teslim etmeli?")
 with st.container(horizontal=True, vertical_alignment="center"):
     sor = st.button("Sor", key="sor", type="primary", icon=":material/search:",
-                    disabled=not (ziyaretci_anahtari or ortak is not None))
+                    disabled=not (ziyaretci_anahtari or ortak_kullanilabilir()))
     st.caption("ya da bir örnek seçin:")
 with st.container(horizontal=True, gap="small"):
     for i, q in enumerate(ORNEK_SORULAR):
@@ -151,7 +163,7 @@ def kayitli_cevap(soru: str) -> dict | None:
 
 
 def cevapla(soru: str) -> dict:
-    if not ziyaretci_anahtari and ortak is None:
+    if not ziyaretci_anahtari and not ortak_kullanilabilir():
         return kayitli_cevap(soru) or {"hata": "anahtarsiz"}
     if ziyaretci_anahtari:
         import anthropic
@@ -167,7 +179,10 @@ def cevapla(soru: str) -> dict:
     except SinirAsildi:
         return {"hata": "sinir"}
     except anthropic.AuthenticationError:
-        return {"hata": "anahtar"}
+        if ziyaretci_anahtari:          # "anahtar geçersiz" yalnız ziyaretçinin kendi anahtarı için
+            return {"hata": "anahtar"}
+        ortak_durum()["gecersiz"] = True
+        return kayitli_cevap(soru) or {"hata": "anahtarsiz"}
     except anthropic.APIError:
         return {"hata": "api"}
     return {"cevap": cevap, "cagri": istemci.cagri_sayisi}
@@ -287,12 +302,17 @@ st.caption(f":material/gavel: **Hukuki tavsiye değildir.** {esc(KAPANIS)} Belge
            "sonraki değişiklikler kapsanmaz.")
 
 
+with anahtar_notu_yeri:
+    if not ziyaretci_anahtari and not ortak_kullanilabilir():
+        st.info("Bu demo kendi Anthropic API anahtarınızla çalışır; örnek sorular anahtarsız "
+                "görüntülenebilir.", icon=":material/key:")
+
 with kota_yeri:
     if ziyaretci_anahtari:
         st.caption(":material/key: Sizin anahtarınız kullanılıyor.")
-    elif ortak is not None:
+    elif ortak_kullanilabilir():
         s = sayac()
         st.caption(f":material/speed: Bugün kalan ortak çağrı: **{s.kalan()} / {s.sinir}** "
                    "(soru başına 2 çağrı; UTC gününe göre sıfırlanır)")
     else:
-        st.caption(":material/key_off: Ortak anahtar tanımlı değil; soru sormak için kendi anahtarınızı girin.")
+        st.caption(":material/key_off: Ortak anahtar kullanılmıyor; soru sormak için kendi anahtarınızı girin.")
