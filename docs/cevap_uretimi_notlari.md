@@ -34,3 +34,11 @@ Arama katmanında alınan kararlar burada cevap üretimine taşınır.
 
 - Her iddia en az bir parçaya dayanır. Kaynak, parçanın `belge_adi`, `madde_etiketi` ve fıkra
   bilgisiyle gösterilir (ör. "6502 sayılı TKHK m.48/4").
+
+## 5. Yeniden yazılmış sorgular
+
+- Yeniden yazım modeli zaman zaman sorguya bilgi ekler (geliştirme setinde bir Opus koşusu
+  "on dört gün" yerine "on gün" yazdı). Bu sorgular yalnızca arama içindir; cevap üretiminde modele
+  **verilmez**. Modele yalnızca kullanıcının özgün sorusu ve getirilen parçalar verilir.
+- `SearchResult.yeniden_yazim == "başarısız"` ise arama düz BM25 ile yapılmıştır; cevap bu durumu
+  kullanıcıya belirtebilir (getirilen parçaların daha zayıf olabileceği).

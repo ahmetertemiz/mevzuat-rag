@@ -84,6 +84,7 @@ def test_indeks_disi_parca_aranmaz(bm25):
 
 @pytest.mark.skipif(not (config.INDEX_DIR / "bge-m3" / "meta.json").exists(), reason="indeks yok")
 def test_hibrit_arama_calisir():
+    pytest.importorskip("sentence_transformers")
     r = Retriever()
     hits = r.search("cayma hakkı kaç gün", k=5, mode="hybrid")
     assert len(hits) == 5

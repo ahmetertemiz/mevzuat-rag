@@ -18,17 +18,31 @@ Kaynak: mevzuat.gov.tr, indirme tarihi 2026-11-23. `docs_raw/` içindeki dosyala
 
 - **Parçalama:** madde bazlı; uzun maddeler fıkra, gerekirse bent sınırından bölünür. Her parça
   belge, madde no, madde başlığı, fıkra aralığı, dipnotlar ve değişiklik notlarıyla birlikte tutulur.
-- **Arama:** `BAAI/bge-m3` (yerel, çok dilli) + BM25, Reciprocal Rank Fusion ile birleştirilir.
-- **Depolama:** veritabanı yok; `data/chunks.jsonl` + numpy dizisi.
+- **Varsayılan arama:** BM25 + sorgu yeniden yazımı. Soru bir model çağrısıyla mevzuat diline
+  çevrilmiş 2-4 sorguya dönüştürülür; özgün soru ve üretilen sorgular ayrı ayrı aranıp RRF ile
+  birleştirilir. Çağrı başarısız olursa düz BM25'e düşülür ve sonuç bunu belirtir.
+  torch ve embedding modeli gerekmez.
+- **İsteğe bağlı:** embedding (`bge-m3` vb.) ile yoğun ve hibrit arama (`requirements-embedding.txt`).
+- **Depolama:** veritabanı yok; `data/chunks.jsonl` (+ embedding kullanılırsa numpy dizisi).
 - Çekirdek mantık `src/mevzuat_rag/` altında, arayüzden bağımsız.
 
 ## Kurulum
+
+Temel kurulum (yayın ortamı için yeterli; torch kurulmaz):
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python -m pip install -e .
 .venv\Scripts\python -m pytest
+```
+
+Sorgu yeniden yazımı için proje kökünde `.env` dosyası: `ANTHROPIC_API_KEY=...` (git'e girmez).
+
+İsteğe bağlı embedding kurulumu (dense/hybrid arama, indeks kurma, deneyler, bellek ölçümleri):
+
+```powershell
+.venv\Scripts\python -m pip install -r requirements-embedding.txt
 ```
 
 ## Belge işleme
@@ -52,46 +66,48 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
 ## Arama
 
 ```powershell
-.venv\Scripts\python scripts\build_index.py          # bge-m3 embedding'leri -> index/ (ilk çalıştırmada model ~2,2 GB iner)
-.venv\Scripts\python search.py "cayma hakkı kaç gün"
-.venv\Scripts\python search.py "6502 m.48" --mode bm25 -k 3
+.venv\Scripts\python search.py "aldığım ürünü beğenmedim geri verebilir miyim"   # BM25 + yeniden yazım
+.venv\Scripts\python search.py "6502 m.48" --yeniden-yazma -k 3                     # yalnız BM25, model çağrısı yok
 ```
 
-- **Yoğun arama:** `BAAI/bge-m3`, CPU, normalize vektörler, kosinüs benzerliği (numpy matris çarpımı).
+Çıktı, yeniden yazımın durumunu (`uygulandı` / `kapalı` / `başarısız`), üretilen sorguları,
+maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzuat_rag.pipeline.Arayici`.
+
 - **BM25:** Türkçe küçük harf + ilk 5 harf kırpma (F5) + küçük bir durak kelime listesi.
   Madde numaraları özel belirtece çevrilir: `md:48`, `md:47/a`, `md:ek1`, `md:gecici2` ve belge
   adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
   üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
-- **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok.
-- Ölçümler: [reports/performans_bge-m3.md](reports/performans_bge-m3.md) ve diğer modeller için `reports/performans_<model>.md` (`scripts/benchmark_model.py`).
+- **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`): model `REWRITE_MODEL` (şu an
+  `claude-opus-5-5`), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
+  konu için en az bir sorgu, en fazla 4. Prompt değişince `PROMPT_VERSION` artırılır.
+- **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok. Skoru 0 olan BM25 sonuçları
+  birleşime girmez.
 
-### Sorgu yeniden yazımı (isteğe bağlı)
-
-Soru, aramadan önce bir model çağrısıyla mevzuat dilinde 2-4 sorguya çevrilir (çok konulu sorularda her konu için en az bir sorgu); özgün soru ve
-üretilen sorgular ayrı ayrı aranır, RRF ile birleştirilir (`src/mevzuat_rag/rewrite.py`).
-API anahtarı proje kökündeki `.env` dosyasında `ANTHROPIC_API_KEY=...` olarak durur (git'e girmez).
+### Embedding (isteğe bağlı)
 
 ```powershell
-.venv\Scripts\python search.py "aldığım ürünü beğenmedim geri verebilir miyim" --yeniden-yaz
+.venv\Scripts\python scripts\build_index.py --model bge-m3      # index/bge-m3/ (ilk çalıştırmada model iner)
+.venv\Scripts\python search.py "cayma hakkı" --mode hybrid --model bge-m3
 ```
 
-### Embedding modelleri
-
-`--model` ile seçilir: `bge-m3` (varsayılan), `granite-97m`, `granite-97m-fp32`, `e5-small`.
-Her modelin indeksi `index/<model>/` altında: `scriptsuild_index.py --model <model>`.
+Modeller: `bge-m3`, `granite-97m`, `granite-97m-fp32`, `e5-small`. Bellek ve süre:
+`reports/performans_<model>.md` (`scripts\benchmark_model.py --model <model>`).
 
 ## Değerlendirme
 
 ```powershell
-.venv\Scripts\python scripts\eval_retrieval.py
+.venv\Scripts\python scripts\eval_retrieval.py                                   # dense / bm25 / hybrid (embedding kurulumu ister)
+.venv\Scripts\python scripts\eval_retrieval.py --varsayilan                      # varsayılan hat, canlı model çağrısı
 ```
 
-- `evals/retrieval.yaml`: 25 soruluk geliştirme seti. Sorular arama kodu yazılmadan önce commit'lendi.
-- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar, geliştirme sırasında çalıştırılmaz.
-- Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md).
-- Yöntem karşılaştırması (modeller × hibrit × yeniden yazım, bellek, süre, maliyet):
-  [evals/DENEYLER.md](evals/DENEYLER.md) — `scripts\experiments.py` (`--api` önbellekte olmayan sorular
-  için model çağrısı yapar; üretilen sorgular `evals/cache/` altında saklanır).
+- `evals/retrieval.yaml`: 30 soruluk geliştirme seti (25'i arama kodu yazılmadan, 5 madde numarası
+  sorusu sonraki deneylerden önce commit'lendi). Seçenek karşılaştırmaları bu sette yapılır.
+- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar; seçilen yapılandırma bir kez
+  koşulur: `scripts\eval_retrieval.py --set evals/holdout.yaml --varsayilan`.
+- Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md) (yöntemler),
+  [evals/DENEYLER.md](evals/DENEYLER.md) (modeller × hibrit × yeniden yazım, bellek, süre, maliyet),
+  [evals/MODEL_KARSILASTIRMA.md](evals/MODEL_KARSILASTIRMA.md) (yeniden yazım modeli, 3'er koşu),
+  [evals/RAPOR_retrieval_varsayilan.md](evals/RAPOR_retrieval_varsayilan.md) (varsayılan hat, tek koşu).
 
 ## Bilinen sınırlar
 
@@ -113,4 +129,11 @@ Her modelin indeksi `index/<model>/` altında: `scriptsuild_index.py --model <m
   Cevap üretiminde dipnotlar `(belge, no)` ile tekilleştirilmeli.
 - **Ayrıştırma bu dört PDF'in biçimine göre ayarlandı.** Punto farkı, `MADDE n –` kalıbı ve ek
   başlıkları buna dahil. Yeni bir belge eklenirse doğrulama raporu yeniden incelenmeli.
+- **Yeniden yazım koşudan koşuya değişir.** Aynı model ve prompt ile geliştirme setinde @5,
+  cevaplı 26 soruda 22 ile 25 arasında oynadı (Opus 5.5, 4 koşu). Tek koşuluk bir sonuç (holdout
+  dahil) bu oynama payıyla okunmalı.
+- **Yeniden yazılmış sorgular bilgi içerebilir** (ör. yanlış bir süre). Arama için kullanılırlar;
+  cevap üretiminde modele verilmemelidir.
+- **Varsayılan hat API'ye bağlıdır.** Çağrı başarısız olursa düz BM25'e düşülür; düz BM25 günlük dil
+  sorularında belirgin biçimde zayıftır (geliştirme setinde 3/8).
 - **Tarih kapsamı:** metinler mevzuat.gov.tr'den 2026-11-23'te indirildi. Bu tarihten sonraki değişiklikleri içermez.

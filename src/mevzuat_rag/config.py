@@ -44,7 +44,12 @@ EMBED_MODELS = {
                                   2048, dtype="float32"),
     "e5-small": EmbedSpec("e5-small", "intfloat/multilingual-e5-small", 512, "query: ", "passage: "),
 }
-DEFAULT_EMBED = "bge-m3"
+DEFAULT_EMBED = "bge-m3"  # yalnızca dense/hybrid modlarında kullanılır
+
+# Varsayılan arama hattı (karar: 2026-11-23): BM25 + sorgu yeniden yazımı. torch ve embedding
+# modeli gerekmez. Embedding modları seçenek olarak kalır (requirements-embedding.txt).
+DEFAULT_SEARCH_MODE = "bm25"
+DEFAULT_REWRITE = True
 # Geriye uyumluluk
 EMBED_MODEL = EMBED_MODELS[DEFAULT_EMBED].name
 EMBED_MAX_TOKENS = EMBED_MODELS[DEFAULT_EMBED].max_tokens

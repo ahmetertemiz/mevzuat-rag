@@ -208,16 +208,71 @@ def render(res: dict, questions: list[dict], cls: dict) -> str:
     return "\n".join(L) + "\n"
 
 
+def evaluate_default(questions: list[dict], stem: str) -> None:
+    """Varsayılan hattı (pipeline.Arayici) olduğu gibi ölçer: önbellek yok, her soru için canlı
+    yeniden yazım çağrısı; çağrı başarısız olursa üretimdeki gibi düz BM25. Tek koşu."""
+    from mevzuat_rag import config
+    from mevzuat_rag.pipeline import Arayici
+    from mevzuat_rag.rewrite import PROMPT_VERSION, REWRITE_MODEL
+
+    a = Arayici()
+    n = len(a.retriever.chunks)
+    rows = []
+    for q in questions:
+        s = a.ara(q["soru"], k=n)
+        keys = [k for k, _ in ranked_articles(s.hits)]
+        ranks = []
+        for req in q["dogru"]:
+            rr = [keys.index(x) + 1 for x in req if x in keys]
+            ranks.append(min(rr) if rr else None)
+        row = {"id": q["id"], "tur": q["tur"], "soru": q["soru"], "siralar": ranks, "ilk5": keys[:5],
+               "yeniden_yazim": s.yeniden_yazim, "sorgular": s.sorgular, "uyari": s.uyari,
+               "maliyet_usd": s.maliyet_usd, "sure_sn": s.yeniden_yazim_sn}
+        for k in KS:
+            met = [x is not None and x <= k for x in ranks]
+            row[f"@{k}"] = bool(met) and all(met)
+        rows.append(row)
+
+    ans = [r for r in rows if r["tur"] != "cevapsiz"]
+    turler = [t for t in ("madde_dili", "gunluk_dil", "iki_madde", "madde_numarasi") if any(r["tur"] == t for r in ans)]
+    L = [f"# Varsayılan hat değerlendirmesi: {stem}\n",
+         f"`python scripts/eval_retrieval.py --set evals/{stem}.yaml --varsayilan` ile üretildi. "
+         f"Hat: `{config.DEFAULT_SEARCH_MODE}` + yeniden yazım (`{REWRITE_MODEL}`, prompt v{PROMPT_VERSION}), "
+         "önbelleksiz, tek koşu.\n",
+         f"| @1 | @3 | @5 | Yeniden yazım başarısız | Toplam maliyet |", "|---|---|---|---|---|",
+         "| " + " | ".join(f"{sum(r[f'@{k}'] for r in ans)}/{len(ans)}" for k in KS)
+         + f" | {sum(r['yeniden_yazim'] != 'uygulandı' for r in rows)} | ${sum(r['maliyet_usd'] for r in rows):.4f} |", "",
+         "| Tür | n | @1 | @3 | @5 |", "|---|---|---|---|---|"]
+    for t in turler:
+        rr = [r for r in ans if r["tur"] == t]
+        L.append(f"| {TUR_AD[t]} | {len(rr)} | " + " | ".join(str(sum(r[f'@{k}'] for r in rr)) for k in KS) + " |")
+    L += ["", "| Soru | Tür | Sıra | İlk 3 | Sorgular / uyarı |", "|---|---|---|---|---|"]
+    for r in rows:
+        sira = ", ".join("–" if x is None else str(x) for x in r["siralar"]) or "—"
+        note = " · ".join(f"`{x}`" for x in r["sorgular"]) or (r["uyari"] or "")
+        L.append(f"| {r['id']} | {TUR_AD[r['tur']]} | {sira} | {', '.join(r['ilk5'][:3])} | {note} |")
+    out = ROOT / "evals" / f"RAPOR_{stem}_varsayilan.md"
+    out.write_text("\n".join(L) + "\n", encoding="utf-8", newline="\n")
+    (ROOT / "evals" / f"sonuclar_{stem}_varsayilan.json").write_text(
+        json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
+    print(f"rapor -> {out.relative_to(ROOT)}")
+    print("varsayılan " + "  ".join(f"@{k}={sum(r[f'@{k}'] for r in ans)}/{len(ans)}" for k in KS))
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
     ap.add_argument("--set", default="evals/retrieval.yaml")
+    ap.add_argument("--varsayilan", action="store_true",
+                    help="yalnızca varsayılan hattı (BM25 + yeniden yazım, canlı model çağrısı) ölç")
     args = ap.parse_args()
     qpath = ROOT / args.set
     questions = yaml.safe_load(qpath.read_text(encoding="utf-8"))["sorular"]
     if not questions:
         sys.exit(f"{args.set} boş.")
+    if args.varsayilan:
+        return evaluate_default(questions, qpath.stem)
     r = Retriever()
     res = evaluate(r, questions)
     stem = qpath.stem

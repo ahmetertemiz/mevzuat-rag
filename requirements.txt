@@ -1,15 +1,14 @@
-# Belge işleme
+# Temel kurulum (yayın ortamı): varsayılan arama hattı BM25 + sorgu yeniden yazımı.
+# torch / sentence-transformers GEREKMEZ; onlar requirements-embedding.txt içinde.
+
+# Belge işleme (yalnızca data/chunks.jsonl yeniden üretilecekse gerekir)
 pymupdf==2.1
 PyYAML==6.0.4
 
-# Arama
+# Arama + sorgu yeniden yazımı
 numpy==2.5.5
 rank-bm25==0.2.2
-sentence-transformers==6.3.0
-# PyTorch'un yalnız CPU sürümü (GPU sürümünden çok daha küçük). Ayrı kurulur:
-#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
-torch==2.15.0
+anthropic==2.12.0
 
-# Ölçüm ve test
-psutil==7.2.2
+# Test
 pytest==9.2.0

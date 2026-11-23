@@ -1,0 +1,10 @@
+# İsteğe bağlı: embedding modları (--mode dense / hybrid), indeks kurma, karşılaştırma deneyleri
+# ve bellek ölçümleri. Yayın ortamına KURULMAZ.
+#
+#   pip install -r requirements.txt -r requirements-embedding.txt
+#
+# PyTorch'un yalnız CPU sürümü (GPU sürümünden çok daha küçük):
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+sentence-transformers==6.3.0
+psutil==7.2.2
