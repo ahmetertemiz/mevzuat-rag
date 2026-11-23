@@ -32,7 +32,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from eval_retrieval import KS, TUR_AD, ranked_articles  # noqa: E402
 from mevzuat_rag import config  # noqa: E402
 from mevzuat_rag.retrieve import Retriever  # noqa: E402
-from mevzuat_rag.rewrite import REWRITE_EFFORT, REWRITE_MODEL, RewriteCache  # noqa: E402
+from mevzuat_rag.rewrite import REWRITE_EFFORT, REWRITE_MODEL, RewriteCache, cache_path  # noqa: E402
 
 TURLER = ("madde_dili", "gunluk_dil", "iki_madde", "madde_numarasi")
 BASELINE = "bge-m3 hibrit"
@@ -76,7 +76,7 @@ def main() -> None:
     args = ap.parse_args()
 
     questions = yaml.safe_load((ROOT / "evals/retrieval.yaml").read_text(encoding="utf-8"))["sorular"]
-    cache = RewriteCache(ROOT / "evals" / "cache" / f"rewrites_{REWRITE_MODEL}.json")
+    cache = RewriteCache(cache_path(REWRITE_MODEL))
     rewriter = None
     if args.api:
         from mevzuat_rag.rewrite import QueryRewriter
@@ -161,7 +161,7 @@ def render(results, questions, perf, bm25_rss, rewrites, rw_cost, rw_sec, rw_in,
       "Küçük örneklem: cevaplı 26 soruda bir soru yaklaşık 4 puan.\n")
     if rewrites:
         w(f"**Sorgu yeniden yazımı:** `{REWRITE_MODEL}`, effort `{REWRITE_EFFORT}`, yapılandırılmış JSON çıktı; "
-          "model soruyu cevaplamadan 2-3 sorgu üretir. Özgün soru ve üretilen sorgular ayrı ayrı aranır, "
+          "model soruyu cevaplamadan 2-4 sorgu üretir. Özgün soru ve üretilen sorgular ayrı ayrı aranır, "
           "tüm sıralamalar ağırlıksız RRF (k=60) ile birleştirilir. Prompt'taki örnekler geliştirme "
           "setinden değil, uydurma (`src/mevzuat_rag/rewrite.py`). Ortalama "
           f"{rw_in:.0f} girdi / {rw_out:.0f} çıktı token'ı (çıktıya düşünme token'ları dahil).\n")

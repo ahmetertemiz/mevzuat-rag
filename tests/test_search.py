@@ -108,3 +108,11 @@ def test_ek_sorgular_rrf_ile_birlestirilir(bm25):
 
 def test_eslesmeyen_bm25_sorgusu_rrfe_katki_vermez(bm25):
     assert bm25.search("xyzqw", k=5, mode="bm25") == []
+
+
+def test_yeniden_yazim_promptu_kurallari():
+    from mevzuat_rag import rewrite
+    assert rewrite.MAX_QUERIES == 4
+    assert "en fazla 4" in rewrite.SYSTEM_PROMPT
+    assert "her konu ve her alt soru için en az bir sorgu" in rewrite.SYSTEM_PROMPT
+    assert rewrite.cache_path().name.endswith(f"_p{rewrite.PROMPT_VERSION}.json")

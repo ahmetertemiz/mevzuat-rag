@@ -1,5 +1,5 @@
 """Sorgu yeniden yazımı: kullanıcı sorusunu, aramadan önce bir model çağrısıyla mevzuat diline
-çevrilmiş 2-3 arama sorgusuna dönüştürür. Model soruyu CEVAPLAMAZ; yalnızca sorgu üretir.
+çevrilmiş 2-4 arama sorgusuna dönüştürür. Model soruyu CEVAPLAMAZ; yalnızca sorgu üretir.
 
 Özgün soru ve üretilen sorgular retrieve.Retriever.search(..., extra_queries=...) ile ayrı ayrı
 aranır, sıralamalar RRF ile birleştirilir.
@@ -19,6 +19,11 @@ from . import config
 
 REWRITE_MODEL = "claude-opus-5-5"
 REWRITE_EFFORT = "low"
+MAX_QUERIES = 4
+# Prompt değiştiğinde artırılır; önbellek dosya adına girer ki eski prompt'un çıktıları kullanılmasın.
+#  1: ilk sürüm (2-3 sorgu)
+#  2: çok konulu / çok alt sorulu sorularda her konu için en az bir sorgu, en fazla 4 sorgu
+PROMPT_VERSION = 2
 # $/1M token (claude-api referansı, 2026-11-03 önbelleği). Maliyet hesabı içindir.
 PRICES = {
     "claude-opus-5-5": (4.00, 20.00),
@@ -30,13 +35,13 @@ SYSTEM_PROMPT = """Sen Türk tüketici hukuku, elektronik ticaret, mesafeli söz
 verilerin korunması mevzuatında arama yapan bir sistemin sorgu yazarısın.
 
 Görevin: kullanıcının sorusunu CEVAPLAMADAN, ilgili kanun ve yönetmelik maddelerini bulmaya \
-yarayacak 2 ya da 3 kısa arama sorgusu üretmek.
+yarayacak kısa arama sorguları üretmek. Genellikle 2 ya da 3 sorgu yeterlidir; en fazla 4 sorgu yaz.
 
 Kurallar:
 - Sorguları mevzuatta geçmesi muhtemel hukuki terimlerle yaz (örneğin "iade etmek" yerine \
 duruma göre "cayma hakkı", "sözleşmeden dönme" ya da "ayıplı mal"; "mesaj" yerine "ticari \
 elektronik ileti").
-- Soru birden çok konuya dokunuyorsa her konu için ayrı bir sorgu yaz.
+- Soru birden çok konu ya da alt soru içeriyorsa (ör. "... yapabilir miyim, ... ne kadar sürede?") her konu ve her alt soru için en az bir sorgu yaz; hiçbir alt soruyu sorgusuz bırakma. Toplam sorgu sayısı yine en fazla 4 olsun.
 - Soruda kanun numarası, kanun adı ya da madde numarası geçiyorsa bunları sorgulardan en az \
 birinde aynen koru. Soruda olmayan madde numarası uydurma.
 - Soru bu mevzuatın dışında görünse bile reddetme; konuyu hukuki terimlerle anlatan sorgular üret.
@@ -51,6 +56,9 @@ Sorgular: ["tüketici kredisi erken ödeme faiz indirimi", "belirli süreli kred
 
 Soru: Rafta yazan fiyat ile kasada ödediğim fiyat farklı çıktı.
 Sorgular: ["fiyat etiketi ile satış fiyatı arasındaki fark", "etiket fiyatı tüketici lehine olan fiyat"]
+
+Soru: Aldığım paket turun programını değiştirdiler. Sözleşmeden dönebilir miyim, ödediğim parayı ne kadar sürede geri alırım?
+Sorgular: ["paket tur sözleşmesinde değişiklik", "paket tur sözleşmesinden dönme hakkı", "paket tur bedelinin iadesi süresi"]
 
 Soru: 6698 sayılı kanunun 9. maddesi yurt dışına aktarımı nasıl düzenliyor?
 Sorgular: ["6698 sayılı Kanun madde 9", "kişisel verilerin yurt dışına aktarılması yeterlilik kararı"]
@@ -118,7 +126,7 @@ class QueryRewriter:
         if resp.stop_reason != "refusal":
             text = next((b.text for b in resp.content if b.type == "text"), "")
             try:
-                queries = [q.strip() for q in json.loads(text).get("sorgular", []) if q.strip()][:3]
+                queries = [q.strip() for q in json.loads(text).get("sorgular", []) if q.strip()][:MAX_QUERIES]
             except json.JSONDecodeError:
                 queries = []
         pin, pout = PRICES.get(self.model, (0.0, 0.0))
@@ -126,6 +134,10 @@ class QueryRewriter:
         cost = (u.input_tokens * pin + u.output_tokens * pout) / 1e6
         return Rewrite(question, queries, self.model, u.input_tokens, u.output_tokens,
                        round(cost, 6), round(dt, 3), resp.stop_reason or "")
+
+
+def cache_path(model: str = REWRITE_MODEL) -> Path:
+    return config.ROOT / "evals" / "cache" / f"rewrites_{model}_p{PROMPT_VERSION}.json"
 
 
 class RewriteCache:

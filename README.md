@@ -67,7 +67,7 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
 
 ### Sorgu yeniden yazımı (isteğe bağlı)
 
-Soru, aramadan önce bir model çağrısıyla mevzuat dilinde 2-3 sorguya çevrilir; özgün soru ve
+Soru, aramadan önce bir model çağrısıyla mevzuat dilinde 2-4 sorguya çevrilir (çok konulu sorularda her konu için en az bir sorgu); özgün soru ve
 üretilen sorgular ayrı ayrı aranır, RRF ile birleştirilir (`src/mevzuat_rag/rewrite.py`).
 API anahtarı proje kökündeki `.env` dosyasında `ANTHROPIC_API_KEY=...` olarak durur (git'e girmez).
 
