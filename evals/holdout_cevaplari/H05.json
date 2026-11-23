@@ -1,0 +1,126 @@
+{
+ "soru": "Müteahhitten maketten daire aldım. Evi bana en geç ne zaman teslim etmek zorunda?",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Ön ödemeli konut satış sözleşmelerinde konut, sözleşmede taahhüt edilen süre içinde tüketiciye teslim edilmek zorundadır.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m44-1",
+     "alinti": "Ön ödemeli konutun sözleşmede taahhüt edilen süre içinde tüketiciye teslim edilmesi zorunludur.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Bu sürenin her hâlükârda sözleşme tarihinden itibaren en fazla kırk sekiz ay olabileceği belirtilmiştir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m44-1",
+     "alinti": "Bu süre her hâlükârda sözleşme tarihinden itibaren kırk sekiz ayı geçemez.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Bu hüküm, tüketicinin konut amaçlı bir taşınmazın satış bedelini önceden ödediği ön ödemeli konut satış sözleşmeleri için geçerlidir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m40-1",
+     "alinti": "tüketicinin konut amaçlı bir taşınmazın satış bedelini önceden peşin veya taksitle ödemeyi",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m44-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 44"
+  },
+  {
+   "parca_id": "TKHK-m40-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 40"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m12-1",
+  "TKHK-m44-1",
+  "TKHK-m35-1",
+  "TKHK-m40-1",
+  "TKHK-m45-1",
+  "TKHK-m30-1",
+  "MSY-m15-1",
+  "TKHK-m34-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "konut satış sözleşmesinde teslim süresi",
+   "konut teslimi gecikmesi tüketici sözleşmesinden dönme",
+   "maketten konut satışı ayıplı ifa teslim tarihi"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.0002
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001941,
+ "sure_sn": 6.74,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Ön ödemeli konut satış sözleşmelerinde konut, sözleşmede taahhüt edilen süre içinde tüketiciye teslim edilmek zorundadır.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m44-1",
+      "alinti": "Ön ödemeli konutun sözleşmede taahhüt edilen süre içinde tüketiciye teslim edilmesi zorunludur."
+     }
+    ]
+   },
+   {
+    "metin": "Bu sürenin her hâlükârda sözleşme tarihinden itibaren en fazla kırk sekiz ay olabileceği belirtilmiştir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m44-1",
+      "alinti": "Bu süre her hâlükârda sözleşme tarihinden itibaren kırk sekiz ayı geçemez."
+     }
+    ]
+   },
+   {
+    "metin": "Bu hüküm, tüketicinin konut amaçlı bir taşınmazın satış bedelini önceden ödediği ön ödemeli konut satış sözleşmeleri için geçerlidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m40-1",
+      "alinti": "tüketicinin konut amaçlı bir taşınmazın satış bedelini önceden peşin veya taksitle ödemeyi"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H05"
+}

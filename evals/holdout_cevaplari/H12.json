@@ -1,0 +1,105 @@
+{
+ "soru": "Otobüs bileti alırken sepete kendiliğinden ek sigorta eklenmiş, fark etmeden ödemişim. Bu parayı geri isteyebilir miyim?",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Mesafeli Sözleşmeler Yönetmeliğine göre, kendiliğinden seçili gelen ilave ödemeler açık onay alınmadan yapılmışsa tüketici ödediği bedeli geri isteyebilir; yönetmelik bu durumu şöyle düzenler: \"Tüketicinin açık onayı alınmadan ilave ödeme yükümlülüğü doğuran seçeneklerin kendiliğinden seçili olarak sunulmuş olmasından dolayı tüketici bir ödemede bulunmuş ise\".",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m19-1",
+     "alinti": "Tüketicinin açık onayı alınmadan ilave ödeme yükümlülüğü doğuran seçeneklerin kendiliğinden seçili olarak sunulmuş olmasından dolayı tüketici bir ödemede bulunmuş ise",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Platform üzerinden kurulan sözleşmelerde bedel satıcı adına tahsil edilmişse, yönetmeliğe göre aracı hizmet sağlayıcı bu ödemelerin iadesini \"aracı hizmet sağlayıcı bu ödemelerin iadesini derhal yapmak zorundadır\" hükmü uyarınca derhal yapmak zorundadır.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m19-1",
+     "alinti": "aracı hizmet sağlayıcı bu ödemelerin iadesini derhal yapmak zorundadır",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Otobüs biletinin alındığı işlemin mesafeli sözleşme ve platform üzerinden kurulan bir sözleşme olup olmadığı, verilen parçalarda belirtilmemektedir.",
+  "Ek sigortanın bu kapsamda bir ilave bedel olup olmadığına ilişkin özel bir hüküm parçalarda yer almamaktadır."
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 2,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "MSY-m19-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 19"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "MSY-m19-1",
+  "MSY-m5-1",
+  "MSY-m11-1",
+  "ETK-gecici2-1",
+  "ETK-ek3-1",
+  "TKHK-m51-1",
+  "MSY-m12-1",
+  "TKHK-m49-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kendiliğinden eklenen ek hizmet ve sigorta bedeli iadesi",
+   "elektronik ticarette tüketicinin onayı olmadan ek ücret",
+   "mesafeli sözleşmelerde ön bilgilendirme ve açık onay yükümlülüğü"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000215
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002356,
+ "sure_sn": 7.3,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Mesafeli Sözleşmeler Yönetmeliğine göre, kendiliğinden seçili gelen ilave ödemeler açık onay alınmadan yapılmışsa tüketici ödediği bedeli geri isteyebilir; yönetmelik bu durumu şöyle düzenler: \"Tüketicinin açık onayı alınmadan ilave ödeme yükümlülüğü doğuran seçeneklerin kendiliğinden seçili olarak sunulmuş olmasından dolayı tüketici bir ödemede bulunmuş ise\".",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m19-1",
+      "alinti": "Tüketicinin açık onayı alınmadan ilave ödeme yükümlülüğü doğuran seçeneklerin kendiliğinden seçili olarak sunulmuş olmasından dolayı tüketici bir ödemede bulunmuş ise"
+     }
+    ]
+   },
+   {
+    "metin": "Platform üzerinden kurulan sözleşmelerde bedel satıcı adına tahsil edilmişse, yönetmeliğe göre aracı hizmet sağlayıcı bu ödemelerin iadesini \"aracı hizmet sağlayıcı bu ödemelerin iadesini derhal yapmak zorundadır\" hükmü uyarınca derhal yapmak zorundadır.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m19-1",
+      "alinti": "aracı hizmet sağlayıcı bu ödemelerin iadesini derhal yapmak zorundadır"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "Otobüs biletinin alındığı işlemin mesafeli sözleşme ve platform üzerinden kurulan bir sözleşme olup olmadığı, verilen parçalarda belirtilmemektedir.",
+   "Ek sigortanın bu kapsamda bir ilave bedel olup olmadığına ilişkin özel bir hüküm parçalarda yer almamaktadır."
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H12"
+}

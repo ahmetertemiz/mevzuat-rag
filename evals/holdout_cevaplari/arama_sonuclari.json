@@ -1,0 +1,2218 @@
+{
+ "arama_kosulari": [
+  [
+   {
+    "id": "H01",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:57/A",
+     "TKHK:58",
+     "TKHK:56",
+     "TKHK:57",
+     "TKHK:77"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yenilenmiş ürün satışında satıcının ayıptan sorumluluğu",
+     "ikinci el tüketici malında garanti süresi",
+     "tüketici malının garanti belgesi ve garanti süresi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000199,
+    "baglam_parcalari": [
+     "TKHK-m57a-1",
+     "TKHK-m58-1",
+     "TKHK-m56-1",
+     "TKHK-m57-1",
+     "TKHK-m77-3",
+     "TKHK-m47a-1",
+     "TKHK-m10-1",
+     "TKHK-m30-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-1",
+     "TKHK-m77-2",
+     "TKHK-m77-4"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H02",
+    "tur": "gunluk_dil",
+    "siralar": [
+     7
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:11",
+     "TKHK:12",
+     "TKHK:13",
+     "TKHK:8"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal tamir süresi",
+     "satıcının ayıplı malı onarım yükümlülüğü",
+     "tüketicinin ayıplı maldan doğan seçimlik hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000197,
+    "baglam_parcalari": [
+     "TKHK-m56-1",
+     "TKHK-m11-1",
+     "TKHK-m12-1",
+     "TKHK-m13-1",
+     "TKHK-m8-1",
+     "TKHK-m15-1",
+     "TKHK-m58-1",
+     "TKHK-m16-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H03",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:29",
+     "TKHK:38",
+     "TKHK:42",
+     "TKHK:49",
+     "TKHK:31"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kredi sözleşmesinde zorunlu sigorta yaptırma şartı",
+     "tüketici kredisi ile birlikte sigorta ürünü satışı",
+     "bankanın kredi koşulu olarak sigorta talep etmesi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "TKHK-m29-1",
+     "TKHK-m38-1",
+     "TKHK-m42-1",
+     "TKHK-m49-1",
+     "TKHK-m31-1",
+     "TKHK-m30-1",
+     "TKHK-m23-1",
+     "TKHK-m24-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H04",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:70",
+     "TKHK:73/A",
+     "TKHK:73",
+     "TKHK:67",
+     "TKHK:68"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyeti kararına itiraz",
+     "tüketici hakem heyeti kararına karşı tüketici mahkemesinde itiraz süresi",
+     "tüketici uyuşmazlığı hakem heyeti kararının iptali"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000207,
+    "baglam_parcalari": [
+     "TKHK-m70-1",
+     "TKHK-m73a-1",
+     "TKHK-m73-1",
+     "TKHK-m67-1",
+     "TKHK-m68-1",
+     "TKHK-m66-1",
+     "TKHK-m69-1",
+     "TKHK-m82-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H05",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:44",
+     "TKHK:35",
+     "TKHK:40",
+     "TKHK:45"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinde teslim süresi",
+     "konut teslimi gecikmesi tüketici sözleşmesinden dönme",
+     "maketten konut satışı ayıplı ifa teslim tarihi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.0002,
+    "baglam_parcalari": [
+     "TKHK-m12-1",
+     "TKHK-m44-1",
+     "TKHK-m35-1",
+     "TKHK-m40-1",
+     "TKHK-m45-1",
+     "TKHK-m30-1",
+     "MSY-m15-1",
+     "TKHK-m34-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H06",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:61",
+     "TKHK:63",
+     "TKHK:62",
+     "TKHK:65",
+     "TKHK:77"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yanıltıcı reklam yasağı",
+     "tüketicinin aldatılması reklam ürün özellikleri",
+     "haksız ticari uygulama yanıltıcı reklam"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000195,
+    "baglam_parcalari": [
+     "TKHK-m61-1",
+     "TKHK-m63-1",
+     "TKHK-m62-1",
+     "TKHK-m65-1",
+     "TKHK-m77-5",
+     "TKHK-m82-1",
+     "TKHK-m77-4",
+     "ETK-ek2-3",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H07",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:50",
+     "TKHK:Geçici 3",
+     "TKHK:77",
+     "TKHK:18",
+     "MSY:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "devre tatil sözleşmesinde cayma hakkı",
+     "tatil kulübü üyeliği sözleşmesinden cayma süresi",
+     "ortak kullanımlı tatil hakkı sözleşmesi tüketici cayma"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000205,
+    "baglam_parcalari": [
+     "TKHK-m50-2",
+     "TKHK-m50-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-2",
+     "TKHK-m18-1",
+     "MSY-m10-1",
+     "TKHK-m24-1",
+     "TKHK-m43-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-7",
+     "TKHK-m77-6",
+     "TKHK-m77-3"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H08",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "KVKK:16",
+     "KVKK:10",
+     "KVKK:3",
+     "KVKK:12",
+     "KVKK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin işlenmesinde aydınlatma yükümlülüğü",
+     "veri sorumlusunun aydınlatma yapma yükümlülüğü kapsamı",
+     "kişisel veri toplama öncesi bilgilendirme ve açık rıza"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000211,
+    "baglam_parcalari": [
+     "KVKK-m16-1",
+     "KVKK-m10-1",
+     "KVKK-m3-1",
+     "KVKK-m12-1",
+     "KVKK-m5-1",
+     "KVKK-m9-3",
+     "MSY-m5-2",
+     "KVKK-m28-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H09",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:28",
+     "KVKK:3",
+     "KVKK:2",
+     "KVKK:16",
+     "KVKK:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin tanımı ve kapsamı",
+     "tamamen kişisel veya ev içi faaliyetler istisnası",
+     "kişisel verilerin işlenmesi veri sorumlusu kapsam dışı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000205,
+    "baglam_parcalari": [
+     "KVKK-m28-1",
+     "KVKK-m3-1",
+     "KVKK-m2-1",
+     "KVKK-m16-1",
+     "KVKK-m11-1",
+     "KVKK-m12-1",
+     "KVKK-m10-1",
+     "ETK-m2-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H10",
+    "tur": "gunluk_dil",
+    "siralar": [
+     11
+    ],
+    "ilk5": [
+     "KVKK:9",
+     "KVKK:11",
+     "KVKK:5",
+     "KVKK:16",
+     "KVKK:3"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin üçüncü kişilere aktarılması açık rıza",
+     "veri sorumlusunun kişisel verileri işleme şartları",
+     "kişisel verilerin korunması ilgili kişinin hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000202,
+    "baglam_parcalari": [
+     "KVKK-m9-1",
+     "KVKK-m11-1",
+     "KVKK-m9-3",
+     "KVKK-m5-1",
+     "KVKK-m16-1",
+     "KVKK-m9-2",
+     "KVKK-m3-1",
+     "KVKK-m12-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H11",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:18",
+     "MSY:4",
+     "TKHK:70",
+     "MSY:5",
+     "KVKK:13"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "çağrı merkezi ücretli hat tüketici şikayet hattı ücreti",
+     "mesafeli sözleşmelerde tüketici iletişim hattı ücret",
+     "elektronik ticaret satıcısının iletişim bilgileri ve ücretli telefon hattı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000215,
+    "baglam_parcalari": [
+     "MSY-m18-1",
+     "MSY-m4-1",
+     "TKHK-m70-1",
+     "MSY-m5-1",
+     "KVKK-m13-1",
+     "ETK-m8-1",
+     "ETK-m2-1",
+     "TKHK-m73-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H12",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:19",
+     "MSY:5",
+     "MSY:11",
+     "ETK:Geçici 2",
+     "ETK:Ek 3"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kendiliğinden eklenen ek hizmet ve sigorta bedeli iadesi",
+     "elektronik ticarette tüketicinin onayı olmadan ek ücret",
+     "mesafeli sözleşmelerde ön bilgilendirme ve açık onay yükümlülüğü"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000215,
+    "baglam_parcalari": [
+     "MSY-m19-1",
+     "MSY-m5-1",
+     "MSY-m11-1",
+     "ETK-gecici2-1",
+     "ETK-ek3-1",
+     "TKHK-m51-1",
+     "MSY-m12-1",
+     "TKHK-m49-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H13",
+    "tur": "gunluk_dil",
+    "siralar": [
+     25
+    ],
+    "ilk5": [
+     "MSY:12",
+     "MSY:11",
+     "MSY:12/A",
+     "MSY:Ek",
+     "MSY:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişiye özel üretilen mal cayma hakkı istisnası",
+     "mesafeli sözleşmelerde cayma hakkı ve istisnaları",
+     "mesafeli sözleşmelerde ayıplı mal ve iade"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000204,
+    "baglam_parcalari": [
+     "MSY-m12-1",
+     "MSY-m11-1",
+     "MSY-m12a-1",
+     "MSY-m12-2",
+     "MSY-ek-1",
+     "MSY-m5-1",
+     "TKHK-m43-1",
+     "TKHK-m48-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H14",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:14",
+     "TKHK:48",
+     "TKHK:18",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkının kullanılması",
+     "cayma bildiriminin yapılma şekli ve usulü",
+     "mesafeli sözleşmelerde cayma hakkı bildirimi tüketici"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m14-1",
+     "TKHK-m48-1",
+     "TKHK-m18-1",
+     "TKHK-m24-1",
+     "MSY-m12a-1",
+     "MSY-m5-1",
+     "TKHK-m43-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H15",
+    "tur": "iki_madde",
+    "siralar": [
+     1,
+     16
+    ],
+    "ilk5": [
+     "TKHK:43",
+     "TKHK:18",
+     "MSY:11",
+     "MSY:10",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinden cayma hakkı",
+     "cayma hakkı süresinin kaçırılması halinde sözleşmeden dönme",
+     "konut sözleşmesinde tüketicinin cayma hakkı kullanımı şartları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000209,
+    "baglam_parcalari": [
+     "TKHK-m43-1",
+     "TKHK-m18-1",
+     "MSY-m11-1",
+     "MSY-m10-1",
+     "TKHK-m24-1",
+     "MSY-m9-1",
+     "TKHK-m48-1",
+     "TKHK-m47-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H16",
+    "tur": "iki_madde",
+    "siralar": [
+     5,
+     2
+    ],
+    "ilk5": [
+     "ETK:11",
+     "ETK:7",
+     "ETK:2",
+     "MSY:4",
+     "ETK:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti onay zorunluluğu",
+     "ticari elektronik iletide gönderici kimliğinin belirtilmesi",
+     "ticari elektronik ileti ret hakkı ve iletişim bilgisi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "ETK-m11-2",
+     "ETK-m7-1",
+     "ETK-m2-1",
+     "MSY-m4-1",
+     "ETK-m6-1",
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "MSY-m5-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "H17",
+    "tur": "madde_dili",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:79",
+     "TKHK:62",
+     "TKHK:61",
+     "TKHK:80",
+     "TKHK:3"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketici Kanunu madde 79 yasaklanan uygulamalar",
+     "tüketici haklarını ihlal eden yasaklı ticari uygulamalar"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000271,
+    "baglam_parcalari": [
+     "TKHK-m79-1",
+     "TKHK-m62-1",
+     "TKHK-m61-1",
+     "TKHK-m80-1",
+     "TKHK-m3-2",
+     "TKHK-m83-1",
+     "TKHK-gecici3-1",
+     "TKHK-m70-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H18",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:77",
+     "TKHK:52",
+     "TKHK:35",
+     "TKHK:30",
+     "TKHK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "boşanma davasında nafaka miktarının belirlenmesi",
+     "tarafların ekonomik durumu ve sosyal konumu nafaka takdiri",
+     "tedbir nafakası ve yoksulluk nafakası ölçütleri"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000203,
+    "baglam_parcalari": [
+     "TKHK-m77-7",
+     "TKHK-m52-1",
+     "TKHK-m77-6",
+     "TKHK-m35-1",
+     "TKHK-m30-1",
+     "TKHK-m5-1",
+     "ETK-ek1-1",
+     "KVKK-m6-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-2",
+     "TKHK-m77-1",
+     "TKHK-m77-4"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H19",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:44",
+     "TKHK:50",
+     "TKHK:31",
+     "TKHK:70",
+     "TKHK:47/A"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kat maliki aidat borcunun tahsili",
+     "kat mülkiyeti kanunu yönetim giderlerine katılma yükümlülüğü",
+     "aidat borcu nedeniyle icra takibi ve kat maliki"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000202,
+    "baglam_parcalari": [
+     "TKHK-m44-1",
+     "TKHK-m50-1",
+     "TKHK-m31-1",
+     "TKHK-m70-1",
+     "TKHK-m47a-1",
+     "TKHK-m27-1",
+     "MSY-m12-1",
+     "TKHK-m34-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H20",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:45",
+     "ETK:Ek 2",
+     "TKHK:54",
+     "KVKK:27",
+     "MSY:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ikinci el eşya satışı gelir vergisi istisnası",
+     "elektronik ticaret kazanç vergilendirme tüketici olmayan satıcı",
+     "şahsi eşya satışından elde edilen kazanç vergi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000203,
+    "baglam_parcalari": [
+     "TKHK-m45-1",
+     "ETK-ek2-1",
+     "TKHK-m54-1",
+     "KVKK-m27-1",
+     "MSY-m5-1",
+     "MSY-m4-1",
+     "TKHK-m77-1",
+     "TKHK-m3-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-6",
+     "TKHK-m77-7",
+     "TKHK-m77-5"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   }
+  ],
+  [
+   {
+    "id": "H01",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:57/A",
+     "TKHK:58",
+     "TKHK:77",
+     "TKHK:57",
+     "TKHK:56"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yenilenmiş ürün satışında garanti yükümlülüğü",
+     "ikinci el veya yenilenmiş mal satışında ayıba karşı tekeffül süresi",
+     "tüketici malında garanti süresi ve garanti belgesi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000205,
+    "baglam_parcalari": [
+     "TKHK-m57a-1",
+     "TKHK-m58-1",
+     "TKHK-m77-3",
+     "TKHK-m57-1",
+     "TKHK-m56-1",
+     "TKHK-m47a-1",
+     "ETK-ek4-1",
+     "ETK-ek4-2",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-1",
+     "TKHK-m77-2",
+     "TKHK-m77-4"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H02",
+    "tur": "gunluk_dil",
+    "siralar": [
+     12
+    ],
+    "ilk5": [
+     "TKHK:11",
+     "TKHK:56",
+     "TKHK:12",
+     "TKHK:13",
+     "TKHK:8"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal tamir süresi",
+     "satıcının ayıplı malı onarma yükümlülüğü",
+     "tüketicinin ayıplı maldan doğan seçimlik hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000197,
+    "baglam_parcalari": [
+     "TKHK-m11-1",
+     "TKHK-m56-1",
+     "TKHK-m12-1",
+     "TKHK-m13-1",
+     "TKHK-m8-1",
+     "TKHK-m16-1",
+     "TKHK-m15-1",
+     "MSY-m9-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H03",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:29",
+     "TKHK:38",
+     "TKHK:42",
+     "TKHK:30",
+     "TKHK:49"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kredi sözleşmesinde zorunlu sigorta yaptırma şartı",
+     "tüketici kredisi ile birlikte sigorta ürünü satışı",
+     "kredi sözleşmesinde yan hizmet ve sigorta bedeli tüketici hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000211,
+    "baglam_parcalari": [
+     "TKHK-m29-1",
+     "TKHK-m38-1",
+     "TKHK-m42-1",
+     "TKHK-m30-1",
+     "TKHK-m49-1",
+     "TKHK-m24-1",
+     "TKHK-m35-1",
+     "TKHK-m31-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H04",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:70",
+     "TKHK:73",
+     "TKHK:73/A",
+     "TKHK:67",
+     "TKHK:68"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyeti kararına itiraz",
+     "tüketici hakem heyeti kararının tüketici mahkemesinde incelenmesi",
+     "tüketici hakem heyeti kararına itiraz süresi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000202,
+    "baglam_parcalari": [
+     "TKHK-m70-1",
+     "TKHK-m73-1",
+     "TKHK-m73a-1",
+     "TKHK-m67-1",
+     "TKHK-m68-1",
+     "TKHK-m69-1",
+     "TKHK-m66-1",
+     "TKHK-m72-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H05",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:44",
+     "TKHK:35",
+     "TKHK:40",
+     "TKHK:45"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinde teslim süresi",
+     "proje ile satılan konutun teslimi tüketici sözleşmesi",
+     "gecikme halinde sözleşmeden dönme ve gecikme tazminatı konut"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000203,
+    "baglam_parcalari": [
+     "TKHK-m12-1",
+     "TKHK-m44-1",
+     "TKHK-m35-1",
+     "TKHK-m40-1",
+     "TKHK-m45-1",
+     "TKHK-m42-1",
+     "TKHK-m34-1",
+     "TKHK-m30-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H06",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:61",
+     "TKHK:63",
+     "TKHK:62",
+     "TKHK:65",
+     "TKHK:77"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yanıltıcı reklam yasağı",
+     "tüketicinin aldatılması reklam ürün nitelikleri",
+     "haksız ticari uygulama reklamda ürün tanıtımı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000197,
+    "baglam_parcalari": [
+     "TKHK-m61-1",
+     "TKHK-m63-1",
+     "TKHK-m62-1",
+     "TKHK-m65-1",
+     "TKHK-m77-5",
+     "TKHK-m82-1",
+     "TKHK-m77-4",
+     "TKHK-m53-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H07",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:50",
+     "TKHK:18",
+     "TKHK:24",
+     "TKHK:43",
+     "MSY:10"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "devre tatil sözleşmesinde cayma hakkı",
+     "tatil kulübü üyeliği sözleşmesinden cayma süresi",
+     "tüketicinin cayma hakkının kullanılması ve bildirimi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000202,
+    "baglam_parcalari": [
+     "TKHK-m50-2",
+     "TKHK-m18-1",
+     "TKHK-m24-1",
+     "TKHK-m50-1",
+     "TKHK-m43-1",
+     "MSY-m10-1",
+     "MSY-m11-1",
+     "TKHK-gecici3-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H08",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "KVKK:16",
+     "KVKK:10",
+     "KVKK:3",
+     "KVKK:12",
+     "KVKK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin işlenmesinde aydınlatma yükümlülüğü",
+     "veri sorumlusunun aydınlatma yapma yükümlülüğü kapsamı",
+     "kişisel veri toplanırken ilgili kişiye bilgi verilmesi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000212,
+    "baglam_parcalari": [
+     "KVKK-m16-1",
+     "KVKK-m10-1",
+     "KVKK-m3-1",
+     "KVKK-m12-1",
+     "KVKK-m5-1",
+     "KVKK-m9-3",
+     "KVKK-m28-1",
+     "KVKK-m13-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H09",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:28",
+     "KVKK:3",
+     "KVKK:2",
+     "KVKK:5",
+     "KVKK:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin korunması kapsam dışı tamamen kişisel faaliyet",
+     "gerçek kişinin tamamen kişisel veya ev içi faaliyetleri veri işleme istisnası",
+     "kişisel veri tanımı işleme kapsamı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000211,
+    "baglam_parcalari": [
+     "KVKK-m28-1",
+     "KVKK-m3-1",
+     "KVKK-m2-1",
+     "KVKK-m5-1",
+     "KVKK-m9-3",
+     "KVKK-m16-1",
+     "KVKK-m12-1",
+     "KVKK-m11-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H10",
+    "tur": "gunluk_dil",
+    "siralar": [
+     15
+    ],
+    "ilk5": [
+     "KVKK:16",
+     "KVKK:9",
+     "KVKK:11",
+     "KVKK:3",
+     "KVKK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin üçüncü kişilere aktarılması açık rızası",
+     "veri sorumlusunun kişisel verileri işleme şartları",
+     "kişisel verilerin korunması ilgili kişi hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000202,
+    "baglam_parcalari": [
+     "KVKK-m16-1",
+     "KVKK-m9-1",
+     "KVKK-m11-1",
+     "KVKK-m9-3",
+     "KVKK-m3-1",
+     "KVKK-m5-1",
+     "KVKK-m9-2",
+     "KVKK-m12-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H11",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:18",
+     "MSY:4",
+     "TKHK:70",
+     "KVKK:13",
+     "TKHK:4"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "çağrı merkezi ücretli hat tüketici şikayet hattı ücret",
+     "mesafeli sözleşmelerde müşteri hizmetleri iletişim hattı ücreti",
+     "tüketici ile iletişim için sabit ücretli hat kullanımı yasağı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000215,
+    "baglam_parcalari": [
+     "MSY-m18-1",
+     "MSY-m4-1",
+     "TKHK-m70-1",
+     "KVKK-m13-1",
+     "TKHK-m4-1",
+     "TKHK-m71-1",
+     "TKHK-m73a-1",
+     "MSY-m5-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H12",
+    "tur": "gunluk_dil",
+    "siralar": [
+     17
+    ],
+    "ilk5": [
+     "ETK:Geçici 2",
+     "ETK:Ek 3",
+     "MSY:5",
+     "ETK:12",
+     "MSY:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kendiliğinden eklenen ek hizmet ve ödeme iadesi",
+     "elektronik ticarette sepete önceden işaretlenmiş ek ücret",
+     "tüketicinin onayı olmadan ek ücret talebi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "ETK-gecici2-1",
+     "ETK-ek3-1",
+     "MSY-m5-1",
+     "ETK-m12-2",
+     "MSY-m11-1",
+     "ETK-m12-3",
+     "ETK-m12-1",
+     "TKHK-m4-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "ETK-m12-5"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H13",
+    "tur": "gunluk_dil",
+    "siralar": [
+     11
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:12/A",
+     "MSY:12",
+     "TKHK:48",
+     "MSY:Ek"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kişiselleştirilmiş ürün istisnası",
+     "mesafeli sözleşmelerde cayma hakkının kullanılması ve bedel iadesi",
+     "tüketicinin sözleşmeden cayma hakkı istisnaları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000215,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m12a-1",
+     "MSY-m12-1",
+     "MSY-m12-2",
+     "TKHK-m48-1",
+     "MSY-ek-1",
+     "TKHK-m43-1",
+     "TKHK-m49-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H14",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:14",
+     "TKHK:48",
+     "TKHK:18",
+     "TKHK:24"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkının kullanılması",
+     "cayma bildiriminin yapılma şekli",
+     "mesafeli sözleşmelerde cayma hakkı bildirimi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.0002,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m14-1",
+     "TKHK-m48-1",
+     "TKHK-m18-1",
+     "TKHK-m24-1",
+     "MSY-m12a-1",
+     "MSY-m13-1",
+     "TKHK-m43-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H15",
+    "tur": "iki_madde",
+    "siralar": [
+     2,
+     24
+    ],
+    "ilk5": [
+     "TKHK:18",
+     "TKHK:43",
+     "MSY:10",
+     "TKHK:24",
+     "MSY:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinde cayma hakkı",
+     "cayma hakkı süresinin başlangıcı ve kullanımı",
+     "cayma süresi geçtikten sonra sözleşmeden dönme hakkı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000204,
+    "baglam_parcalari": [
+     "TKHK-m18-1",
+     "TKHK-m43-1",
+     "MSY-m10-1",
+     "TKHK-m24-1",
+     "MSY-m9-1",
+     "TKHK-m47-1",
+     "MSY-m11-1",
+     "TKHK-m48-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H16",
+    "tur": "iki_madde",
+    "siralar": [
+     5,
+     2
+    ],
+    "ilk5": [
+     "ETK:11",
+     "ETK:7",
+     "ETK:2",
+     "MSY:4",
+     "ETK:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti onay zorunluluğu",
+     "ticari elektronik iletide gönderici kimliğinin belirtilmesi",
+     "ticari iletişim ret hakkı ve iletinin içeriği"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000204,
+    "baglam_parcalari": [
+     "ETK-m11-2",
+     "ETK-m7-1",
+     "ETK-m2-1",
+     "MSY-m4-1",
+     "ETK-m6-1",
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "MSY-m5-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "H17",
+    "tur": "madde_dili",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:62",
+     "TKHK:79",
+     "TKHK:80",
+     "TKHK:61",
+     "TKHK:73"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketici Kanunu 79. madde yasaklanan uygulamalar",
+     "tüketici hukuku yasaklanan haksız ticari uygulamalar",
+     "tüketiciye karşı yasaklanan davranışlar ve idari yaptırım"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000328,
+    "baglam_parcalari": [
+     "TKHK-m62-1",
+     "TKHK-m79-1",
+     "TKHK-m80-1",
+     "TKHK-m61-1",
+     "TKHK-m73-1",
+     "TKHK-m70-1",
+     "TKHK-m76-1",
+     "TKHK-gecici3-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H18",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:26",
+     "TKHK:57/A",
+     "TKHK:77",
+     "TKHK:52",
+     "TKHK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "boşanma davasında nafaka miktarının belirlenmesi",
+     "tarafların ekonomik ve sosyal durumu nafaka takdiri",
+     "yoksulluk nafakası tedbir nafakası şartları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000199,
+    "baglam_parcalari": [
+     "TKHK-m26-1",
+     "TKHK-m57a-1",
+     "TKHK-m77-7",
+     "TKHK-m52-1",
+     "TKHK-m5-1",
+     "TKHK-m35-1",
+     "TKHK-m56-1",
+     "TKHK-m30-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-6",
+     "TKHK-m77-2",
+     "TKHK-m77-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H19",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:44",
+     "TKHK:50",
+     "TKHK:81",
+     "TKHK:31",
+     "TKHK:70"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kat maliki aidat borcunun tahsili",
+     "yönetici aidat alacağı icra takibi kat mülkiyeti",
+     "kat mülkiyeti kanunu ortak giderlere katılma yükümlülüğü"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000201,
+    "baglam_parcalari": [
+     "TKHK-m44-1",
+     "TKHK-m50-1",
+     "TKHK-m81-1",
+     "TKHK-m31-1",
+     "TKHK-m70-1",
+     "TKHK-m47a-1",
+     "TKHK-m34-1",
+     "MSY-m12-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H20",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "ETK:Ek 2",
+     "TKHK:77",
+     "ETK:Ek 4",
+     "TKHK:45",
+     "KVKK:29"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel eşyaların internet üzerinden satışı gelir vergisi",
+     "elektronik ticaret yoluyla yapılan satışlarda ticari kazanç tespiti",
+     "ikinci el eşya satışından elde edilen kazancın vergilendirilmesi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.00021,
+    "baglam_parcalari": [
+     "ETK-ek2-1",
+     "TKHK-m77-6",
+     "TKHK-m77-7",
+     "ETK-ek4-2",
+     "TKHK-m45-1",
+     "ETK-ek2-5",
+     "KVKK-m29-1",
+     "TKHK-m77-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-5",
+     "TKHK-m77-4",
+     "TKHK-m77-3"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   }
+  ],
+  [
+   {
+    "id": "H01",
+    "tur": "gunluk_dil",
+    "siralar": [
+     4
+    ],
+    "ilk5": [
+     "TKHK:56",
+     "TKHK:58",
+     "TKHK:57",
+     "TKHK:57/A",
+     "TKHK:77"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yenilenmiş ürün satışında garanti süresi",
+     "ikinci el tüketici malında satıcının ayıptan sorumluluğu",
+     "tüketici malının garanti belgesi ve garanti süresi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000199,
+    "baglam_parcalari": [
+     "TKHK-m56-1",
+     "TKHK-m58-1",
+     "TKHK-m57-1",
+     "TKHK-m57a-1",
+     "TKHK-m77-3",
+     "TKHK-m47a-1",
+     "TKHK-m17-1",
+     "MSY-m5-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-1",
+     "TKHK-m77-2",
+     "TKHK-m77-4"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "H02",
+    "tur": "gunluk_dil",
+    "siralar": [
+     4
+    ],
+    "ilk5": [
+     "TKHK:11",
+     "TKHK:56",
+     "TKHK:76",
+     "TKHK:58",
+     "TKHK:8"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ayıplı mal tamir süresi",
+     "tüketici tamir talebi süresi ayıplı mal",
+     "satıcının ayıbı giderme yükümlülüğü makul süre"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000195,
+    "baglam_parcalari": [
+     "TKHK-m11-1",
+     "TKHK-m56-1",
+     "TKHK-m76-1",
+     "TKHK-m58-1",
+     "TKHK-m8-1",
+     "TKHK-m13-1",
+     "TKHK-m15-1",
+     "TKHK-m47-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "H03",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:29",
+     "TKHK:38",
+     "TKHK:42",
+     "TKHK:49",
+     "TKHK:31"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici kredisi ile zorunlu hayat sigortası yaptırılması şartı",
+     "kredi sözleşmesinde sigorta yaptırma zorunluluğu tüketici hakları",
+     "kredi borçlusunun sigorta sözleşmesini seçme hakkı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000214,
+    "baglam_parcalari": [
+     "TKHK-m29-1",
+     "TKHK-m38-1",
+     "TKHK-m42-1",
+     "TKHK-m49-1",
+     "TKHK-m31-1",
+     "TKHK-m30-1",
+     "TKHK-m24-1",
+     "TKHK-m23-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H04",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:70",
+     "TKHK:73/A",
+     "TKHK:73",
+     "TKHK:67",
+     "TKHK:68"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici hakem heyeti kararına itiraz",
+     "tüketici hakem heyeti kararına karşı tüketici mahkemesinde itiraz süresi",
+     "tüketici uyuşmazlık hakem heyeti kararının iptali"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "TKHK-m70-1",
+     "TKHK-m73a-1",
+     "TKHK-m73-1",
+     "TKHK-m67-1",
+     "TKHK-m68-1",
+     "TKHK-m66-1",
+     "TKHK-m69-1",
+     "TKHK-m82-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H05",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:12",
+     "TKHK:44",
+     "TKHK:35",
+     "TKHK:40",
+     "TKHK:9"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinde teslim süresi",
+     "konut teslim tarihinin gecikmesi müteahhit sorumluluğu",
+     "ayıplı konut teslimi tüketici hakları"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000198,
+    "baglam_parcalari": [
+     "TKHK-m12-1",
+     "TKHK-m44-1",
+     "TKHK-m35-1",
+     "TKHK-m40-1",
+     "TKHK-m9-1",
+     "MSY-m2-1",
+     "MSY-m15-1",
+     "TKHK-m34-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H06",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "TKHK:63",
+     "TKHK:61",
+     "TKHK:77",
+     "TKHK:65",
+     "ETK:Ek 2"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "yanıltıcı reklam yasağı",
+     "tüketiciyi yanıltıcı ticari reklam ve haksız ticari uygulama",
+     "reklamda vaat edilen ürünle teslim edilen ürün arasındaki uyumsuzluk"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000208,
+    "baglam_parcalari": [
+     "TKHK-m63-1",
+     "TKHK-m61-1",
+     "TKHK-m77-5",
+     "TKHK-m65-1",
+     "ETK-ek2-3",
+     "TKHK-m62-1",
+     "TKHK-m82-1",
+     "ETK-ek3-2",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-4",
+     "TKHK-m77-3",
+     "TKHK-m77-6"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H07",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:50",
+     "TKHK:Geçici 3",
+     "TKHK:77",
+     "TKHK:11",
+     "TKHK:18"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "devre tatil sözleşmesinde cayma hakkı",
+     "tatil kulübü üyeliği sözleşmesinden dönme",
+     "tüketicinin cayma hakkını kullanma süresi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000198,
+    "baglam_parcalari": [
+     "TKHK-m50-2",
+     "TKHK-gecici3-1",
+     "TKHK-m50-1",
+     "TKHK-m77-2",
+     "TKHK-m11-1",
+     "TKHK-m18-1",
+     "MSY-m9-1",
+     "TKHK-m46-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-7",
+     "TKHK-m77-6",
+     "TKHK-m77-3"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H08",
+    "tur": "gunluk_dil",
+    "siralar": [
+     2
+    ],
+    "ilk5": [
+     "KVKK:16",
+     "KVKK:10",
+     "KVKK:3",
+     "KVKK:12",
+     "KVKK:5"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin işlenmesinde aydınlatma yükümlülüğü",
+     "veri sorumlusunun aydınlatma yapma yükümlülüğü kapsamı",
+     "kişisel veri toplanırken ilgili kişiye bildirilecek hususlar"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000212,
+    "baglam_parcalari": [
+     "KVKK-m16-1",
+     "KVKK-m10-1",
+     "KVKK-m3-1",
+     "KVKK-m12-1",
+     "KVKK-m5-1",
+     "KVKK-m9-3",
+     "KVKK-m13-1",
+     "KVKK-m28-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H09",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "KVKK:28",
+     "KVKK:3",
+     "KVKK:12",
+     "KVKK:2",
+     "KVKK:16"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin tanımı ve kapsamı",
+     "tamamen kişisel faaliyetler kapsam dışı kişisel veri işleme",
+     "gerçek kişi veri sorumlusu kişisel veri işleme istisnası"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000207,
+    "baglam_parcalari": [
+     "KVKK-m28-1",
+     "KVKK-m3-1",
+     "KVKK-m12-1",
+     "KVKK-m2-1",
+     "KVKK-m16-1",
+     "KVKK-m11-1",
+     "KVKK-m9-3",
+     "KVKK-m10-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H10",
+    "tur": "gunluk_dil",
+    "siralar": [
+     47
+    ],
+    "ilk5": [
+     "KVKK:16",
+     "KVKK:9",
+     "KVKK:3",
+     "KVKK:11",
+     "KVKK:12"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kişisel verilerin işlenmesi açık rıza",
+     "kişisel verilerin üçüncü kişilere aktarılması",
+     "veri sorumlusunun aydınlatma yükümlülüğü"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000199,
+    "baglam_parcalari": [
+     "KVKK-m16-1",
+     "KVKK-m9-1",
+     "KVKK-m3-1",
+     "KVKK-m11-1",
+     "KVKK-m9-3",
+     "KVKK-m12-1",
+     "KVKK-gecici1-1",
+     "KVKK-m10-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H11",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:18",
+     "ETK:2",
+     "MSY:4",
+     "MSY:6",
+     "TKHK:73"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "tüketici çağrı merkezi ücretli hat uygulaması",
+     "mesafeli sözleşmelerde müşteri hizmetleri iletişim ücreti",
+     "sipariş sonrası tüketici iletişim hattı sabit ücret"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000209,
+    "baglam_parcalari": [
+     "MSY-m18-1",
+     "ETK-m2-1",
+     "MSY-m4-1",
+     "MSY-m6-1",
+     "TKHK-m73-1",
+     "KVKK-m13-1",
+     "TKHK-m70-1",
+     "TKHK-m73a-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H12",
+    "tur": "gunluk_dil",
+    "siralar": [
+     22
+    ],
+    "ilk5": [
+     "ETK:Geçici 2",
+     "ETK:12",
+     "ETK:Ek 3",
+     "MSY:5",
+     "MSY:11"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kendiliğinden eklenen ek hizmet ve sigorta bedeli",
+     "elektronik ticarette ön onaylı kutucuk ile ek ücret",
+     "ek ücretin iadesi ve haksız fiil nedeniyle ödeme"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000209,
+    "baglam_parcalari": [
+     "ETK-gecici2-1",
+     "ETK-m12-2",
+     "ETK-ek3-1",
+     "ETK-m12-3",
+     "ETK-m12-1",
+     "MSY-m5-1",
+     "MSY-m11-1",
+     "KVKK-m27-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "ETK-m12-5"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H13",
+    "tur": "gunluk_dil",
+    "siralar": [
+     22
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:12/A",
+     "MSY:12",
+     "MSY:14",
+     "MSY:Ek"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "kişiye özel üretilen mal cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkının kullanılması ve bedel iadesi"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m12a-1",
+     "MSY-m12-1",
+     "MSY-m14-1",
+     "MSY-ek-1",
+     "MSY-m12-2",
+     "TKHK-m48-1",
+     "TKHK-m43-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H14",
+    "tur": "gunluk_dil",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:14",
+     "TKHK:48",
+     "MSY:12/A",
+     "TKHK:49"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkının kullanılması",
+     "cayma bildiriminin yapılma şekli",
+     "mesafeli sözleşmelerde cayma hakkı bildirimi yazılı veya kalıcı veri saklayıcı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000209,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m14-1",
+     "TKHK-m48-1",
+     "MSY-m12a-1",
+     "TKHK-m49-1",
+     "TKHK-m18-1",
+     "TKHK-m24-1",
+     "MSY-m5-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H15",
+    "tur": "iki_madde",
+    "siralar": [
+     5,
+     23
+    ],
+    "ilk5": [
+     "MSY:11",
+     "MSY:9",
+     "TKHK:48",
+     "TKHK:18",
+     "TKHK:43"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "konut satış sözleşmesinde cayma hakkı",
+     "cayma hakkı süresi",
+     "sözleşmeden dönme hakkı ayıplı mal",
+     "mesafeli sözleşmelerde cayma hakkının kullanılması"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000207,
+    "baglam_parcalari": [
+     "MSY-m11-1",
+     "MSY-m9-1",
+     "TKHK-m48-1",
+     "TKHK-m18-1",
+     "TKHK-m43-1",
+     "MSY-ek-1",
+     "MSY-m10-1",
+     "TKHK-m47-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H16",
+    "tur": "iki_madde",
+    "siralar": [
+     5,
+     2
+    ],
+    "ilk5": [
+     "ETK:11",
+     "ETK:7",
+     "ETK:2",
+     "MSY:4",
+     "ETK:6"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ticari elektronik ileti onay zorunluluğu",
+     "ticari elektronik iletide gönderici kimliği ve iletişim bilgisi",
+     "ticari elektronik ileti gönderilmesinde ret hakkı"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000206,
+    "baglam_parcalari": [
+     "ETK-m11-2",
+     "ETK-m7-1",
+     "ETK-m2-1",
+     "MSY-m4-1",
+     "ETK-m6-1",
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "ETK-ek2-1"
+    ],
+    "baglam8": true,
+    "@1": false,
+    "@3": false,
+    "@5": true
+   },
+   {
+    "id": "H17",
+    "tur": "madde_dili",
+    "siralar": [
+     1
+    ],
+    "ilk5": [
+     "TKHK:79",
+     "TKHK:62",
+     "TKHK:83",
+     "TKHK:2",
+     "TKHK:86"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "Tüketici Kanunu 79. madde",
+     "tüketici kanunu yasaklanan haksız ticari uygulamalar",
+     "tüketicinin korunması yasaklanan fiiller"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000338,
+    "baglam_parcalari": [
+     "TKHK-m79-1",
+     "TKHK-m62-1",
+     "TKHK-m83-1",
+     "TKHK-m2-1",
+     "TKHK-m86-1",
+     "TKHK-m64-1",
+     "TKHK-m73-1",
+     "TKHK-m80-1"
+    ],
+    "baglam8": true,
+    "@1": true,
+    "@3": true,
+    "@5": true
+   },
+   {
+    "id": "H18",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:35",
+     "TKHK:30",
+     "ETK:Ek 1",
+     "TKHK:26",
+     "TKHK:20"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "boşanma davasında nafaka miktarının belirlenmesi",
+     "tarafların ekonomik durumu ve yoksulluk nafakası",
+     "boşanma nafakası takdir ölçütleri"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000216,
+    "baglam_parcalari": [
+     "TKHK-m35-1",
+     "TKHK-m30-1",
+     "ETK-ek1-1",
+     "TKHK-m26-1",
+     "TKHK-m20-1",
+     "TKHK-m63-2",
+     "TKHK-m37-1",
+     "TKHK-m16-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H19",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "TKHK:44",
+     "TKHK:50",
+     "TKHK:27",
+     "TKHK:34",
+     "TKHK:31"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "kat maliklerinin aidat borcu ödememesi",
+     "kat mülkiyeti yönetim giderlerine katılma borcu icra takibi",
+     "kat malikinin aidat borcu tahsili"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000197,
+    "baglam_parcalari": [
+     "TKHK-m44-1",
+     "TKHK-m50-1",
+     "TKHK-m27-1",
+     "TKHK-m34-1",
+     "TKHK-m31-1",
+     "TKHK-m37-1",
+     "TKHK-m28-1",
+     "MSY-m12-1"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   },
+   {
+    "id": "H20",
+    "tur": "cevapsiz",
+    "siralar": [],
+    "ilk5": [
+     "ETK:Ek 2",
+     "KVKK:29",
+     "TKHK:45",
+     "TKHK:77",
+     "TKHK:54"
+    ],
+    "yeniden_yazim": "uygulandı",
+    "sorgular": [
+     "ikinci el eşya satışından elde edilen gelir vergisi",
+     "elektronik ticaret yoluyla yapılan satışlarda gelir vergisi yükümlülüğü",
+     "kişisel eşyanın satışı kazanç vergilendirme istisnası"
+    ],
+    "uyari": null,
+    "maliyet_usd": 0.000209,
+    "baglam_parcalari": [
+     "ETK-ek2-1",
+     "KVKK-m29-1",
+     "TKHK-m45-1",
+     "TKHK-m77-6",
+     "TKHK-m54-1",
+     "TKHK-m77-7",
+     "TKHK-m77-1",
+     "MSY-m5-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-5",
+     "TKHK-m77-4",
+     "TKHK-m77-3"
+    ],
+    "baglam8": false,
+    "@1": false,
+    "@3": false,
+    "@5": false
+   }
+  ]
+ ],
+ "cevap_modeli": "claude-haiku-5-5",
+ "cevap_atif_takibi": null
+}

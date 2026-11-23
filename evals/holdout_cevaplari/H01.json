@@ -1,0 +1,107 @@
+{
+ "soru": "yenilenmiş telefon aldım, bunun garantisi oluyor mu ne kadar",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Yenilenmiş ürünlere tüketiciye teslim tarihinden itibaren asgari bir yıl garanti verilmesi zorunludur.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m57a-1",
+     "alinti": "Yenilenmiş ürünlere tüketiciye teslim tarihinden itibaren asgari bir yıl garanti verilmesi zorunludur.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Ancak özelliği nedeniyle bazı malların garanti şartları Bakanlıkça başka bir ölçü birimi ile de belirlenebilir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m57a-1",
+     "alinti": "Ancak özelliği nedeniyle bazı malların garanti şartları Bakanlıkça başka bir ölçü birimi ile de belirlenebilir.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Telefonunuzun yenilenmiş ürün kapsamında olup olmadığı ve garanti şartlarının telefon için başka bir ölçü birimiyle belirlenip belirlenmediği parçalarda yer almamaktadır."
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 2,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m57a-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 57/A"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m57a-1",
+  "TKHK-m58-1",
+  "TKHK-m56-1",
+  "TKHK-m57-1",
+  "TKHK-m77-3",
+  "TKHK-m47a-1",
+  "TKHK-m10-1",
+  "TKHK-m30-1",
+  "TKHK-tablo2026-1",
+  "TKHK-m77-1",
+  "TKHK-m77-2",
+  "TKHK-m77-4"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "yenilenmiş ürün satışında satıcının ayıptan sorumluluğu",
+   "ikinci el tüketici malında garanti süresi",
+   "tüketici malının garanti belgesi ve garanti süresi"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000199
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002188,
+ "sure_sn": 2.54,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Yenilenmiş ürünlere tüketiciye teslim tarihinden itibaren asgari bir yıl garanti verilmesi zorunludur.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m57a-1",
+      "alinti": "Yenilenmiş ürünlere tüketiciye teslim tarihinden itibaren asgari bir yıl garanti verilmesi zorunludur."
+     }
+    ]
+   },
+   {
+    "metin": "Ancak özelliği nedeniyle bazı malların garanti şartları Bakanlıkça başka bir ölçü birimi ile de belirlenebilir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m57a-1",
+      "alinti": "Ancak özelliği nedeniyle bazı malların garanti şartları Bakanlıkça başka bir ölçü birimi ile de belirlenebilir."
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "Telefonunuzun yenilenmiş ürün kapsamında olup olmadığı ve garanti şartlarının telefon için başka bir ölçü birimiyle belirlenip belirlenmediği parçalarda yer almamaktadır."
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H01"
+}

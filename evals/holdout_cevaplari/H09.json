@@ -1,0 +1,99 @@
+{
+ "soru": "Kendi telefonumda arkadaşlarımın ve ailemin numaralarını, doğum günlerini tutuyorum. Kişisel veri kanunu bana da uygulanır mı?",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "KVKK'nın 28. maddesinin birinci fıkrasının (a) bendine göre, kişisel verilerin üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi durumunda Kanun hükümleri uygulanmaz.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m28-1",
+     "alinti": "Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Bu nedenle kişisel telefonunuzda yalnızca kendiniz için arkadaşlarınızın ve ailenizin numaralarını ve doğum günlerini tutmanız, verilerin üçüncü kişilere verilmemesi ve veri güvenliği yükümlülüklerine uyulması kaydıyla, bu istisna kapsamında değerlendirilebilir.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m28-1",
+     "alinti": "üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 2,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "KVKK-m28-1",
+   "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 28"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "KVKK-m28-1",
+  "KVKK-m3-1",
+  "KVKK-m2-1",
+  "KVKK-m16-1",
+  "KVKK-m11-1",
+  "KVKK-m12-1",
+  "KVKK-m10-1",
+  "ETK-m2-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kişisel verilerin tanımı ve kapsamı",
+   "tamamen kişisel veya ev içi faaliyetler istisnası",
+   "kişisel verilerin işlenmesi veri sorumlusu kapsam dışı"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000205
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001396,
+ "sure_sn": 3.11,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "KVKK'nın 28. maddesinin birinci fıkrasının (a) bendine göre, kişisel verilerin üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi durumunda Kanun hükümleri uygulanmaz.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m28-1",
+      "alinti": "Kişisel verilerin, üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla gerçek kişiler tarafından tamamen kendisiyle veya aynı konutta yaşayan aile fertleriyle ilgili faaliyetler kapsamında işlenmesi."
+     }
+    ]
+   },
+   {
+    "metin": "Bu nedenle kişisel telefonunuzda yalnızca kendiniz için arkadaşlarınızın ve ailenizin numaralarını ve doğum günlerini tutmanız, verilerin üçüncü kişilere verilmemesi ve veri güvenliği yükümlülüklerine uyulması kaydıyla, bu istisna kapsamında değerlendirilebilir.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m28-1",
+      "alinti": "üçüncü kişilere verilmemek ve veri güvenliğine ilişkin yükümlülüklere uyulmak kaydıyla"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H09"
+}

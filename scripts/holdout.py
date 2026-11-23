@@ -179,7 +179,7 @@ def rapor(questions: list[dict]) -> None:
           f"**{h['alinti_orani']}** ({h['alinti_toplam']} alıntı) |",
           f"| Çıkarılan cümle | {_oz([o['cikarilan'] for o in dev2_ol])} | **{h['cikarilan']}** / {h['cumle_toplam']} cümle "
           f"({h['cikarilan_cevap']} cevapta) |",
-          f"| Cevapsız soruda reddetme | {_oz([o['ret'] for o in dev2_ol])} / {len(dev2_cevapsiz)} | "
+          f"| Cevapsız soruda reddetme | {_oz([o['ret'] for o in dev2_ol])} ({len(dev2_cevapsiz)} soruda) | "
           f"**{h['ret']} / {len(cevapsiz)}** |",
           f"| Sistem hatası (okunamayan çıktı) | {_oz([o['sistem_hatasi'] for o in dev2_ol])} | **{h['sistem_hatasi']}** |",
           "", "### Soru bazında durum (holdout)\n", "| Soru | Tür | Durum | Gösterilen / çıkarılan cümle | Uyarılar |",

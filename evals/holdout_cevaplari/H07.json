@@ -1,0 +1,130 @@
+{
+ "soru": "tatildeyken bize devre tatil sattılar, eve dönünce pişman olduk. vazgeçme hakkımız var mı",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Mevzuata göre tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m50-2",
+     "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Cayma hakkının kullanılmasıyla devre tatil sözleşmeleri kendiliğinden sona erer.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m50-2",
+     "alinti": "cayma hakkının kullanılması ile birlikte kendiliğinden sona erer.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Satıcı veya sağlayıcı cayma hakkı konusunda tüketiciyi gerektiği şekilde bilgilendirmezse, tüketici cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m10-1",
+     "alinti": "cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m50-2",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 50, fıkra 6–11"
+  },
+  {
+   "parca_id": "MSY-m10-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 10"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m50-2",
+  "TKHK-m50-1",
+  "TKHK-gecici3-1",
+  "TKHK-m77-2",
+  "TKHK-m18-1",
+  "MSY-m10-1",
+  "TKHK-m24-1",
+  "TKHK-m43-1",
+  "TKHK-tablo2026-1",
+  "TKHK-m77-7",
+  "TKHK-m77-6",
+  "TKHK-m77-3"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "devre tatil sözleşmesinde cayma hakkı",
+   "tatil kulübü üyeliği sözleşmesinden cayma süresi",
+   "ortak kullanımlı tatil hakkı sözleşmesi tüketici cayma"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000205
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002858,
+ "sure_sn": 7.07,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Mevzuata göre tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m50-2",
+      "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir."
+     }
+    ]
+   },
+   {
+    "metin": "Cayma hakkının kullanılmasıyla devre tatil sözleşmeleri kendiliğinden sona erer.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m50-2",
+      "alinti": "cayma hakkının kullanılması ile birlikte kendiliğinden sona erer."
+     }
+    ]
+   },
+   {
+    "metin": "Satıcı veya sağlayıcı cayma hakkı konusunda tüketiciyi gerektiği şekilde bilgilendirmezse, tüketici cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m10-1",
+      "alinti": "cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H07"
+}

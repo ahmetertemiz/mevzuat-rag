@@ -1,0 +1,153 @@
+{
+ "soru": "İnternet alışverişinden caymak istiyorum. Satıcıyı telefonla arayıp söylesem yeterli olur mu, nasıl bildirmem gerekiyor?",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Yönetmeliğe göre cayma hakkının kullanıldığına dair bildirimin cayma hakkı süresi dolmadan, yazılı olarak veya kalıcı veri saklayıcısı ile satıcıya veya sağlayıcıya yöneltilmesi yeterlidir.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m11-1",
+     "alinti": "Cayma hakkının kullanıldığına dair bildirimin cayma hakkı süresi dolmadan, yazılı olarak veya kalıcı veri saklayıcısı ile",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Tüketici, EK’te yer alan formu kullanabileceği gibi cayma kararını bildiren açık bir beyanda da bulunabilir.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m11-1",
+     "alinti": "EK’te yer alan formu kullanabileceği gibi cayma kararını bildiren açık bir beyanda da bulunabilir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Mesafeli sözleşmelerde tüketici on dört gün içinde cayma hakkına sahiptir ve bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m48-1",
+     "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Bildirimde bulunulduğunu ispat yükümlülüğü tüketiciye aittir.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m11-1",
+     "alinti": "Bu maddede geçen cayma hakkının kullanımına ilişkin ispat yükümlülüğü tüketiciye aittir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Telefonla sözlü olarak yapılan bildirimin yeterli olup olmadığı"
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 4,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "MSY-m11-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 11"
+  },
+  {
+   "parca_id": "TKHK-m48-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 48, fıkra 1–5"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "MSY-m11-1",
+  "MSY-m14-1",
+  "TKHK-m48-1",
+  "TKHK-m18-1",
+  "TKHK-m24-1",
+  "MSY-m12a-1",
+  "MSY-m5-1",
+  "TKHK-m43-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "mesafeli sözleşmelerde cayma hakkının kullanılması",
+   "cayma bildiriminin yapılma şekli ve usulü",
+   "mesafeli sözleşmelerde cayma hakkı bildirimi tüketici"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000206
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002482,
+ "sure_sn": 10.06,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Yönetmeliğe göre cayma hakkının kullanıldığına dair bildirimin cayma hakkı süresi dolmadan, yazılı olarak veya kalıcı veri saklayıcısı ile satıcıya veya sağlayıcıya yöneltilmesi yeterlidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m11-1",
+      "alinti": "Cayma hakkının kullanıldığına dair bildirimin cayma hakkı süresi dolmadan, yazılı olarak veya kalıcı veri saklayıcısı ile"
+     }
+    ]
+   },
+   {
+    "metin": "Tüketici, EK’te yer alan formu kullanabileceği gibi cayma kararını bildiren açık bir beyanda da bulunabilir.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m11-1",
+      "alinti": "EK’te yer alan formu kullanabileceği gibi cayma kararını bildiren açık bir beyanda da bulunabilir"
+     }
+    ]
+   },
+   {
+    "metin": "Mesafeli sözleşmelerde tüketici on dört gün içinde cayma hakkına sahiptir ve bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m48-1",
+      "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir"
+     }
+    ]
+   },
+   {
+    "metin": "Bildirimde bulunulduğunu ispat yükümlülüğü tüketiciye aittir.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m11-1",
+      "alinti": "Bu maddede geçen cayma hakkının kullanımına ilişkin ispat yükümlülüğü tüketiciye aittir"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "Telefonla sözlü olarak yapılan bildirimin yeterli olup olmadığı"
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H14"
+}

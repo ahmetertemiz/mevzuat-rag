@@ -1,0 +1,109 @@
+{
+ "soru": "Bir uygulamaya kaydolurken bilgilerimi istiyorlar. Bu bilgileri toplarken bana neleri açıklamak zorundalar?",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Kişisel verilerin elde edilmesi sırasında veri sorumlusu veya yetkilendirdiği kişi, ilgili kişilere veri sorumlusunun ve varsa temsilcisinin kimliğini açıklamakla yükümlüdür.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m10-1",
+     "alinti": "Veri sorumlusunun ve varsa temsilcisinin kimliği,",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Ayrıca kişisel verilerin hangi amaçla işleneceği, işlenen kişisel verilerin kimlere ve hangi amaçla aktarılabileceği, kişisel veri toplamanın yöntemi ve hukuki sebebi ile 11 inci maddede sayılan diğer haklar konusunda bilgi verilmesi gerekir.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m10-1",
+     "alinti": "Kişisel verilerin hangi amaçla işleneceği,",
+     "dogrulandi": true,
+     "neden": null
+    },
+    {
+     "parca_id": "KVKK-m10-1",
+     "alinti": "Kişisel veri toplamanın yöntemi ve hukuki sebebi,",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "KVKK-m10-1",
+   "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 10"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "KVKK-m16-1",
+  "KVKK-m10-1",
+  "KVKK-m3-1",
+  "KVKK-m12-1",
+  "KVKK-m5-1",
+  "KVKK-m9-3",
+  "MSY-m5-2",
+  "KVKK-m28-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kişisel verilerin işlenmesinde aydınlatma yükümlülüğü",
+   "veri sorumlusunun aydınlatma yapma yükümlülüğü kapsamı",
+   "kişisel veri toplama öncesi bilgilendirme ve açık rıza"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000211
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001337,
+ "sure_sn": 2.37,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Kişisel verilerin elde edilmesi sırasında veri sorumlusu veya yetkilendirdiği kişi, ilgili kişilere veri sorumlusunun ve varsa temsilcisinin kimliğini açıklamakla yükümlüdür.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m10-1",
+      "alinti": "Veri sorumlusunun ve varsa temsilcisinin kimliği,"
+     }
+    ]
+   },
+   {
+    "metin": "Ayrıca kişisel verilerin hangi amaçla işleneceği, işlenen kişisel verilerin kimlere ve hangi amaçla aktarılabileceği, kişisel veri toplamanın yöntemi ve hukuki sebebi ile 11 inci maddede sayılan diğer haklar konusunda bilgi verilmesi gerekir.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m10-1",
+      "alinti": "Kişisel verilerin hangi amaçla işleneceği,"
+     },
+     {
+      "parca_id": "KVKK-m10-1",
+      "alinti": "Kişisel veri toplamanın yöntemi ve hukuki sebebi,"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H08"
+}

@@ -1,0 +1,130 @@
+{
+ "soru": "Maketten aldığım evden vazgeçmek istiyorum. Hemen cayabilir miyim, cayma süresini kaçırdıysam sözleşmeden dönme hakkım var mı?",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Ön ödemeli konut satış sözleşmesinde tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m43-1",
+     "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin ön ödemeli konut satış sözleşmesinden cayma hakkına sahiptir.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcıya yöneltilmiş olması yeterlidir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m43-1",
+     "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcıya yöneltilmiş olması yeterlidir.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Mesafeli sözleşmelerde satıcı, cayma hakkı konusunda tüketiciyi gerektiği şekilde bilgilendirmezse tüketici on dört günlük süreye bağlı değildir.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m10-1",
+     "alinti": "Tüketici, cayma hakkı konusunda gerektiği şekilde bilgilendirilmezse, cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Cayma süresinin kaçırılması halinde ön ödemeli konut satış sözleşmesinden dönme hakkının olup olmadığı"
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m43-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 43"
+  },
+  {
+   "parca_id": "MSY-m10-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 10"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m43-1",
+  "TKHK-m18-1",
+  "MSY-m11-1",
+  "MSY-m10-1",
+  "TKHK-m24-1",
+  "MSY-m9-1",
+  "TKHK-m48-1",
+  "TKHK-m47-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "konut satış sözleşmesinden cayma hakkı",
+   "cayma hakkı süresinin kaçırılması halinde sözleşmeden dönme",
+   "konut sözleşmesinde tüketicinin cayma hakkı kullanımı şartları"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000209
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002268,
+ "sure_sn": 9.33,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Ön ödemeli konut satış sözleşmesinde tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m43-1",
+      "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin ön ödemeli konut satış sözleşmesinden cayma hakkına sahiptir."
+     }
+    ]
+   },
+   {
+    "metin": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcıya yöneltilmiş olması yeterlidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m43-1",
+      "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcıya yöneltilmiş olması yeterlidir."
+     }
+    ]
+   },
+   {
+    "metin": "Mesafeli sözleşmelerde satıcı, cayma hakkı konusunda tüketiciyi gerektiği şekilde bilgilendirmezse tüketici on dört günlük süreye bağlı değildir.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m10-1",
+      "alinti": "Tüketici, cayma hakkı konusunda gerektiği şekilde bilgilendirilmezse, cayma hakkını kullanmak için on dört günlük süreyle bağlı değildir."
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "Cayma süresinin kaçırılması halinde ön ödemeli konut satış sözleşmesinden dönme hakkının olup olmadığı"
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H15"
+}

@@ -1,0 +1,50 @@
+{
+ "soru": "Apartman aidatını ödemeyen kat malikine karşı ne yapılabilir?",
+ "durum": "bulunamadi",
+ "cumleler": [],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Apartman aidatını ödemeyen kat malikine karşı yapılabilecek işlemler parçalarda yer almamaktadır."
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 0,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "bulunamadi",
+ "baglam_parcalari": [
+  "TKHK-m44-1",
+  "TKHK-m50-1",
+  "TKHK-m31-1",
+  "TKHK-m70-1",
+  "TKHK-m47a-1",
+  "TKHK-m27-1",
+  "MSY-m12-1",
+  "TKHK-m34-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kat maliki aidat borcunun tahsili",
+   "kat mülkiyeti kanunu yönetim giderlerine katılma yükümlülüğü",
+   "aidat borcu nedeniyle icra takibi ve kat maliki"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000202
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.00139,
+ "sure_sn": 1.16,
+ "ham_cikti": {
+  "durum": "bulunamadi",
+  "cumleler": [],
+  "bulunamayan": [
+   "Apartman aidatını ödemeyen kat malikine karşı yapılabilecek işlemler parçalarda yer almamaktadır."
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H19"
+}

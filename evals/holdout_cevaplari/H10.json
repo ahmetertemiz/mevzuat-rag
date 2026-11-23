@@ -1,0 +1,157 @@
+{
+ "soru": "üye olduğum mağaza bilgilerimi bana sormadan başka bir şirkete vermiş, buna hakkı var mı",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Kişisel veriler, ilgili kişinin açık rızası olmaksızın işlenemez.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m5-1",
+     "alinti": "Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Açık rıza, belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızadır.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m3-1",
+     "alinti": "Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Herkes, veri sorumlusuna başvurarak kendisiyle ilgili kişisel verilerin yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme hakkına sahiptir.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m11-1",
+     "alinti": "Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme hakkı bulunmaktadır.",
+   "dayanaklar": [
+    {
+     "parca_id": "KVKK-m11-1",
+     "alinti": "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Verilerin mağaza tarafından başka bir şirkete, somut olayda rıza alınmadan verilip verilmediğine dair hüküm; bu değerlendirme parçalarda yer almamaktadır."
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 4,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "KVKK-m5-1",
+   "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 5"
+  },
+  {
+   "parca_id": "KVKK-m3-1",
+   "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 3"
+  },
+  {
+   "parca_id": "KVKK-m11-1",
+   "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 11"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "KVKK-m9-1",
+  "KVKK-m11-1",
+  "KVKK-m9-3",
+  "KVKK-m5-1",
+  "KVKK-m16-1",
+  "KVKK-m9-2",
+  "KVKK-m3-1",
+  "KVKK-m12-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kişisel verilerin üçüncü kişilere aktarılması açık rıza",
+   "veri sorumlusunun kişisel verileri işleme şartları",
+   "kişisel verilerin korunması ilgili kişinin hakları"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000202
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001453,
+ "sure_sn": 3.03,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Kişisel veriler, ilgili kişinin açık rızası olmaksızın işlenemez.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m5-1",
+      "alinti": "Kişisel veriler ilgili kişinin açık rızası olmaksızın işlenemez."
+     }
+    ]
+   },
+   {
+    "metin": "Açık rıza, belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızadır.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m3-1",
+      "alinti": "Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı"
+     }
+    ]
+   },
+   {
+    "metin": "Herkes, veri sorumlusuna başvurarak kendisiyle ilgili kişisel verilerin yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme hakkına sahiptir.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m11-1",
+      "alinti": "Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme"
+     }
+    ]
+   },
+   {
+    "metin": "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme hakkı bulunmaktadır.",
+    "dayanaklar": [
+     {
+      "parca_id": "KVKK-m11-1",
+      "alinti": "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "Verilerin mağaza tarafından başka bir şirkete, somut olayda rıza alınmadan verilip verilmediğine dair hüküm; bu değerlendirme parçalarda yer almamaktadır."
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H10"
+}

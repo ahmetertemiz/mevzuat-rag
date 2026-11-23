@@ -1,0 +1,130 @@
+{
+ "soru": "üzerine ismimi yazdırdığım kolyeyi internetten almıştım, beğenmedim. iade edebilir miyim",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m48-1",
+     "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m48-1",
+     "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Satıcı, cayma hakkı kullanıldığında tahsil edilen tüm ödemeleri iade etmekle yükümlüdür.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m12-1",
+     "alinti": "tahsil edilen tüm ödemeleri iade etmekle yükümlüdür",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "İsme özel yazdırılmış (kişiselleştirilmiş) kolyenin cayma hakkı kapsamında olup olmadığına ilişkin hüküm parçalarda bulunmamaktadır."
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m48-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 48, fıkra 1–5"
+  },
+  {
+   "parca_id": "MSY-m12-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 12, fıkra 1–4"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "kismen_cevaplandi",
+ "baglam_parcalari": [
+  "MSY-m12-1",
+  "MSY-m11-1",
+  "MSY-m12a-1",
+  "MSY-m12-2",
+  "MSY-ek-1",
+  "MSY-m5-1",
+  "TKHK-m43-1",
+  "TKHK-m48-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kişiye özel üretilen mal cayma hakkı istisnası",
+   "mesafeli sözleşmelerde cayma hakkı ve istisnaları",
+   "mesafeli sözleşmelerde ayıplı mal ve iade"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000204
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.00256,
+ "sure_sn": 10.18,
+ "ham_cikti": {
+  "durum": "kismen_cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m48-1",
+      "alinti": "Tüketici, on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin sözleşmeden cayma hakkına sahiptir"
+     }
+    ]
+   },
+   {
+    "metin": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m48-1",
+      "alinti": "Cayma hakkının kullanıldığına dair bildirimin bu süre içinde satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir"
+     }
+    ]
+   },
+   {
+    "metin": "Satıcı, cayma hakkı kullanıldığında tahsil edilen tüm ödemeleri iade etmekle yükümlüdür.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m12-1",
+      "alinti": "tahsil edilen tüm ödemeleri iade etmekle yükümlüdür"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [
+   "İsme özel yazdırılmış (kişiselleştirilmiş) kolyenin cayma hakkı kapsamında olup olmadığına ilişkin hüküm parçalarda bulunmamaktadır."
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H13"
+}

@@ -1,0 +1,122 @@
+{
+ "soru": "Banka ihtiyaç kredisi verirken hayat sigortası yaptırmamı şart koştu. Bunu yaptırmak zorunda mıyım?",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Tüketicinin yazılı veya kalıcı veri saklayıcısı aracılığıyla açık talebi olmaksızın kredi bağlantılı sigorta yaptırılamaz.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m29-1",
+     "alinti": "Tüketicinin yazılı veya kalıcı veri saklayıcısı aracılığıyla açık talebi olmaksızın kredi bağlantılı sigorta yaptırılamaz.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Tüketici kredisi sözleşmesi, kredi ile ilgili olanlar hariç yan finansal ürün ve hizmetlerin satın alınması şartına bağlanamaz.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m29-1",
+     "alinti": "Tüketici kredisi sözleşmesi, kredi ile ilgili olanlar hariç yan finansal ürün ve hizmetlerin satın alınması şartına bağlanamaz.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Kredi veren, kredi bağlantılı sigorta içermeyen bir sözleşmeyi de tüketiciye teklif etmek koşuluyla kredi bağlantılı sigorta yaptırılmasını içeren bir kredi sözleşmesini sunabilir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m29-1",
+     "alinti": "Kredi veren, kredi bağlantılı sigorta içermeyen bir sözleşmeyi de tüketiciye teklif etmek koşuluyla",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 3,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m29-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 29"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m29-1",
+  "TKHK-m38-1",
+  "TKHK-m42-1",
+  "TKHK-m49-1",
+  "TKHK-m31-1",
+  "TKHK-m30-1",
+  "TKHK-m23-1",
+  "TKHK-m24-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "kredi sözleşmesinde zorunlu sigorta yaptırma şartı",
+   "tüketici kredisi ile birlikte sigorta ürünü satışı",
+   "bankanın kredi koşulu olarak sigorta talep etmesi"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000206
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001323,
+ "sure_sn": 2.9,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Tüketicinin yazılı veya kalıcı veri saklayıcısı aracılığıyla açık talebi olmaksızın kredi bağlantılı sigorta yaptırılamaz.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m29-1",
+      "alinti": "Tüketicinin yazılı veya kalıcı veri saklayıcısı aracılığıyla açık talebi olmaksızın kredi bağlantılı sigorta yaptırılamaz."
+     }
+    ]
+   },
+   {
+    "metin": "Tüketici kredisi sözleşmesi, kredi ile ilgili olanlar hariç yan finansal ürün ve hizmetlerin satın alınması şartına bağlanamaz.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m29-1",
+      "alinti": "Tüketici kredisi sözleşmesi, kredi ile ilgili olanlar hariç yan finansal ürün ve hizmetlerin satın alınması şartına bağlanamaz."
+     }
+    ]
+   },
+   {
+    "metin": "Kredi veren, kredi bağlantılı sigorta içermeyen bir sözleşmeyi de tüketiciye teklif etmek koşuluyla kredi bağlantılı sigorta yaptırılmasını içeren bir kredi sözleşmesini sunabilir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m29-1",
+      "alinti": "Kredi veren, kredi bağlantılı sigorta içermeyen bir sözleşmeyi de tüketiciye teklif etmek koşuluyla"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H03"
+}

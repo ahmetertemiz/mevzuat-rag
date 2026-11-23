@@ -82,7 +82,7 @@ Modelin çıktısına güvenilmez; kullanıcıya giden her şey kodla denetlenir
 
 ## Değerlendirme sonuçları
 
-İki geliştirme seti ve proje sahibinin yazacağı ayrı bir holdout seti var. Bütün kararlar
+İki geliştirme seti ve ayrı bir holdout seti var. Bütün kararlar
 (kabul kuralları, gürültü payı) ölçümden **önce** [docs/kararlar.md](docs/kararlar.md)'ye kaydedildi.
 Yeniden yazım koşudan koşuya değiştiği için her ölçüm 3 koşu yapıldı. Tablolarda en düşük / medyan /
 en yüksek değer var.
@@ -91,23 +91,34 @@ en yüksek değer var.
 |---|---|---|
 | `evals/retrieval.yaml` (dev1) | Arama seçenekleri bu sette seçildi | 26 cevaplı + 4 cevapsız |
 | `evals/answers.yaml` (dev2) | Cevap üretimi ve teşhis; sonradan yazıldı, daha zor | 15 cevaplı + 5 cevapsız |
-| `evals/holdout.yaml` | Son doğrulama, sorular proje sahibinde | henüz koşulmadı |
+| `evals/holdout.yaml` | Son doğrulama; sistem dondurulduktan sonra **bir kez** koşuldu (etiket `sistem-donduruldu-holdout`) | 17 cevaplı + 3 cevapsız |
 
-**Arama** (varsayılan hat; doğru maddenin ilk 8 parçada olması):
+Holdout soruları proje sahibi yerine sohbetteki Claude tarafından yazıldı; yazan geliştirme
+setlerini görmüştü. Holdout bu yüzden tam bağımsız değil (sınır dosyanın başında yazılı).
 
-| | dev1 (26) | dev2 (15) |
-|---|---|---|
-| Arama @8 | 24 / 24 / 25 (%92) | 10 / 10 / 11 (%67–73) |
-| Bağlam (tablo eklemesi dahil) | 24 / 24 / 25 | 12 / 12 / 12 (%80) |
+**Arama** (varsayılan hat, 3 koşu; @k = doğru madde ilk k sonuçta; bağlam = modele giden k=8 parça
+ve eklemeler; [evals/HOLDOUT_RAPOR.md](evals/HOLDOUT_RAPOR.md)):
+
+| | dev1 (26) | dev2 (15) | **holdout (17)** |
+|---|---|---|---|
+| @1 | 15 / 15 / 17 (%58) | — | 7 / 8 / 10 (%47) |
+| @3 | 19 / 22 / 22 (%85) | — | 10 / 11 / 12 (%65) |
+| @5 | 23 / 23 / 24 (%88) | — | 12 / 13 / 13 (%76) |
+| Bağlam, k=8 | 24 / 24 / 25 (%92) | 12 / 12 / 13 (%80) | **12 / 13 / 14 (%76)** |
 
 **İki set arasındaki fark büyük ve önemli.** dev1, arama seçeneklerinin seçildiği set; bu yüzden
 iyimser. dev2'de varsayılan hat düz BM25'ten bile biraz kötü (bağlam 12'ye 13). Kalan hataların
 çoğu yeniden yazımın soruyu yanlış hukuki kavrama çevirmesinden ve benzer maddelerin kalabalık
 etmesinden geliyor ([evals/ARAMA_TESHIS.md](evals/ARAMA_TESHIS.md)). Bu hataları hedefleyen üç
 değişiklik ölçüldü; hiçbiri önceden konan +3 eşiğini geçmedi ([evals/ARAMA_DENEYI.md](evals/ARAMA_DENEYI.md)).
-Holdout bu farkın hangi tarafa yakın olduğunu gösterecek.
+**Holdout dev2 tarafında çıktı:** bağlam düzeyinde %76. Gerçekçi beklenti dev1'in %92'si değil,
+%75–80. Holdout'ta her koşuda kaçan sorular: H10 (KVKK m.8), H13 (MSY m.15), H15'in ikinci yarısı
+(TKHK m.45).
 
-**Cevap üretimi** (dev2, Haiku 5.5, 3 koşu; [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md)):
+Atıf takibi (bir maddenin numarayla atıf yaptığı maddeyi bağlama eklemek) de ölçüldü; bağlam
+kazancı +1 ile eşiğin (+2) altında kaldı ve reddedildi ([evals/ATIF_DENEYI.md](evals/ATIF_DENEYI.md)).
+
+**Cevap üretimi, model seçimi** (dev2, Haiku ve Sonnet, 3 koşu; [evals/CEVAP_RAPOR.md](evals/CEVAP_RAPOR.md)):
 
 | Ölçüt | Haiku 5.5 (seçilen) | Sonnet 5.5 |
 |---|---|---|
@@ -120,6 +131,20 @@ Holdout bu farkın hangi tarafa yakın olduğunu gösterecek.
 | Liste eksik aktarılmış (elle) | 2 / 45 | 0 / 45 |
 | Maliyet / cevap (arama dahil) | ~$0,002 | ~$0,03 |
 | Süre / cevap | ~2,6 sn | ~4,2 sn |
+
+**Cevap üretimi, holdout** (Haiku 5.5, tek koşu; yalnız otomatik ölçütler, elle okuma ayrıca
+yapılacak). dev2 sütunu aynı sistemin 3 koşusu.
+
+| Ölçüt | dev2 (15 + 5) | holdout (17 + 3) |
+|---|---|---|
+| Cevaplandı / kısmen / bulunamadı (cevaplı sorularda) | 8–9 / 3–4 / 2–3 | 10 / 7 / 0 |
+| Alıntı doğrulama oranı | %95–98 | %98 |
+| Çıkarılan cümle | 1–2 | 1 (46 cümlede) |
+| Cevapsız soruda reddetme | 5 / 5 | 3 / 3 |
+
+Holdout'ta cevaplı hiçbir soru "bulunamadı" olmadı. Beklenen madde bağlamda değilken (H10, H13,
+H15) model "kısmen cevaplandı" verdi ve başka maddelere dayandı. Bu cevapların doğru olup olmadığı
+elle okumada belirlenecek.
 
 Zayıf yanlar:
 
@@ -135,7 +160,9 @@ Zayıf yanlar:
   en az 2 daha az yanlış olguyla seçilecekti, iki modelde de 0. Sonnet cevap başına ~18 kat pahalı.
 - **Liste bütünlüğü kuralı yeni.** Bu kural eklenmeden önceki 120 cevapta 2 eksik liste bulundu.
   Kuralın etkisi henüz ölçülmedi.
-- **Örneklem küçük.** dev2'de bir soru ~%7 puan; koşular arası oynama 1–2 soru.
+- **Örneklem küçük.** dev2'de bir soru ~%7, holdout'ta ~%6 puan; koşular arası oynama 1–2 soru.
+- **Holdout'ta arama %76.** Kaçırılan maddeler gerçek kullanımda da kaçırılacak; araç bu durumda ya
+  susar ya da başka maddelerle kısmi cevap verir.
 
 ## Arayüz ve yayın
 

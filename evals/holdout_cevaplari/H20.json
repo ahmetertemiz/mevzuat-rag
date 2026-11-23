@@ -1,0 +1,54 @@
+{
+ "soru": "Kullanmadığım eşyalarımı internetten satarsam bu gelir için vergi öder miyim?",
+ "durum": "bulunamadi",
+ "cumleler": [],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [
+  "Kullanmadığı eşyaların internetten satışından elde edilen gelirin vergilendirilip vergilendirilmeyeceği"
+ ],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 0,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "bulunamadi",
+ "baglam_parcalari": [
+  "TKHK-m45-1",
+  "ETK-ek2-1",
+  "TKHK-m54-1",
+  "KVKK-m27-1",
+  "MSY-m5-1",
+  "MSY-m4-1",
+  "TKHK-m77-1",
+  "TKHK-m3-1",
+  "TKHK-tablo2026-1",
+  "TKHK-m77-6",
+  "TKHK-m77-7",
+  "TKHK-m77-5"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "ikinci el eşya satışı gelir vergisi istisnası",
+   "elektronik ticaret kazanç vergilendirme tüketici olmayan satıcı",
+   "şahsi eşya satışından elde edilen kazanç vergi"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000203
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002309,
+ "sure_sn": 1.45,
+ "ham_cikti": {
+  "durum": "bulunamadi",
+  "cumleler": [],
+  "bulunamayan": [
+   "Kullanmadığı eşyaların internetten satışından elde edilen gelirin vergilendirilip vergilendirilmeyeceği"
+  ],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H20"
+}

@@ -1,0 +1,172 @@
+{
+ "soru": "Reklamda gösterilen ürünle elime geçen ürünün alakası yok. Yanıltıcı reklam yapmak yasak mı?",
+ "durum": "kismen_cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Ticari reklamlarda tüketiciyi aldatıcı reklam yapmak yasaktır.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m61-1",
+     "alinti": "Tüketiciyi aldatıcı veya onun tecrübe ve bilgi noksanlıklarını istismar edici",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  },
+  {
+   "metin": "Ticari reklamların doğru ve dürüst olmaları esastır ve reklam verenler reklamlarındaki iddiaların doğruluğunu ispatla yükümlüdür.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m61-1",
+     "alinti": "Ticari reklamların Reklam Kurulunca belirlenen ilkelere, genel ahlaka",
+     "dogrulandi": true,
+     "neden": null
+    },
+    {
+     "parca_id": "TKHK-m61-1",
+     "alinti": "Reklam verenler ticari reklamlarında yer alan iddiaların doğruluğunu ispatla yükümlüdür.",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [
+  {
+   "metin": "Bu tür reklamlar için Reklam Kurulu, reklam verenlere durdurma veya aynı yöntemle düzeltme ya da idari para cezası uygulayabilir; diğer mecralar aracılığıyla gerçekleşmişse altmış bin Türk Lirasından altı yüz bin Türk Lirasına kadar idari para cezası verilir.",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-m77-4",
+     "alinti": "durdurma veya aynı yöntemle düzeltme veya idari para cezası ve gerekli görülen hâllerde de üç aya kadar tedbiren durdurma cezası uygulanır",
+     "dogrulandi": true,
+     "neden": null
+    },
+    {
+     "parca_id": "TKHK-m77-4",
+     "alinti": "Diğer mecralar aracılığı ile gerçekleşmiş ise altmış bin Türk Lirasından altı yüz bin Türk Lirasına kadar",
+     "dogrulandi": false,
+     "neden": "alıntı parçada geçmiyor"
+    }
+   ],
+   "dogrulandi": false,
+   "neden": "TKHK-m77-4: alıntı parçada geçmiyor",
+   "sayi_hatasi": []
+  }
+ ],
+ "ust_not": "1 cümle kaynağında doğrulanamadığı için çıkarıldı.",
+ "bulunamayan": [],
+ "uyarilar": [
+  {
+   "tur": "ceza_tutari_belirsiz",
+   "metin": "Ceza tutarları, aykırılığın gerçekleştiği mecraya göre farklılık gösterir; 2026 yılı tablosundaki tutarlar ilgili fıkraya göre değerlendirilmelidir.",
+   "kaynak": "model",
+   "dayanaklar": [
+    {
+     "parca_id": "TKHK-tablo2026-1",
+     "alinti": "Bir satırda birden çok tutar varsa hangisinin hangi duruma ait olduğu bu tabloda yazmaz",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ]
+  }
+ ],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 6,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "TKHK-m61-1",
+   "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 61"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "TKHK-m61-1",
+  "TKHK-m63-1",
+  "TKHK-m62-1",
+  "TKHK-m65-1",
+  "TKHK-m77-5",
+  "TKHK-m82-1",
+  "TKHK-m77-4",
+  "ETK-ek2-3",
+  "TKHK-tablo2026-1",
+  "TKHK-m77-3",
+  "TKHK-m77-6",
+  "TKHK-m77-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "yanıltıcı reklam yasağı",
+   "tüketicinin aldatılması reklam ürün özellikleri",
+   "haksız ticari uygulama yanıltıcı reklam"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000195
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.002469,
+ "sure_sn": 4.14,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Ticari reklamlarda tüketiciyi aldatıcı reklam yapmak yasaktır.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m61-1",
+      "alinti": "Tüketiciyi aldatıcı veya onun tecrübe ve bilgi noksanlıklarını istismar edici"
+     }
+    ]
+   },
+   {
+    "metin": "Ticari reklamların doğru ve dürüst olmaları esastır ve reklam verenler reklamlarındaki iddiaların doğruluğunu ispatla yükümlüdür.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m61-1",
+      "alinti": "Ticari reklamların Reklam Kurulunca belirlenen ilkelere, genel ahlaka"
+     },
+     {
+      "parca_id": "TKHK-m61-1",
+      "alinti": "Reklam verenler ticari reklamlarında yer alan iddiaların doğruluğunu ispatla yükümlüdür."
+     }
+    ]
+   },
+   {
+    "metin": "Bu tür reklamlar için Reklam Kurulu, reklam verenlere durdurma veya aynı yöntemle düzeltme ya da idari para cezası uygulayabilir; diğer mecralar aracılığıyla gerçekleşmişse altmış bin Türk Lirasından altı yüz bin Türk Lirasına kadar idari para cezası verilir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-m77-4",
+      "alinti": "durdurma veya aynı yöntemle düzeltme veya idari para cezası ve gerekli görülen hâllerde de üç aya kadar tedbiren durdurma cezası uygulanır"
+     },
+     {
+      "parca_id": "TKHK-m77-4",
+      "alinti": "Diğer mecralar aracılığı ile gerçekleşmiş ise altmış bin Türk Lirasından altı yüz bin Türk Lirasına kadar"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": [
+   {
+    "tur": "ceza_tutari_belirsiz",
+    "metin": "Ceza tutarları, aykırılığın gerçekleştiği mecraya göre farklılık gösterir; 2026 yılı tablosundaki tutarlar ilgili fıkraya göre değerlendirilmelidir.",
+    "dayanaklar": [
+     {
+      "parca_id": "TKHK-tablo2026-1",
+      "alinti": "Bir satırda birden çok tutar varsa hangisinin hangi duruma ait olduğu bu tabloda yazmaz"
+     }
+    ]
+   }
+  ]
+ },
+ "model_denemesi": 1,
+ "id": "H06"
+}

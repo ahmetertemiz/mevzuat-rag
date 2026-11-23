@@ -1,0 +1,76 @@
+{
+ "soru": "İnternetten verdiğim siparişle ilgili müşteri hizmetlerini aradığımda beni pahalı bir hatta yönlendiriyorlar. Bu arama için ekstra ücret alabilirler mi?",
+ "durum": "cevaplandi",
+ "cumleler": [
+  {
+   "metin": "Yönetmeliğe göre, kurulmuş bir sözleşmeye ilişkin olarak tüketicilerin iletişime geçebilmesi için satıcı tarafından bir telefon hattı tahsis edilmesi durumunda, satıcı bu hat için olağan ücret tarifesinden daha yüksek bir tarife seçemez.",
+   "dayanaklar": [
+    {
+     "parca_id": "MSY-m18-1",
+     "alinti": "bu hat ile ilgili olarak satıcı veya sağlayıcı olağan ücret tarifesinden daha yüksek bir tarife seçemez",
+     "dogrulandi": true,
+     "neden": null
+    }
+   ],
+   "dogrulandi": true,
+   "neden": null,
+   "sayi_hatasi": []
+  }
+ ],
+ "cikarilan_cumleler": [],
+ "ust_not": null,
+ "bulunamayan": [],
+ "uyarilar": [],
+ "cikarilan_uyarilar": [],
+ "dayanak_sayisi": 1,
+ "baglam_disi_dayanaklar": [],
+ "kaynaklar": [
+  {
+   "parca_id": "MSY-m18-1",
+   "atif": "Mesafeli Sözleşmeler Yönetmeliği (MSY) Madde 18"
+  }
+ ],
+ "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+ "model_durumu": "cevaplandi",
+ "baglam_parcalari": [
+  "MSY-m18-1",
+  "MSY-m4-1",
+  "TKHK-m70-1",
+  "MSY-m5-1",
+  "KVKK-m13-1",
+  "ETK-m8-1",
+  "ETK-m2-1",
+  "TKHK-m73-1"
+ ],
+ "arama": {
+  "yeniden_yazim": "uygulandı",
+  "sorgular": [
+   "çağrı merkezi ücretli hat tüketici şikayet hattı ücreti",
+   "mesafeli sözleşmelerde tüketici iletişim hattı ücret",
+   "elektronik ticaret satıcısının iletişim bilgileri ve ücretli telefon hattı"
+  ],
+  "uyari": null,
+  "maliyet_usd": 0.000215
+ },
+ "model": "claude-haiku-5-5",
+ "maliyet_usd": 0.001821,
+ "sure_sn": 4.3,
+ "ham_cikti": {
+  "durum": "cevaplandi",
+  "cumleler": [
+   {
+    "metin": "Yönetmeliğe göre, kurulmuş bir sözleşmeye ilişkin olarak tüketicilerin iletişime geçebilmesi için satıcı tarafından bir telefon hattı tahsis edilmesi durumunda, satıcı bu hat için olağan ücret tarifesinden daha yüksek bir tarife seçemez.",
+    "dayanaklar": [
+     {
+      "parca_id": "MSY-m18-1",
+      "alinti": "bu hat ile ilgili olarak satıcı veya sağlayıcı olağan ücret tarifesinden daha yüksek bir tarife seçemez"
+     }
+    ]
+   }
+  ],
+  "bulunamayan": [],
+  "uyarilar": []
+ },
+ "model_denemesi": 1,
+ "id": "H11"
+}
