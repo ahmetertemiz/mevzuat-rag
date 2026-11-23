@@ -59,6 +59,13 @@ def olc(q: dict, c: dict, chunks: dict[str, dict]) -> dict:
         "uyari_isabet": (q.get("beklenen_uyari") in {u["tur"] for u in c["uyarilar"]}) if q.get("beklenen_uyari") else None,
         "alinti_toplam": len(tum_alinti), "alinti_dogru": sum(d["dogrulandi"] for d in tum_alinti),
         "cumle_toplam": len(gosterilen) + len(c["cikarilan_cumleler"]), "cumle_cikarilan": len(c["cikarilan_cumleler"]),
+        "uyari_cikarilan": len(c.get("cikarilan_uyarilar") or []),
+        "uyari_model_toplam": sum(u.get("kaynak") == "model" for u in c["uyarilar"]) + len(c.get("cikarilan_uyarilar") or []),
+        # Bağlam dışı (uydurma) parça kimliği: yeni koşularda doğrudan sayılır; eski koşularda
+        # (sayaç eklenmeden önce) alıntı doğrulama nedeninden ("parça bağlamda yok") çıkarılır.
+        "dayanak_toplam": c.get("dayanak_sayisi", len(tum_alinti)),
+        "baglam_disi": (len(c["baglam_disi_dayanaklar"]) if "baglam_disi_dayanaklar" in c
+                        else sum(d.get("neden") == "parça bağlamda yok" for d in tum_alinti)),
         "maliyet": c["maliyet_usd"] - (c["arama"].get("maliyet_usd") or 0.0), "sure": c["sure_sn"],
     }
 
@@ -135,6 +142,10 @@ def rapor() -> None:
         ("Çıkarılan cümle oranı (%)", lambda m: per_run(m, lambda d: round(100 * sum(r["cumle_cikarilan"] for r in d.values())
                                                                            / max(1, sum(r["cumle_toplam"] for r in d.values())), 1))),
         ("Çıkarılan cümle içeren cevap", lambda m: per_run(m, lambda d: sum(r["cumle_cikarilan"] > 0 for r in d.values()))),
+        ("Bağlam dışı parça kimliği (dayanak sayısı)", lambda m: per_run(m, lambda d: sum(r["baglam_disi"] for r in d.values()))),
+        ("Bağlam dışı parça kimliği oranı (%)", lambda m: per_run(m, lambda d: round(100 * sum(r["baglam_disi"] for r in d.values())
+                                                                                     / max(1, sum(r["dayanak_toplam"] for r in d.values())), 1))),
+        ("Çıkarılan model uyarısı", lambda m: per_run(m, lambda d: sum(r["uyari_cikarilan"] for r in d.values()))),
         ("Maliyet / cevap ($, arama hariç)", lambda m: per_run(m, lambda d: round(statistics.mean(r["maliyet"] for r in d.values()), 5))),
         ("Süre / cevap medyanı (sn, arama dahil)", lambda m: per_run(m, lambda d: round(statistics.median(r["sure"] for r in d.values()), 1))),
         ("Hüküm / tavsiye (elle okuma)", lambda m: [len(x.get("tavsiye_hukum") or []) for x in (elle.get(m) or {}).values()] or None),

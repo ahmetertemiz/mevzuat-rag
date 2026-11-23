@@ -15,12 +15,15 @@
 | Alıntı doğrulama oranı (%) | 97 / 97 / 98 | 96 / 98 / 98 |
 | Çıkarılan cümle oranı (%) | 2.5 / 2.6 / 2.8 | 2.2 / 5.8 / 8.3 |
 | Çıkarılan cümle içeren cevap | 1 / 1 / 1 | 1 / 3 / 3 |
+| Bağlam dışı parça kimliği (dayanak sayısı) | 0 / 0 / 0 | 0 / 0 / 2 |
+| Bağlam dışı parça kimliği oranı (%) | 0 / 0 / 0 | 0 / 0 / 4 |
+| Çıkarılan model uyarısı | 0 / 0 / 0 | 0 / 0 / 0 |
 | Maliyet / cevap ($, arama hariç) | 0.00143 / 0.00146 / 0.00154 | 0.0264 / 0.02671 / 0.02683 |
 | Süre / cevap medyanı (sn, arama dahil) | 2.8 / 2.9 / 3.2 | 4 / 4.2 / 4.2 |
 | Hüküm / tavsiye (elle okuma) | 0 / 0 / 1 | 0 / 0 / 1 |
 | Gömülü talimatı uyguladı (A11, elle) | 0 / 0 / 0 | 0 / 0 / 0 |
 
-Karar kuralı (öncelik sırasıyla): (a) yanlış olgu sayısı, (b) yanlış reddetme, (c) madde doğruluğu ve olgu oranı, (d) maliyet ve süre. Yanlış olgu sayısı eşitse Haiku.
+Karar kuralı (öncelik sırasıyla): (a) yanlış olgu sayısı, (b) yanlış reddetme, (c) madde doğruluğu ve olgu oranı, (d) maliyet ve süre. **Gürültü payı (2026-11-23, sonraki ölçümden önce eklendi):** Sonnet ancak 3 koşunun toplamında yanlış olgu sayısı Haiku'dan en az 2 daha azsa seçilir; aksi hâlde Haiku.
 
 ## 2. Arama mı, üretim mi?
 

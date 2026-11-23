@@ -215,3 +215,16 @@ def test_sema_ve_prompt_uyarilara_dayanak_ister():
     item = OUTPUT_SCHEMA["properties"]["uyarilar"]["items"]
     assert "dayanaklar" in item["required"]
     assert "Uyarılar da cümleler gibi en az bir dayanak" in SYSTEM_PROMPT
+
+
+def test_baglam_disi_parca_kimligi_sayaci(r):
+    b = _baglam(r, "MSY-m9-1")
+    ham = {"durum": "cevaplandi", "bulunamayan": [], "cumleler": [
+        GECERLI,
+        _c("Uydurma kimlik.", ("MSY-m10-2", "bilgilendirmenin gereği gibi yapıldığı günden")),   # Sonnet örneği
+        _c("Bağlam dışı gerçek kimlik.", ("TKHK-m11-1", "malın ayıplı olduğunun anlaşılması durumunda")),
+    ], "uyarilar": [_u("diger", "Uyarıda da uydurma.", ("TKHK-m15-2", "orantısız güçlükleri beraberinde"))]}
+    s = son_islem(ham, b, "q")
+    assert s["dayanak_sayisi"] == 4
+    assert s["baglam_disi_dayanaklar"] == ["MSY-m10-2", "TKHK-m11-1", "TKHK-m15-2"]
+    assert len(s["cumleler"]) == 1

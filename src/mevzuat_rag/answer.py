@@ -126,6 +126,8 @@ class Cevap:
     bulunamayan: list[str]
     uyarilar: list[dict]                          # [{"tur", "metin", "kaynak": "kod"|"model"}]
     cikarilan_uyarilar: list[dict]                # doğrulanamayan model uyarıları (gösterilmez)
+    dayanak_sayisi: int                           # modelin verdiği tüm dayanaklar (cümle + uyarı)
+    baglam_disi_dayanaklar: list[str]             # bağlamda olmayan (uydurma) parça kimlikleri
     kaynaklar: list[dict]                         # [{"parca_id", "atif"}]
     kapanis: str
     model_durumu: str                             # modelin kendi verdiği durum
@@ -243,12 +245,20 @@ def son_islem(ham: dict, baglam: Baglam, soru: str, arama: dict | None = None) -
         parcalar_not.append(f"{len(cikarilan_uyarilar)} uyarı")
     ust_not = (" ve ".join(parcalar_not) + " kaynağında doğrulanamadığı için çıkarıldı.") if parcalar_not else None
 
+    # Sayaç: modelin bağlamda OLMAYAN bir parça kimliğine dayanak gösterdiği durumlar (uydurma kimlik).
+    # Bu dayanaklar zaten doğrulanamaz; burada oranını izlemek için ayrıca sayılır.
+    tum_dayanaklar = ([d for c in gosterilen + cikarilan for d in c.dayanaklar]
+                      + [d for u in uyarilar + cikarilan_uyarilar for d in u.get("dayanaklar") or []])
+    baglam_disi = [d.get("parca_id", "") for d in tum_dayanaklar if d.get("parca_id", "") not in baglam.by_id]
+
     return {
         "durum": durum, "cumleler": gosterilen, "cikarilan_cumleler": cikarilan, "ust_not": ust_not,
         "bulunamayan": list(ham.get("bulunamayan") or []), "uyarilar": uyarilar,
         "cikarilan_uyarilar": cikarilan_uyarilar,
         "kaynaklar": [{"parca_id": i, "atif": _atif(baglam.by_id[i])} for i in dayanak_ids],
         "model_durumu": model_durumu,
+        "dayanak_sayisi": len(tum_dayanaklar),
+        "baglam_disi_dayanaklar": baglam_disi,
     }
 
 
