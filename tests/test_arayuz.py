@@ -206,6 +206,7 @@ def test_ornek_soru_cevap_ve_kaynak_gosterir(app):
     assert "on dört gün içinde gerekçe göstermeden cayabilir" in m
     assert "Hukuki tavsiye değildir" in m and "2026-11-23" in m
     assert "Bugün kalan ortak çağrı: **296 / 300**" in m   # iki soru × (yeniden yazım + cevap)
+    assert "Kayıt sırasında" not in m                      # canlı cevapta işaret yok
     assert "MSY m.9/1" in str([b.proto for b in at.get("popover")])
 
 
@@ -257,6 +258,7 @@ def test_anahtarsiz_ornek_soru_kayitli_cevabi_gosterir(app):
     assert ilk in m                                        # kayıtlı cümle aynı çizim koduyla gösterildi
     assert "6502 m.56" in str([b.proto for b in at.get("popover")])
     assert _SahteAnthropic.olusturulan == []               # hiçbir API istemcisi kurulmadı
+    assert "Kayıt sırasında (" in m and "Bu gösterimde model çağrısı yapılmadı" in m
 
 
 

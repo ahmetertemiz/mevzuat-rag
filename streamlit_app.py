@@ -296,8 +296,13 @@ elif cevap is not None:
     with st.sidebar:
         st.header("Arama ayrıntıları", divider="gray")
         a = cevap.arama
-        st.caption(f"Yeniden yazım: **{a.get('yeniden_yazim')}** · model çağrısı: {sonuc.get('cagri')} · "
-                   f"maliyet ≈ ${cevap.maliyet_usd:.4f} · süre {cevap.sure_sn:.1f} sn")
+        olcum = (f"Yeniden yazım: **{a.get('yeniden_yazim')}** · model çağrısı: {sonuc.get('cagri')} · "
+                 f"maliyet ≈ ${cevap.maliyet_usd:.4f} · süre {cevap.sure_sn:.1f} sn")
+        if sonuc.get("kayitli"):
+            # Kayıtlı cevap gösterilirken model çağrısı yapılmaz; bu değerler kaydın üretildiği ana ait.
+            olcum = (f":material/history: **Kayıt sırasında ({sonuc['kayitli'].get('tarih')}):** {olcum}. "
+                     "Bu gösterimde model çağrısı yapılmadı.")
+        st.caption(olcum)
         if a.get("uyari"):
             st.caption(f":material/warning: {esc(a['uyari'])}")
         st.markdown("**Yeniden yazılan sorgular**")
