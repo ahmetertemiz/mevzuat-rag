@@ -12,6 +12,7 @@ Modelin her cümlesi en az bir dayanak (parça kimliği + kelimesi kelimesine al
 from __future__ import annotations
 
 import json
+import re
 import time
 from dataclasses import asdict, dataclass, field
 
@@ -150,7 +151,31 @@ def _atif(p: dict) -> str:
     return atif
 
 
-def kod_uyarilari(dayanak_parcalari: list[dict], baglam: Baglam, arama: dict) -> list[dict]:
+MULGA_ILK_N = 3   # bağlamın ilk bu kadar parçasındaki mülga kayıt "soruyla ilgili" sayılır
+
+
+def _mulga_mi(p: dict) -> bool:
+    return p.get("tur") == "mulga" or p.get("durum") == "mulga"
+
+
+def soru_maddeyi_aniyor(soru: str, madde_no: str) -> bool:
+    """Soru bu madde numarasını madde atfı olarak içeriyor mu? ("10. madde", "madde 10", "m.10",
+    "10 uncu maddesi"). Çıplak sayı ("10 gün") sayılmaz."""
+    no = re.escape(str(madde_no))
+    desen = (rf"(?<![\w.])(?:madde|md\.?|m\.)\s*{no}(?![\d])"
+             rf"|(?<![\d]){no}\s*(?:\.|'?\s*(?:inci|ıncı|uncu|üncü|nci|ncı|ncu|ncü|ci|cı|cu|cü))?\s*madde")
+    return re.search(desen, soru, flags=re.IGNORECASE) is not None
+
+
+def ilgili_mulga_parcalari(baglam: Baglam, soru: str) -> list[dict]:
+    """Bağlamdaki mülga kayıtlardan soruyla ilgili olanlar: ilk MULGA_ILK_N parçada olan ya da madde
+    numarası soruda geçen. Bu kayıtların uyarısı cümle doğrulamasından bağımsız gösterilir."""
+    return [p for i, p in enumerate(baglam.parcalar)
+            if _mulga_mi(p) and (i < MULGA_ILK_N or soru_maddeyi_aniyor(soru, p.get("madde_no", "")))]
+
+
+def kod_uyarilari(dayanak_parcalari: list[dict], baglam: Baglam, arama: dict,
+                  soru: str = "") -> list[dict]:
     out, seen = [], set()
 
     def add(tur, metin):
@@ -158,11 +183,13 @@ def kod_uyarilari(dayanak_parcalari: list[dict], baglam: Baglam, arama: dict) ->
             seen.add((tur, metin))
             out.append({"tur": tur, "metin": metin, "kaynak": "kod"})
 
-    for p in dayanak_parcalari:
+    # Mülga kayıt: doğrulanmış dayanak olmasa da (ör. bütün cümleler çıkarıldıysa) soruyla ilgiliyse göster.
+    ek = [p for p in ilgili_mulga_parcalari(baglam, soru) if p not in dayanak_parcalari]
+    for p in list(dayanak_parcalari) + ek:
         for d in p.get("dipnotlar") or []:
             if d.get("tur") == "aym_karari":
                 add("aym_iptal", f"{p['belge_kisa_ad']} {p['madde_etiketi']} ({d.get('konum')}): {d['metin']}")
-        if p.get("tur") == "mulga" or p.get("durum") == "mulga":
+        if _mulga_mi(p):
             m = p.get("mulga") or {}
             add("mulga", f"{p['belge_kisa_ad']} {p['madde_etiketi']} yürürlükten kaldırılmıştır "
                          f"(kaldırılma tarihi {m.get('tarih')}, dayanak: {m.get('dayanak')}).")
@@ -222,7 +249,7 @@ def son_islem(ham: dict, baglam: Baglam, soru: str, arama: dict | None = None) -
 
     dayanak_ids = list(dict.fromkeys(d["parca_id"] for c in gosterilen for d in c.dayanaklar))
     dayanak_parcalari = [baglam.by_id[i] for i in dayanak_ids]
-    uyarilar = kod_uyarilari(dayanak_parcalari, baglam, arama)
+    uyarilar = kod_uyarilari(dayanak_parcalari, baglam, arama, soru)
     kod_turleri = {u["tur"] for u in uyarilar}
     # Modelin uyarıları da cümlelerle aynı doğrulamadan geçer (alıntı + sayı tutarlılığı);
     # doğrulanamayan uyarı gösterilmez. Kodun uyarıları belirlenimci olduğu için denetlenmez.

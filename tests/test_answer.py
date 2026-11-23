@@ -228,3 +228,42 @@ def test_baglam_disi_parca_kimligi_sayaci(r):
     assert s["dayanak_sayisi"] == 4
     assert s["baglam_disi_dayanaklar"] == ["MSY-m10-2", "TKHK-m11-1", "TKHK-m15-2"]
     assert len(s["cumleler"]) == 1
+
+
+# ------------------------------------------------------------------ mülga uyarısı dayanaktan bağımsız (A12)
+
+@pytest.mark.parametrize("soru,beklenen", [
+    ("6563 sayılı Kanunun 10. maddesi ne diyor?", True),
+    ("ETK madde 10 yürürlükte mi?", True),
+    ("m.10 hükmü nedir?", True),
+    ("Kanunun 10 uncu maddesi kaldırıldı mı?", True),
+    ("10 gün içinde cayabilir miyim?", False),
+    ("110. madde ne diyor?", False),
+    ("Madde 100 nedir?", False),
+])
+def test_soru_maddeyi_aniyor(soru, beklenen):
+    from mevzuat_rag.answer import soru_maddeyi_aniyor
+    assert soru_maddeyi_aniyor(soru, "10") is beklenen
+
+
+def test_mulga_uyarisi_cumleler_cikarilsa_da_gosterilir(r):
+    b = _baglam(r, "ETK-m10-1", "MSY-m9-1")
+    bozuk = _c("10. madde 2022'de kaldırıldı.", ("ETK-m10-1", "bu alıntı parçada geçmiyor ama"))
+    s = son_islem({"durum": "cevaplandi", "cumleler": [bozuk], "bulunamayan": [], "uyarilar": []}, b,
+                  "6563 sayılı Kanunun 10. maddesi ne düzenliyor?")
+    assert s["durum"] == "bulunamadi" and s["cumleler"] == []
+    assert any(u["tur"] == "mulga" and "ETK Madde 10" in u["metin"] for u in s["uyarilar"])
+
+
+def test_mulga_uyarisi_soruda_madde_no_varsa_alt_siradan_da(r):
+    b = _baglam(r, "MSY-m9-1", "MSY-m10-1", "MSY-m11-1", "MSY-m12-1", "ETK-m10-1")
+    s = son_islem({"durum": "bulunamadi", "cumleler": [], "bulunamayan": [], "uyarilar": []}, b,
+                  "ETK madde 10 ne diyor?")
+    assert any(u["tur"] == "mulga" for u in s["uyarilar"])
+
+
+def test_mulga_uyarisi_ilgisizse_gosterilmez(r):
+    b = _baglam(r, "MSY-m9-1", "MSY-m10-1", "MSY-m11-1", "MSY-m12-1", "ETK-m10-1")
+    s = son_islem({"durum": "cevaplandi", "cumleler": [GECERLI], "bulunamayan": [], "uyarilar": []}, b,
+                  "Mesafeli sözleşmede cayma süresi kaç gün?")
+    assert not any(u["tur"] == "mulga" for u in s["uyarilar"])
