@@ -20,6 +20,8 @@ APPROVED_TABLES = {"6502", "6563"}
 TABLE_NOTES = {
     "6502": ("Bir satırda birden çok tutar varsa hangisinin hangi duruma ait olduğu bu tabloda "
              "yazmaz; 77. maddenin ilgili fıkrasına bakılmalıdır."),
+    "6563": ("Bir satırda birden çok tutar varsa hangisinin hangi duruma ait olduğu bu tabloda "
+             "yazmaz; 12. maddenin ilgili fıkrasına bakılmalıdır."),
 }
 
 

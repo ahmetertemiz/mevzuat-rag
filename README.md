@@ -78,9 +78,9 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
 ## Bilinen sınırlar
 
 - **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) PDF görüntüleriyle
-  karşılaştırıldı, onaylandı ve indekste. 6502 tablosunda bazı satırlarda aynı fıkra için birden çok
-  tutar var; hangi tutarın hangi duruma ait olduğu tabloda yazmaz, 77. maddenin metnindedir. Tablo
-  parçasının başında bu not yer alır. Her satır `ilgili_parca` alanıyla karşılık geldiği madde
+  karşılaştırıldı, onaylandı ve indekste. İki tabloda da bazı satırlarda aynı fıkra için birden çok
+  tutar var; hangi tutarın hangi duruma ait olduğu tabloda yazmaz, ilgili maddenin (6502 m.77,
+  6563 m.12) metnindedir. Her iki tablo parçasının başında bu not yer alır. Her satır `ilgili_parca` alanıyla karşılık geldiği madde
   parçasına bağlıdır.
 - **Ceza tutarı soruları (cevap üretimi için kural):** tablo parçası **tek başına kullanılmaz**.
   Tablo parçası getirildiğinde `ilgili_parcalar` / satırdaki `ilgili_parca` üzerinden 77. maddenin
