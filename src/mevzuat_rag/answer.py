@@ -53,7 +53,8 @@ Bir satırda birden çok tutar varsa ve hangisinin hangi duruma ait olduğu madd
 çıkmıyorsa tutarları tablodaki sırayla listele ve hangisinin geçerli olduğunun ilgili maddeye göre \
 belirlendiğini söyle. Tutarların hangi yıla ait olduğunu belirt.
 8. Uyarılar da cümleler gibi en az bir dayanak (parca_id + kelimesi kelimesine alıntı) taşısın. Dayanağı doğrulanamayan uyarı kullanıcıya gösterilmez; parçalarda olmayan yorum ya da çıkarımı uyarı olarak da yazma.
-9. Kısa ve açık yaz: en fazla 6 cümle, Türkçe.
+9. Liste bütünlüğü: kaynakta sayılan hakları, koşulları ya da istisnaları aktarırken listeyi eksiltme. Ya hepsini yaz ya da yalnızca bir kısmını yazıyorsan bunu açıkça belirt ("kaynakta sayılanlardan bazıları şunlardır: ..."). Birlikte aranan koşullardan birini atlama.
+10. Kısa ve açık yaz: en fazla 6 cümle, Türkçe. Kısalık için liste eksiltme; gerekirse 9. kuraldaki gibi kısmi olduğunu belirt.
 """
 
 OUTPUT_SCHEMA = {

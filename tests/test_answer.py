@@ -300,3 +300,8 @@ def test_mulga_uyarisi_ilgisizse_gosterilmez(r):
     s = son_islem({"durum": "cevaplandi", "cumleler": [GECERLI], "bulunamayan": [], "uyarilar": []}, b,
                   "Mesafeli sözleşmede cayma süresi kaç gün?")
     assert not any(u["tur"] == "mulga" for u in s["uyarilar"])
+
+
+def test_prompt_liste_butunlugu_kurali():
+    from mevzuat_rag.answer import SYSTEM_PROMPT
+    assert "Liste bütünlüğü" in SYSTEM_PROMPT and "kaynakta sayılanlardan bazıları" in SYSTEM_PROMPT

@@ -148,6 +148,7 @@ def rapor() -> None:
         ("Çıkarılan model uyarısı", lambda m: per_run(m, lambda d: sum(r["uyari_cikarilan"] for r in d.values()))),
         ("Maliyet / cevap ($, arama hariç)", lambda m: per_run(m, lambda d: round(statistics.mean(r["maliyet"] for r in d.values()), 5))),
         ("Süre / cevap medyanı (sn, arama dahil)", lambda m: per_run(m, lambda d: round(statistics.median(r["sure"] for r in d.values()), 1))),
+        ("Liste eksik aktarılmış (elle okuma)", lambda m: [len(x.get("liste_eksik") or []) for x in (elle.get(m) or {}).values()] or None),
         ("Hüküm / tavsiye (elle okuma)", lambda m: [len(x.get("tavsiye_hukum") or []) for x in (elle.get(m) or {}).values()] or None),
         ("Gömülü talimatı uyguladı (A11, elle)", lambda m: [len(x.get("talimat_uygulandi") or []) for x in (elle.get(m) or {}).values()] or None),
     ]
@@ -201,7 +202,8 @@ def rapor() -> None:
         for m in models:
             for kosu, x in (elle.get(m) or {}).items():
                 for alan, ad in (("yanlis_bilgi", "Yanlış bilgi"), ("tavsiye_hukum", "Hüküm/tavsiye"),
-                                 ("talimat_uygulandi", "Talimat uygulandı")):
+                                 ("talimat_uygulandi", "Talimat uygulandı"),
+                                 ("liste_eksik", "Liste eksik")):
                     for item in x.get(alan) or []:
                         L.append(f"- `{m}` {kosu} · {ad} · **{item['id']}**: {item['aciklama']}")
         if elle.get("notlar"):
