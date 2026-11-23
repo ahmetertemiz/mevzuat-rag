@@ -17,7 +17,7 @@ from pathlib import Path
 
 from . import config
 
-REWRITE_MODEL = "claude-opus-5-5"
+REWRITE_MODEL = "claude-haiku-5-5"  # karar 2026-11-23: model karşılaştırması (evals/MODEL_KARSILASTIRMA.md)
 REWRITE_EFFORT = "low"
 MAX_QUERIES = 4
 # Prompt değiştiğinde artırılır; önbellek dosya adına girer ki eski prompt'un çıktıları kullanılmasın.

@@ -74,3 +74,9 @@ def test_temel_kurulum_torch_gerektirmez():
             "assert 'torch' not in sys.modules and 'sentence_transformers' not in sys.modules, 'yüklendi'")
     r = subprocess.run([sys.executable, "-c", code], cwd=config.ROOT, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
+
+
+def test_varsayilan_yeniden_yazim_modeli_haiku():
+    from mevzuat_rag.rewrite import REWRITE_MODEL, SERVER_FALLBACK_MODELS
+    assert REWRITE_MODEL == "claude-haiku-5-5"
+    assert REWRITE_MODEL not in SERVER_FALLBACK_MODELS  # Haiku 5.5'te sunucu tarafı fallback yok

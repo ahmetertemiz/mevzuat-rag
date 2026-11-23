@@ -78,7 +78,7 @@ maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzu
   adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
   üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
 - **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`): model `REWRITE_MODEL` (şu an
-  `claude-opus-5-5`), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
+  `claude-haiku-5-5`, sunucu tarafı fallback yok), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
   konu için en az bir sorgu, en fazla 4. Prompt değişince `PROMPT_VERSION` artırılır.
 - **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok. Skoru 0 olan BM25 sonuçları
   birleşime girmez.
