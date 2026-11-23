@@ -350,3 +350,45 @@ def test_baglanti_hatasinda_arayuz_sayaci_dusmez(app, monkeypatch):
     assert any("Servise ulaşılamadı" in str(e.proto.title) for e in at.error)
     assert "Bugün kalan ortak çağrı: **300 / 300**" in m
 
+
+
+# ------------------------------------------------------------------ yeniden dağıtım ve beklenmeyen hata
+
+def test_guncel_nesne_eski_siniftan_kalani_yeniden_kurar():
+    """Canlıdaki hata: yeniden dağıtımdan sonra önbellekte eski GunlukSayac (iade yöntemi yok) kaldı."""
+    from mevzuat_rag.arayuz import guncel_nesne
+
+    class EskiSayac:            # eski kodun sınıfı: iade yok
+        pass
+
+    kurulan = []
+
+    def getir():
+        if not kurulan:
+            kurulan.append(EskiSayac())
+        return kurulan[-1]
+
+    def temizle():
+        kurulan.clear()
+        kurulan.append(GunlukSayac(5))
+    getir.clear = temizle
+    s = guncel_nesne(getir, GunlukSayac)
+    assert isinstance(s, GunlukSayac) and hasattr(s, "iade")
+    assert guncel_nesne(getir, GunlukSayac) is s          # güncelse dokunulmaz
+
+
+class _Bozuk(_SahteAnthropic):
+    def _create(self, **kw):
+        raise RuntimeError("beklenmeyen")
+
+
+def test_beklenmeyen_hata_iz_kaydi_gostermez(app, monkeypatch):
+    import anthropic
+    monkeypatch.setattr(anthropic, "Anthropic", _Bozuk)
+    at = app(ANTHROPIC_API_KEY="sahte-ortak").run()
+    at.text_area(key="soru").input("Cayma süresi kaç gün?")
+    at.button(key="sor").click().run()
+    assert not at.exception
+    assert any("Beklenmeyen hata" in str(e.proto.title) for e in at.error)
+    at.button(key="ornek_2").click().run()                 # örnek soruda kayıtlı cevaba düşer
+    assert not at.exception and "Kayıtlı örnek cevap" in _metinler(at)

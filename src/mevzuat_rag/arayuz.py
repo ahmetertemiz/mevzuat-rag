@@ -218,3 +218,16 @@ def ornek_cevaplari_oku(yol=None) -> dict:
         return json.loads(yol.read_text(encoding="utf-8"))
     except FileNotFoundError:
         return {}
+
+
+# ------------------------------------------------------------------ önbellek
+
+def guncel_nesne(getir, cls):
+    """st.cache_resource ile önbelleğe alınmış nesneyi döndürür; nesne güncel sınıfın örneği değilse
+    önbelleği temizleyip yeniden kurar. Yeniden dağıtımda modüller yeniden yüklenir ama önbellek korunur;
+    eski sınıftan kalan nesnede yeni yöntemler olmaz (ör. GunlukSayac.iade → AttributeError)."""
+    nesne = getir()
+    if not isinstance(nesne, cls):
+        getir.clear()
+        nesne = getir()
+    return nesne

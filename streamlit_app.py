@@ -6,6 +6,7 @@ ortamına yazılmaz. Ortak anahtarla yapılan her model çağrısı günlük sı
 """
 from __future__ import annotations
 
+import logging
 import os
 import sys
 from pathlib import Path
@@ -16,8 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
 from mevzuat_rag.answer import CEVAP_MODEL, KAPANIS  # noqa: E402
 from mevzuat_rag.arayuz import (VARSAYILAN_GUNLUK_SINIR, GunlukSayac, SayacliIstemci,  # noqa: E402
-                                SinirAsildi, cevap_yukle, cevaplayici_kur, kisa_atif, madde_tam_metni,
-                                ornek_cevaplari_oku)
+                                SinirAsildi, cevap_yukle, cevaplayici_kur, guncel_nesne, kisa_atif,
+                                madde_tam_metni, ornek_cevaplari_oku)
 from mevzuat_rag.context import belge_kaydi  # noqa: E402
 from mevzuat_rag.retrieve import Retriever  # noqa: E402
 from mevzuat_rag.rewrite import REWRITE_MODEL, load_dotenv  # noqa: E402
@@ -56,9 +57,16 @@ def _ayar(ad: str) -> str | None:
     return os.environ.get(ad) or None
 
 
+LOG = logging.getLogger("mevzuat_rag.arayuz")
+
+
 @st.cache_resource
-def retriever() -> Retriever:
+def _retriever() -> Retriever:
     return Retriever(load_model=False)
+
+
+def retriever() -> Retriever:
+    return guncel_nesne(_retriever, Retriever)
 
 
 @st.cache_resource
@@ -82,8 +90,13 @@ def ornek_kayit() -> dict:
     return ornek_cevaplari_oku()
 
 
-@st.cache_resource
 def sayac() -> GunlukSayac:
+    # Yeniden dağıtımdan sonra önbellekte eski sınıftan kalan sayaç yeniden kurulur (sayı sıfırlanır).
+    return guncel_nesne(_sayac, GunlukSayac)
+
+
+@st.cache_resource
+def _sayac() -> GunlukSayac:
     try:
         sinir = int(_ayar("GUNLUK_CAGRI_SINIRI") or VARSAYILAN_GUNLUK_SINIR)
     except ValueError:
@@ -185,6 +198,11 @@ def cevapla(soru: str) -> dict:
         return kayitli_cevap(soru) or {"hata": "anahtarsiz"}
     except anthropic.APIError:
         return {"hata": "api"}
+    except Exception:
+        # Ziyaretçiye iz kaydı gösterilmez; ayrıntı sunucu günlüğüne yazılır. Örnek soruysa kayıtlı
+        # cevap gösterilir.
+        LOG.exception("Beklenmeyen hata (soru uzunluğu %d)", len(soru))
+        return kayitli_cevap(soru) or {"hata": "beklenmeyen"}
     return {"cevap": cevap, "cagri": istemci.cagri_sayisi}
 
 
@@ -202,6 +220,8 @@ HATA_MESAJI = {
               "ya da yan panelden kendi API anahtarınızı girin."),
     "anahtar": ("Anahtar geçersiz", "Anthropic API anahtarı kabul edilmedi. Yan paneldeki anahtarı kontrol edin."),
     "api": ("Servise ulaşılamadı", "Model servisine şu anda ulaşılamıyor. Biraz sonra yeniden deneyin."),
+    "beklenmeyen": ("Beklenmeyen hata", "Cevap üretilirken bir sorun oluştu; ayrıntı sunucu günlüğüne "
+                    "yazıldı. Biraz sonra yeniden deneyin."),
     "anahtarsiz": ("API anahtarı gerekli", "Kendi sorunuzu sormak için yan panelden Anthropic API anahtarınızı "
                    "girin. Örnek sorular anahtarsız görüntülenebilir."),
 }
