@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
+from mevzuat_rag import config  # noqa: E402
 from mevzuat_rag.retrieve import MODES, Retriever  # noqa: E402
 
 
@@ -24,11 +25,22 @@ def main() -> None:
     ap.add_argument("sorgu")
     ap.add_argument("-k", type=int, default=5, help="döndürülecek parça sayısı (varsayılan 5)")
     ap.add_argument("--mode", choices=MODES, default="hybrid")
+    ap.add_argument("--model", choices=list(config.EMBED_MODELS), default=config.DEFAULT_EMBED,
+                    help="embedding modeli (varsayılan bge-m3)")
+    ap.add_argument("--yeniden-yaz", action="store_true",
+                    help="soruyu önce model çağrısıyla mevzuat diline çevir (API anahtarı gerekir)")
     ap.add_argument("--uzun", action="store_true", help="parça metninin tamamını göster")
     args = ap.parse_args()
 
-    r = Retriever(load_model=args.mode != "bm25")
-    for h in r.search(args.sorgu, k=args.k, mode=args.mode):
+    extra = None
+    if args.yeniden_yaz:
+        from mevzuat_rag.rewrite import QueryRewriter
+
+        rw = QueryRewriter().rewrite(args.sorgu)
+        extra = rw.sorgular
+        print(f"üretilen sorgular: {extra}  (maliyet ${rw.cost_usd:.4f}, {rw.seconds:.1f} sn)")
+    r = Retriever(model=args.model, load_model=args.mode != "bm25")
+    for h in r.search(args.sorgu, k=args.k, mode=args.mode, extra_queries=extra):
         c = h.chunk
         ranks = []
         if h.dense_rank:

@@ -66,72 +66,102 @@ def rrf(rankings: list[list[int]], n: int, k: int = RRF_K) -> np.ndarray:
 
 
 class Embedder:
-    def __init__(self, model_name: str = config.EMBED_MODEL, max_seq_length: int = config.EMBED_MAX_TOKENS):
+    def __init__(self, spec: config.EmbedSpec | str = config.DEFAULT_EMBED):
         from sentence_transformers import SentenceTransformer  # yavaş import; yalnızca gerekince
 
-        self.model_name = model_name
+        self.spec = config.EMBED_MODELS[spec] if isinstance(spec, str) else spec
+        kw = {}
+        if self.spec.dtype == "float32":
+            import torch
+            kw["model_kwargs"] = {"dtype": torch.float32}
         try:
             # Model önbellekteyse ağa hiç çıkma (başlangıç süresi ve gizlilik için).
-            self.model = SentenceTransformer(model_name, device="cpu", local_files_only=True)
+            self.model = SentenceTransformer(self.spec.name, device="cpu", local_files_only=True, **kw)
         except OSError:
-            self.model = SentenceTransformer(model_name, device="cpu")  # ilk çalıştırma: indir
-        self.model.max_seq_length = max_seq_length
+            self.model = SentenceTransformer(self.spec.name, device="cpu", **kw)  # ilk çalıştırma: indir
+        self.model.max_seq_length = self.spec.max_tokens
 
-    def encode(self, texts: list[str], batch_size: int = 8) -> np.ndarray:
+    def _encode(self, texts: list[str], batch_size: int = 8) -> np.ndarray:
         return self.model.encode(texts, batch_size=batch_size, normalize_embeddings=True,
                                  convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
 
+    def encode_docs(self, texts: list[str]) -> np.ndarray:
+        return self._encode([self.spec.doc_prefix + t for t in texts])
+
+    def encode_queries(self, texts: list[str]) -> np.ndarray:
+        return self._encode([self.spec.query_prefix + t for t in texts])
+
     def token_lengths(self, texts: list[str]) -> list[int]:
         tok = self.model.tokenizer
-        return [len(tok(t, add_special_tokens=True)["input_ids"]) for t in texts]
+        return [len(tok(self.spec.doc_prefix + t, add_special_tokens=True)["input_ids"]) for t in texts]
+
+
+def index_dir_for(key: str) -> Path:
+    return config.INDEX_DIR / key
 
 
 class Retriever:
-    def __init__(self, chunks_path: Path = config.CHUNKS_PATH, index_dir: Path = config.INDEX_DIR,
+    def __init__(self, chunks_path: Path = config.CHUNKS_PATH, model: str = config.DEFAULT_EMBED,
                  load_model: bool = True):
         self.chunks = load_chunks(chunks_path)
         self.bm25 = BM25Okapi(bm25_corpus(self.chunks))
         self.embedder: Embedder | None = None
         self.emb: np.ndarray | None = None
+        self.model_key = model
         if load_model:
-            meta = json.loads((index_dir / "meta.json").read_text(encoding="utf-8"))
+            idx = index_dir_for(model)
+            if not (idx / "meta.json").exists():
+                raise RuntimeError(f"İndeks yok: python scripts/build_index.py --model {model}")
+            meta = json.loads((idx / "meta.json").read_text(encoding="utf-8"))
             if meta["chunks_fingerprint"] != chunks_fingerprint(self.chunks):
-                raise RuntimeError("İndeks güncel değil: python scripts/build_index.py çalıştırın.")
-            self.emb = np.load(index_dir / "embeddings.npy")
-            self.embedder = Embedder(meta["model"], meta["max_seq_length"])
+                raise RuntimeError(f"İndeks güncel değil: python scripts/build_index.py --model {model}")
+            self.emb = np.load(idx / "embeddings.npy")
+            self.embedder = Embedder(model)
 
-    # -------------------------------------------------- sıralamalar (en iyiden kötüye indeksler)
+    # -------------------------------------------------- skorlar
     def dense_scores(self, query: str) -> np.ndarray:
         if self.embedder is None or self.emb is None:
             raise RuntimeError("Model yüklenmedi (load_model=False).")
-        q = self.embedder.encode([query])[0]
-        return self.emb @ q
+        return self.emb @ self.embedder.encode_queries([query])[0]
 
     def bm25_scores(self, query: str) -> np.ndarray:
         return self.bm25.get_scores(query_tokens(query))
 
-    def search(self, query: str, k: int = 5, mode: str = "hybrid") -> list[Hit]:
+    def _orders(self, query: str, mode: str) -> tuple[list[list[int]], dict]:
+        """Bir sorgu için yöntemlerin sıralamaları (en iyiden kötüye indeksler) ve ham skorları."""
+        orders, raw = [], {}
+        if mode in ("dense", "hybrid"):
+            raw["dense"] = self.dense_scores(query)
+            orders.append(list(np.argsort(-raw["dense"], kind="stable")))
+        if mode in ("bm25", "hybrid"):
+            raw["bm25"] = self.bm25_scores(query)
+            # Yalnızca gerçekten eşleşen parçalar (skor > 0) sıralamaya girer. Skoru 0 olan
+            # parçaların "sırası" dosya sırasıdır; RRF'e girerse belgenin ilk maddelerine
+            # anlamsız puan verir. BM25 tek başına kullanıldığında eşleşmeyen parça dönmez.
+            order = [i for i in np.argsort(-raw["bm25"], kind="stable") if raw["bm25"][i] > 0]
+            orders.append(order)
+        return orders, raw
+
+    def search(self, query: str, k: int = 5, mode: str = "hybrid",
+               extra_queries: list[str] | None = None) -> list[Hit]:
+        """extra_queries verilirse (sorgu yeniden yazımı) özgün sorgu ve ek sorgular ayrı ayrı
+        aranır; tüm sıralamalar ağırlıksız RRF ile birleştirilir."""
         if mode not in MODES:
             raise ValueError(f"mode {MODES} içinden olmalı")
         n = len(self.chunks)
-        dense_order = bm25_order = None
-        if mode in ("dense", "hybrid"):
-            ds = self.dense_scores(query)
-            dense_order = list(np.argsort(-ds, kind="stable"))
-        if mode in ("bm25", "hybrid"):
-            bs = self.bm25_scores(query)
-            bm25_order = list(np.argsort(-bs, kind="stable"))
-
-        if mode == "dense":
-            order, scores = dense_order, ds
-        elif mode == "bm25":
-            order, scores = bm25_order, bs
+        orders, raw = self._orders(query, mode)
+        for q in extra_queries or []:
+            orders += self._orders(q, mode)[0]
+        if len(orders) == 1:
+            scores = raw["dense"] if mode == "dense" else raw["bm25"]
+            order = orders[0]
         else:
-            scores = rrf([dense_order, bm25_order], n)
+            scores = rrf(orders, n)
             order = list(np.argsort(-scores, kind="stable"))
-
-        d_rank = {idx: r for r, idx in enumerate(dense_order, 1)} if dense_order else {}
-        b_rank = {idx: r for r, idx in enumerate(bm25_order, 1)} if bm25_order else {}
+        d_rank = ({i: r for r, i in enumerate(np.argsort(-raw["dense"], kind="stable"), 1)}
+                  if "dense" in raw else {})
+        b_rank = ({i: r for r, i in enumerate(np.argsort(-raw["bm25"], kind="stable"), 1)}
+                  if "bm25" in raw else {})
         return [Hit(rank=r, score=float(scores[i]), chunk=self.chunks[i],
                     dense_rank=d_rank.get(i), bm25_rank=b_rank.get(i))
                 for r, i in enumerate(order[:k], 1)]

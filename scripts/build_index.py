@@ -15,25 +15,32 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from mevzuat_rag import config  # noqa: E402
-from mevzuat_rag.retrieve import Embedder, chunks_fingerprint, load_chunks  # noqa: E402
+from mevzuat_rag.retrieve import Embedder, chunks_fingerprint, index_dir_for, load_chunks  # noqa: E402
+import argparse  # noqa: E402
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", choices=list(config.EMBED_MODELS), default=config.DEFAULT_EMBED)
+    args = ap.parse_args()
+    spec = config.EMBED_MODELS[args.model]
     chunks = load_chunks()
     texts = [c["arama_metni"] for c in chunks]
-    emb = Embedder()
+    emb = Embedder(spec)
     lengths = emb.token_lengths(texts)
-    truncated = [c["chunk_id"] for c, n in zip(chunks, lengths) if n > config.EMBED_MAX_TOKENS]
-    print(f"{len(chunks)} parça; token uzunluğu en fazla {max(lengths)}, "
-          f"sınır {config.EMBED_MAX_TOKENS}; kesilen: {truncated or 'yok'}")
+    truncated = [c["chunk_id"] for c, n in zip(chunks, lengths) if n > spec.max_tokens]
+    print(f"[{spec.key}] {len(chunks)} parça; token uzunluğu en fazla {max(lengths)}, "
+          f"sınır {spec.max_tokens}; kesilen ({len(truncated)}): {truncated or 'yok'}")
     t0 = time.perf_counter()
-    vecs = emb.encode(texts)
+    vecs = emb.encode_docs(texts)
     dt = time.perf_counter() - t0
-    config.INDEX_DIR.mkdir(exist_ok=True)
-    np.save(config.INDEX_DIR / "embeddings.npy", vecs)
+    out = index_dir_for(spec.key)
+    out.mkdir(parents=True, exist_ok=True)
+    np.save(out / "embeddings.npy", vecs)
     meta = {
-        "model": config.EMBED_MODEL,
-        "max_seq_length": config.EMBED_MAX_TOKENS,
+        "model": spec.name,
+        "key": spec.key,
+        "max_seq_length": spec.max_tokens,
         "dim": int(vecs.shape[1]),
         "n": len(chunks),
         "chunk_ids": [c["chunk_id"] for c in chunks],
@@ -43,8 +50,8 @@ def main() -> None:
         "encode_seconds": round(dt, 2),
         "created": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
-    (config.INDEX_DIR / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"embedding: {vecs.shape}, {dt:.1f} sn -> {config.INDEX_DIR.relative_to(config.ROOT)}")
+    (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"embedding: {vecs.shape}, {dt:.1f} sn -> {out.relative_to(config.ROOT)}")
 
 
 if __name__ == "__main__":

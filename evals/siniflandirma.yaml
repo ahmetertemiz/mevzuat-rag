@@ -6,9 +6,18 @@ kategoriler:
   kelime_uyusmazligi: "Soru ile madde farklı kelimeler kullanıyor (kargo/taşıyıcı, kampanya mesajı/ticari elektronik ileti, kanıtlamak/ispat). BM25'in yapısal sınırı."
   anlam_kaymasi: "Günlük ifade, anlamca başka bir hukuki kavrama daha yakın düşüyor (beğenmeyip geri vermek -> ayıplı mal / sözleşmeden dönme, oysa doğru kavram cayma hakkı)."
   benzer_madde_kalabaligi: "Aynı konuyu işleyen çok sayıda madde var (cayma hakkı en az 6 maddede; ön bilgilendirme MSY m.5-8); doğru madde komşularının gerisinde kalıyor."
+  numara_anlamsal_degil: "Soru madde numarası ya da kanun adıyla soruluyor; embedding numarayı anlamsal sinyal olarak taşımaz, 'kanun madde' gibi genel kelimelere yakın maddeleri (yürürlük, tanımlar, tablo) getirir."
   rrf_seyreltmesi: "Yöntemlerden biri doğru maddeyi üst sıralarda bulmuş, diğerinin kötü sıralaması ağırlıksız birleşimde onu ilk 5'in dışına itiyor."
 
 sorular:
+  S26:
+    dense:
+      kategori: numara_anlamsal_degil
+      aciklama: "'6502 sayılı kanunun 56. maddesi' için ilk sıralarda ceza tablosu, m.77, m.46; doğru madde 11. Hibrit ve BM25 1. sırada buluyor."
+  S30:
+    dense:
+      kategori: numara_anlamsal_degil
+      aciklama: "'Kanun madde 73/A' için ilk sıralarda m.83, m.1, MSY m.3; doğru madde 12. Hibrit ve BM25 buluyor."
   S06:
     hybrid:
       kategori: rrf_seyreltmesi
@@ -59,8 +68,8 @@ sorular:
       aciklama: "'Ön bilgi' kelimeleri MSY m.5-8'in hepsinde ve başlıklarında; içerik maddesi m.5 uzun ve terim yoğunluğu düşük."
 
 genel_notlar:
-  - "Bu sette yalnız embedding her k değerinde hibritten iyi (@5: 20/21'e karşı 17/21). Ağırlıksız RRF, BM25'in kötü olduğu günlük dil sorularında embedding'in doğru sonucunu aşağı çekiyor (S06, S19). Tersine BM25'in kurtardığı tek soru S08 (BM25 2., embedding 24.); orada da hibrit 16. sırada kalıyor."
+  - "İlk 25 soruda (21 cevaplı) yalnız embedding her k değerinde hibritten iyiydi (@5: 20/21'e karşı 17/21); madde numarası soruları eklenince fark kapanıyor (@5: 23/26'ya karşı 22/26). Ağırlıksız RRF, BM25'in kötü olduğu günlük dil sorularında embedding'in doğru sonucunu aşağı çekiyor (S06, S19). Tersine BM25'in kurtardığı tek soru S08 (BM25 2., embedding 24.); orada da hibrit 16. sırada kalıyor."
   - "Hibritin @1 kaybı (8/21'e karşı embedding 12/21) büyük ölçüde günlük dil sorularından geliyor: S11 ve S12'de TKHK m.11 (seçimlik haklar) ilk sıraya çıkıyor; şikâyet içeren sorular ayıplı mal maddelerine çekiliyor."
-  - "BM25'in güçlü olduğu madde numarası sorguları ('6502 m.48', '47/A') bu sette yok; hibritin bu sorgulardaki katkısı yalnızca birim testlerde (tests/test_search.py) doğrulanıyor, bu raporda ölçülmüyor."
+  - "Madde numarası soruları (S26-S30, sonradan eklendi) BM25'in ve hibritin üstün olduğu tür: BM25 ve hibrit 5/5, yalnız embedding 3/5 (@5). Yalnız embedding'in genel üstünlüğü bu türde tersine dönüyor."
   - "Cevapsız sorularda hiçbir yöntemin skoru cevaplılardan ayrışmıyor (ör. embedding'de S25 'trafik cezasına itiraz' 0.630, cevaplı soruların medyanı 0.679). Sabit bir skor eşiği 'cevap yok' demek için yeterli görünmüyor; bu karar cevap üretimi katmanında, getirilen metnin soruyu karşılayıp karşılamadığına bakılarak verilmeli."
-  - "Örneklem küçük: cevaplı 21 soru, bir soru yaklaşık 5 puan. Yöntem seçimi gibi bir karar bu sete göre verilirse (dev setine göre ayar), sonucun holdout setinde doğrulanması gerekir."
+  - "Örneklem küçük: cevaplı 26 soru, bir soru yaklaşık 4 puan. Yöntem seçimi gibi bir karar bu sete göre verilirse (dev setine göre ayar), sonucun holdout setinde doğrulanması gerekir."

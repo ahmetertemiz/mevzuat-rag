@@ -82,7 +82,7 @@ def test_indeks_disi_parca_aranmaz(bm25):
     assert all(c["indekse_dahil"] for c in bm25.chunks)
 
 
-@pytest.mark.skipif(not (config.INDEX_DIR / "meta.json").exists(), reason="indeks yok")
+@pytest.mark.skipif(not (config.INDEX_DIR / "bge-m3" / "meta.json").exists(), reason="indeks yok")
 def test_hibrit_arama_calisir():
     r = Retriever()
     hits = r.search("cayma hakkı kaç gün", k=5, mode="hybrid")
@@ -90,9 +90,21 @@ def test_hibrit_arama_calisir():
     assert all(h.dense_rank and h.bm25_rank for h in hits)
 
 
-@pytest.mark.skipif(not (config.INDEX_DIR / "meta.json").exists(), reason="indeks yok")
+@pytest.mark.skipif(not (config.INDEX_DIR / "bge-m3" / "meta.json").exists(), reason="indeks yok")
 def test_indeks_hicbir_parcayi_kesmiyor():
     import json
-    meta = json.loads((config.INDEX_DIR / "meta.json").read_text(encoding="utf-8"))
+    meta = json.loads((config.INDEX_DIR / "bge-m3" / "meta.json").read_text(encoding="utf-8"))
     assert meta["truncated"] == []
     assert meta["max_token_length"] <= meta["max_seq_length"]
+
+
+def test_ek_sorgular_rrf_ile_birlestirilir(bm25):
+    """Yeniden yazım: özgün sorgu ek sorgularla RRF'te birleşir; ek sorgu doğru maddeyi öne taşır."""
+    alone = bm25.search("xyzqw", k=3, mode="bm25")
+    with_extra = bm25.search("xyzqw", k=3, mode="bm25", extra_queries=["6502 m.48"])
+    assert with_extra[0].chunk["madde_no"] == "48"
+    assert alone == []  # eşleşmeyen özgün sorgu sıralamaya hiçbir şey eklemez
+
+
+def test_eslesmeyen_bm25_sorgusu_rrfe_katki_vermez(bm25):
+    assert bm25.search("xyzqw", k=5, mode="bm25") == []

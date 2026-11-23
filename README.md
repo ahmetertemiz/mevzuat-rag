@@ -63,7 +63,22 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
   adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
   üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
 - **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok.
-- Ölçümler: [reports/performans.md](reports/performans.md) (`scripts/benchmark_model.py`).
+- Ölçümler: [reports/performans_bge-m3.md](reports/performans_bge-m3.md) ve diğer modeller için `reports/performans_<model>.md` (`scripts/benchmark_model.py`).
+
+### Sorgu yeniden yazımı (isteğe bağlı)
+
+Soru, aramadan önce bir model çağrısıyla mevzuat dilinde 2-3 sorguya çevrilir; özgün soru ve
+üretilen sorgular ayrı ayrı aranır, RRF ile birleştirilir (`src/mevzuat_rag/rewrite.py`).
+API anahtarı proje kökündeki `.env` dosyasında `ANTHROPIC_API_KEY=...` olarak durur (git'e girmez).
+
+```powershell
+.venv\Scripts\python search.py "aldığım ürünü beğenmedim geri verebilir miyim" --yeniden-yaz
+```
+
+### Embedding modelleri
+
+`--model` ile seçilir: `bge-m3` (varsayılan), `granite-97m`, `granite-97m-fp32`, `e5-small`.
+Her modelin indeksi `index/<model>/` altında: `scriptsuild_index.py --model <model>`.
 
 ## Değerlendirme
 
@@ -74,6 +89,9 @@ Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipno
 - `evals/retrieval.yaml`: 25 soruluk geliştirme seti. Sorular arama kodu yazılmadan önce commit'lendi.
 - `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar, geliştirme sırasında çalıştırılmaz.
 - Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md).
+- Yöntem karşılaştırması (modeller × hibrit × yeniden yazım, bellek, süre, maliyet):
+  [evals/DENEYLER.md](evals/DENEYLER.md) — `scripts\experiments.py` (`--api` önbellekte olmayan sorular
+  için model çağrısı yapar; üretilen sorgular `evals/cache/` altında saklanır).
 
 ## Bilinen sınırlar
 

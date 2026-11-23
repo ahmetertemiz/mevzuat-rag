@@ -1,0 +1,8221 @@
+{
+ "results": {
+  "BM25": {
+   "model": null,
+   "mode": "bm25",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:10",
+      "TKHK:48",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:10",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:28"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      21
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "MSY:11",
+      "TKHK:24"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:19"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "MSY:9",
+      "TKHK:45"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      21
+     ],
+     "ilk3": [
+      "TKHK:45",
+      "MSY:22",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:6",
+      "TKHK:7",
+      "MSY:Ek"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      15
+     ],
+     "ilk3": [
+      "TKHK:79",
+      "TKHK:76",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "TKHK:79",
+      "KVKK:11",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      15
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "MSY:12/A",
+      "ETK:Ek 2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      15
+     ],
+     "ilk3": [
+      "TKHK:29",
+      "TKHK:38",
+      "KVKK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:26",
+      "TKHK:47/A"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      5
+     ],
+     "ilk3": [
+      "TKHK:43",
+      "MSY:13",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      5
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:57",
+      "TKHK:57/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "MSY:5"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      18,
+      2
+     ],
+     "ilk3": [
+      "TKHK:76",
+      "MSY:16",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      10,
+      2
+     ],
+     "ilk3": [
+      "MSY:6",
+      "MSY:7",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:13",
+      "KVKK:12"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "MSY:12",
+      "TKHK:52",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 4",
+      "ETK:Ek 2",
+      "ETK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "TKHK:31"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:70",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:86",
+      "TKHK:83"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "ETK:5",
+      "MSY:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:Geçici 1",
+      "ETK:1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "ETK:15",
+      "KVKK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:86",
+      "TKHK:2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 0.3662000017357059
+  },
+  "BM25 + yeniden yazım": {
+   "model": null,
+   "mode": "bm25",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:10",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      8
+     ],
+     "ilk3": [
+      "MSY:Ek",
+      "MSY:11",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:24"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:11",
+      "TKHK:43"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:74",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:16",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:6",
+      "TKHK:47/A",
+      "TKHK:76"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:17"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:7",
+      "ETK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:14",
+      "KVKK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:77"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      1
+     ],
+     "ilk3": [
+      "MSY:12",
+      "TKHK:43",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:57",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:70",
+      "MSY:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      5
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:12/A",
+      "MSY:17"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      2
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:7",
+      "MSY:12/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      8
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:11",
+      "KVKK:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "MSY:5",
+      "MSY:12/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "TKHK:54",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "TKHK:1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77/A",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:86",
+      "TKHK:83"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:4",
+      "KVKK:1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:49",
+      "MSY:14"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:Geçici 2",
+      "TKHK:69"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 1.1544000008143485
+  },
+  "bge-m3 embedding": {
+   "model": "bge-m3",
+   "mode": "dense",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "TKHK:48",
+      "MSY:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:12",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:50",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:24"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      24
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:45"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:11",
+      "TKHK:58"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:13",
+      "TKHK:56"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:7",
+      "ETK:12"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:11",
+      "TKHK:74"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "ETK:8",
+      "TKHK:63"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:13",
+      "KVKK:14",
+      "MSY:20"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "ETK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:12",
+      "TKHK:18"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      2
+     ],
+     "ilk3": [
+      "TKHK:15",
+      "TKHK:11",
+      "TKHK:58"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:73"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      4
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:17",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:6",
+      "MSY:5"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:11",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:44",
+      "MSY:12",
+      "TKHK:45"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:Ek 3",
+      "ETK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:Tablo-2026",
+      "KVKK:21"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:78",
+      "ETK:12",
+      "TKHK:77/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      11
+     ],
+     "ilk3": [
+      "TKHK:Tablo-2026",
+      "TKHK:77",
+      "TKHK:46"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "KVKK:9",
+      "KVKK:8",
+      "KVKK:Geçici 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "ETK:2",
+      "ETK:Ek 2",
+      "ETK:1"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:3",
+      "MSY:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      12
+     ],
+     "ilk3": [
+      "TKHK:83",
+      "TKHK:1",
+      "MSY:3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 59.68119999306509
+  },
+  "bge-m3 embedding + yeniden yazım": {
+   "model": "bge-m3",
+   "mode": "dense",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:12",
+      "MSY:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:14",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:13",
+      "TKHK:18"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:11",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:13",
+      "MSY:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "TKHK:11",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:80"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:5",
+      "ETK:6"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:13",
+      "KVKK:14",
+      "KVKK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "ETK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:13",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      8,
+      2
+     ],
+     "ilk3": [
+      "TKHK:15",
+      "TKHK:11",
+      "TKHK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:73"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:13",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:5",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      10
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:34",
+      "TKHK:45",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "ETK:Ek 2",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "TKHK:28"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:78",
+      "TKHK:77/A",
+      "ETK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      13
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "TKHK:46",
+      "TKHK:Tablo-2026"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:8",
+      "KVKK:5",
+      "KVKK:3"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:2",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:73",
+      "TKHK:3"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 205.1590999981272
+  },
+  "bge-m3 hibrit": {
+   "model": "bge-m3",
+   "mode": "hybrid",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:9",
+      "MSY:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      12
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:24"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:24"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      15
+     ],
+     "ilk3": [
+      "TKHK:45",
+      "MSY:13",
+      "TKHK:74"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:13",
+      "TKHK:47",
+      "TKHK:10"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:7",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:7",
+      "ETK:8"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:6",
+      "TKHK:79"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "MSY:12/A",
+      "ETK:8"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:14",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:77"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "MSY:13",
+      "TKHK:43",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:15",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:66"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:16",
+      "MSY:12/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      8,
+      2
+     ],
+     "ilk3": [
+      "MSY:6",
+      "MSY:7",
+      "TKHK:40"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:13",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "MSY:12",
+      "TKHK:45",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "ETK:Ek 2",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "KVKK:23"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77/A",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:87",
+      "TKHK:46"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:2",
+      "KVKK:Geçici 3"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:1",
+      "MSY:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:1",
+      "TKHK:83",
+      "TKHK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 58.195750003505964
+  },
+  "bge-m3 hibrit + yeniden yazım": {
+   "model": "bge-m3",
+   "mode": "hybrid",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:18",
+      "MSY:14"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:24"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:11",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:74",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "ETK:Ek 1",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:5",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:15",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:77"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:13",
+      "TKHK:43"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:56"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:73"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:17",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "TKHK:48",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      6
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "TKHK:34",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "TKHK:77",
+      "ETK:Ek 4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "KVKK:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77/A",
+      "TKHK:78"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "TKHK:87",
+      "TKHK:2",
+      "TKHK:46"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:8",
+      "KVKK:3"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:14",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:73",
+      "TKHK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 214.01419999892823
+  },
+  "granite-97m embedding": {
+   "model": "granite-97m",
+   "mode": "dense",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:9",
+      "TKHK:49"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:74",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:8",
+      "TKHK:74"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:10",
+      "KVKK:12",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:18",
+      "TKHK:47"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "TKHK:17",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      26
+     ],
+     "ilk3": [
+      "TKHK:15",
+      "TKHK:16",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      29
+     ],
+     "ilk3": [
+      "MSY:18",
+      "ETK:8",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:16",
+      "MSY:10"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:12",
+      "TKHK:7"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:7",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      13
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "TKHK:14",
+      "MSY:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "MSY:10",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "MSY:19",
+      "TKHK:47/A",
+      "MSY:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      5
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:16",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      8
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:58",
+      "TKHK:57"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      9
+     ],
+     "ilk3": [
+      "TKHK:69",
+      "TKHK:68",
+      "TKHK:71"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "MSY:17",
+      "MSY:16",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:8",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:11",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:44",
+      "MSY:16",
+      "TKHK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:54",
+      "ETK:Ek 2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:45",
+      "ETK:Ek 4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      27
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:87",
+      "TKHK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      59
+     ],
+     "ilk3": [
+      "KVKK:33",
+      "KVKK:30",
+      "KVKK:19"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      7
+     ],
+     "ilk3": [
+      "ETK:2",
+      "ETK:1",
+      "ETK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      11
+     ],
+     "ilk3": [
+      "MSY:Geçici 1",
+      "MSY:4",
+      "MSY:1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      61
+     ],
+     "ilk3": [
+      "TKHK:86",
+      "TKHK:87",
+      "TKHK:83"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 37.149899995711166
+  },
+  "granite-97m embedding + yeniden yazım": {
+   "model": "granite-97m",
+   "mode": "dense",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:11",
+      "KVKK:10"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:48",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:9",
+      "TKHK:43"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:15",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:8",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:48",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "TKHK:6",
+      "TKHK:41"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:5",
+      "ETK:6"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:13",
+      "KVKK:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:17"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      3
+     ],
+     "ilk3": [
+      "MSY:9",
+      "TKHK:48",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      2
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:11",
+      "TKHK:56"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      8
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:71",
+      "TKHK:69"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "TKHK:48",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      5
+     ],
+     "ilk3": [
+      "MSY:20",
+      "ETK:3",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      10
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:10",
+      "KVKK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:24",
+      "TKHK:45",
+      "TKHK:44"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:54",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "KVKK:27",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      27
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:87",
+      "TKHK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      11
+     ],
+     "ilk3": [
+      "KVKK:3",
+      "KVKK:11",
+      "KVKK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "ETK:1",
+      "ETK:2",
+      "ETK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:49",
+      "MSY:23"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      18
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:69",
+      "TKHK:Geçici 2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 129.48849999520462
+  },
+  "granite-97m hibrit": {
+   "model": "granite-97m",
+   "mode": "hybrid",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:10",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:74",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:10",
+      "KVKK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      11
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      10
+     ],
+     "ilk3": [
+      "MSY:13",
+      "TKHK:77",
+      "TKHK:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      15
+     ],
+     "ilk3": [
+      "MSY:18",
+      "MSY:8",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "TKHK:7",
+      "MSY:16"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:7",
+      "MSY:19"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:11",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "TKHK:63",
+      "ETK:8"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:15",
+      "TKHK:23"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:47/A",
+      "TKHK:80",
+      "KVKK:21"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:9",
+      "TKHK:43"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      5
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:57",
+      "TKHK:58"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:69",
+      "TKHK:66"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:12",
+      "TKHK:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:6",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:13",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "MSY:16",
+      "MSY:12",
+      "TKHK:45"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:12",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "ETK:Ek 4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      8
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:86",
+      "TKHK:85"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      17
+     ],
+     "ilk3": [
+      "KVKK:33",
+      "KVKK:31",
+      "KVKK:1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "ETK:1",
+      "ETK:Ek 2",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:Geçici 1",
+      "MSY:1",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      19
+     ],
+     "ilk3": [
+      "TKHK:86",
+      "TKHK:83",
+      "TKHK:88"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 37.71450000203913
+  },
+  "granite-97m hibrit + yeniden yazım": {
+   "model": "granite-97m",
+   "mode": "hybrid",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:74"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:48",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:43",
+      "TKHK:18",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:12",
+      "MSY:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:74",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "MSY:16",
+      "TKHK:41"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:17"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:7",
+      "ETK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:15",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      1
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:56",
+      "TKHK:57"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:73/A",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:16",
+      "MSY:17"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      6,
+      3
+     ],
+     "ilk3": [
+      "MSY:8",
+      "TKHK:48",
+      "MSY:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      8
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "TKHK:24",
+      "TKHK:34"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:54",
+      "ETK:Ek 2",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      9
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:86",
+      "TKHK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:3",
+      "KVKK:2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:16"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:14",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:Geçici 2",
+      "TKHK:69",
+      "TKHK:73/A"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 128.92065000050934
+  },
+  "granite-97m-fp32 embedding": {
+   "model": "granite-97m-fp32",
+   "mode": "dense",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:9",
+      "TKHK:49"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:74",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:8",
+      "TKHK:74"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:10",
+      "KVKK:12",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:47",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "TKHK:17",
+      "TKHK:48",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      27
+     ],
+     "ilk3": [
+      "TKHK:15",
+      "TKHK:16",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      28
+     ],
+     "ilk3": [
+      "MSY:18",
+      "ETK:8",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:16",
+      "MSY:10"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:16",
+      "TKHK:7"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:7",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      14
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "TKHK:14",
+      "MSY:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "MSY:10",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:19",
+      "TKHK:47/A",
+      "MSY:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      5
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:16",
+      "MSY:10"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      7
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:58",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      7
+     ],
+     "ilk3": [
+      "TKHK:69",
+      "TKHK:68",
+      "TKHK:71"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "MSY:17",
+      "MSY:16",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:8",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:44",
+      "MSY:16",
+      "TKHK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:54",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:45",
+      "TKHK:20"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      25
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:85",
+      "TKHK:87"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      61
+     ],
+     "ilk3": [
+      "KVKK:33",
+      "KVKK:30",
+      "KVKK:19"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      7
+     ],
+     "ilk3": [
+      "ETK:2",
+      "ETK:1",
+      "ETK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      12
+     ],
+     "ilk3": [
+      "MSY:Geçici 1",
+      "MSY:1",
+      "MSY:4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      61
+     ],
+     "ilk3": [
+      "TKHK:86",
+      "TKHK:87",
+      "TKHK:83"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 12.015599997539539
+  },
+  "granite-97m-fp32 embedding + yeniden yazım": {
+   "model": "granite-97m-fp32",
+   "mode": "dense",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:11",
+      "KVKK:10"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:48",
+      "MSY:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:9",
+      "TKHK:18"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:15",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:8",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:48",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "TKHK:6",
+      "TKHK:41"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:6",
+      "ETK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:13",
+      "KVKK:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:17"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      6,
+      2
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:12",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      2
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:11",
+      "TKHK:56"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      7
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:71",
+      "TKHK:69"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:16",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      5
+     ],
+     "ilk3": [
+      "MSY:20",
+      "ETK:3",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      10
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:10",
+      "KVKK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:24",
+      "TKHK:45",
+      "TKHK:44"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:54",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "KVKK:27",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      28
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:87",
+      "TKHK:86"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      13
+     ],
+     "ilk3": [
+      "KVKK:3",
+      "KVKK:2",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      8
+     ],
+     "ilk3": [
+      "ETK:1",
+      "ETK:2",
+      "ETK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:23",
+      "TKHK:49"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      16
+     ],
+     "ilk3": [
+      "TKHK:69",
+      "TKHK:68",
+      "TKHK:Geçici 2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 42.20139999961248
+  },
+  "granite-97m-fp32 hibrit": {
+   "model": "granite-97m-fp32",
+   "mode": "hybrid",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:10",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:74",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:10",
+      "KVKK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      12
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:47",
+      "MSY:14"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      11
+     ],
+     "ilk3": [
+      "MSY:13",
+      "TKHK:77",
+      "TKHK:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      14
+     ],
+     "ilk3": [
+      "MSY:18",
+      "MSY:8",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:16",
+      "TKHK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:7",
+      "MSY:19"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:11",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "TKHK:63",
+      "ETK:8"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:15",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:47/A",
+      "TKHK:80",
+      "KVKK:21"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:9",
+      "TKHK:43"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:57",
+      "TKHK:58"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:69",
+      "TKHK:73/A"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:12",
+      "TKHK:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:6",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      3
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:11",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "MSY:16",
+      "MSY:12",
+      "TKHK:45"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "ETK:Ek 2",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "ETK:Ek 4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      8
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:85",
+      "TKHK:86"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      17
+     ],
+     "ilk3": [
+      "KVKK:33",
+      "KVKK:31",
+      "KVKK:1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "ETK:1",
+      "ETK:Ek 2",
+      "ETK:Ek 3"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:1",
+      "MSY:Geçici 1",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      17
+     ],
+     "ilk3": [
+      "TKHK:86",
+      "TKHK:83",
+      "TKHK:88"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 12.504300000728108
+  },
+  "granite-97m-fp32 hibrit + yeniden yazım": {
+   "model": "granite-97m-fp32",
+   "mode": "hybrid",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:15",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:74"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:48",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:12",
+      "MSY:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:74",
+      "TKHK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:7",
+      "MSY:16",
+      "TKHK:41"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:7",
+      "ETK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:14",
+      "KVKK:15",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      1
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:56",
+      "TKHK:57"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      2
+     ],
+     "ilk3": [
+      "TKHK:68",
+      "TKHK:73/A",
+      "TKHK:73"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      3,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:16",
+      "MSY:17"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      6,
+      3
+     ],
+     "ilk3": [
+      "MSY:8",
+      "TKHK:48",
+      "MSY:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      8
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:7",
+      "KVKK:10"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "TKHK:24",
+      "TKHK:34"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "TKHK:54",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:37",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      9
+     ],
+     "ilk3": [
+      "TKHK:88",
+      "TKHK:86",
+      "TKHK:2"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:3",
+      "KVKK:5",
+      "KVKK:2"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:16"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:14",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:Geçici 2",
+      "TKHK:69",
+      "TKHK:73/A"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 43.625350001093466
+  },
+  "e5-small embedding": {
+   "model": "e5-small",
+   "mode": "dense",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:10",
+      "MSY:Ek"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:10",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:8",
+      "TKHK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:24",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      26
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:77",
+      "TKHK:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "TKHK:10",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:16",
+      "ETK:4"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      30
+     ],
+     "ilk3": [
+      "MSY:5",
+      "TKHK:48",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "KVKK:11",
+      "MSY:12"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      19
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "ETK:12",
+      "TKHK:63"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      7
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:9",
+      "KVKK:28"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "MSY:12/A",
+      "MSY:5",
+      "KVKK:Geçici 1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      2
+     ],
+     "ilk3": [
+      "MSY:11",
+      "MSY:12",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      6
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:15",
+      "TKHK:57"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:Geçici 2"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      9,
+      8
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:9",
+      "TKHK:74"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      9,
+      1
+     ],
+     "ilk3": [
+      "MSY:7",
+      "MSY:6",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      6
+     ],
+     "ilk3": [
+      "KVKK:16",
+      "KVKK:7",
+      "KVKK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:43",
+      "MSY:16",
+      "TKHK:34"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:Ek 3",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "TKHK:4",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:5",
+      "TKHK:55",
+      "TKHK:47"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "KVKK:18",
+      "KVKK:6",
+      "KVKK:1"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "ETK:13",
+      "ETK:Ek 2",
+      "ETK:2"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:5",
+      "MSY:Geçici 1",
+      "MSY:4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      10
+     ],
+     "ilk3": [
+      "TKHK:73",
+      "TKHK:76",
+      "TKHK:86"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    }
+   ],
+   "search_ms_median": 12.192549998871982
+  },
+  "e5-small embedding + yeniden yazım": {
+   "model": "e5-small",
+   "mode": "dense",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "TKHK:48",
+      "MSY:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:8",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:Ek 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:28",
+      "KVKK:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "TKHK:24",
+      "TKHK:18"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:43",
+      "TKHK:18",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "MSY:11",
+      "MSY:12",
+      "MSY:15"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:11",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "TKHK:48",
+      "MSY:5"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      14
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:12/A",
+      "TKHK:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:Ek 1",
+      "ETK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:9",
+      "KVKK:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "MSY:12/A",
+      "TKHK:47/A"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      7,
+      3
+     ],
+     "ilk3": [
+      "MSY:11",
+      "MSY:9",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "MSY:15",
+      "TKHK:15"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      4
+     ],
+     "ilk3": [
+      "TKHK:73",
+      "TKHK:68",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      10,
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      3
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:6",
+      "MSY:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      17
+     ],
+     "ilk3": [
+      "KVKK:16",
+      "KVKK:11",
+      "KVKK:28"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "TKHK:43",
+      "TKHK:34"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "MSY:4",
+      "TKHK:3",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "MSY:15",
+      "TKHK:4"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:78",
+      "ETK:12",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      6
+     ],
+     "ilk3": [
+      "TKHK:55",
+      "TKHK:47",
+      "TKHK:68"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "KVKK:6",
+      "KVKK:5",
+      "KVKK:28"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:2",
+      "ETK:Geçici 2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:5",
+      "MSY:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:73",
+      "TKHK:73/A",
+      "TKHK:Geçici 1"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 39.24900000129128
+  },
+  "e5-small hibrit": {
+   "model": "e5-small",
+   "mode": "hybrid",
+   "rewrite": false,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "MSY:10",
+      "MSY:9",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:10",
+      "TKHK:15"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:28"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      12
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:24",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:18",
+      "TKHK:43",
+      "MSY:9"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      20
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "TKHK:45",
+      "TKHK:74"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "TKHK:47",
+      "TKHK:45",
+      "MSY:12/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:48",
+      "MSY:6",
+      "MSY:16"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      13
+     ],
+     "ilk3": [
+      "MSY:11",
+      "TKHK:11",
+      "MSY:13"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "TKHK:79",
+      "TKHK:6"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      13
+     ],
+     "ilk3": [
+      "TKHK:77",
+      "TKHK:3",
+      "TKHK:63"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:12",
+      "KVKK:13"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "KVKK:Geçici 1",
+      "KVKK:3"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "MSY:13",
+      "MSY:9",
+      "MSY:11"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      6
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:57",
+      "TKHK:57/A"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:68",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      10,
+      3
+     ],
+     "ilk3": [
+      "MSY:9",
+      "TKHK:9",
+      "MSY:16"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      10,
+      2
+     ],
+     "ilk3": [
+      "MSY:6",
+      "MSY:7",
+      "MSY:8"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      4
+     ],
+     "ilk3": [
+      "KVKK:7",
+      "KVKK:11",
+      "KVKK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:43",
+      "MSY:16",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:Ek 4",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "MSY:5",
+      "TKHK:37"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:77",
+      "TKHK:70"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:75",
+      "TKHK:68"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:1",
+      "KVKK:2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:1",
+      "ETK:Geçici 2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:Geçici 1",
+      "MSY:21"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:86",
+      "TKHK:73/A",
+      "TKHK:Geçici 1"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 11.835949997475836
+  },
+  "e5-small hibrit + yeniden yazım": {
+   "model": "e5-small",
+   "mode": "hybrid",
+   "rewrite": true,
+   "rows": [
+    {
+     "id": "S01",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:9",
+      "TKHK:48",
+      "MSY:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S02",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:10",
+      "TKHK:8"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S03",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:12",
+      "TKHK:16",
+      "TKHK:10"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S04",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:6",
+      "ETK:8",
+      "ETK:7"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S05",
+     "tur": "madde_dili",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:5",
+      "KVKK:28"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S06",
+     "tur": "madde_dili",
+     "siralar": [
+      4
+     ],
+     "ilk3": [
+      "MSY:11",
+      "TKHK:18",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S07",
+     "tur": "madde_dili",
+     "siralar": [
+      2
+     ],
+     "ilk3": [
+      "TKHK:43",
+      "TKHK:18",
+      "TKHK:24"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S08",
+     "tur": "gunluk_dil",
+     "siralar": [
+      3
+     ],
+     "ilk3": [
+      "MSY:11",
+      "MSY:12",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S09",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:10",
+      "TKHK:74",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S10",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:9",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S11",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "MSY:16",
+      "MSY:6",
+      "TKHK:48"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S12",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:6",
+      "TKHK:74",
+      "TKHK:11"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S13",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:8",
+      "ETK:7",
+      "ETK:2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S14",
+     "tur": "gunluk_dil",
+     "siralar": [
+      5
+     ],
+     "ilk3": [
+      "KVKK:15",
+      "KVKK:14",
+      "KVKK:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S15",
+     "tur": "gunluk_dil",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:80",
+      "TKHK:47/A",
+      "TKHK:77"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S16",
+     "tur": "iki_madde",
+     "siralar": [
+      6,
+      2
+     ],
+     "ilk3": [
+      "MSY:11",
+      "MSY:12",
+      "MSY:9"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S17",
+     "tur": "iki_madde",
+     "siralar": [
+      2,
+      1
+     ],
+     "ilk3": [
+      "TKHK:11",
+      "TKHK:56",
+      "TKHK:57"
+     ],
+     "@1": false,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S18",
+     "tur": "iki_madde",
+     "siralar": [
+      4,
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:70",
+      "TKHK:73"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S19",
+     "tur": "iki_madde",
+     "siralar": [
+      5,
+      2
+     ],
+     "ilk3": [
+      "MSY:9",
+      "MSY:16",
+      "MSY:12"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": true
+    },
+    {
+     "id": "S20",
+     "tur": "iki_madde",
+     "siralar": [
+      6,
+      2
+     ],
+     "ilk3": [
+      "MSY:12",
+      "MSY:7",
+      "MSY:6"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S21",
+     "tur": "iki_madde",
+     "siralar": [
+      1,
+      12
+     ],
+     "ilk3": [
+      "KVKK:11",
+      "KVKK:28",
+      "KVKK:7"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S22",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "TKHK:45",
+      "TKHK:43",
+      "TKHK:34"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S23",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:Ek 2",
+      "MSY:4",
+      "MSY:5"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S24",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "KVKK:27",
+      "MSY:5",
+      "TKHK:37"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S25",
+     "tur": "cevapsiz",
+     "siralar": [],
+     "ilk3": [
+      "ETK:12",
+      "TKHK:78",
+      "TKHK:77"
+     ],
+     "@1": false,
+     "@3": false,
+     "@5": false
+    },
+    {
+     "id": "S26",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:56",
+      "TKHK:2",
+      "TKHK:Geçici 1"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S27",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "KVKK:5",
+      "KVKK:1",
+      "KVKK:6"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S28",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "ETK:Ek 2",
+      "ETK:Geçici 2",
+      "ETK:2"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S29",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "MSY:15",
+      "MSY:14",
+      "TKHK:48"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    },
+    {
+     "id": "S30",
+     "tur": "madde_numarasi",
+     "siralar": [
+      1
+     ],
+     "ilk3": [
+      "TKHK:73/A",
+      "TKHK:Geçici 1",
+      "TKHK:73"
+     ],
+     "@1": true,
+     "@3": true,
+     "@5": true
+    }
+   ],
+   "search_ms_median": 40.6878499998129
+  }
+ },
+ "bm25_rss_mb": 40.2890625,
+ "rewrite": {
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "mean_cost_usd": 0.0064215999999999995,
+  "median_seconds": 2.0244999999999997,
+  "mean_input_tokens": 1152.7333333333333,
+  "mean_output_tokens": 90.53333333333333
+ }
+}
