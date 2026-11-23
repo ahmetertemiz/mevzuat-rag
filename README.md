@@ -191,44 +191,66 @@ Zayıf yanlar:
   "hukuki tavsiye değildir" notu var.
 - Yan paneldeki "Arama ayrıntıları" yeniden yazılan sorguları ve bağlama giren parçaları gösterir.
 
-**Anahtar ve sınır:**
+**Yayındaki demo ziyaretçinin kendi anahtarıyla çalışır.** Ortak anahtar bilerek tanımlı değil.
 
-- **Ortak anahtar** `st.secrets["ANTHROPIC_API_KEY"]`'den, yoksa ortam değişkeninden ya da `.env`'den
-  okunur. `.env` ve `.streamlit/secrets.toml` git'e girmez.
-- **Günlük çağrı sınırı:** ortak anahtarla yapılan **her model çağrısı** sayılır: yeniden yazım,
-  cevap ve JSON okunamazsa yapılan ikinci deneme. Varsayılan sınır 300; `GUNLUK_CAGRI_SINIRI`
-  (secrets ya da ortam) ile değişir. Soru başına normalde 2 çağrı gider. Kalan hak 2'nin altına
-  düşünce soru çalıştırılmaz. SDK'nın ağ hatalarında yaptığı otomatik yeniden denemeler tek çağrı
-  sayılır.
-- **Sayaç bellekte tutulur.** Sunucu süreci yeniden başlarsa sıfırlanır. Birden çok süreç ya da kopya
-  çalışıyorsa her biri kendi sayacını tutar, yani gerçek üst sınır kopya sayısıyla çarpılır.
-  Sayaç UTC gününe göre sıfırlanır. Kalıcı ve paylaşılan bir sınır gerekiyorsa API sağlayıcısının
-  harcama sınırı da ayarlanmalı.
-- **Ziyaretçi kendi anahtarını girebilir** (yan panel, parola alanı). Bu anahtar:
+- **Anahtar olmadan:**
+  - Sayfanın üstünde sakin bir bilgi notu görünür: "Bu demo kendi Anthropic API anahtarınızla
+    çalışır; örnek sorular anahtarsız görüntülenebilir".
+  - Beş örnek sorunun her biri **kayıtlı cevabı** gösterir. Kayıt `data/ornek_cevaplar.json`
+    dosyasında: cevap nesnesinin tamamı, yani cümleler, alıntılar, uyarılar, kaynaklar ve arama
+    ayrıntıları, üretim tarihi ve modelle birlikte.
+  - Kayıtlı cevabın üstünde "Kayıtlı örnek cevap (üretim tarihi …); kendi sorunuzu sormak için yan
+    panelden API anahtarınızı girin" notu yer alır.
+  - Kayıtlı cevap canlı cevapla aynı arayüz koduyla çizilir. Model çağrısı yapılmaz.
+- **Ziyaretçi anahtarıyla:** yan paneldeki parola alanına girilen anahtar:
   - yalnız o oturumun istemcisine verilir;
   - süreç ortamına, ekrana ya da günlüğe yazılmaz;
   - ortak günlük sınırdan düşmez.
 
-  Hata mesajları genel tutulur ("anahtar geçersiz", "servise ulaşılamadı"); API'nin ham hata metni
-  gösterilmez.
+  Serbest sorular ve örnek sorular canlı cevaplanır.
+- **Hata mesajları:**
+  - "Anahtar geçersiz" yalnız ziyaretçinin kendi girdiği anahtar reddedildiğinde çıkar.
+  - Ortak anahtar tanımlıysa ama reddedilirse ziyaretçiye hata gösterilmez. Ortak anahtar sunucu
+    yeniden başlayana kadar kullanılmaz ve demo anahtarsız durumdaki gibi davranır.
+  - Bağlantı sorunlarında "Servise ulaşılamadı" görünür.
+  - API'nin ham hata metni hiç gösterilmez.
 - Soru en fazla 500 karakter.
+- Kayıtlı cevapları yeniden üretmek için (yerelde, `.env` anahtarıyla):
+  `python scripts/ornek_cevaplari_uret.py`.
+
+**Ortak anahtar ve günlük sınır (isteğe bağlı):**
+
+- **Ortak anahtar** `st.secrets["ANTHROPIC_API_KEY"]`'den, yoksa ortam değişkeninden ya da `.env`'den
+  okunur. `.env` ve `.streamlit/secrets.toml` git'e girmez.
+- **Günlük çağrı sınırı:** ortak anahtarla yapılan her model çağrısı sayılır: yeniden yazım, cevap ve
+  JSON okunamazsa yapılan ikinci deneme.
+  - Varsayılan sınır 300; `GUNLUK_CAGRI_SINIRI` (secrets ya da ortam) ile değişir.
+  - Soru başına normalde 2 çağrı gider. Kalan hak 2'nin altına düşünce soru çalıştırılmaz.
+  - **Kimlik doğrulama ve bağlantı hatalarıyla (zaman aşımı dahil) biten çağrılar sayılmaz;**
+    diğer API hataları sayılır. SDK'nın ağ hatalarında yaptığı otomatik yeniden denemeler tek çağrı
+    sayılır.
+- **Sayaç bellekte tutulur.**
+  - Sunucu süreci yeniden başlarsa sıfırlanır.
+  - Birden çok süreç ya da kopya çalışıyorsa her biri kendi sayacını tutar, yani gerçek üst sınır
+    kopya sayısıyla çarpılır.
+  - Sayaç UTC gününe göre sıfırlanır.
+  - Kalıcı ve paylaşılan bir sınır gerekiyorsa API sağlayıcısının harcama sınırı da ayarlanmalı.
 
 **Streamlit Community Cloud'da yayın:**
 
 1. Depoyu bağla. Ana dosya `streamlit_app.py`, bağımlılık dosyası `requirements.txt`.
-2. App settings → Secrets bölümüne şunları gir (TOML):
+2. Secrets gerekmez: demo ziyaretçi anahtarıyla ve kayıtlı örnek cevaplarla çalışır.
+3. İstenirse ortak anahtar açılabilir. Bunun için App settings → Secrets bölümüne şunlar girilir (TOML):
 
    ```toml
    ANTHROPIC_API_KEY = "sk-ant-..."
    GUNLUK_CAGRI_SINIRI = "200"
    ```
 
-3. Önerilen günlük sınır: **200 çağrı**. Her soru 2 model çağrısı yapar (yeniden yazım + cevap),
-   yani günde yaklaşık 100 soru.
-   - Haiku 5.5 ile soru başına yaklaşık $0,002 tutar; bu sınırla günde yaklaşık $0,20, ayda
-     yaklaşık $6.
-   - Sayaç bellekte tutulur. Uygulama uykuya geçip yeniden başlarsa sayaç sıfırlanır.
-   - Bu yüzden Anthropic Console'da anahtar için aylık harcama sınırı da ayarlanmalı (ör. $10).
+   - Önerilen sınır 200 çağrı, yani günde yaklaşık 100 soru (her soru 2 çağrı).
+   - Haiku 5.5 ile soru başına yaklaşık $0,002 tutar: günde yaklaşık $0,20, ayda yaklaşık $6.
+   - Sayaç uygulama yeniden başlayınca sıfırlandığı için Anthropic Console'da aylık harcama sınırı
+     da ayarlanmalı (ör. $10).
 
 **Yayın ortamı yalnızca `requirements.txt` ile çalışır.** Bu dosyada torch, sentence-transformers
 ve pymupdf yok; hazır `data/chunks.jsonl` kullanılır. Temiz bir ortamda bu dosyayla bütün testler
