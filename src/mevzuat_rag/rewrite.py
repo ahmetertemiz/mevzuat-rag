@@ -14,6 +14,7 @@ import os
 import re
 import time
 from dataclasses import asdict, dataclass, field
+from functools import lru_cache
 from pathlib import Path
 
 from . import config
@@ -110,10 +111,28 @@ _SPELLED = re.compile(rf"\b(?:(?:{_NUM_WORDS})\s+)+(?:{_UNITS}){_SUFFIX}\b|\byü
 _DIGITS = re.compile(r"\d+")
 
 
+@lru_cache(maxsize=1)
+def belge_kaydi_serbest() -> tuple[frozenset[str], tuple[str, ...]]:
+    """Belge kaydındaki (data/belgeler.json) kanun numaraları ile belge adları ve kısaltmaları.
+    Bunlar cevap tahmini değil, belge kimliğidir; sorguda geçmeleri serbesttir
+    (ör. soru "KVKK" derken sorgunun "6698 sayılı Kanun" demesi)."""
+    try:
+        docs = json.loads(config.DOCS_META_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return frozenset(), ()
+    numaralar = frozenset(d["numara"] for d in docs if d.get("tur") == "kanun")
+    adlar = [normalize(x) for d in docs for x in (d.get("tam_ad"), d.get("belge_adi"), d.get("kisa_ad")) if x]
+    return numaralar, tuple(sorted(set(adlar), key=len, reverse=True))
+
+
 def sayi_denetimi(soru: str, sorgu: str) -> str | None:
-    """Sorguda soruda geçmeyen bir sayı varsa nedenini döndürür, yoksa None."""
+    """Sorguda soruda geçmeyen bir sayı varsa nedenini döndürür, yoksa None.
+    Belge kaydındaki kanun numaraları, belge adları ve kısaltmaları serbesttir."""
+    serbest_no, serbest_ad = belge_kaydi_serbest()
     q, s = normalize(soru), normalize(sorgu)
-    soru_rakam = set(_DIGITS.findall(q))
+    for ad in serbest_ad:  # belge adları sayı denetimine girmez
+        s = s.replace(ad, " ")
+    soru_rakam = set(_DIGITS.findall(q)) | serbest_no
     yeni = [d for d in _DIGITS.findall(s) if d not in soru_rakam]
     if yeni:
         return f"soruda olmayan sayı: {', '.join(yeni)}"

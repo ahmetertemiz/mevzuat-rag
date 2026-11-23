@@ -90,8 +90,12 @@ maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzu
 - **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`, prompt v3): model `REWRITE_MODEL` (şu an
   `claude-haiku-5-5`, sunucu tarafı fallback yok), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
   konu için en az bir sorgu, en fazla 4. Sorgular yalnız konu ve kavram içerir: soruda geçmeyen
-  sayı (süre, tutar, oran, tarih, kanun/madde numarası) yazılmaz; yazılırsa kod o sorguyu atar ve
-  `SearchResult.atilan_sorgular` alanında belirtir. Prompt değişince `PROMPT_VERSION` artırılır.
+  sayı (süre, tutar, oran, tarih, madde numarası) yazılmaz; yazılırsa kod o sorguyu atar ve
+  `SearchResult.atilan_sorgular` alanında belirtir. Belge kaydındaki (`data/belgeler.json`) kanun
+  numaraları, belge adları ve kısaltmaları bu denetimde serbesttir. Prompt değişince
+  `PROMPT_VERSION` artırılır.
+- **Arama ayarları dondu (2026-11-23):** holdout koşulana kadar yeniden yazım prompt'u, tokenizer
+  ve birleştirme mantığı değiştirilmez.
 - **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok. Skoru 0 olan BM25 sonuçları
   birleşime girmez.
 

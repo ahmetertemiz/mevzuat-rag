@@ -17,8 +17,9 @@ from mevzuat_rag.rewrite import Rewrite, denetle, sayi_denetimi
     ("zamanaşımı ne kadar", "iki yıllık zamanaşımı"),
     ("ceza ne kadar", "idari para cezası yüzde on"),             # oran
     ("abonelik iptali", "abonelik sözleşmesi bir yıl"),
-    ("kargo kayboldu", "6502 sayılı Kanun mesafeli sözleşme"),   # soruda olmayan kanun numarası
-    ("kişisel verilerimi silebilir miyim", "6698 madde 11 ilgili kişinin hakları"),  # madde numarası
+    ("kişisel verilerimi silebilir miyim", "6698 madde 11 ilgili kişinin hakları"),  # madde no (11)
+    ("kargo kayboldu", "1618 sayılı Kanun taşıma"),             # belge kaydında olmayan kanun no
+    ("mesafeli satış", "Mesafeli Sözleşmeler Yönetmeliği 20237"),  # yönetmelik kayıt no kanun no değil
     ("ödeme ne zaman yapılır", "beş iş günü içinde ödeme"),
 ])
 def test_soruda_olmayan_sayi_atilir(soru, sorgu):
@@ -33,6 +34,11 @@ def test_soruda_olmayan_sayi_atilir(soru, sorgu):
     ("ayıplı ürün", "bir ayıplı mal için seçimlik haklar"),      # "bir" + "ayıp" süre değil
     ("iade", "bir ürünün iadesi"),
     ("ön bilgi", "ön bilgilendirme yükümlülüğü"),
+    # belge kaydındaki kanun numaraları, adlar ve kısaltmalar serbest
+    ("kargo kayboldu", "6502 sayılı Kanun mesafeli sözleşme"),
+    ("KVKK 5. madde", "6698 sayılı Kanun madde 5"),
+    ("e-ticaret bildirimi", "6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun"),
+    ("mesafeli satış", "Mesafeli Sözleşmeler Yönetmeliği MSY cayma"),
 ])
 def test_soruda_olan_ya_da_sayi_olmayan_sorgu_kalir(soru, sorgu):
     assert sayi_denetimi(soru, sorgu) is None
