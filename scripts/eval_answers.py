@@ -149,7 +149,9 @@ def rapor() -> None:
         L.append(f"| {ad} | " + " | ".join(cells) + " |")
     L.append("")
     L.append("Karar kuralı (öncelik sırasıyla): (a) yanlış olgu sayısı, (b) yanlış reddetme, (c) madde "
-             "doğruluğu ve olgu oranı, (d) maliyet ve süre. Yanlış olgu sayısı eşitse Haiku.\n")
+             "doğruluğu ve olgu oranı, (d) maliyet ve süre. **Gürültü payı (2026-11-23, sonraki ölçümden "
+             "önce eklendi):** Sonnet ancak 3 koşunun toplamında yanlış olgu sayısı Haiku'dan en az 2 "
+             "daha azsa seçilir; aksi hâlde Haiku.\n")
 
     # arama ayrıştırması
     L += ["## 2. Arama mı, üretim mi?\n",
