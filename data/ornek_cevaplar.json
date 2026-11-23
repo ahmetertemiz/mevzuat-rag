@@ -1,0 +1,621 @@
+{
+ "uretim_tarihi": "2026-11-23",
+ "model": "claude-haiku-5-5",
+ "yeniden_yazim_modeli": "claude-haiku-5-5",
+ "cevaplar": {
+  "Abonelik sözleşmesini nasıl sona erdirebilirim, bunun için ücret ödemem gerekir mi?": {
+   "cevap": {
+    "soru": "Abonelik sözleşmesini nasıl sona erdirebilirim, bunun için ücret ödemem gerekir mi?",
+    "durum": "cevaplandi",
+    "cumleler": [
+     {
+      "metin": "Belirsiz süreli veya süresi bir yıldan uzun belirli süreli abonelik sözleşmesini tüketici, herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin istediği zaman feshedebilir.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m52-1",
+        "alinti": "Tüketici, belirsiz süreli veya süresi bir yıldan daha uzun olan belirli süreli abonelik sözleşmesini herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin istediği zaman feshetme hakkına sahiptir.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Fesih bildiriminin kâğıt üzerinde veya kalıcı veri saklayıcısı ile satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m52-1",
+        "alinti": "Fesih bildiriminin kâğıt üzerinde veya kalıcı veri saklayıcısı ile satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Aboneliğin belirlenen süreler içinde sona erdirilmemesi hâlinde, bu sürelerin bitiminden itibaren mal veya hizmetten yararlanılmış olsa dahi tüketiciden herhangi bir bedel talep edilemez.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m52-1",
+        "alinti": "Aboneliğin belirlenen süreler içinde sona erdirilmediği durumlarda, bu sürelerin bitiminden itibaren mal veya hizmetten yararlanılmış olsa dahi, tüketiciden herhangi bir bedel talep edilemez.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     }
+    ],
+    "cikarilan_cumleler": [],
+    "ust_not": null,
+    "bulunamayan": [],
+    "uyarilar": [],
+    "cikarilan_uyarilar": [],
+    "dayanak_sayisi": 3,
+    "baglam_disi_dayanaklar": [],
+    "kaynaklar": [
+     {
+      "parca_id": "TKHK-m52-1",
+      "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 52"
+     }
+    ],
+    "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+    "model_durumu": "cevaplandi",
+    "baglam_parcalari": [
+     "TKHK-m52-1",
+     "MSY-m15-1",
+     "MSY-m20-1",
+     "ETK-m11-2",
+     "TKHK-m50-2",
+     "TKHK-m49-1",
+     "TKHK-m18-1",
+     "MSY-m2-1"
+    ],
+    "arama": {
+     "yeniden_yazim": "uygulandı",
+     "sorgular": [
+      "abonelik sözleşmesinin sona erdirilmesi",
+      "abonelik sözleşmesinin feshinde cayma bedeli ödenmesi",
+      "tüketicinin abonelikten çekilme hakkı"
+     ],
+     "uyari": null,
+     "maliyet_usd": 0.000201
+    },
+    "model": "claude-haiku-5-5",
+    "maliyet_usd": 0.001685,
+    "sure_sn": 3.21,
+    "ham_cikti": {
+     "durum": "cevaplandi",
+     "cumleler": [
+      {
+       "metin": "Belirsiz süreli veya süresi bir yıldan uzun belirli süreli abonelik sözleşmesini tüketici, herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin istediği zaman feshedebilir.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m52-1",
+         "alinti": "Tüketici, belirsiz süreli veya süresi bir yıldan daha uzun olan belirli süreli abonelik sözleşmesini herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin istediği zaman feshetme hakkına sahiptir."
+        }
+       ]
+      },
+      {
+       "metin": "Fesih bildiriminin kâğıt üzerinde veya kalıcı veri saklayıcısı ile satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m52-1",
+         "alinti": "Fesih bildiriminin kâğıt üzerinde veya kalıcı veri saklayıcısı ile satıcı veya sağlayıcıya yöneltilmiş olması yeterlidir."
+        }
+       ]
+      },
+      {
+       "metin": "Aboneliğin belirlenen süreler içinde sona erdirilmemesi hâlinde, bu sürelerin bitiminden itibaren mal veya hizmetten yararlanılmış olsa dahi tüketiciden herhangi bir bedel talep edilemez.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m52-1",
+         "alinti": "Aboneliğin belirlenen süreler içinde sona erdirilmediği durumlarda, bu sürelerin bitiminden itibaren mal veya hizmetten yararlanılmış olsa dahi, tüketiciden herhangi bir bedel talep edilemez."
+        }
+       ]
+      }
+     ],
+     "bulunamayan": [],
+     "uyarilar": []
+    },
+    "model_denemesi": 1
+   },
+   "cagri": 2
+  },
+  "Satın aldığım ürün için garanti belgesi verilmesi zorunlu mu, garanti süresi en az ne kadardır?": {
+   "cevap": {
+    "soru": "Satın aldığım ürün için garanti belgesi verilmesi zorunlu mu, garanti süresi en az ne kadardır?",
+    "durum": "cevaplandi",
+    "cumleler": [
+     {
+      "metin": "Üretici ve ithalatçılar, tüketiciye yönelik üretilen veya ithal edilen mallar için içeriği yönetmelikle belirlenen bir garanti belgesi düzenlemek zorundadır.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m56-1",
+        "alinti": "Üretici ve ithalatçılar, tüketiciye yönelik üretilen veya ithal edilen mallar için içeriği yönetmelikle belirlenen bir garanti belgesi düzenlemek zorundadır.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Bu belgenin tekemmül ettirilerek tüketiciye verilmesi sorumluluğu satıcıya aittir.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m56-1",
+        "alinti": "Bu belgenin tekemmül ettirilerek tüketiciye verilmesi sorumluluğu satıcıya aittir.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Garanti süresi malın teslim tarihinden itibaren başlamak üzere asgari iki yıldır.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m56-1",
+        "alinti": "Garanti süresi malın teslim tarihinden itibaren başlamak üzere asgari iki yıldır.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     }
+    ],
+    "cikarilan_cumleler": [],
+    "ust_not": null,
+    "bulunamayan": [],
+    "uyarilar": [],
+    "cikarilan_uyarilar": [],
+    "dayanak_sayisi": 3,
+    "baglam_disi_dayanaklar": [],
+    "kaynaklar": [
+     {
+      "parca_id": "TKHK-m56-1",
+      "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 56"
+     }
+    ],
+    "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+    "model_durumu": "cevaplandi",
+    "baglam_parcalari": [
+     "TKHK-m56-1",
+     "TKHK-m57-1",
+     "TKHK-m58-1",
+     "TKHK-m57a-1",
+     "TKHK-m43-1",
+     "TKHK-m10-1",
+     "TKHK-m50-2",
+     "TKHK-m41-1"
+    ],
+    "arama": {
+     "yeniden_yazim": "uygulandı",
+     "sorgular": [
+      "garanti belgesi verilmesi zorunluluğu",
+      "tüketici malının garanti süresi",
+      "garanti şartları ve garanti belgesi düzenlenmesi"
+     ],
+     "uyari": null,
+     "maliyet_usd": 0.000194
+    },
+    "model": "claude-haiku-5-5",
+    "maliyet_usd": 0.001282,
+    "sure_sn": 2.33,
+    "ham_cikti": {
+     "durum": "cevaplandi",
+     "cumleler": [
+      {
+       "metin": "Üretici ve ithalatçılar, tüketiciye yönelik üretilen veya ithal edilen mallar için içeriği yönetmelikle belirlenen bir garanti belgesi düzenlemek zorundadır.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m56-1",
+         "alinti": "Üretici ve ithalatçılar, tüketiciye yönelik üretilen veya ithal edilen mallar için içeriği yönetmelikle belirlenen bir garanti belgesi düzenlemek zorundadır."
+        }
+       ]
+      },
+      {
+       "metin": "Bu belgenin tekemmül ettirilerek tüketiciye verilmesi sorumluluğu satıcıya aittir.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m56-1",
+         "alinti": "Bu belgenin tekemmül ettirilerek tüketiciye verilmesi sorumluluğu satıcıya aittir."
+        }
+       ]
+      },
+      {
+       "metin": "Garanti süresi malın teslim tarihinden itibaren başlamak üzere asgari iki yıldır.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m56-1",
+         "alinti": "Garanti süresi malın teslim tarihinden itibaren başlamak üzere asgari iki yıldır."
+        }
+       ]
+      }
+     ],
+     "bulunamayan": [],
+     "uyarilar": []
+    },
+    "model_denemesi": 1
+   },
+   "cagri": 2
+  },
+  "Kişisel verilerim yurt dışına aktarılabilir mi?": {
+   "cevap": {
+    "soru": "Kişisel verilerim yurt dışına aktarılabilir mi?",
+    "durum": "cevaplandi",
+    "cumleler": [
+     {
+      "metin": "Kişisel veriler, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı ve aktarımın yapılacağı ülke, ülke içerisindeki sektörler veya uluslararası kuruluşlar hakkında yeterlilik kararı bulunması halinde yurt dışına aktarılabilir.",
+      "dayanaklar": [
+       {
+        "parca_id": "KVKK-m9-1",
+        "alinti": "Kişisel veriler, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı ve aktarımın yapılacağı ülke",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Yeterlilik kararının bulunmaması durumunda veriler, 5 ve 6 ncı maddelerdeki şartlardan birinin varlığı ve ilgili kişinin haklarını kullanma ve etkili kanun yollarına başvurma imkânının bulunması kaydıyla, uygun güvencelerden birinin taraflarca sağlanması halinde aktarılabilir.",
+      "dayanaklar": [
+       {
+        "parca_id": "KVKK-m9-2",
+        "alinti": "Kişisel veriler, yeterlilik kararının bulunmaması durumunda, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Yeterlilik kararı ve uygun güvenceler de sağlanamadığında, veri sorumluları ve veri işleyenler, arızi olmak kaydıyla yalnızca kanunda sayılan hallerden birinin varlığında aktarım yapabilir; bunlar arasında ilgili kişinin aktarıma açık rızası vardır.",
+      "dayanaklar": [
+       {
+        "parca_id": "KVKK-m9-3",
+        "alinti": "arızi olmak kaydıyla sadece aşağıdaki hallerden birinin varlığı halinde yurt dışına kişisel veri aktarabilir",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Kaynakta sayılan diğer haller arasında sözleşmenin ifası, üstün kamu yararı, bir hakkın tesisi, kullanılması veya korunması, hayatın veya beden bütünlüğünün korunması ve belirli sicillerden aktarım bulunmaktadır.",
+      "dayanaklar": [
+       {
+        "parca_id": "KVKK-m9-3",
+        "alinti": "Bir hakkın tesisi, kullanılması veya korunması için kişisel verilerin aktarılmasının zorunlu olması.",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     }
+    ],
+    "cikarilan_cumleler": [],
+    "ust_not": null,
+    "bulunamayan": [],
+    "uyarilar": [],
+    "cikarilan_uyarilar": [],
+    "dayanak_sayisi": 4,
+    "baglam_disi_dayanaklar": [],
+    "kaynaklar": [
+     {
+      "parca_id": "KVKK-m9-1",
+      "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 9, fıkra 1–3"
+     },
+     {
+      "parca_id": "KVKK-m9-2",
+      "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 9, fıkra 4–5"
+     },
+     {
+      "parca_id": "KVKK-m9-3",
+      "atif": "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Madde 9, fıkra 6–11"
+     }
+    ],
+    "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+    "model_durumu": "cevaplandi",
+    "baglam_parcalari": [
+     "KVKK-m9-3",
+     "KVKK-m9-2",
+     "KVKK-m9-1",
+     "KVKK-m11-1",
+     "KVKK-m8-1",
+     "KVKK-gecici2-1",
+     "KVKK-m16-1",
+     "KVKK-m15-1"
+    ],
+    "arama": {
+     "yeniden_yazim": "uygulandı",
+     "sorgular": [
+      "kişisel verilerin yurt dışına aktarılması",
+      "kişisel verilerin yurt dışına aktarılması yeterlilik kararı",
+      "kişisel verilerin yurt dışına aktarılması açık rıza"
+     ],
+     "uyari": null,
+     "maliyet_usd": 0.0002
+    },
+    "model": "claude-haiku-5-5",
+    "maliyet_usd": 0.001522,
+    "sure_sn": 4.1,
+    "ham_cikti": {
+     "durum": "cevaplandi",
+     "cumleler": [
+      {
+       "metin": "Kişisel veriler, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı ve aktarımın yapılacağı ülke, ülke içerisindeki sektörler veya uluslararası kuruluşlar hakkında yeterlilik kararı bulunması halinde yurt dışına aktarılabilir.",
+       "dayanaklar": [
+        {
+         "parca_id": "KVKK-m9-1",
+         "alinti": "Kişisel veriler, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı ve aktarımın yapılacağı ülke"
+        }
+       ]
+      },
+      {
+       "metin": "Yeterlilik kararının bulunmaması durumunda veriler, 5 ve 6 ncı maddelerdeki şartlardan birinin varlığı ve ilgili kişinin haklarını kullanma ve etkili kanun yollarına başvurma imkânının bulunması kaydıyla, uygun güvencelerden birinin taraflarca sağlanması halinde aktarılabilir.",
+       "dayanaklar": [
+        {
+         "parca_id": "KVKK-m9-2",
+         "alinti": "Kişisel veriler, yeterlilik kararının bulunmaması durumunda, 5 inci ve 6 ncı maddelerde belirtilen şartlardan birinin varlığı"
+        }
+       ]
+      },
+      {
+       "metin": "Yeterlilik kararı ve uygun güvenceler de sağlanamadığında, veri sorumluları ve veri işleyenler, arızi olmak kaydıyla yalnızca kanunda sayılan hallerden birinin varlığında aktarım yapabilir; bunlar arasında ilgili kişinin aktarıma açık rızası vardır.",
+       "dayanaklar": [
+        {
+         "parca_id": "KVKK-m9-3",
+         "alinti": "arızi olmak kaydıyla sadece aşağıdaki hallerden birinin varlığı halinde yurt dışına kişisel veri aktarabilir"
+        }
+       ]
+      },
+      {
+       "metin": "Kaynakta sayılan diğer haller arasında sözleşmenin ifası, üstün kamu yararı, bir hakkın tesisi, kullanılması veya korunması, hayatın veya beden bütünlüğünün korunması ve belirli sicillerden aktarım bulunmaktadır.",
+       "dayanaklar": [
+        {
+         "parca_id": "KVKK-m9-3",
+         "alinti": "Bir hakkın tesisi, kullanılması veya korunması için kişisel verilerin aktarılmasının zorunlu olması."
+        }
+       ]
+      }
+     ],
+     "bulunamayan": [],
+     "uyarilar": []
+    },
+    "model_denemesi": 1
+   },
+   "cagri": 2
+  },
+  "Üretici, sattığı ürün için satış sonrası servis hizmetini ne kadar süre sağlamak zorundadır?": {
+   "cevap": {
+    "soru": "Üretici, sattığı ürün için satış sonrası servis hizmetini ne kadar süre sağlamak zorundadır?",
+    "durum": "kismen_cevaplandi",
+    "cumleler": [
+     {
+      "metin": "Üretici veya ithalatçılar, ürettikleri veya ithal ettikleri mallar için Bakanlıkça belirlenen kullanım ömrü süresince, satış sonrası bakım ve onarım hizmetlerini sağlamak zorundadır.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m58-1",
+        "alinti": "Bakanlıkça belirlenen kullanım ömrü süresince, satış sonrası bakım ve onarım hizmetlerini sağlamak zorundadır",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     }
+    ],
+    "cikarilan_cumleler": [
+     {
+      "metin": "Garanti süresi bittikten sonra da Bakanlıkça belirlenen kullanım ömrü süresince mala ilişkin satış sonrası hizmetin üretici veya ithalatçı tarafından sağlanmaması hâlinde tüketici zararın tazminini talep edebilir.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m77-2",
+        "alinti": "Garanti süresi bittikten sonra Bakanlıkça belirlenen kullanım ömrü süresince mala ilişkin satış sonrası hizmetin",
+        "dogrulandi": false,
+        "neden": "alıntı parçada geçmiyor"
+       }
+      ],
+      "dogrulandi": false,
+      "neden": "TKHK-m77-2: alıntı parçada geçmiyor",
+      "sayi_hatasi": []
+     }
+    ],
+    "ust_not": "1 cümle kaynağında doğrulanamadığı için çıkarıldı.",
+    "bulunamayan": [],
+    "uyarilar": [],
+    "cikarilan_uyarilar": [],
+    "dayanak_sayisi": 2,
+    "baglam_disi_dayanaklar": [],
+    "kaynaklar": [
+     {
+      "parca_id": "TKHK-m58-1",
+      "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 58"
+     }
+    ],
+    "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+    "model_durumu": "cevaplandi",
+    "baglam_parcalari": [
+     "TKHK-m58-1",
+     "TKHK-m77-3",
+     "MSY-m15-1",
+     "TKHK-m17-1",
+     "TKHK-m47-1",
+     "TKHK-m21-1",
+     "MSY-m10-1",
+     "TKHK-m74-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-2",
+     "TKHK-m77-6",
+     "TKHK-m77-1"
+    ],
+    "arama": {
+     "yeniden_yazim": "uygulandı",
+     "sorgular": [
+      "satış sonrası servis hizmeti yükümlülüğü",
+      "üreticinin yedek parça ve servis hizmeti sağlama süresi",
+      "tüketici malı satış sonrası hizmet süresi"
+     ],
+     "uyari": null,
+     "maliyet_usd": 0.000199
+    },
+    "model": "claude-haiku-5-5",
+    "maliyet_usd": 0.002268,
+    "sure_sn": 2.44,
+    "ham_cikti": {
+     "durum": "cevaplandi",
+     "cumleler": [
+      {
+       "metin": "Üretici veya ithalatçılar, ürettikleri veya ithal ettikleri mallar için Bakanlıkça belirlenen kullanım ömrü süresince, satış sonrası bakım ve onarım hizmetlerini sağlamak zorundadır.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m58-1",
+         "alinti": "Bakanlıkça belirlenen kullanım ömrü süresince, satış sonrası bakım ve onarım hizmetlerini sağlamak zorundadır"
+        }
+       ]
+      },
+      {
+       "metin": "Garanti süresi bittikten sonra da Bakanlıkça belirlenen kullanım ömrü süresince mala ilişkin satış sonrası hizmetin üretici veya ithalatçı tarafından sağlanmaması hâlinde tüketici zararın tazminini talep edebilir.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m77-2",
+         "alinti": "Garanti süresi bittikten sonra Bakanlıkça belirlenen kullanım ömrü süresince mala ilişkin satış sonrası hizmetin"
+        }
+       ]
+      }
+     ],
+     "bulunamayan": [],
+     "uyarilar": []
+    },
+    "model_denemesi": 1
+   },
+   "cagri": 2
+  },
+  "Ön ödemeli konut satışında tüketici sözleşmeden ne zaman cayabilir?": {
+   "cevap": {
+    "soru": "Ön ödemeli konut satışında tüketici sözleşmeden ne zaman cayabilir?",
+    "durum": "cevaplandi",
+    "cumleler": [
+     {
+      "metin": "Tüketici, cayma hakkını on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin kullanabilir.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m43-1",
+        "alinti": "on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     },
+     {
+      "metin": "Ayrıca Kanuna göre sözleşme tarihinden itibaren yirmidört aya kadar tüketicinin herhangi bir gerekçe göstermeden sözleşmeden dönme hakkı vardır.",
+      "dayanaklar": [
+       {
+        "parca_id": "TKHK-m45-1",
+        "alinti": "sözleşme tarihinden itibaren yirmidört aya kadar tüketicinin herhangi bir gerekçe göstermeden sözleşmeden dönme hakkı vardır",
+        "dogrulandi": true,
+        "neden": null
+       }
+      ],
+      "dogrulandi": true,
+      "neden": null,
+      "sayi_hatasi": []
+     }
+    ],
+    "cikarilan_cumleler": [],
+    "ust_not": null,
+    "bulunamayan": [],
+    "uyarilar": [],
+    "cikarilan_uyarilar": [],
+    "dayanak_sayisi": 2,
+    "baglam_disi_dayanaklar": [],
+    "kaynaklar": [
+     {
+      "parca_id": "TKHK-m43-1",
+      "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 43"
+     },
+     {
+      "parca_id": "TKHK-m45-1",
+      "atif": "6502 sayılı Tüketicinin Korunması Hakkında Kanun (TKHK) Madde 45"
+     }
+    ],
+    "kapanis": "Bu metin, verilen mevzuatın ilgili hükümlerinin ne dediğini aktarır; hukuki tavsiye değildir ve somut bir olay hakkında görüş bildirmez.",
+    "model_durumu": "cevaplandi",
+    "baglam_parcalari": [
+     "TKHK-m40-1",
+     "TKHK-m45-1",
+     "TKHK-m41-1",
+     "TKHK-m43-1",
+     "TKHK-m34-1",
+     "TKHK-m42-1",
+     "TKHK-m44-1",
+     "TKHK-m21-1"
+    ],
+    "arama": {
+     "yeniden_yazim": "uygulandı",
+     "sorgular": [
+      "ön ödemeli konut satışı sözleşmesinden cayma hakkı",
+      "konut satışında tüketicinin sözleşmeden dönme hakkı",
+      "ön ödemeli konut satış sözleşmesinin feshi"
+     ],
+     "uyari": null,
+     "maliyet_usd": 0.000203
+    },
+    "model": "claude-haiku-5-5",
+    "maliyet_usd": 0.001631,
+    "sure_sn": 5.91,
+    "ham_cikti": {
+     "durum": "cevaplandi",
+     "cumleler": [
+      {
+       "metin": "Tüketici, cayma hakkını on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin kullanabilir.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m43-1",
+         "alinti": "on dört gün içinde herhangi bir gerekçe göstermeksizin ve cezai şart ödemeksizin"
+        }
+       ]
+      },
+      {
+       "metin": "Ayrıca Kanuna göre sözleşme tarihinden itibaren yirmidört aya kadar tüketicinin herhangi bir gerekçe göstermeden sözleşmeden dönme hakkı vardır.",
+       "dayanaklar": [
+        {
+         "parca_id": "TKHK-m45-1",
+         "alinti": "sözleşme tarihinden itibaren yirmidört aya kadar tüketicinin herhangi bir gerekçe göstermeden sözleşmeden dönme hakkı vardır"
+        }
+       ]
+      }
+     ],
+     "bulunamayan": [],
+     "uyarilar": []
+    },
+    "model_denemesi": 1
+   },
+   "cagri": 2
+  }
+ }
+}

@@ -226,3 +226,34 @@ def test_ziyaretci_anahtari_kullanilir_ve_gorunmez(app):
     assert GIZLI not in _metinler(at)                         # ekranda yok
     assert GIZLI not in os.environ.get("ANTHROPIC_API_KEY", "")
     assert "Sizin anahtarınız kullanılıyor" in _metinler(at)
+
+
+# ------------------------------------------------------------------ kayıtlı örnek cevaplar
+
+def test_ornek_cevaplar_dosyasi_ornek_sorularla_eslesir():
+    import ast
+
+    from mevzuat_rag.arayuz import cevap_yukle, ornek_cevaplari_oku
+    agac = ast.parse((ROOT / "streamlit_app.py").read_text(encoding="utf-8"))
+    sorular = next(ast.literal_eval(n.value) for n in agac.body
+                   if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "ORNEK_SORULAR")
+    k = ornek_cevaplari_oku()
+    assert set(k["cevaplar"]) == set(sorular)
+    assert k["uretim_tarihi"] and k["model"]
+    for v in k["cevaplar"].values():
+        c = cevap_yukle(v["cevap"])
+        assert c.cumleler and all(cm.dogrulandi for cm in c.cumleler)
+        assert c.arama.get("sorgular") and c.baglam_parcalari and c.kaynaklar
+
+
+def test_anahtarsiz_ornek_soru_kayitli_cevabi_gosterir(app):
+    from mevzuat_rag.arayuz import ornek_cevaplari_oku
+    at = app().run()
+    at.button(key="ornek_1").click().run()
+    assert not at.exception
+    m = _metinler(at)
+    assert "Kayıtlı örnek cevap (üretim tarihi" in m
+    ilk = ornek_cevaplari_oku()["cevaplar"][at.text_area(key="soru").value]["cevap"]["cumleler"][0]["metin"]
+    assert ilk in m                                        # kayıtlı cümle aynı çizim koduyla gösterildi
+    assert "6502 m.56" in str([b.proto for b in at.get("popover")])
+    assert _SahteAnthropic.olusturulan == []               # hiçbir API istemcisi kurulmadı

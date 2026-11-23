@@ -160,3 +160,36 @@ def cevaplayici_kur(retriever, istemci):
 
     arayici = Arayici(retriever=retriever, rewriter=yeniden_yazici_kur(istemci))
     return Cevaplayici(arayici=arayici, client=istemci)
+
+
+# ------------------------------------------------------------------ kayıtlı örnek cevaplar
+
+def ornek_cevaplar_yolu():
+    from . import config
+    return config.ROOT / "data" / "ornek_cevaplar.json"
+
+
+def cevap_yukle(d: dict):
+    """cevap_sozlugu() çıktısını yeniden Cevap nesnesine çevirir; kayıtlı ve canlı cevap aynı arayüz
+    koduyla çizilsin diye."""
+    from dataclasses import fields
+
+    from .answer import Cevap, Cumle
+
+    adlar = {f.name for f in fields(Cevap)}
+    x = {k: v for k, v in d.items() if k in adlar}
+    x["cumleler"] = [Cumle(**c) for c in d.get("cumleler") or []]
+    x["cikarilan_cumleler"] = [Cumle(**c) for c in d.get("cikarilan_cumleler") or []]
+    return Cevap(**x)
+
+
+def ornek_cevaplari_oku(yol=None) -> dict:
+    """{"uretim_tarihi", "model", "yeniden_yazim_modeli", "cevaplar": {soru: {"cevap": dict, "cagri": n}}};
+    dosya yoksa boş sözlük."""
+    import json
+
+    yol = yol or ornek_cevaplar_yolu()
+    try:
+        return json.loads(yol.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}

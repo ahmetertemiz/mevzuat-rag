@@ -16,7 +16,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
 from mevzuat_rag.answer import CEVAP_MODEL, KAPANIS  # noqa: E402
 from mevzuat_rag.arayuz import (VARSAYILAN_GUNLUK_SINIR, GunlukSayac, SayacliIstemci,  # noqa: E402
-                                SinirAsildi, cevaplayici_kur, kisa_atif, madde_tam_metni)
+                                SinirAsildi, cevap_yukle, cevaplayici_kur, kisa_atif, madde_tam_metni,
+                                ornek_cevaplari_oku)
 from mevzuat_rag.context import belge_kaydi  # noqa: E402
 from mevzuat_rag.retrieve import Retriever  # noqa: E402
 from mevzuat_rag.rewrite import REWRITE_MODEL, load_dotenv  # noqa: E402
@@ -63,6 +64,11 @@ def retriever() -> Retriever:
 @st.cache_resource
 def belgeler() -> dict[str, dict]:
     return belge_kaydi()
+
+
+@st.cache_resource
+def ornek_kayit() -> dict:
+    return ornek_cevaplari_oku()
 
 
 @st.cache_resource
@@ -131,11 +137,22 @@ with st.container(horizontal=True, vertical_alignment="center"):
     st.caption("ya da bir örnek seçin:")
 with st.container(horizontal=True, gap="small"):
     for i, q in enumerate(ORNEK_SORULAR):
-        st.button(q, key=f"ornek_{i}", on_click=ornek_sec, args=(q,), type="tertiary",
-                  disabled=not (ziyaretci_anahtari or ortak is not None))
+        st.button(q, key=f"ornek_{i}", on_click=ornek_sec, args=(q,), type="tertiary")
+
+
+def kayitli_cevap(soru: str) -> dict | None:
+    """Örnek sorunun kayıtlı cevabı (data/ornek_cevaplar.json); canlı cevapla aynı biçimde döner."""
+    k = ornek_kayit()
+    v = (k.get("cevaplar") or {}).get(soru)
+    if v is None:
+        return None
+    return {"cevap": cevap_yukle(v["cevap"]), "cagri": v.get("cagri"),
+            "kayitli": {"tarih": k.get("uretim_tarihi"), "model": k.get("model")}}
 
 
 def cevapla(soru: str) -> dict:
+    if not ziyaretci_anahtari and ortak is None:
+        return kayitli_cevap(soru) or {"hata": "anahtarsiz"}
     if ziyaretci_anahtari:
         import anthropic
         istemci = SayacliIstemci(anthropic.Anthropic(api_key=ziyaretci_anahtari, timeout=60.0, max_retries=2), None)
@@ -170,18 +187,27 @@ HATA_MESAJI = {
               "ya da yan panelden kendi API anahtarınızı girin."),
     "anahtar": ("Anahtar geçersiz", "Anthropic API anahtarı kabul edilmedi. Yan paneldeki anahtarı kontrol edin."),
     "api": ("Servise ulaşılamadı", "Model servisine şu anda ulaşılamıyor. Biraz sonra yeniden deneyin."),
+    "anahtarsiz": ("API anahtarı gerekli", "Kendi sorunuzu sormak için yan panelden Anthropic API anahtarınızı "
+                   "girin. Örnek sorular anahtarsız görüntülenebilir."),
 }
 
 sonuc = st.session_state.sonuc
 cevap = (sonuc or {}).get("cevap")
 if sonuc and sonuc.get("hata"):
     baslik, govde = HATA_MESAJI[sonuc["hata"]]
-    st.error(govde, title=baslik, icon=":material/error:")
+    if sonuc["hata"] == "anahtarsiz":   # hata değil, yönlendirme: sakin bilgi notu
+        st.info(govde, title=baslik, icon=":material/key:")
+    else:
+        st.error(govde, title=baslik, icon=":material/error:")
 elif cevap is not None:
     tum = retriever().chunks
     by_id = {c["chunk_id"]: c for c in tum}
     B = belgeler()
     st.subheader("Cevap", anchor=False, divider="gray")
+    if sonuc.get("kayitli"):
+        st.info(f"Kayıtlı örnek cevap (üretim tarihi {sonuc['kayitli'].get('tarih')}, model "
+                f"`{sonuc['kayitli'].get('model')}`); kendi sorunuzu sormak için yan panelden API "
+                "anahtarınızı girin.", icon=":material/history:")
     st.caption(f"Soru: {esc(cevap.soru)}")
 
     # --- üstte: belirgin uyarılar, sonra diğer uyarılar, sonra çıkarılan cümle notu
