@@ -1,0 +1,1750 @@
+{
+ "dev1": [
+  [
+   {
+    "id": "S01",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "mesafeli sözleşmelerde tüketicinin cayma hakkı",
+     "cayma hakkının kullanılması bildirim süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S02",
+    "sorgular": [
+     "ayıplı mal seçimlik haklar",
+     "tüketicinin ayıplı maldan dolayı sözleşmeden dönme hakkı",
+     "ayıplı mal bedel indirimi veya ücretsiz onarım talebi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "S03",
+    "sorgular": [
+     "ayıplı mal satış sözleşmesi zamanaşımı",
+     "tüketici ayıp nedeniyle sorumluluk zamanaşımı süresi",
+     "satıcının ayıptan sorumluluğu dava zamanaşımı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m10-1"
+    ]
+   },
+   {
+    "id": "S04",
+    "sorgular": [
+     "ticari elektronik ileti gönderimi alıcının önceden onayı",
+     "ticari elektronik ileti ret hakkı ve iletişim izni",
+     "elektronik ticaret ticari iletişim onay yükümlülüğü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S05",
+    "sorgular": [
+     "ilgili kişinin veri sorumlusuna karşı hakları",
+     "kişisel verilerin işlenmesine ilişkin ilgili kişi hakları",
+     "veri sorumlusuna başvuru ve şikayet hakkı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m7-1"
+    ]
+   },
+   {
+    "id": "S06",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı sözleşmeler",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "tüketicinin cayma hakkı kapsamı dışında kalan mallar ve hizmetler"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "S07",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "cayma hakkı süresinin başlangıcı teslim"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S08",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli satışta cayma hakkı süresi",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S09",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcı",
+     "tüketici malın ayıplı olduğunu ispat yükü",
+     "satılan malın ayıbının satıcı sorumluluğu"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S10",
+    "sorgular": [
+     "mesafeli sözleşmelerde malın teslim süresi",
+     "siparişin teslim edilmemesi halinde sözleşmeden dönme hakkı",
+     "satıcının edimi ifa etmemesi temerrüt ve ek süre"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S11",
+    "sorgular": [
+     "talep edilmeyen mal gönderimi tüketici sorumluluğu",
+     "siparişi verilmemiş ürünün bedelinin ödenmesi",
+     "haksız ticari uygulama talep edilmeyen ürün"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S12",
+    "sorgular": [
+     "satıcının satıştan kaçınma hakkı",
+     "mağazada satış yapma zorunluluğu tüketici",
+     "vitrinde sergilenen ürünün satışı ve icap"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S13",
+    "sorgular": [
+     "ticari elektronik ileti gönderiminden ret hakkı",
+     "ticari elektronik ileti onay ve retin geri alınması",
+     "ticari elektronik iletişimde abonelikten çıkma hakkı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "ETK-m6-1"
+    ]
+   },
+   {
+    "id": "S14",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel verilere ilişkin bilgi talebi veri sorumlusunun yükümlülüğü",
+     "kişisel verilerin korunması başvuru cevap süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S15",
+    "sorgular": [
+     "piramit satış sistemi yasağı",
+     "zincir sistem ile ticari amaçlı yanıltıcı uygulama",
+     "haksız ticari uygulama ve ticari dolandırıcılık"
+    ],
+    "kapali": false,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2",
+     "TKHK-m80-1"
+    ]
+   },
+   {
+    "id": "S16",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "mesafeli sözleşmelerde cayma halinde malın iadesi",
+     "mesafeli sözleşmelerde cayma halinde bedelin iadesi süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1",
+     "MSY-m16-1"
+    ]
+   },
+   {
+    "id": "S17",
+    "sorgular": [
+     "garanti süresi içinde onarılan ayıplı mal",
+     "tüketicinin ayıplı maldan doğan seçimlik hakları",
+     "malın ayıbının giderilmesi ve sözleşmeden dönme"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "S18",
+    "sorgular": [
+     "tüketici hakem heyeti parasal sınır başvuru",
+     "tüketici uyuşmazlığında zorunlu arabuluculuk dava şartı",
+     "tüketici hakem heyeti görev değer sınırı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m74-1"
+    ]
+   },
+   {
+    "id": "S19",
+    "sorgular": [
+     "mesafeli sözleşmelerde taşıma sırasında malın zarara uğraması sorumluluğu",
+     "satıcının malı teslim etme yükümlülüğü teslim süresi",
+     "mesafeli sözleşmede ürünün teslim edilmemesi sözleşmeden dönme"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S20",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının ön bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde ön bilgilerin tüketiciye teyit edilmesi",
+     "elektronik ticarette sözleşme öncesi bilgilendirme ve onay"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m11-1",
+     "TKHK-m15-1"
+    ]
+   },
+   {
+    "id": "S21",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "veri sorumlusuna başvuru usulü",
+     "kişisel verilerin silinmesi veya yok edilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S26",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici sözleşmelerinde ayıplı mal ve hizmet hükümleri"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S27",
+    "sorgular": [
+     "KVKK madde 5 kişisel verilerin işlenme şartları",
+     "6698 sayılı Kanun madde 5 kişisel verilerin işlenmesi",
+     "özel nitelikli olmayan kişisel veri işleme şartları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S28",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek madde 2",
+     "elektronik ticaret kanunu ek 2. madde düzenleme kapsamı",
+     "elektronik ticaret ek madde yükümlülükler"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S29",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları",
+     "mesafeli sözleşmelerde cayma hakkı kullanılamayan haller"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m13-1"
+    ]
+   },
+   {
+    "id": "S30",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "tüketicinin korunması hakkında kanun 73/A hükmü",
+     "tüketici işlemlerinde haksız şart ve ceza hükümleri"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m73-1",
+     "TKHK-m74-1"
+    ]
+   }
+  ],
+  [
+   {
+    "id": "S01",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "mesafeli sözleşmeler cayma hakkının kullanılması",
+     "cayma hakkı bildirim süresi tüketici"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S02",
+    "sorgular": [
+     "ayıplı mal seçimlik haklar",
+     "satılan malın ayıplı olması tüketicinin sözleşmeden dönme hakkı",
+     "ayıplı malda onarım veya değiştirme talebi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "S03",
+    "sorgular": [
+     "ayıplı mal zamanaşımı süresi",
+     "satıcının ayıptan sorumluluğu zamanaşımı",
+     "tüketici sözleşmesi ayıplı mal dava zamanaşımı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S04",
+    "sorgular": [
+     "ticari elektronik ileti gönderimi için alıcının önceden onayı",
+     "ticari elektronik ileti gönderilmesinde izin ve ret hakkı",
+     "elektronik ticaret ticari iletişim onay zorunluluğu"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S05",
+    "sorgular": [
+     "kişisel verilerin işlenmesi ilgili kişinin hakları",
+     "veri sorumlusuna başvuru ilgili kişi hakları",
+     "kişisel verilerin silinmesi ve düzeltilmesi talebi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S06",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı sözleşmeler",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "tüketicinin cayma hakkına ilişkin istisnalar"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "S07",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı süresi",
+     "mesafeli sözleşmelerde cayma hakkının kullanılması",
+     "tüketici kredili satış sözleşmesinden cayma"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S08",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli sözleşmede cayma hakkının kullanılması ve bedel iadesi",
+     "cayma hakkı süresi mesafeli satış"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S09",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcı",
+     "tüketici malın ayıplı olduğunu ispat yükü",
+     "satılan malın ayıbının ayıp kavramı ve garanti süresi içinde ispatı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S10",
+    "sorgular": [
+     "mesafeli sözleşmede teslim süresi",
+     "satıcının sipariş edilen malı teslim yükümlülüğü",
+     "teslim süresinin aşılması halinde sözleşmeden dönme hakkı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S11",
+    "sorgular": [
+     "talep edilmeden gönderilen mal veya hizmet bedeli",
+     "tüketicinin sipariş etmediği ürün ödeme yükümlülüğü",
+     "haksız ticari uygulama talepsiz mal gönderimi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S12",
+    "sorgular": [
+     "satıcının mal satma yükümlülüğü",
+     "mağazada satışa arz edilen malın satılmaması",
+     "tüketicinin satın alma hakkı ve satıcının kabul yükümlülüğü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S13",
+    "sorgular": [
+     "ticari elektronik ileti gönderimine itiraz hakkı",
+     "ticari elektronik ileti ret bildirimi ve abonelikten çıkma",
+     "tüketicinin ticari iletişim izninin geri alınması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "ETK-m6-1"
+    ]
+   },
+   {
+    "id": "S14",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel verilere ilişkin bilgi talebi yanıt süresi",
+     "veri sorumlusuna başvuru usulü ve cevap verme yükümlülüğü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S15",
+    "sorgular": [
+     "piramit satış sistemi haksız ticari uygulama",
+     "zincir satış sistemi yeni üye kazanç vaadi yasağı",
+     "aldatıcı ticari uygulamalar tüketici hukuku"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ]
+   },
+   {
+    "id": "S16",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "mesafeli sözleşmelerde cayma halinde malın iadesi",
+     "mesafeli sözleşmelerde cayma halinde bedelin iadesi süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1",
+     "MSY-m16-1"
+    ]
+   },
+   {
+    "id": "S17",
+    "sorgular": [
+     "garanti süresi içinde tekrar arızalanan ayıplı mal",
+     "ayıplı malda tüketicinin seçimlik hakları",
+     "tüketici malının onarımı ve garanti belgesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S18",
+    "sorgular": [
+     "tüketici hakem heyeti parasal sınır başvuru",
+     "tüketici uyuşmazlığı arabuluculuk dava şartı",
+     "tüketici mahkemesi dava açma değer sınırı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m74-1"
+    ]
+   },
+   {
+    "id": "S19",
+    "sorgular": [
+     "mesafeli sözleşmelerde taşıma sırasında malın zararı ve sorumluluğu",
+     "satıcının malı teslim etme yükümlülüğü ve teslim süresi",
+     "mesafeli sözleşmelerde malın teslimi için öngörülen süre"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S20",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının sözleşme öncesi bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmede ön bilgilendirmenin tüketiciye teyit edilmesi",
+     "elektronik ticarette sipariş öncesi bilgilendirme ve teyit yükümlülüğü"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "S21",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "veri sorumlusuna başvuru usulü",
+     "kişisel verilerin silinmesi yok edilmesi veya anonim hale getirilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S26",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici hakem heyeti yetkisi ve başvuru usulü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S27",
+    "sorgular": [
+     "KVKK madde 5 kişisel verilerin işlenme şartları",
+     "6698 sayılı Kanun madde 5 kişisel verilerin işlenmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S28",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde",
+     "elektronik ticaret kanunu ek madde 2 düzenleme kapsamı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S29",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S30",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "tüketici işlemlerinde ayıplı mal ve hizmet yaptırımı",
+     "tüketicinin korunması hakkında kanun idari para cezası"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   }
+  ],
+  [
+   {
+    "id": "S01",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "mesafeli sözleşmelerde cayma hakkının kullanılması",
+     "cayma hakkı süresinin başlangıcı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S02",
+    "sorgular": [
+     "ayıplı mal seçimlik haklar tüketici",
+     "ayıplı malda sözleşmeden dönme ve bedel indirimi",
+     "ayıplı mal değiştirme onarım tüketici hakları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "S03",
+    "sorgular": [
+     "ayıplı mal zamanaşımı süresi",
+     "satıcının ayıptan sorumluluğu zamanaşımı",
+     "tüketici ayıplı mal değişim onarım hakkı zamanaşımı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S04",
+    "sorgular": [
+     "ticari elektronik ileti önceden onay",
+     "ticari elektronik iletişim izni alıcı rızası",
+     "elektronik ticaretin düzenlenmesi ticari ileti gönderim onayı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S05",
+    "sorgular": [
+     "kişisel verileri işlenen ilgili kişinin hakları",
+     "veri sorumlusuna başvuru ve kişisel veri talepleri",
+     "kişisel verilerin işlenmesine ilişkin bilgi talep etme hakkı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S06",
+    "sorgular": [
+     "cayma hakkının kullanılamayacağı sözleşmeler",
+     "mesafeli sözleşmelerde cayma hakkı istisnaları",
+     "tüketicinin cayma hakkından istisna tutulan mal ve hizmetler"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "S07",
+    "sorgular": [
+     "taksitli satış sözleşmesinde cayma hakkı",
+     "mesafeli sözleşmelerde cayma hakkı kullanım süresi",
+     "taksitle satışta cayma hakkı süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S08",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "mesafeli satışta cayma hakkı süresi",
+     "mesafeli sözleşmelerde cayma hakkının istisnaları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S09",
+    "sorgular": [
+     "ayıplı mal ispat yükü satıcıda",
+     "ayıbın satıştan önce var olduğunu ispat tüketici",
+     "tüketici hakem heyeti ayıplı mal ispat yükü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S10",
+    "sorgular": [
+     "mesafeli sözleşmede teslim süresi",
+     "satıcının edimi ifa etmemesi sözleşmeden dönme",
+     "mesafeli sözleşmede siparişin teslimi gecikmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S11",
+    "sorgular": [
+     "talep edilmeksizin gönderilen mal ve ödeme yükümlülüğü",
+     "tüketicinin sipariş dışı mal gönderimi karşısında hakları",
+     "haksız ticari uygulama olarak sipariş dışı mal gönderilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S12",
+    "sorgular": [
+     "satıcının satış yapmaktan kaçınması",
+     "mağazanın mal satışını reddetmesi tüketici hakları",
+     "vitrinde sergilenen ürünün satışa arz edilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S13",
+    "sorgular": [
+     "ticari elektronik ileti gönderimine itiraz hakkı",
+     "ticari elektronik ileti onay ve ret bildirimi",
+     "ticari ileti gönderiminin durdurulması kişisel veri işleme"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-4",
+     "TKHK-gecici3-1"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-4",
+     "TKHK-gecici3-1",
+     "ETK-m3-1",
+     "ETK-m4-1",
+     "ETK-m6-1"
+    ]
+   },
+   {
+    "id": "S14",
+    "sorgular": [
+     "veri sorumlusunun ilgili kişi başvurusuna cevap verme süresi",
+     "kişisel veri sahibinin bilgi talep hakkı",
+     "kişisel verilerin korunması başvuru cevap süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S15",
+    "sorgular": [
+     "piramit satış sistemi haksız ticari uygulama",
+     "zincir satış sistemi üye kazancı yasağı",
+     "tüketici ile satıcı arasında aldatıcı ticari uygulama"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ]
+   },
+   {
+    "id": "S16",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı kullanımı",
+     "cayma hakkında malın geri gönderilmesi süresi",
+     "cayma hakkında satıcının bedeli iade etme süresi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S17",
+    "sorgular": [
+     "garanti süresi içinde onarılan ayıplı mal",
+     "ayıplı malda tüketicinin seçimlik hakları",
+     "tüketici malının garantisi ve onarım hakkı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S18",
+    "sorgular": [
+     "tüketici hakem heyetine başvuru parasal sınır",
+     "tüketici uyuşmazlıklarında arabuluculuk dava şartı",
+     "tüketici mahkemesi ve hakem heyeti görev sınırı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m74-1"
+    ]
+   },
+   {
+    "id": "S19",
+    "sorgular": [
+     "mesafeli sözleşmelerde kargo sırasında malın zayi olması sorumluluğu",
+     "satıcının malı teslim etme yükümlülüğü",
+     "mesafeli sözleşmede teslim süresi aşımı sözleşmeden dönme"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1"
+    ]
+   },
+   {
+    "id": "S20",
+    "sorgular": [
+     "mesafeli sözleşmelerde satıcının ön bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde ön bilgilerin tüketiciye teyit edilmesi",
+     "elektronik ticarette sözleşme öncesi bilgilendirme ve kalıcı veri saklayıcı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m5-1",
+     "TKHK-m11-1",
+     "TKHK-m15-1"
+    ]
+   },
+   {
+    "id": "S21",
+    "sorgular": [
+     "kişisel verilerin silinmesi talebi",
+     "veri sorumlusuna başvuru usulü",
+     "kişisel verilerin silinmesi yok edilmesi veya anonim hale getirilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S26",
+    "sorgular": [
+     "6502 sayılı Kanun madde 56",
+     "tüketici hukuku mesafeli sözleşmeler cayma hakkı düzenlemesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m11-1"
+    ]
+   },
+   {
+    "id": "S27",
+    "sorgular": [
+     "6698 sayılı Kanun madde 5",
+     "kişisel verilerin işlenme şartları",
+     "KVKK 5. madde"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S28",
+    "sorgular": [
+     "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde",
+     "elektronik ticaret kanunu ek madde 2 ticari elektronik ileti",
+     "elektronik ticaret ek madde düzenleme kapsamı"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "S29",
+    "sorgular": [
+     "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+     "mesafeli sözleşmelerde tüketicinin cayma hakkı istisnaları",
+     "mesafeli sözleşmelerde cayma hakkının kullanılamayacağı haller"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "MSY-m13-1"
+    ]
+   },
+   {
+    "id": "S30",
+    "sorgular": [
+     "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+     "6502 sayılı Kanun 73/A maddesi",
+     "tüketici hakem heyeti ayıplı mal ve hizmet ceza hükmü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m73-1",
+     "TKHK-m74-1"
+    ]
+   }
+  ]
+ ],
+ "dev2": [
+  [
+   {
+    "id": "A01",
+    "sorgular": [
+     "tüketici kredisi cayma hakkı",
+     "tüketici kredisi sözleşmesinde cayma hakkı süresi",
+     "kredi sözleşmesinden cayma bildirimi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A02",
+    "sorgular": [
+     "ayıplı mal satın alan tüketicinin seçimlik hakları",
+     "hizmet kusuru nedeniyle tüketicinin tazminat hakkı",
+     "kuru temizleme hizmetinde zarar gören tüketici"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "A03",
+    "sorgular": [
+     "tüketici sözleşmesinde haksız şart",
+     "haksız şartın sözleşmeden çıkarılması ve geçersizliği",
+     "tüketici sözleşmelerinde haksız şartların hukuki sonucu"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-6",
+     "TKHK-m77-2",
+     "TKHK-m26-1",
+     "TKHK-m8-1",
+     "TKHK-m49-1"
+    ]
+   },
+   {
+    "id": "A04",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "satıcının adresinde yapılmayan sözleşmelerde cayma hakkı süresi",
+     "kapıda satış sözleşmesinden cayma hakkının kullanılması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A05",
+    "sorgular": [
+     "6502 sayılı Kanun madde 62",
+     "haksız ticari uygulama tanımı",
+     "tüketici hukukunda haksız ticari uygulamalar"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m61-1"
+    ]
+   },
+   {
+    "id": "A06",
+    "sorgular": [
+     "elektronik ticarette sipariş alındığının teyidi",
+     "hizmet sağlayıcının siparişi onaylama yükümlülüğü",
+     "elektronik sözleşmede sipariş onayı ve bildirim"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A07",
+    "sorgular": [
+     "pazaryeri aracı hizmet sağlayıcı satış bedelinin ödenmesi",
+     "elektronik ticaret aracı hizmet sağlayıcı ödeme yükümlülüğü süresi",
+     "mesafeli satış bedelinin satıcıya ödenmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A08",
+    "sorgular": [
+     "kişisel verilerin kanuni olmayan yollarla ele geçirilmesi veri sorumlusunun bildirim yükümlülüğü",
+     "veri ihlali durumunda veri sorumlusunun kurula ve ilgili kişilere bildirimi",
+     "kişisel verilerin güvenliğine ilişkin veri sorumlusunun gerekli tedbirleri alma yükümlülüğü"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m5-1",
+     "KVKK-m6-1"
+    ]
+   },
+   {
+    "id": "A09",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde cayma hakkı süresi başlangıcı",
+     "satıcının cayma hakkı konusunda bilgilendirmemesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A10",
+    "sorgular": [
+     "özel nitelikli kişisel verilerin işlenmesi açık rıza",
+     "veri sorumlusuna başvuru reddi Kurula şikayet süresi",
+     "işveren sağlık verilerinin işlenmesi kişisel verilerin korunması"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A11",
+    "sorgular": [
+     "mesafeli sözleşmede cayma hakkının bağlı kredi sözleşmesine etkisi",
+     "tüketici kredisi sözleşmesinin cayma hakkı ile sona ermesi",
+     "mesafeli satışa bağlı diğer sözleşmelerin feshi"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A12",
+    "sorgular": [
+     "6563 sayılı Kanun madde 10",
+     "elektronik ticaret kişisel verilerin korunması aydınlatma yükümlülüğü",
+     "elektronik ticarette kişisel veri işleme şartları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m11-1"
+    ]
+   },
+   {
+    "id": "A13",
+    "sorgular": [
+     "pazaryeri sağlayıcısının sorumluluğu",
+     "elektronik ticaret aracı hizmet sağlayıcının sorumluluğu",
+     "hukuka aykırı ürün satışı platform sorumluluğu"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A14",
+    "sorgular": [
+     "elektronik ticarette siparişin alındığına dair teyit yükümlülüğü",
+     "elektronik ticaret idari para cezası",
+     "idari para cezası parasal sınırlarının yeniden değerlendirilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-1",
+     "TKHK-gecici3-1"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-3",
+     "TKHK-m77-1",
+     "TKHK-gecici3-1",
+     "ETK-m4-1",
+     "ETK-m2-1",
+     "TKHK-m76-1"
+    ]
+   },
+   {
+    "id": "A15",
+    "sorgular": [
+     "yetkisiz kapıdan satış idari para cezası",
+     "Bakanlık yetkisi olmadan kapıdan satış yaptırımı",
+     "kapıdan satış idari para cezası güncellenmiş parasal sınırlar"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "TKHK-m77-4",
+     "TKHK-m77-5"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "TKHK-m77-4",
+     "TKHK-m77-5",
+     "TKHK-m47a-1",
+     "TKHK-m80-1",
+     "TKHK-m58-1"
+    ]
+   }
+  ],
+  [
+   {
+    "id": "A01",
+    "sorgular": [
+     "tüketici kredisi sözleşmesinde cayma hakkı",
+     "tüketici kredisi cayma hakkı kullanım süresi",
+     "kredi sözleşmesinden cayma bildirimi ve kredi kullandırılan tutarın ödenmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A02",
+    "sorgular": [
+     "ayıplı mal satın alan tüketicinin seçimlik hakları",
+     "hizmet ayıbı nedeniyle tüketicinin bedel indirimi ve onarım hakkı",
+     "kuru temizleme hizmetinde zarar ve tazminat sorumluluğu"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "A03",
+    "sorgular": [
+     "tüketici sözleşmelerinde haksız şart",
+     "haksız şartların sözleşmeden çıkarılması ve geçersizliği",
+     "tüketici sözleşmesinde haksız şartın batıl olması"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-2",
+     "TKHK-m77-7"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-2",
+     "TKHK-m77-7",
+     "TKHK-m26-1",
+     "TKHK-m8-1",
+     "TKHK-m4-1"
+    ]
+   },
+   {
+    "id": "A04",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "kapıda yapılan satışlarda cayma hakkı süresi",
+     "satıcının yerinde satış sözleşmesi cayma bildirimi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A05",
+    "sorgular": [
+     "6502 sayılı Kanun madde 62",
+     "haksız ticari uygulama tanımı",
+     "tüketici hukukunda haksız ticari uygulamaların yasaklanması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m61-1"
+    ]
+   },
+   {
+    "id": "A06",
+    "sorgular": [
+     "elektronik ticarette sipariş teyidi",
+     "hizmet sağlayıcının siparişin alındığına dair bildirimi",
+     "elektronik sözleşmede siparişin alındığının alıcıya teyidi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A07",
+    "sorgular": [
+     "pazaryeri aracı hizmet sağlayıcı satıcıya ödeme yükümlülüğü",
+     "elektronik ticaret aracı hizmet sağlayıcının satış bedelini ödeme süresi",
+     "mesafeli satış bedelinin satıcıya aktarılması"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A08",
+    "sorgular": [
+     "kişisel verilerin kanuni olmayan yollarla ele geçirilmesi",
+     "veri sorumlusunun ihlali kişisel verilerin kurula ve ilgiliye bildirilmesi",
+     "kişisel veri ihlali veri sorumlusunun yükümlülükleri"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A09",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "satıcının cayma hakkı konusunda bilgilendirmemesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A10",
+    "sorgular": [
+     "özel nitelikli kişisel veri işleme açık rıza",
+     "veri sorumlusuna başvuru reddi Kurula şikayet süresi",
+     "işveren sağlık verisi işleme kişisel verilerin korunması"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A11",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı ve bağlı kredi sözleşmesi",
+     "cayma hakkının kullanılması halinde bağlantılı kredi sözleşmesinin sona ermesi",
+     "mesafeli sözleşmede kredi kartı ile ödeme ve tüketici kredisi"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A12",
+    "sorgular": [
+     "6563 sayılı Kanun madde 10",
+     "elektronik ticaret kişisel verilerin korunması",
+     "elektronik ticarette kişisel verilerin işlenmesi ve saklanması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m11-1"
+    ]
+   },
+   {
+    "id": "A13",
+    "sorgular": [
+     "pazaryeri sağlayıcısının sorumluluğu",
+     "elektronik ticaret aracı hizmet sağlayıcısı sorumluluğu",
+     "hukuka aykırı ürün satışı pazar yeri sorumluluk"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A14",
+    "sorgular": [
+     "elektronik ticaret sipariş onayı teyit yükümlülüğü",
+     "elektronik ticarette sağlayıcının idari para cezası",
+     "sipariş alındığına dair elektronik teyit bildirimi"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "ETK-tablo2026-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-7",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "ETK-tablo2026-1",
+     "TKHK-tablo2026-1",
+     "TKHK-m77-7",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ]
+   },
+   {
+    "id": "A15",
+    "sorgular": [
+     "kapıdan satış yetkisi olmadan idari para cezası",
+     "tüketici mevzuatında izinsiz satış idari para cezası",
+     "kapıdan satış faaliyetinde bakanlık izni cezai yaptırım"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "TKHK-m77-4",
+     "TKHK-gecici3-1",
+     "TKHK-m77-5"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "TKHK-m77-4",
+     "TKHK-gecici3-1",
+     "TKHK-m77-5",
+     "TKHK-m47a-1",
+     "TKHK-m80-1",
+     "TKHK-m58-1"
+    ]
+   }
+  ],
+  [
+   {
+    "id": "A01",
+    "sorgular": [
+     "tüketici kredisi sözleşmesinde cayma hakkı",
+     "tüketici kredisinde cayma hakkı kullanım süresi",
+     "cayma bildiriminin kredi kuruluşuna yapılması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A02",
+    "sorgular": [
+     "ayıplı mal satın alan tüketicinin seçimlik hakları",
+     "hizmet sözleşmesinde ayıp ve kusurlu ifa tazminatı",
+     "kuru temizleme hizmetinde zarar tüketici hakları"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m58-1"
+    ]
+   },
+   {
+    "id": "A03",
+    "sorgular": [
+     "tüketici sözleşmelerinde haksız şart",
+     "haksız şartın sözleşmeden çıkarılması ve geçersizliği",
+     "tüketici sözleşmesinde haksız şartların sonucu"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-6",
+     "TKHK-m77-2"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-gecici3-1",
+     "TKHK-m77-6",
+     "TKHK-m77-2",
+     "TKHK-m26-1",
+     "TKHK-m8-1",
+     "TKHK-m49-1"
+    ]
+   },
+   {
+    "id": "A04",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı",
+     "satıcının adresinde imzalanan sözleşmede cayma hakkı kullanımı",
+     "cayma hakkı süresi hesaplanması"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A05",
+    "sorgular": [
+     "6502 sayılı Kanun madde 62",
+     "haksız ticari uygulama tanımı",
+     "tüketici sağlığını ve güvenliğini tehlikeye düşüren ticari uygulama"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-m61-1"
+    ]
+   },
+   {
+    "id": "A06",
+    "sorgular": [
+     "elektronik ticarette sipariş alındığına dair teyit",
+     "hizmet sağlayıcının sipariş onayı yükümlülüğü",
+     "elektronik sözleşmede sipariş teyidinin gönderilmesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "ETK-tablo2026-1",
+     "ETK-m12-2",
+     "ETK-m12-3",
+     "ETK-m12-1"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "ETK-tablo2026-1",
+     "ETK-m12-2",
+     "ETK-m12-3",
+     "ETK-m12-1"
+    ]
+   },
+   {
+    "id": "A07",
+    "sorgular": [
+     "pazaryeri hizmet sağlayıcısının satıcıya ödeme yükümlülüğü",
+     "elektronik ticaret aracı hizmet sağlayıcısı satış bedelinin ödenmesi süresi",
+     "mesafeli satışta satıcıya bedel ödemesi"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A08",
+    "sorgular": [
+     "kişisel verilerin kanuni olmayan yollarla ele geçirilmesi",
+     "veri sorumlusunun ihlal bildirimi yükümlülüğü",
+     "kişisel veri ihlali kişisel veri koruma kurulu bildirimi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m6-1"
+    ]
+   },
+   {
+    "id": "A09",
+    "sorgular": [
+     "mesafeli sözleşmelerde cayma hakkı bilgilendirme yükümlülüğü",
+     "mesafeli sözleşmelerde cayma hakkı süresi",
+     "satıcının cayma hakkı konusunda bilgilendirmemesi"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A10",
+    "sorgular": [
+     "özel nitelikli kişisel verilerin işlenmesi açık rıza",
+     "veri sorumlusuna başvuru reddi Kişisel Verileri Koruma Kurulu şikayet süresi",
+     "işveren sağlık verilerinin işlenmesi kişisel verilerin korunması"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A11",
+    "sorgular": [
+     "mesafeli sözleşmede cayma hakkının bağlı kredi sözleşmesine etkisi",
+     "cayma hakkı kullanıldığında tüketici kredisi sözleşmesinin feshi",
+     "internetten satın alınan malda cayma hakkı ve bedelin iadesi"
+    ],
+    "kapali": false,
+    "kapali_ek": [],
+    "acik": false,
+    "acik_ek": []
+   },
+   {
+    "id": "A12",
+    "sorgular": [
+     "6563 sayılı Kanun madde 10",
+     "elektronik ticaret kişisel verilerin korunması aydınlatma yükümlülüğü",
+     "elektronik ticarette kişisel veri işleme ve koruma"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": [
+     "KVKK-m11-1"
+    ]
+   },
+   {
+    "id": "A13",
+    "sorgular": [
+     "pazaryeri sağlayıcısının sorumluluğu",
+     "elektronik ticaret aracı hizmet sağlayıcısının sorumluluğu",
+     "hukuka aykırı ürünün satışı platform sorumluluğu"
+    ],
+    "kapali": true,
+    "kapali_ek": [],
+    "acik": true,
+    "acik_ek": []
+   },
+   {
+    "id": "A14",
+    "sorgular": [
+     "elektronik ticarette siparişin alındığının teyit edilmesi yükümlülüğü",
+     "elektronik ticaret sağlayıcısına idari para cezası",
+     "elektronik ticaret idari para cezası tutarları ve artırımı"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-5",
+     "TKHK-m77-3",
+     "TKHK-m77-1"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "TKHK-m77-5",
+     "TKHK-m77-3",
+     "TKHK-m77-1",
+     "ETK-m4-1",
+     "ETK-m3-1",
+     "TKHK-m80-1"
+    ]
+   },
+   {
+    "id": "A15",
+    "sorgular": [
+     "izinsiz kapıda satış idari para cezası",
+     "yetki belgesi olmadan kapı kapı satış yaptırımı",
+     "tüketici idari para cezalarının yeniden değerleme oranı"
+    ],
+    "kapali": true,
+    "kapali_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "TKHK-m77-4",
+     "TKHK-m77-5"
+    ],
+    "acik": true,
+    "acik_ek": [
+     "TKHK-tablo2026-1",
+     "ETK-tablo2026-1",
+     "ETK-m12-4",
+     "TKHK-m77-4",
+     "TKHK-m77-5",
+     "TKHK-m47a-1",
+     "TKHK-m80-1",
+     "TKHK-m58-1"
+    ]
+   }
+  ]
+ ]
+}

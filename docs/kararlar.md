@@ -87,3 +87,9 @@ yapılan maddenin ilgili parçası bağlama eklenir. Sınırlar:
 
 Kabul edilirse atıf takibi varsayılan olur; sistem yeni bir etiketle dondurulur ve holdout bir kez
 koşulur.
+
+### Sonuç (2026-11-23)
+
+Kural uygulandı (`evals/ATIF_DENEYI.md`). (a) sağlanmadı: bağlam düzeyinde toplam kazanç +1 (dev1 +1,
+dev2 0; eşik +2). Ret; atıf takibi varsayılan olmadı (`ATIF_TAKIBI_VARSAYILAN = False`). (a)
+sağlanmadığı için (b) elle okunmadı. A15 çözülmedi (ilk 3 parça ve en fazla 3 ek sınırları).
