@@ -24,6 +24,7 @@ MAX_QUERIES = 4
 #  1: ilk sürüm (2-3 sorgu)
 #  2: çok konulu / çok alt sorulu sorularda her konu için en az bir sorgu, en fazla 4 sorgu
 PROMPT_VERSION = 2
+SERVER_FALLBACK_MODELS = {"claude-opus-5-5", "claude-sonnet-5-5"}
 # $/1M token (claude-api referansı, 2026-11-03 önbelleği). Maliyet hesabı içindir.
 PRICES = {
     "claude-opus-5-5": (4.00, 20.00),
@@ -99,28 +100,33 @@ def load_dotenv(path: Path = config.ROOT / ".env") -> None:
 
 
 class QueryRewriter:
-    def __init__(self, model: str = REWRITE_MODEL, effort: str = REWRITE_EFFORT):
+    def __init__(self, model: str = REWRITE_MODEL, effort: str = REWRITE_EFFORT,
+                 timeout: float = 20.0, max_retries: int = 2):
         import anthropic
 
         load_dotenv()
-        self.client = anthropic.Anthropic()
+        self.client = anthropic.Anthropic(timeout=timeout, max_retries=max_retries)
         self.model = model
         self.effort = effort
 
     def rewrite(self, question: str) -> Rewrite:
         t0 = time.perf_counter()
-        resp = self.client.beta.messages.create(
+        kwargs = dict(
             model=self.model,
             max_tokens=4000,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": f"Soru: {question}"}],
             output_config={"effort": self.effort,
                            "format": {"type": "json_schema", "schema": OUTPUT_SCHEMA}},
-            # Güvenlik sınıflandırıcısı reddederse istek sunucu tarafında başka modelde yeniden
-            # çalışır (Opus 5.5 için önerilen varsayılan).
-            betas=["server-side-fallback-2026-07-01"],
-            fallbacks="default",
         )
+        if self.model in SERVER_FALLBACK_MODELS:
+            # Güvenlik sınıflandırıcısı reddederse istek sunucu tarafında başka modelde yeniden
+            # çalışır (Opus 5.5 / Sonnet 5.5 için önerilen varsayılan).
+            resp = self.client.beta.messages.create(
+                **kwargs, betas=["server-side-fallback-2026-07-01"], fallbacks="default")
+        else:
+            # Haiku 5.5'te sunucu tarafı fallback yok; reddetme stop_reason ile ele alınır.
+            resp = self.client.messages.create(**kwargs)
         dt = time.perf_counter() - t0
         queries: list[str] = []
         if resp.stop_reason != "refusal":

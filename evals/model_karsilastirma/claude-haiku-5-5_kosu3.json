@@ -1,0 +1,784 @@
+{
+ "prompt_surumu": 2,
+ "effort": "low",
+ "cagrilar": [
+  {
+   "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+   "sorgular": [
+    "mesafeli sözleşmelerde cayma hakkı süresi",
+    "Mesafeli Sözleşmeler Yönetmeliği cayma hakkı on dört gün",
+    "6502 sayılı Kanun mesafeli sözleşmelerde cayma hakkı"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1386,
+   "output_tokens": 106,
+   "cost_usd": 0.000192,
+   "seconds": 1.036,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S01"
+  },
+  {
+   "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+   "sorgular": [
+    "ayıplı mal tüketicinin seçimlik hakları",
+    "tüketici kanunu ayıplı mal seçimlik haklar ücretsiz onarım değişim bedel indirimi",
+    "satılan malın ayıbı sözleşmeden dönme hakkı"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1389,
+   "output_tokens": 105,
+   "cost_usd": 0.000191,
+   "seconds": 1.293,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S02"
+  },
+  {
+   "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+   "sorgular": [
+    "ayıplı mal zamanaşımı süresi",
+    "satıcının ayıptan sorumluluğu zamanaşımı Tüketicinin Korunması Hakkında Kanun",
+    "ayıplı maldan doğan haklar dava zamanaşımı"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1388,
+   "output_tokens": 101,
+   "cost_usd": 0.000189,
+   "seconds": 1.092,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S03"
+  },
+  {
+   "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+   "sorgular": [
+    "ticari elektronik ileti gönderimi alıcının önceden onayı",
+    "ticari elektronik iletişim izni 6563 sayılı Kanun",
+    "ticari elektronik ileti retten çıkma hakkı"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1393,
+   "output_tokens": 88,
+   "cost_usd": 0.000183,
+   "seconds": 1.305,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S04"
+  },
+  {
+   "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+   "sorgular": [
+    "ilgili kişinin veri sorumlusuna başvuru hakları",
+    "6698 sayılı Kanun ilgili kişinin hakları madde 11",
+    "kişisel verilerin silinmesi düzeltilmesi itiraz hakkı"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1396,
+   "output_tokens": 97,
+   "cost_usd": 0.000188,
+   "seconds": 1.12,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S05"
+  },
+  {
+   "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+   "sorgular": [
+    "mesafeli sözleşmelerde cayma hakkının istisnaları",
+    "cayma hakkı kullanılamayan mesafeli sözleşmeler",
+    "6502 sayılı Kanun cayma hakkı istisnası"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1390,
+   "output_tokens": 91,
+   "cost_usd": 0.000185,
+   "seconds": 1.09,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S06"
+  },
+  {
+   "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+   "sorgular": [
+    "taksitli satış sözleşmesinde cayma hakkı süresi",
+    "mesafeli sözleşmelerde cayma hakkı on dört gün",
+    "tüketicinin cayma hakkını kullanma süresi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1393,
+   "output_tokens": 87,
+   "cost_usd": 0.000183,
+   "seconds": 0.94,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S07"
+  },
+  {
+   "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+   "sorgular": [
+    "mesafeli sözleşmelerde cayma hakkı",
+    "mesafeli satışta malın iadesi ve cayma süresi",
+    "mesafeli sözleşmelerde cayma hakkının kullanılması"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1389,
+   "output_tokens": 85,
+   "cost_usd": 0.000181,
+   "seconds": 0.968,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S08"
+  },
+  {
+   "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+   "sorgular": [
+    "ayıplı mal ispat yükü satıcıya ait olması",
+    "tüketici satın alma tarihinden itibaren altı ay içinde ayıp",
+    "ayıplı malın değiştirilmesi veya bedel iadesi tüketici hakları"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1423,
+   "output_tokens": 99,
+   "cost_usd": 0.000192,
+   "seconds": 1.133,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S09"
+  },
+  {
+   "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+   "sorgular": [
+    "mesafeli sözleşmelerde satıcının edimini ifa süresi",
+    "mesafeli sözleşmelerde teslim süresi ve sözleşmeden dönme hakkı",
+    "siparişin teslim edilmemesi halinde satıcının sorumluluğu"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1398,
+   "output_tokens": 106,
+   "cost_usd": 0.000193,
+   "seconds": 1.241,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S10"
+  },
+  {
+   "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+   "sorgular": [
+    "talep edilmeyen mal veya hizmet gönderimi tüketici sorumluluğu",
+    "gönderilen maldan doğan ödeme yükümlülüğü ve kabul edilmemiş ürün",
+    "mesafeli sözleşmelerde sipariş dışı mal gönderimi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1408,
+   "output_tokens": 114,
+   "cost_usd": 0.000198,
+   "seconds": 1.675,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S11"
+  },
+  {
+   "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+   "sorgular": [
+    "satıcının satıştan kaçınması ve ürünü satmayı reddetmesi",
+    "mağazanın satış yükümlülüğü ve icap davet ayrımı",
+    "vitrin ürünü satış sözleşmesi kurulması tüketici"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1398,
+   "output_tokens": 98,
+   "cost_usd": 0.000189,
+   "seconds": 1.322,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S12"
+  },
+  {
+   "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+   "sorgular": [
+    "ticari elektronik ileti gönderimine itiraz hakkı",
+    "ticari elektronik ileti retleme ret bildirimi",
+    "ticari elektronik iletilerde onay ve abonelikten çıkma"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1395,
+   "output_tokens": 86,
+   "cost_usd": 0.000182,
+   "seconds": 1.486,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S13"
+  },
+  {
+   "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+   "sorgular": [
+    "kişisel verilerin korunması veri sorumlusunun başvuruya cevap süresi",
+    "ilgili kişinin başvuru hakkı veri sorumlusu otuz gün içinde cevap",
+    "6698 sayılı Kanun başvuru usulü ve cevap süresi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1402,
+   "output_tokens": 110,
+   "cost_usd": 0.000195,
+   "seconds": 1.04,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S14"
+  },
+  {
+   "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+   "sorgular": [
+    "piramit satış sistemi yasağı haksız ticari uygulama",
+    "zincir sistem ile kazanç vaat eden satış yasağı",
+    "kazanç vaadiyle üye kazandırma ticari uygulamalar yönetmeliği"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1405,
+   "output_tokens": 97,
+   "cost_usd": 0.000189,
+   "seconds": 1.544,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S15"
+  },
+  {
+   "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+   "sorgular": [
+    "mesafeli sözleşmelerde cayma hakkının kullanılması süre",
+    "mesafeli sözleşmelerde satıcının bedeli iade etme süresi",
+    "6502 sayılı Kanun mesafeli sözleşmeler cayma hakkı iade"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1427,
+   "output_tokens": 105,
+   "cost_usd": 0.000195,
+   "seconds": 1.182,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S16"
+  },
+  {
+   "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+   "sorgular": [
+    "garanti süresi içinde ayıplı malın onarımı",
+    "ayıplı mal değişim iade bedel indirimi hakkı",
+    "tüketici malın tekrar ayıplanması garanti belgesi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1399,
+   "output_tokens": 84,
+   "cost_usd": 0.000182,
+   "seconds": 1.275,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S17"
+  },
+  {
+   "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+   "sorgular": [
+    "tüketici hakem heyeti parasal sınır başvuru değeri",
+    "tüketici uyuşmazlığında arabuluculuk dava şartı",
+    "6502 sayılı Kanun tüketici hakem heyeti yetkisi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1431,
+   "output_tokens": 94,
+   "cost_usd": 0.00019,
+   "seconds": 1.24,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S18"
+  },
+  {
+   "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+   "sorgular": [
+    "mesafeli sözleşmelerde taşıma sırasında malın zarar görmesi ve sorumluluk",
+    "satıcının malı teslim etme yükümlülüğü ve teslim süresi",
+    "mesafeli sözleşmelerde malın teslimi otuz gün"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1408,
+   "output_tokens": 107,
+   "cost_usd": 0.000194,
+   "seconds": 1.127,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S19"
+  },
+  {
+   "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+   "sorgular": [
+    "mesafeli sözleşmelerde satıcının ön bilgilendirme yükümlülüğü",
+    "mesafeli sözleşmelerde ön bilgilendirmenin tüketiciye teyit edilmesi",
+    "mesafeli sözleşmeler yönetmeliği ön bilgilendirme formu"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1422,
+   "output_tokens": 120,
+   "cost_usd": 0.000202,
+   "seconds": 1.318,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S20"
+  },
+  {
+   "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+   "sorgular": [
+    "kişisel verilerin silinmesi talebi veri sorumlusu",
+    "kişisel verilerin silinmesi yok edilmesi veya anonim hale getirilmesi",
+    "veri sorumlusuna başvuru usul ve esasları"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1407,
+   "output_tokens": 95,
+   "cost_usd": 0.000188,
+   "seconds": 1.313,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S21"
+  },
+  {
+   "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+   "sorgular": [
+    "konut kira sözleşmesinde depozito iadesi",
+    "kiralananın tahliyesinde teminat bedelinin iadesi süresi",
+    "Türk Borçlar Kanunu kira depozitosu geri verilmesi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1388,
+   "output_tokens": 91,
+   "cost_usd": 0.000184,
+   "seconds": 1.601,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S22"
+  },
+  {
+   "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+   "sorgular": [
+    "internetten yapılan satışlarda katma değer vergisi oranı",
+    "elektronik ticaret mal satışı KDV oranları",
+    "mesafeli satış katma değer vergisi uygulaması"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1388,
+   "output_tokens": 80,
+   "cost_usd": 0.000179,
+   "seconds": 1.27,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S23"
+  },
+  {
+   "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+   "sorgular": [
+    "kıdem tazminatı hesaplanması",
+    "iş sözleşmesinin feshi kıdem tazminatı hakkı",
+    "işçinin kıdem tazminatı süre ve brüt ücret esasları"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1391,
+   "output_tokens": 85,
+   "cost_usd": 0.000182,
+   "seconds": 0.993,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S24"
+  },
+  {
+   "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+   "sorgular": [
+    "trafik cezasına itiraz süresi",
+    "Karayolları Trafik Kanunu idari para cezasına itiraz",
+    "trafik para cezasına karşı sulh ceza hakimliğine itiraz süresi"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1377,
+   "output_tokens": 87,
+   "cost_usd": 0.000181,
+   "seconds": 1.544,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S25"
+  },
+  {
+   "soru": "6502 sayılı kanunun 56. maddesi ne diyor?",
+   "sorgular": [
+    "6502 sayılı Kanun madde 56",
+    "tüketici kredisi ve hizmet sözleşmelerinde ayıplı mal ve cayma hakkı 6502 madde 56"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1380,
+   "output_tokens": 78,
+   "cost_usd": 0.000177,
+   "seconds": 1.32,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S26"
+  },
+  {
+   "soru": "KVKK 5. madde",
+   "sorgular": [
+    "6698 sayılı Kanun madde 5 kişisel verilerin işlenme şartları",
+    "KVKK madde 5 açık rıza ve işleme şartları"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1364,
+   "output_tokens": 67,
+   "cost_usd": 0.00017,
+   "seconds": 1.062,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S27"
+  },
+  {
+   "soru": "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde neyi düzenler?",
+   "sorgular": [
+    "Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ek 2. madde",
+    "6563 sayılı Kanun ek madde 2 elektronik ticaret",
+    "elektronik ticaret ek madde 2 tanımlar kapsam"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1399,
+   "output_tokens": 104,
+   "cost_usd": 0.000192,
+   "seconds": 1.375,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S28"
+  },
+  {
+   "soru": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi",
+   "sorgular": [
+    "Mesafeli Sözleşmeler Yönetmeliği madde 15",
+    "mesafeli sözleşmelerde cayma hakkının kullanılması ve istisnalar",
+    "mesafeli sözleşmeler yönetmeliği 15. madde ödeme ve ifa"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1387,
+   "output_tokens": 109,
+   "cost_usd": 0.000193,
+   "seconds": 1.8,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S29"
+  },
+  {
+   "soru": "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+   "sorgular": [
+    "Tüketicinin Korunması Hakkında Kanun madde 73/A",
+    "6502 sayılı Kanun madde 73/A",
+    "tüketici hakem heyeti ve idari para cezası 73/A"
+   ],
+   "model": "claude-haiku-5-5",
+   "input_tokens": 1381,
+   "output_tokens": 81,
+   "cost_usd": 0.000179,
+   "seconds": 1.166,
+   "stop_reason": "end_turn",
+   "hata": null,
+   "id": "S30"
+  }
+ ],
+ "sonuclar": [
+  {
+   "id": "S01",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S02",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S03",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S04",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S05",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S06",
+   "tur": "madde_dili",
+   "siralar": [
+    10
+   ],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S07",
+   "tur": "madde_dili",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S08",
+   "tur": "gunluk_dil",
+   "siralar": [
+    2
+   ],
+   "@1": false,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S09",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S10",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S11",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S12",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S13",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S14",
+   "tur": "gunluk_dil",
+   "siralar": [
+    3
+   ],
+   "@1": false,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S15",
+   "tur": "gunluk_dil",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S16",
+   "tur": "iki_madde",
+   "siralar": [
+    13,
+    2
+   ],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S17",
+   "tur": "iki_madde",
+   "siralar": [
+    5,
+    1
+   ],
+   "@1": false,
+   "@3": false,
+   "@5": true
+  },
+  {
+   "id": "S18",
+   "tur": "iki_madde",
+   "siralar": [
+    1,
+    2
+   ],
+   "@1": false,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S19",
+   "tur": "iki_madde",
+   "siralar": [
+    4,
+    6
+   ],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S20",
+   "tur": "iki_madde",
+   "siralar": [
+    5,
+    1
+   ],
+   "@1": false,
+   "@3": false,
+   "@5": true
+  },
+  {
+   "id": "S21",
+   "tur": "iki_madde",
+   "siralar": [
+    1,
+    2
+   ],
+   "@1": false,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S22",
+   "tur": "cevapsiz",
+   "siralar": [],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S23",
+   "tur": "cevapsiz",
+   "siralar": [],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S24",
+   "tur": "cevapsiz",
+   "siralar": [],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S25",
+   "tur": "cevapsiz",
+   "siralar": [],
+   "@1": false,
+   "@3": false,
+   "@5": false
+  },
+  {
+   "id": "S26",
+   "tur": "madde_numarasi",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S27",
+   "tur": "madde_numarasi",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S28",
+   "tur": "madde_numarasi",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S29",
+   "tur": "madde_numarasi",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  },
+  {
+   "id": "S30",
+   "tur": "madde_numarasi",
+   "siralar": [
+    1
+   ],
+   "@1": true,
+   "@3": true,
+   "@5": true
+  }
+ ]
+}
