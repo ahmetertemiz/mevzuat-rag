@@ -30,3 +30,22 @@ Bilinen zayıflığı, iki alt sorulu sorularda konuları birleştirmesi (S16). 
 **Kalite öncelikliyse alternatif: `claude-opus-5-5`.** İki konulu sorularda ve madde numarası sorgularında daha kararlı; bedeli 40 kat maliyet. Sonnet'i önermiyorum: maliyeti Haiku'nun 20 katı ve @1'de en düşük aralıkta.
 
 Holdout tek yapılandırmayla, bir kez koşulacağı için seçilecek model holdout'tan önce sabitlenmeli. Koşular arası oynama yüzünden holdout'un kendisi de tek koşuda ±2–3 soru oynayabilir; bu, holdout sonucunu yorumlarken hesaba katılmalı.
+
+## 8. Prompt v3: sayı kuralı ve sayı denetimi (Haiku 5.5, 3 koşu)
+
+v3'te prompt'a "soruda geçmeyen sayı (süre, tutar, oran, tarih, kanun ve madde numarası) ekleme,
+cevabı tahmin etme" kuralı eklendi. Kodda da bir denetim var: soruda olmayan bir sayı içeren sorgu
+atılıyor ve sonuç nesnesinin `atilan_sorgular` alanında belirtiliyor.
+
+| Haiku 5.5 | @1 | @3 | @5 | Günlük dil @1 / @5 | İki madde @5 | Atılan sorgu / koşu |
+|---|---|---|---|---|---|---|
+| prompt v2 (3 koşu) | 14–17 | 19–21 | 22–23 | 4–7 / 7–8 | 4 | (denetim yok) |
+| prompt v3 (3 koşu) | 12–14 | 21 | 22–23 | 2–5 / 8 | 3–4 | 1 |
+
+- **@3 ve @5 korunuyor.** @5 aralığı aynı. @3 en az v2'nin en iyisi kadar ve daha kararlı (3 koşuda da 21).
+- **@1 düşüyor.** Düşüş 2–3 soru; v3'ün en iyi koşusu (14) v2'nin en kötüsüne (14) eşit. Bu yüzden kural @1'i hafifçe bozuyor. Nedeni ölçüldü:
+  - v2'de Haiku 3 koşuda 67 sorguya sayı ya da süre eklemişti. Bunların bir kısmı doğru tahmindi.
+  - Örnek S01: v2 sorgusu "cayma hakkı on dört gün" MSY m.9'un metniyle kelimesi kelimesine eşleşip onu 1. sıraya taşıyordu. v3'te bu sorgu yok ve madde 2.–3. sırada.
+  - Kısacası v2'nin @1 avantajının bir bölümü, modelin cevabı doğru tahmin etmesinden geliyordu. Tahmin yanlış olduğunda (Opus'un "on gün" örneği) aynı mekanizma yanlış maddeyi öne çıkarabilir. v3 bu riski kaldırıyor, bedeli @1'de birkaç soru.
+- **Modelin davranışı değişti.** Denetim 3 koşuda toplam yalnızca 3 sorgu attı; demek ki Haiku kurala büyük ölçüde uyuyor ve sayıları kendisi yazmıyor. Atılan 3 sorgunun hepsi S27'de ("KVKK 5. madde"): model KVKK'yı "6698 sayılı Kanun" olarak açmış, ama soruda "6698" geçmiyor. Bu bir cevap tahmini değil, doğru bir kısaltma açılımı. Katı kural bunu da atıyor; S27 yine de her koşuda bulundu (madde numarası soruları @5 5/5).
+- **İki madde:** S19 v3'te her koşuda kaçıyor (teslim süresi gereksinimi 6.–7. sırada); v2'de de 3 koşudan 2'sinde kaçıyordu.

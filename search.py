@@ -41,6 +41,8 @@ def main() -> None:
     print(f"mod: {s.mode} · yeniden yazım: {s.yeniden_yazim}")
     if s.sorgular:
         print(f"üretilen sorgular: {s.sorgular}  (maliyet ${s.maliyet_usd:.5f}, {s.yeniden_yazim_sn:.1f} sn)")
+    for a in s.atilan_sorgular:
+        print(f"atılan sorgu: {a['sorgu']!r} ({a['neden']})")
     if s.uyari:
         print(f"UYARI: {s.uyari}")
     if not s.hits:

@@ -77,9 +77,11 @@ maliyeti ve başarısızlık durumunda uyarıyı gösterir. Kod içinden: `mevzu
   Madde numaraları özel belirtece çevrilir: `md:48`, `md:47/a`, `md:ek1`, `md:gecici2` ve belge
   adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
   üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
-- **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`): model `REWRITE_MODEL` (şu an
+- **Sorgu yeniden yazımı** (`src/mevzuat_rag/rewrite.py`, prompt v3): model `REWRITE_MODEL` (şu an
   `claude-haiku-5-5`, sunucu tarafı fallback yok), effort `low`, JSON çıktı, istemci zaman aşımı 20 sn. Çok konulu sorularda her
-  konu için en az bir sorgu, en fazla 4. Prompt değişince `PROMPT_VERSION` artırılır.
+  konu için en az bir sorgu, en fazla 4. Sorgular yalnız konu ve kavram içerir: soruda geçmeyen
+  sayı (süre, tutar, oran, tarih, kanun/madde numarası) yazılmaz; yazılırsa kod o sorguyu atar ve
+  `SearchResult.atilan_sorgular` alanında belirtir. Prompt değişince `PROMPT_VERSION` artırılır.
 - **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok. Skoru 0 olan BM25 sonuçları
   birleşime girmez.
 

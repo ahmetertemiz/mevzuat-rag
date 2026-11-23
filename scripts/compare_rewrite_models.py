@@ -72,6 +72,17 @@ def score(bm25: Retriever, questions: list[dict], recs: dict[str, dict]) -> list
     return rows
 
 
+def load_runs() -> dict[str, list[dict]]:
+    """evals/model_karsilastirma/*.json -> {"model · prompt vN": [koşular]} (model ve sürüm sırasıyla)."""
+    groups: dict[tuple, list[dict]] = {}
+    for f in sorted(OUT_DIR.glob("*_kosu*.json")):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        model = d["cagrilar"][0]["model"]
+        groups.setdefault((MODELS.index(model) if model in MODELS else 99, d["prompt_surumu"], model), []).append(
+            {"recs": d["cagrilar"], "rows": d["sonuclar"]})
+    return {f"{m} · prompt v{p}": runs for (_, p, m), runs in sorted(groups.items())}
+
+
 def rng(xs) -> str:
     lo, hi = min(xs), max(xs)
     return f"{lo}" if lo == hi else f"{lo}–{hi}"
@@ -83,34 +94,33 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--models", nargs="+", default=list(MODELS))
     args = ap.parse_args()
 
     questions = yaml.safe_load((ROOT / "evals/retrieval.yaml").read_text(encoding="utf-8"))["sorular"]
     bm25 = Retriever(load_model=False)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    all_runs: dict[str, list[dict]] = {}
-    for m in MODELS:
+    for m in args.models:
         rw = QueryRewriter(model=m)
-        all_runs[m] = []
         for run in range(1, args.runs + 1):
             with ThreadPoolExecutor(max_workers=args.workers) as ex:
                 recs = list(ex.map(lambda q: one_call(rw, q), questions))
             by_id = {r["id"]: r for r in recs}
             rows = score(bm25, questions, by_id)
-            (OUT_DIR / f"{m}_kosu{run}.json").write_text(
+            (OUT_DIR / f"{m}_p{PROMPT_VERSION}_kosu{run}.json").write_text(
                 json.dumps({"prompt_surumu": PROMPT_VERSION, "effort": REWRITE_EFFORT, "cagrilar": recs,
                             "sonuclar": rows}, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
-            all_runs[m].append({"recs": recs, "rows": rows})
             ans = [r for r in rows if r["tur"] != "cevapsiz"]
             fails = sum(1 for r in recs if r["hata"])
-            print(f"{m:18s} koşu {run}: " + "  ".join(f"@{k}={sum(r[f'@{k}'] for r in ans)}" for k in KS)
-                  + f"  hata={fails}  ${sum(r['cost_usd'] for r in recs):.4f}")
+            dropped = sum(len(r.get("atilan_sorgular") or []) for r in recs)
+            print(f"{m:18s} p{PROMPT_VERSION} koşu {run}: " + "  ".join(f"@{k}={sum(r[f'@{k}'] for r in ans)}" for k in KS)
+                  + f"  hata={fails}  atılan sorgu={dropped}  ${sum(r['cost_usd'] for r in recs):.4f}")
 
     # düz BM25 referansı
     plain = score(bm25, questions, {q["id"]: {"sorgular": []} for q in questions})
     (ROOT / "evals" / "MODEL_KARSILASTIRMA.md").write_text(
-        render(questions, all_runs, plain, args.runs), encoding="utf-8", newline="\n")
+        render(questions, load_runs(), plain, args.runs), encoding="utf-8", newline="\n")
     print("rapor -> evals/MODEL_KARSILASTIRMA.md")
 
 
@@ -122,8 +132,9 @@ def render(questions, all_runs, plain, n_runs) -> str:
     w("# Yeniden yazım modeli karşılaştırması (BM25 + yeniden yazım)\n")
     w("`python scripts/compare_rewrite_models.py` tarafından üretilir. Geliştirme seti "
       f"(`evals/retrieval.yaml`, {len(ans_ids)} cevaplı soru). Holdout kullanılmadı.\n")
-    w(f"- Prompt sürümü {PROMPT_VERSION} (çok konulu sorularda konu başına en az bir sorgu, en fazla 4), "
-      f"effort `{REWRITE_EFFORT}`, JSON şeması; üç modelde aynı.")
+    w("- Prompt v2: çok konulu sorularda konu başına en az bir sorgu, en fazla 4. Prompt v3: ek olarak "
+      "soruda geçmeyen sayı (süre, tutar, oran, tarih, kanun/madde numarası) yazma kuralı ve kodda sayı "
+      f"denetimi (böyle sorgular atılır). Effort `{REWRITE_EFFORT}`, JSON şeması; tüm satırlarda aynı.")
     w(f"- Her model **{n_runs} kez, önbelleksiz** koşuldu; hücrelerde koşular arası aralık (en düşük–en yüksek).")
     w(f"- Sunucu tarafı reddetme fallback'i: {', '.join(sorted(SERVER_FALLBACK_MODELS))} (Haiku 5.5'te bu özellik yok).")
     w("- Çağrı hata verir ya da sorgu üretmezse soru düz BM25 ile aranır; \"Hata\" sütunu bunları sayar.")
@@ -131,12 +142,12 @@ def render(questions, all_runs, plain, n_runs) -> str:
       "liste fiyatı (Haiku 5.5 $0.10/$0.50, Sonnet 5.5 $2/$10, Opus 5.5 $4/$20 / 1M token).\n")
 
     w("## 1. Ana tablo\n")
-    w("| Model | @1 | @3 | @5 | Madde dili @5 | Günlük dil @5 | İki madde @5 | Madde no @5 | Süre medyan / p95 | Maliyet / sorgu | Sorgu sayısı (ort.) | Hata |")
-    w("|---|---|---|---|---|---|---|---|---|---|---|---|")
+    w("| Model | @1 | @3 | @5 | Madde dili @5 | Günlük dil @5 | İki madde @5 | Madde no @5 | Süre medyan / p95 | Maliyet / sorgu | Sorgu sayısı (ort.) | Atılan sorgu / koşu | Hata |")
+    w("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     cells_plain = [str(sum(r[f"@{k}"] for r in plain if r["id"] in ans_ids)) for k in KS]
     pb = {r["id"]: r for r in plain}
     cells_plain += [str(sum(pb[i]["@5"] for i in by_type[t])) for t in TURLER]
-    w("| _düz BM25 (referans)_ | " + " | ".join(cells_plain) + " | ~1 ms | $0 | 0 | — |")
+    w("| _düz BM25 (referans)_ | " + " | ".join(cells_plain) + " | ~1 ms | $0 | 0 | — | — |")
     for m, runs in all_runs.items():
         per = [{r["id"]: r for r in run["rows"]} for run in runs]
         cells = [rng([sum(p[i][f"@{k}"] for i in ans_ids) for p in per]) for k in KS]
@@ -147,8 +158,10 @@ def render(questions, all_runs, plain, n_runs) -> str:
         costs = [statistics.mean(r["cost_usd"] for r in run["recs"]) for run in runs]
         nq = statistics.mean(len(r["sorgular"]) for run in runs for r in run["recs"])
         fails = [sum(1 for r in run["recs"] if r["hata"]) for run in runs]
+        dropped = [sum(len(r.get("atilan_sorgular") or []) for r in run["recs"]) for run in runs]
+        drop_cell = rng(dropped) if any("atilan_sorgular" in r for run in runs for r in run["recs"]) else "denetim yok"
         w(f"| `{m}` | " + " | ".join(cells) +
-          f" | {statistics.median(secs):.1f} / {p95:.1f} sn | ${statistics.mean(costs):.5f} | {nq:.1f} | {rng(fails)} |")
+          f" | {statistics.median(secs):.1f} / {p95:.1f} sn | ${statistics.mean(costs):.5f} | {nq:.1f} | {drop_cell} | {rng(fails)} |")
     w("")
 
     w("## 2. Soru türüne göre @1 / @3 / @5 (aralık)\n")
@@ -188,7 +201,7 @@ def render(questions, all_runs, plain, n_runs) -> str:
     w("")
 
     w("## 5. Örnek çıktılar (koşu 1, iki konulu sorular)\n")
-    for qid in ("S16", "S18", "S19", "S20", "S21"):
+    for qid in ("S16", "S19", "S21"):
         q = next(x for x in questions if x["id"] == qid)
         w(f"**{qid}** {q['soru']}\n")
         for m, runs in all_runs.items():

@@ -31,6 +31,8 @@ class SearchResult:
     uyari: str | None = None
     maliyet_usd: float = 0.0
     yeniden_yazim_sn: float | None = None
+    # Sayı denetiminde atılan sorgular: [{"sorgu", "neden"}] (rewrite.sayi_denetimi)
+    atilan_sorgular: list[dict] = field(default_factory=list)
 
 
 class Arayici:
@@ -58,6 +60,7 @@ class Arayici:
             return SearchResult(soru, self.retriever.search(soru, k=k, mode=self.mode), self.mode, KAPALI)
 
         sorgular: list[str] = []
+        atilan: list[dict] = []
         uyari = None
         maliyet, sure = 0.0, None
         rw = self._get_rewriter()
@@ -67,8 +70,12 @@ class Arayici:
             try:
                 r = rw.rewrite(soru)
                 maliyet, sure = r.cost_usd, r.seconds
+                atilan = list(getattr(r, "atilan_sorgular", []) or [])
                 if r.sorgular:
                     sorgular = r.sorgular
+                elif atilan:
+                    uyari = ("Üretilen sorguların hepsi sayı denetiminde atıldı (soruda olmayan sayı "
+                             "içeriyorlardı); düz arama yapıldı.")
                 else:
                     uyari = (f"Sorgu yeniden yazımı sorgu üretmedi (stop_reason={r.stop_reason}); "
                              "düz arama yapıldı.")
@@ -77,4 +84,4 @@ class Arayici:
 
         hits = self.retriever.search(soru, k=k, mode=self.mode, extra_queries=sorgular or None)
         return SearchResult(soru, hits, self.mode, UYGULANDI if sorgular else BASARISIZ,
-                            sorgular, uyari, maliyet, sure)
+                            sorgular, uyari, maliyet, sure, atilan)

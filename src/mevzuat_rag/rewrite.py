@@ -11,11 +11,13 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 from . import config
+from .textnorm import normalize
 
 REWRITE_MODEL = "claude-haiku-5-5"  # karar 2026-11-23: model karşılaştırması (evals/MODEL_KARSILASTIRMA.md)
 REWRITE_EFFORT = "low"
@@ -23,7 +25,9 @@ MAX_QUERIES = 4
 # Prompt değiştiğinde artırılır; önbellek dosya adına girer ki eski prompt'un çıktıları kullanılmasın.
 #  1: ilk sürüm (2-3 sorgu)
 #  2: çok konulu / çok alt sorulu sorularda her konu için en az bir sorgu, en fazla 4 sorgu
-PROMPT_VERSION = 2
+#  3: sorgular yalnız konu ve kavram içerir; soruda geçmeyen sayı (süre, tutar, oran, tarih, kanun ve
+#     madde numarası) eklenmez. Ayrıca kodda denetim (sayi_denetimi): böyle bir sorgu atılır.
+PROMPT_VERSION = 3
 SERVER_FALLBACK_MODELS = {"claude-opus-5-5", "claude-sonnet-5-5"}
 # $/1M token (claude-api referansı, 2026-11-03 önbelleği). Maliyet hesabı içindir.
 PRICES = {
@@ -44,7 +48,11 @@ duruma göre "cayma hakkı", "sözleşmeden dönme" ya da "ayıplı mal"; "mesaj
 elektronik ileti").
 - Soru birden çok konu ya da alt soru içeriyorsa (ör. "... yapabilir miyim, ... ne kadar sürede?") her konu ve her alt soru için en az bir sorgu yaz; hiçbir alt soruyu sorgusuz bırakma. Toplam sorgu sayısı yine en fazla 4 olsun.
 - Soruda kanun numarası, kanun adı ya da madde numarası geçiyorsa bunları sorgulardan en az \
-birinde aynen koru. Soruda olmayan madde numarası uydurma.
+birinde aynen koru.
+- Sorgular yalnızca konu ve kavram içersin. Soruda geçmeyen hiçbir sayı ekleme: süre ("on dört \
+gün", "30 gün"), tutar, oran, tarih, kanun numarası ya da madde numarası yazma. Cevabı tahmin \
+etmeye çalışma; "kaç gün" diye soruluyorsa sorguya süreyi değil, sürenin konusunu yaz \
+(ör. "cayma hakkı süresi"). Soruda olmayan sayı içeren sorgular sistem tarafından atılır.
 - Soru bu mevzuatın dışında görünse bile reddetme; konuyu hukuki terimlerle anlatan sorgular üret.
 - Sorgular kısa olsun (en fazla 12 kelime), açıklama ya da cevap içermesin.
 
@@ -85,6 +93,45 @@ class Rewrite:
     cost_usd: float
     seconds: float
     stop_reason: str
+    atilan_sorgular: list[dict] = field(default_factory=list)  # [{"sorgu", "neden"}]
+
+
+# ------------------------------------------------------------------ sayı denetimi
+#
+# Model cevabı tahmin edip sorguya süre / madde numarası ekleyebilir ("cayma süresi on gün").
+# Soruda geçmeyen bir sayı içeren sorgu atılır. Rakamlar ve yazıyla yazılmış süre/tutar/oran
+# kalıpları ("on dört gün", "yüzde on", "otuz bin lira") denetlenir. Soruda aynen geçen sayılar serbest.
+
+_NUM_WORDS = (r"bir|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|yirmi|otuz|kırk|elli|altmış|yetmiş|"
+              r"seksen|doksan|yüz|bin|milyon|milyar")
+_UNITS = r"iş\s+günü|gün|hafta|ay|yıl|saat|dakika|lira|tl|kuruş"
+_SUFFIX = r"(?:lık|lik|luk|lük|da|de|ta|te|dan|den|tan|ten|ı|i|u|ü|a|e)?"  # aylık, günde, yılı...
+_SPELLED = re.compile(rf"\b(?:(?:{_NUM_WORDS})\s+)+(?:{_UNITS}){_SUFFIX}\b|\byüzde\s+(?:(?:{_NUM_WORDS})\b\s*)+")
+_DIGITS = re.compile(r"\d+")
+
+
+def sayi_denetimi(soru: str, sorgu: str) -> str | None:
+    """Sorguda soruda geçmeyen bir sayı varsa nedenini döndürür, yoksa None."""
+    q, s = normalize(soru), normalize(sorgu)
+    soru_rakam = set(_DIGITS.findall(q))
+    yeni = [d for d in _DIGITS.findall(s) if d not in soru_rakam]
+    if yeni:
+        return f"soruda olmayan sayı: {', '.join(yeni)}"
+    yazili = [m.group(0).strip() for m in _SPELLED.finditer(s) if m.group(0).strip() not in q]
+    if yazili:
+        return f"soruda olmayan süre/tutar/oran: {', '.join(yazili)}"
+    return None
+
+
+def denetle(soru: str, sorgular: list[str]) -> tuple[list[str], list[dict]]:
+    kalan, atilan = [], []
+    for sg in sorgular:
+        neden = sayi_denetimi(soru, sg)
+        if neden:
+            atilan.append({"sorgu": sg, "neden": neden})
+        else:
+            kalan.append(sg)
+    return kalan, atilan
 
 
 def load_dotenv(path: Path = config.ROOT / ".env") -> None:
@@ -135,11 +182,12 @@ class QueryRewriter:
                 queries = [q.strip() for q in json.loads(text).get("sorgular", []) if q.strip()][:MAX_QUERIES]
             except json.JSONDecodeError:
                 queries = []
+        queries, dropped = denetle(question, queries)
         pin, pout = PRICES.get(self.model, (0.0, 0.0))
         u = resp.usage
         cost = (u.input_tokens * pin + u.output_tokens * pout) / 1e6
         return Rewrite(question, queries, self.model, u.input_tokens, u.output_tokens,
-                       round(cost, 6), round(dt, 3), resp.stop_reason or "")
+                       round(cost, 6), round(dt, 3), resp.stop_reason or "", dropped)
 
 
 def cache_path(model: str = REWRITE_MODEL) -> Path:
