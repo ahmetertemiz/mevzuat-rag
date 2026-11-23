@@ -8,8 +8,12 @@
   (c) madde doğruluğu ve olgu oranı, (d) maliyet ve süre.
 - **Gürültü payı** (2026-11-23, bir sonraki cevap ölçümünden önce eklendi): Sonnet 5.5 ancak 3
   koşunun toplamında yanlış olgu sayısı Haiku 5.5'ten **en az 2 daha az** ise seçilir; aksi hâlde Haiku.
-- Karar ertelendi; çalışma varsayılanı Haiku 5.5. Önceki ölçüm (evals/CEVAP_RAPOR.md, Haiku 2 /
-  Sonnet 1) bu kurala göre değerlendirilmez; kural sonraki ölçüm için geçerlidir.
+- Önceki ölçüm (evals/CEVAP_RAPOR_v1.md, Haiku 2 / Sonnet 1) bu kurala göre değerlendirilmez;
+  kural sonraki ölçüm için geçerlidir.
+- **Sonuç (2026-11-23, arama-donduruldu-2 + üç kod düzeltmesi, 3'er koşu, elle okuma):** yanlış olgu
+  toplamı Haiku 0, Sonnet 0; fark 0 < 2. **Cevap modeli: Haiku 5.5** (`CEVAP_MODEL` değişmedi).
+  Sonnet (b) ve (c)'de biraz iyi (yanlış ret medyanı 2'ye 3, madde doğruluğu 11'e 10), cevap başına
+  ~18 kat pahalı. Ayrıntı: evals/CEVAP_RAPOR.md.
 
 ## Değerlendirme setleri
 
