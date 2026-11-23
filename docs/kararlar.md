@@ -44,3 +44,9 @@ Uygulama ayrıntıları (ölçümden önce sabitlendi):
 - bge-m3 hibrit (1+2) yalnız referanstır; bellek kısıtı nedeniyle seçilmez.
 - Bu turdan sonra arama yeniden dondurulur (git etiketi `arama-donduruldu-2`) ve holdout'a kadar
   değişmez.
+
+### Sonuç (2026-11-23)
+
+Kural uygulandı (`evals/ARAMA_DENEYI.md`). Hiçbir yapılandırma kabul edilmedi; en iyi toplam kazanç +1.
+Varsayılan değişmedi: BM25 + yeniden yazım (Haiku 5.5, prompt v3), düz RRF, parça çeşitliliği yok.
+Arama `arama-donduruldu-2` etiketiyle yeniden donduruldu; holdout'a kadar değişmez.
