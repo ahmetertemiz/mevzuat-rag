@@ -28,7 +28,13 @@ Kaynak: mevzuat.gov.tr, indirme tarihi 2026-11-23. `docs_raw/` içindeki dosyala
 
 ## Kurulum
 
-Temel kurulum (yayın ortamı için yeterli; torch kurulmaz):
+Üç bağımlılık dosyası var; yayın ortamı yalnızca ilkini kurar:
+
+| Dosya | Ne için | Yayında |
+|---|---|---|
+| `requirements.txt` | Hazır `data/chunks.jsonl` ile BM25 + sorgu yeniden yazımı, testler | ✔ |
+| `requirements-build.txt` | PDF'lerden `chunks.jsonl` üretmek (`pymupdf`) ve belge işleme testleri | ✘ |
+| `requirements-embedding.txt` | Embedding modları, indeks kurma, deneyler, bellek ölçümleri (torch) | ✘ |
 
 ```powershell
 python -m venv .venv
@@ -37,13 +43,14 @@ python -m venv .venv
 .venv\Scripts\python -m pytest
 ```
 
-Sorgu yeniden yazımı için proje kökünde `.env` dosyası: `ANTHROPIC_API_KEY=...` (git'e girmez).
-
-İsteğe bağlı embedding kurulumu (dense/hybrid arama, indeks kurma, deneyler, bellek ölçümleri):
+Temiz bir ortamda yalnızca `requirements.txt` ile kurulum yaklaşık 130 MB tutar; PDF işleme ve
+embedding testleri atlanır. Geliştirme için:
 
 ```powershell
-.venv\Scripts\python -m pip install -r requirements-embedding.txt
+.venv\Scripts\python -m pip install -r requirements-build.txt -r requirements-embedding.txt
 ```
+
+Sorgu yeniden yazımı için proje kökünde `.env` dosyası: `ANTHROPIC_API_KEY=...` (git'e girmez).
 
 ## Belge işleme
 

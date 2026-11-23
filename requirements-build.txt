@@ -1,0 +1,5 @@
+# İsteğe bağlı: PDF'lerden data/chunks.jsonl üretmek (scripts/build_chunks.py) ve belge işleme
+# testleri. Yayın ortamına KURULMAZ; yayın ortamı hazır chunks.jsonl ile çalışır.
+#
+#   pip install -r requirements.txt -r requirements-build.txt
+pymupdf==2.1

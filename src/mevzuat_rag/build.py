@@ -5,12 +5,11 @@ import re
 from dataclasses import dataclass, field
 from datetime import date
 
-import pymupdf
 
 from . import chunk as ch
 from . import tables as tb
 from .config import MAX_CHUNK_WORDS, DOCS_RAW, DocSpec
-from .extract import ARTICLE_HEADER_RE, FN_TOKEN_RE, extract
+from .extract import ARTICLE_HEADER_RE, FN_TOKEN_RE, extract, open_pdf
 from .textnorm import tr_lower, tr_title
 
 DATE_RE = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4})")
@@ -379,7 +378,7 @@ def _fns(loc: dict[str, str], wanted: set[str], footnotes: dict[str, str]) -> li
 def _independent_header_count(pdf, appendix_page: int | None) -> int:
     """Paragraf mantığından bağımsız sayım: ham sayfa metninde satır başı 'MADDE n –' kalıbı.
     Ek bölümünün başladığı sayfada ek başlığından sonrası sayılmaz."""
-    doc = pymupdf.open(pdf)
+    doc = open_pdf(pdf)
     n = 0
     for i, page in enumerate(doc):
         if appendix_page and i + 1 > appendix_page:

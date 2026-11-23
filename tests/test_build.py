@@ -3,6 +3,8 @@ from collections import Counter
 
 import pytest
 
+pytest.importorskip("pymupdf", reason="PDF işleme testleri requirements-build.txt ister")
+
 from mevzuat_rag import config
 from mevzuat_rag.build import build_document
 

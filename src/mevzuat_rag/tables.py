@@ -16,8 +16,8 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import pymupdf
 
+from .extract import open_pdf
 from .textnorm import tr_title
 
 AMOUNT_RE = re.compile(r"\d{1,3}(?:\.\d{3})+|\d+")
@@ -45,14 +45,14 @@ class PenaltyTable:
     ham_sayilar: list[str] = field(default_factory=list)
 
 
-def _cell_text(page: pymupdf.Page, rect) -> str:
+def _cell_text(page, rect) -> str:
     return " ".join(page.get_text("text", clip=rect).split())
 
 
 def extract_penalty_table(pdf_path: Path, start_page: int, intro_text: str) -> PenaltyTable | None:
     """start_page (1 tabanlı): ek bölümünün başladığı sayfa. intro_text: ek bölümünde tablodan
     önce gelen gövde metni (başlık + açıklama), extract.py'nin ek satırlarından gelir."""
-    doc = pymupdf.open(pdf_path)
+    doc = open_pdf(pdf_path)
     pages: list[int] = []
     for i in range(start_page - 1, len(doc)):
         page = doc[i]

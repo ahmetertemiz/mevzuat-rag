@@ -71,7 +71,7 @@ def test_temel_kurulum_torch_gerektirmez():
     code = ("import sys; sys.path.insert(0,'src');"
             "from mevzuat_rag.pipeline import Arayici;"
             "a=Arayici(rewrite=False); a.ara('cayma hakkı');"
-            "assert 'torch' not in sys.modules and 'sentence_transformers' not in sys.modules, 'yüklendi'")
+            "assert not {'torch','sentence_transformers','pymupdf'} & set(sys.modules), 'yüklendi'")
     r = subprocess.run([sys.executable, "-c", code], cwd=config.ROOT, capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
 

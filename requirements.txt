@@ -1,11 +1,8 @@
-# Temel kurulum (yayın ortamı): varsayılan arama hattı BM25 + sorgu yeniden yazımı.
-# torch / sentence-transformers GEREKMEZ; onlar requirements-embedding.txt içinde.
-
-# Belge işleme (yalnızca data/chunks.jsonl yeniden üretilecekse gerekir)
-pymupdf==2.1
+# Temel kurulum (yayın ortamı): hazır data/chunks.jsonl ile BM25 + sorgu yeniden yazımı.
+# Kurulmayanlar:
+#   - PDF işleme (pymupdf)                  -> requirements-build.txt
+#   - embedding modları (torch, ...)         -> requirements-embedding.txt
 PyYAML==6.0.4
-
-# Arama + sorgu yeniden yazımı
 numpy==2.5.5
 rank-bm25==0.2.2
 anthropic==2.12.0

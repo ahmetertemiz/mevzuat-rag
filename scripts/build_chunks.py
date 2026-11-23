@@ -12,12 +12,12 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-import pymupdf
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from mevzuat_rag import config  # noqa: E402
 from mevzuat_rag.build import build_document  # noqa: E402
+from mevzuat_rag.extract import open_pdf  # noqa: E402
 
 SEED = 2026
 IMG_DIR = config.REPORTS_DIR / "img"
@@ -54,7 +54,7 @@ def suspicious(c: dict) -> list[str]:
 
 def render_table_pages(doc_spec, pages: list[int]) -> list[str]:
     IMG_DIR.mkdir(parents=True, exist_ok=True)
-    doc = pymupdf.open(config.DOCS_RAW / doc_spec.dosya)
+    doc = open_pdf(config.DOCS_RAW / doc_spec.dosya)
     out = []
     for p in pages:
         name = f"{doc_spec.kisa_ad}_tablo_s{p}.png"

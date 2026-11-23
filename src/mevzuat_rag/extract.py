@@ -16,7 +16,10 @@ from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import pymupdf
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:  # pymupdf yalnızca PDF işlenirken gerekir (requirements-build.txt)
+    import pymupdf
 
 FN_OPEN, FN_CLOSE = "⟨fn:", "⟩"
 FN_TOKEN_RE = re.compile(r"⟨fn:([^⟩]+)⟩")
@@ -55,6 +58,15 @@ class Extracted:
     appendix_start_page: int | None
     header_text: str                             # ilk maddeden önceki metin (başlık, RG bilgisi)
     pdf_metadata: dict = field(default_factory=dict)
+
+
+def open_pdf(path):
+    """pymupdf'i gerektiğinde yükler. Yayın ortamı hazır chunks.jsonl ile çalışır ve pymupdf kurmaz."""
+    try:
+        import pymupdf
+    except ImportError as e:
+        raise ImportError("PDF işleme için pymupdf gerekli: pip install -r requirements-build.txt") from e
+    return pymupdf.open(path)
 
 
 def _is_heading_like(text: str) -> bool:
@@ -164,7 +176,7 @@ def _is_footnote_start(ln: Line, body_size: float, is_regulation: bool) -> bool:
 
 
 def extract(pdf_path: Path, is_regulation: bool = False) -> Extracted:
-    doc = pymupdf.open(pdf_path)
+    doc = open_pdf(pdf_path)
     body_size = _doc_body_size(doc)
     foot_size = body_size - 1
 
