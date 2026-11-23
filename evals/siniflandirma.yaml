@@ -1,0 +1,66 @@
+# Başarısız soruların neden sınıflandırması.
+# Sonuçlara (evals/sonuclar_retrieval.json) bakılarak elle yazıldı. Hiçbir ayar bu sonuçlara
+# göre değiştirilmedi. Her başarısızlığa bir ana kategori verildi; ikincil etken açıklamada.
+
+kategoriler:
+  kelime_uyusmazligi: "Soru ile madde farklı kelimeler kullanıyor (kargo/taşıyıcı, kampanya mesajı/ticari elektronik ileti, kanıtlamak/ispat). BM25'in yapısal sınırı."
+  anlam_kaymasi: "Günlük ifade, anlamca başka bir hukuki kavrama daha yakın düşüyor (beğenmeyip geri vermek -> ayıplı mal / sözleşmeden dönme, oysa doğru kavram cayma hakkı)."
+  benzer_madde_kalabaligi: "Aynı konuyu işleyen çok sayıda madde var (cayma hakkı en az 6 maddede; ön bilgilendirme MSY m.5-8); doğru madde komşularının gerisinde kalıyor."
+  rrf_seyreltmesi: "Yöntemlerden biri doğru maddeyi üst sıralarda bulmuş, diğerinin kötü sıralaması ağırlıksız birleşimde onu ilk 5'in dışına itiyor."
+
+sorular:
+  S06:
+    hybrid:
+      kategori: rrf_seyreltmesi
+      aciklama: "Embedding 1. sırada, BM25 21. sırada; birleşimde 12. Başlığı 'Cayma hakkı' olan TKHK m.18/24/43 BM25'te öne geçiyor (benzer madde kalabalığı)."
+    bm25:
+      kategori: benzer_madde_kalabaligi
+      aciklama: "'cayma' ve 'sözleşme' kelimeleri başlığı 'Cayma hakkı' olan diğer maddelerde de yoğun; MSY m.15'in ayırt edici kelimesi 'istisna' soruda yok."
+  S08:
+    hybrid:
+      kategori: anlam_kaymasi
+      aciklama: "BM25 2. sırada bulmuş, embedding 24. sırada; birleşimde 16. İlk sıralarda TKHK m.45 (sözleşmeden dönme), MSY m.13, TKHK m.8 (ayıplı mal)."
+    dense:
+      kategori: anlam_kaymasi
+      aciklama: "'Beğenmedim, geri verebilir miyim' ayıplı mal ve seçimlik haklar maddelerine (TKHK m.11, m.15, m.8) yakın gömülüyor; 'internetten' ifadesi mesafeli sözleşme kavramına bağlanmıyor."
+  S09:
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "Soru 'bozuldu, kanıtlamalıyım, üç ay' diyor; madde 'ayıp, ispat, altı ay' diyor."
+  S11:
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "'İstemediğim ürünü gönderdiler' ile 'sipariş edilmeyen mal' arasında ortak kök yok."
+  S12:
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "6. sırada, sınırın hemen dışında. 'vitrin' eşleşiyor ama 'satmak' (satma) ile 'satış' (satış) F5 kırpmasında farklı köklere düşüyor."
+  S13:
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "'Kampanya mesajı, durdurmak' ile 'ticari elektronik ileti, reddetme' arasında ortak kelime yok; 'kampanya' TKHK m.77 ve ETK Ek 2'de geçiyor."
+  S14:
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "Soru 'bilgilerimi, cevap vermek' diyor; madde 'kişisel veri, başvuru, sonuçlandırır' diyor."
+  S19:
+    hybrid:
+      kategori: rrf_seyreltmesi
+      aciklama: "MSY m.17'yi embedding 2. sırada, BM25 18. sırada buluyor; birleşimde 7. Teslim süresi gereksinimi (MSY m.16) 2. sırada karşılanıyor."
+    bm25:
+      kategori: kelime_uyusmazligi
+      aciklama: "'Kargo, kaybolan' ile 'taşıyıcı, kayıp, hasar' F5'te eşleşmiyor (kaybo / kayıp)."
+  S20:
+    hybrid:
+      kategori: benzer_madde_kalabaligi
+      aciklama: "MSY m.6 (ön bilgilendirme yöntemi), m.7, m.8 aynı konuda; m.5 embedding'de 3., BM25'te 10., birleşimde 8. (RRF seyreltmesi de etkili)."
+    bm25:
+      kategori: benzer_madde_kalabaligi
+      aciklama: "'Ön bilgi' kelimeleri MSY m.5-8'in hepsinde ve başlıklarında; içerik maddesi m.5 uzun ve terim yoğunluğu düşük."
+
+genel_notlar:
+  - "Bu sette yalnız embedding her k değerinde hibritten iyi (@5: 20/21'e karşı 17/21). Ağırlıksız RRF, BM25'in kötü olduğu günlük dil sorularında embedding'in doğru sonucunu aşağı çekiyor (S06, S19). Tersine BM25'in kurtardığı tek soru S08 (BM25 2., embedding 24.); orada da hibrit 16. sırada kalıyor."
+  - "Hibritin @1 kaybı (8/21'e karşı embedding 12/21) büyük ölçüde günlük dil sorularından geliyor: S11 ve S12'de TKHK m.11 (seçimlik haklar) ilk sıraya çıkıyor; şikâyet içeren sorular ayıplı mal maddelerine çekiliyor."
+  - "BM25'in güçlü olduğu madde numarası sorguları ('6502 m.48', '47/A') bu sette yok; hibritin bu sorgulardaki katkısı yalnızca birim testlerde (tests/test_search.py) doğrulanıyor, bu raporda ölçülmüyor."
+  - "Cevapsız sorularda hiçbir yöntemin skoru cevaplılardan ayrışmıyor (ör. embedding'de S25 'trafik cezasına itiraz' 0.630, cevaplı soruların medyanı 0.679). Sabit bir skor eşiği 'cevap yok' demek için yeterli görünmüyor; bu karar cevap üretimi katmanında, getirilen metnin soruyu karşılayıp karşılamadığına bakılarak verilmeli."
+  - "Örneklem küçük: cevaplı 21 soru, bir soru yaklaşık 5 puan. Yöntem seçimi gibi bir karar bu sete göre verilirse (dev setine göre ayar), sonucun holdout setinde doğrulanması gerekir."

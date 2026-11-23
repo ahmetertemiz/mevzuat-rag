@@ -1,0 +1,3173 @@
+{
+ "hybrid": [
+  {
+   "id": "S01",
+   "tur": "madde_dili",
+   "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:48",
+     0.03225806451612903
+    ],
+    [
+     "MSY:9",
+     0.032018442622950824
+    ],
+    [
+     "MSY:10",
+     0.032018442622950824
+    ],
+    [
+     "MSY:13",
+     0.030303030303030304
+    ],
+    [
+     "MSY:11",
+     0.02976190476190476
+    ]
+   ],
+   "ilk_skor": 0.03225806451612903,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S02",
+   "tur": "madde_dili",
+   "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+   "dogru": [
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:15",
+     0.03200204813108039
+    ],
+    [
+     "TKHK:10",
+     0.0315136476426799
+    ],
+    [
+     "TKHK:74",
+     0.03125
+    ],
+    [
+     "TKHK:8",
+     0.031024531024531024
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S03",
+   "tur": "madde_dili",
+   "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+   "dogru": [
+    [
+     "TKHK:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:12",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:16",
+     0.03225806451612903
+    ],
+    [
+     "TKHK:9",
+     0.031746031746031744
+    ],
+    [
+     "TKHK:8",
+     0.031009615384615385
+    ],
+    [
+     "TKHK:14",
+     0.029857397504456328
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S04",
+   "tur": "madde_dili",
+   "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+   "dogru": [
+    [
+     "ETK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "ETK:6",
+     0.03278688524590164
+    ],
+    [
+     "ETK:8",
+     0.03225806451612903
+    ],
+    [
+     "ETK:7",
+     0.03149801587301587
+    ],
+    [
+     "ETK:4",
+     0.031009615384615385
+    ],
+    [
+     "ETK:Geçici 1",
+     0.030798389007344232
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S05",
+   "tur": "madde_dili",
+   "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+   "dogru": [
+    [
+     "KVKK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "KVKK:11",
+     0.03278688524590164
+    ],
+    [
+     "KVKK:5",
+     0.031754032258064516
+    ],
+    [
+     "KVKK:10",
+     0.03149801587301587
+    ],
+    [
+     "KVKK:12",
+     0.030834914611005692
+    ],
+    [
+     "KVKK:22",
+     0.03007688828584351
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S06",
+   "tur": "madde_dili",
+   "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+   "dogru": [
+    [
+     "MSY:15"
+    ]
+   ],
+   "gereksinim_siralari": [
+    12
+   ],
+   "ilk5": [
+    [
+     "TKHK:18",
+     0.032266458495966696
+    ],
+    [
+     "TKHK:43",
+     0.03076923076923077
+    ],
+    [
+     "TKHK:24",
+     0.03036576949620428
+    ],
+    [
+     "MSY:14",
+     0.030117753623188408
+    ],
+    [
+     "TKHK:50",
+     0.030017921146953404
+    ]
+   ],
+   "ilk_skor": 0.032266458495966696,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S07",
+   "tur": "madde_dili",
+   "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+   "dogru": [
+    [
+     "TKHK:18"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:18",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:43",
+     0.03225806451612903
+    ],
+    [
+     "TKHK:24",
+     0.03149801587301587
+    ],
+    [
+     "MSY:9",
+     0.03076923076923077
+    ],
+    [
+     "TKHK:19",
+     0.03036576949620428
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S08",
+   "tur": "gunluk_dil",
+   "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    16
+   ],
+   "ilk5": [
+    [
+     "TKHK:45",
+     0.031746031746031744
+    ],
+    [
+     "MSY:13",
+     0.030303030303030304
+    ],
+    [
+     "TKHK:74",
+     0.02821939586645469
+    ],
+    [
+     "TKHK:8",
+     0.028125
+    ],
+    [
+     "MSY:12",
+     0.027271052146674038
+    ]
+   ],
+   "ilk_skor": 0.031746031746031744,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S09",
+   "tur": "gunluk_dil",
+   "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+   "dogru": [
+    [
+     "TKHK:10"
+    ]
+   ],
+   "gereksinim_siralari": [
+    3
+   ],
+   "ilk5": [
+    [
+     "MSY:13",
+     0.03149801587301587
+    ],
+    [
+     "TKHK:47",
+     0.03076923076923077
+    ],
+    [
+     "TKHK:10",
+     0.02889344262295082
+    ],
+    [
+     "TKHK:45",
+     0.02815814850530376
+    ],
+    [
+     "TKHK:11",
+     0.02803379416282642
+    ]
+   ],
+   "ilk_skor": 0.03149801587301587,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S10",
+   "tur": "gunluk_dil",
+   "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+   "dogru": [
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "MSY:16",
+     0.031099324975891997
+    ],
+    [
+     "TKHK:7",
+     0.03021353930031804
+    ],
+    [
+     "TKHK:48",
+     0.030090497737556562
+    ],
+    [
+     "MSY:13",
+     0.02832415420928403
+    ],
+    [
+     "MSY:9",
+     0.028258706467661692
+    ]
+   ],
+   "ilk_skor": 0.031099324975891997,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S11",
+   "tur": "gunluk_dil",
+   "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+   "dogru": [
+    [
+     "TKHK:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.031544957774465976
+    ],
+    [
+     "TKHK:7",
+     0.02946236559139785
+    ],
+    [
+     "ETK:8",
+     0.028782894736842105
+    ],
+    [
+     "TKHK:79",
+     0.02844163539403516
+    ],
+    [
+     "MSY:13",
+     0.027783137179239824
+    ]
+   ],
+   "ilk_skor": 0.031544957774465976,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S12",
+   "tur": "gunluk_dil",
+   "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+   "dogru": [
+    [
+     "TKHK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.03200204813108039
+    ],
+    [
+     "TKHK:6",
+     0.031544957774465976
+    ],
+    [
+     "TKHK:79",
+     0.031099324975891997
+    ],
+    [
+     "ETK:9",
+     0.029513888888888888
+    ],
+    [
+     "TKHK:15",
+     0.028370221327967807
+    ]
+   ],
+   "ilk_skor": 0.03200204813108039,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S13",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+   "dogru": [
+    [
+     "ETK:8"
+    ]
+   ],
+   "gereksinim_siralari": [
+    3
+   ],
+   "ilk5": [
+    [
+     "TKHK:77",
+     0.03252247488101534
+    ],
+    [
+     "MSY:12/A",
+     0.03036576949620428
+    ],
+    [
+     "ETK:8",
+     0.029030910609857977
+    ],
+    [
+     "TKHK:63",
+     0.028612012987012988
+    ],
+    [
+     "ETK:5",
+     0.026234567901234566
+    ]
+   ],
+   "ilk_skor": 0.03252247488101534,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S14",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+   "dogru": [
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    3
+   ],
+   "ilk5": [
+    [
+     "KVKK:15",
+     0.03125
+    ],
+    [
+     "KVKK:14",
+     0.031054405392392875
+    ],
+    [
+     "KVKK:13",
+     0.029726775956284153
+    ],
+    [
+     "MSY:6",
+     0.02964426877470356
+    ],
+    [
+     "KVKK:12",
+     0.02821869488536155
+    ]
+   ],
+   "ilk_skor": 0.03125,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S15",
+   "tur": "gunluk_dil",
+   "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+   "dogru": [
+    [
+     "TKHK:80"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:80",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:47/A",
+     0.03200204813108039
+    ],
+    [
+     "TKHK:77",
+     0.028665028665028666
+    ],
+    [
+     "ETK:1",
+     0.02728937728937729
+    ],
+    [
+     "ETK:2",
+     0.026356857985087564
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S16",
+   "tur": "iki_madde",
+   "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+   "dogru": [
+    [
+     "MSY:13"
+    ],
+    [
+     "MSY:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    3
+   ],
+   "ilk5": [
+    [
+     "MSY:13",
+     0.03252247488101534
+    ],
+    [
+     "TKHK:43",
+     0.03177805800756621
+    ],
+    [
+     "MSY:12",
+     0.0315136476426799
+    ],
+    [
+     "TKHK:24",
+     0.03125
+    ],
+    [
+     "MSY:9",
+     0.031024531024531024
+    ]
+   ],
+   "ilk_skor": 0.03252247488101534,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S17",
+   "tur": "iki_madde",
+   "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+   "dogru": [
+    [
+     "TKHK:56"
+    ],
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    3
+   ],
+   "ilk5": [
+    [
+     "TKHK:56",
+     0.03177805800756621
+    ],
+    [
+     "TKHK:15",
+     0.031544957774465976
+    ],
+    [
+     "TKHK:11",
+     0.0315136476426799
+    ],
+    [
+     "TKHK:57/A",
+     0.03149801587301587
+    ],
+    [
+     "TKHK:58",
+     0.03149801587301587
+    ]
+   ],
+   "ilk_skor": 0.03177805800756621,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S18",
+   "tur": "iki_madde",
+   "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+   "dogru": [
+    [
+     "TKHK:68"
+    ],
+    [
+     "TKHK:73/A"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2,
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:73/A",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:68",
+     0.03225806451612903
+    ],
+    [
+     "TKHK:66",
+     0.03125
+    ],
+    [
+     "TKHK:70",
+     0.03076923076923077
+    ],
+    [
+     "TKHK:73",
+     0.03057889822595705
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S19",
+   "tur": "iki_madde",
+   "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+   "dogru": [
+    [
+     "MSY:17"
+    ],
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    7,
+    2
+   ],
+   "ilk5": [
+    [
+     "MSY:12",
+     0.032266458495966696
+    ],
+    [
+     "MSY:16",
+     0.031754032258064516
+    ],
+    [
+     "MSY:12/A",
+     0.03055037313432836
+    ],
+    [
+     "TKHK:18",
+     0.029877369007803793
+    ],
+    [
+     "MSY:13",
+     0.029386529386529386
+    ]
+   ],
+   "ilk_skor": 0.032266458495966696,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": false,
+   "biri@5": true
+  },
+  {
+   "id": "S20",
+   "tur": "iki_madde",
+   "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+   "dogru": [
+    [
+     "MSY:5"
+    ],
+    [
+     "MSY:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    8,
+    2
+   ],
+   "ilk5": [
+    [
+     "MSY:6",
+     0.03252247488101534
+    ],
+    [
+     "MSY:7",
+     0.03252247488101534
+    ],
+    [
+     "TKHK:40",
+     0.03055037313432836
+    ],
+    [
+     "MSY:8",
+     0.03007688828584351
+    ],
+    [
+     "ETK:4",
+     0.029877369007803793
+    ]
+   ],
+   "ilk_skor": 0.03252247488101534,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": false,
+   "biri@5": true
+  },
+  {
+   "id": "S21",
+   "tur": "iki_madde",
+   "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+   "dogru": [
+    [
+     "KVKK:11",
+     "KVKK:7"
+    ],
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    2
+   ],
+   "ilk5": [
+    [
+     "KVKK:7",
+     0.03278688524590164
+    ],
+    [
+     "KVKK:13",
+     0.03200204813108039
+    ],
+    [
+     "KVKK:11",
+     0.031754032258064516
+    ],
+    [
+     "KVKK:12",
+     0.03125763125763126
+    ],
+    [
+     "KVKK:16",
+     0.029709507042253523
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S22",
+   "tur": "cevapsiz",
+   "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "MSY:12",
+     0.03252247488101534
+    ],
+    [
+     "TKHK:45",
+     0.031024531024531024
+    ],
+    [
+     "MSY:16",
+     0.030776515151515152
+    ],
+    [
+     "TKHK:43",
+     0.030090497737556562
+    ],
+    [
+     "TKHK:34",
+     0.028612012987012988
+    ]
+   ],
+   "ilk_skor": 0.03252247488101534,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S23",
+   "tur": "cevapsiz",
+   "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "ETK:12",
+     0.03149801587301587
+    ],
+    [
+     "ETK:Ek 2",
+     0.03125763125763126
+    ],
+    [
+     "ETK:Ek 3",
+     0.02964254577157803
+    ],
+    [
+     "ETK:Ek 4",
+     0.029551337359792925
+    ],
+    [
+     "TKHK:25",
+     0.02758751902587519
+    ]
+   ],
+   "ilk_skor": 0.03149801587301587,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S24",
+   "tur": "cevapsiz",
+   "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "KVKK:27",
+     0.03278688524590164
+    ],
+    [
+     "TKHK:37",
+     0.03128054740957967
+    ],
+    [
+     "KVKK:23",
+     0.02712049508554787
+    ],
+    [
+     "TKHK:34",
+     0.026687875574407917
+    ],
+    [
+     "TKHK:24",
+     0.026334026334026334
+    ]
+   ],
+   "ilk_skor": 0.03278688524590164,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S25",
+   "tur": "cevapsiz",
+   "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "ETK:12",
+     0.03252247488101534
+    ],
+    [
+     "TKHK:77/A",
+     0.03125763125763126
+    ],
+    [
+     "TKHK:77",
+     0.03036576949620428
+    ],
+    [
+     "TKHK:78",
+     0.03009207275993712
+    ],
+    [
+     "TKHK:70",
+     0.02724014336917563
+    ]
+   ],
+   "ilk_skor": 0.03252247488101534,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  }
+ ],
+ "dense": [
+  {
+   "id": "S01",
+   "tur": "madde_dili",
+   "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "MSY:9",
+     0.7739520072937012
+    ],
+    [
+     "TKHK:48",
+     0.7147914171218872
+    ],
+    [
+     "MSY:12",
+     0.7045049667358398
+    ],
+    [
+     "MSY:10",
+     0.6971895694732666
+    ],
+    [
+     "MSY:15",
+     0.6795677542686462
+    ]
+   ],
+   "ilk_skor": 0.7739520072937012,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S02",
+   "tur": "madde_dili",
+   "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+   "dogru": [
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.8131443858146667
+    ],
+    [
+     "TKHK:15",
+     0.7652580738067627
+    ],
+    [
+     "TKHK:8",
+     0.7023869156837463
+    ],
+    [
+     "TKHK:74",
+     0.699609100818634
+    ],
+    [
+     "TKHK:10",
+     0.6658324003219604
+    ]
+   ],
+   "ilk_skor": 0.8131443858146667,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S03",
+   "tur": "madde_dili",
+   "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+   "dogru": [
+    [
+     "TKHK:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:12",
+     0.7344510555267334
+    ],
+    [
+     "TKHK:16",
+     0.6666890382766724
+    ],
+    [
+     "TKHK:9",
+     0.6329305171966553
+    ],
+    [
+     "TKHK:8",
+     0.6205621957778931
+    ],
+    [
+     "TKHK:10",
+     0.6048306226730347
+    ]
+   ],
+   "ilk_skor": 0.7344510555267334,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S04",
+   "tur": "madde_dili",
+   "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+   "dogru": [
+    [
+     "ETK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "ETK:6",
+     0.8093080520629883
+    ],
+    [
+     "ETK:8",
+     0.6910051107406616
+    ],
+    [
+     "ETK:Geçici 1",
+     0.6757583022117615
+    ],
+    [
+     "ETK:7",
+     0.6757556200027466
+    ],
+    [
+     "ETK:4",
+     0.6708601117134094
+    ]
+   ],
+   "ilk_skor": 0.8093080520629883,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S05",
+   "tur": "madde_dili",
+   "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+   "dogru": [
+    [
+     "KVKK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "KVKK:11",
+     0.7556222677230835
+    ],
+    [
+     "KVKK:12",
+     0.7345663905143738
+    ],
+    [
+     "KVKK:10",
+     0.7134889364242554
+    ],
+    [
+     "KVKK:5",
+     0.6869107484817505
+    ],
+    [
+     "KVKK:16",
+     0.6777334213256836
+    ]
+   ],
+   "ilk_skor": 0.7556222677230835,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S06",
+   "tur": "madde_dili",
+   "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+   "dogru": [
+    [
+     "MSY:15"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "MSY:15",
+     0.7449713945388794
+    ],
+    [
+     "TKHK:50",
+     0.699494481086731
+    ],
+    [
+     "TKHK:18",
+     0.6742992401123047
+    ],
+    [
+     "MSY:14",
+     0.6652848124504089
+    ],
+    [
+     "TKHK:43",
+     0.6573659181594849
+    ]
+   ],
+   "ilk_skor": 0.7449713945388794,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S07",
+   "tur": "madde_dili",
+   "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+   "dogru": [
+    [
+     "TKHK:18"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:18",
+     0.7538114190101624
+    ],
+    [
+     "TKHK:43",
+     0.745749294757843
+    ],
+    [
+     "TKHK:24",
+     0.7016825079917908
+    ],
+    [
+     "TKHK:50",
+     0.6997464895248413
+    ],
+    [
+     "MSY:9",
+     0.698881983757019
+    ]
+   ],
+   "ilk_skor": 0.7538114190101624,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S08",
+   "tur": "gunluk_dil",
+   "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    24
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.5464552640914917
+    ],
+    [
+     "TKHK:15",
+     0.5255469083786011
+    ],
+    [
+     "TKHK:45",
+     0.5242592692375183
+    ],
+    [
+     "TKHK:8",
+     0.5227156281471252
+    ],
+    [
+     "ETK:12",
+     0.5104279518127441
+    ]
+   ],
+   "ilk_skor": 0.5464552640914917,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S09",
+   "tur": "gunluk_dil",
+   "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+   "dogru": [
+    [
+     "TKHK:10"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:10",
+     0.576801061630249
+    ],
+    [
+     "TKHK:11",
+     0.5539100170135498
+    ],
+    [
+     "TKHK:58",
+     0.5465024709701538
+    ],
+    [
+     "MSY:13",
+     0.54096919298172
+    ],
+    [
+     "TKHK:47",
+     0.5400367975234985
+    ]
+   ],
+   "ilk_skor": 0.576801061630249,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S10",
+   "tur": "gunluk_dil",
+   "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+   "dogru": [
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "MSY:16",
+     0.6312679648399353
+    ],
+    [
+     "MSY:13",
+     0.6189171075820923
+    ],
+    [
+     "TKHK:56",
+     0.5955151319503784
+    ],
+    [
+     "MSY:12",
+     0.5918533802032471
+    ],
+    [
+     "TKHK:58",
+     0.5792467594146729
+    ]
+   ],
+   "ilk_skor": 0.6312679648399353,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S11",
+   "tur": "gunluk_dil",
+   "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+   "dogru": [
+    [
+     "TKHK:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     0.5825933218002319
+    ],
+    [
+     "TKHK:7",
+     0.57151198387146
+    ],
+    [
+     "ETK:12",
+     0.5571743249893188
+    ],
+    [
+     "ETK:8",
+     0.5530259013175964
+    ],
+    [
+     "TKHK:15",
+     0.5482442378997803
+    ]
+   ],
+   "ilk_skor": 0.5825933218002319,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S12",
+   "tur": "gunluk_dil",
+   "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+   "dogru": [
+    [
+     "TKHK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:6",
+     0.6284347176551819
+    ],
+    [
+     "TKHK:11",
+     0.5612574815750122
+    ],
+    [
+     "TKHK:74",
+     0.5343555212020874
+    ],
+    [
+     "TKHK:7",
+     0.5265727639198303
+    ],
+    [
+     "TKHK:80",
+     0.5265206098556519
+    ]
+   ],
+   "ilk_skor": 0.6284347176551819,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S13",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+   "dogru": [
+    [
+     "ETK:8"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:77",
+     0.5636134147644043
+    ],
+    [
+     "ETK:8",
+     0.5419054627418518
+    ],
+    [
+     "TKHK:63",
+     0.5319262146949768
+    ],
+    [
+     "TKHK:53",
+     0.5275458097457886
+    ],
+    [
+     "TKHK:65",
+     0.5173598527908325
+    ]
+   ],
+   "ilk_skor": 0.5636134147644043,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S14",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+   "dogru": [
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "KVKK:13",
+     0.6315300464630127
+    ],
+    [
+     "KVKK:14",
+     0.6185564994812012
+    ],
+    [
+     "MSY:20",
+     0.5963976979255676
+    ],
+    [
+     "KVKK:15",
+     0.5898878574371338
+    ],
+    [
+     "MSY:10",
+     0.5722982287406921
+    ]
+   ],
+   "ilk_skor": 0.6315300464630127,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S15",
+   "tur": "gunluk_dil",
+   "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+   "dogru": [
+    [
+     "TKHK:80"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:80",
+     0.5927450060844421
+    ],
+    [
+     "TKHK:47/A",
+     0.514315128326416
+    ],
+    [
+     "ETK:12",
+     0.5066173076629639
+    ],
+    [
+     "ETK:Ek 4",
+     0.503372311592102
+    ],
+    [
+     "ETK:1",
+     0.4984658658504486
+    ]
+   ],
+   "ilk_skor": 0.5927450060844421,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S16",
+   "tur": "iki_madde",
+   "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+   "dogru": [
+    [
+     "MSY:13"
+    ],
+    [
+     "MSY:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    2
+   ],
+   "ilk5": [
+    [
+     "MSY:13",
+     0.7354927062988281
+    ],
+    [
+     "MSY:12",
+     0.7196645140647888
+    ],
+    [
+     "TKHK:18",
+     0.6949434280395508
+    ],
+    [
+     "TKHK:24",
+     0.6787102222442627
+    ],
+    [
+     "TKHK:43",
+     0.674510657787323
+    ]
+   ],
+   "ilk_skor": 0.7354927062988281,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S17",
+   "tur": "iki_madde",
+   "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+   "dogru": [
+    [
+     "TKHK:56"
+    ],
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    5,
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:15",
+     0.6595737934112549
+    ],
+    [
+     "TKHK:11",
+     0.6482032537460327
+    ],
+    [
+     "TKHK:58",
+     0.6361474990844727
+    ],
+    [
+     "TKHK:57/A",
+     0.6299827098846436
+    ],
+    [
+     "TKHK:56",
+     0.6201553344726562
+    ]
+   ],
+   "ilk_skor": 0.6595737934112549,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S18",
+   "tur": "iki_madde",
+   "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+   "dogru": [
+    [
+     "TKHK:68"
+    ],
+    [
+     "TKHK:73/A"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2,
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:73/A",
+     0.7576273679733276
+    ],
+    [
+     "TKHK:68",
+     0.7425124645233154
+    ],
+    [
+     "TKHK:73",
+     0.6614994406700134
+    ],
+    [
+     "TKHK:66",
+     0.6241987347602844
+    ],
+    [
+     "TKHK:70",
+     0.6237480640411377
+    ]
+   ],
+   "ilk_skor": 0.7576273679733276,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S19",
+   "tur": "iki_madde",
+   "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+   "dogru": [
+    [
+     "MSY:17"
+    ],
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2,
+    4
+   ],
+   "ilk5": [
+    [
+     "MSY:12",
+     0.6066789627075195
+    ],
+    [
+     "MSY:17",
+     0.5888274908065796
+    ],
+    [
+     "MSY:13",
+     0.5869234800338745
+    ],
+    [
+     "MSY:16",
+     0.5700056552886963
+    ],
+    [
+     "TKHK:58",
+     0.5599398016929626
+    ]
+   ],
+   "ilk_skor": 0.6066789627075195,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S20",
+   "tur": "iki_madde",
+   "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+   "dogru": [
+    [
+     "MSY:5"
+    ],
+    [
+     "MSY:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    3,
+    1
+   ],
+   "ilk5": [
+    [
+     "MSY:7",
+     0.6802225112915039
+    ],
+    [
+     "MSY:6",
+     0.6559877395629883
+    ],
+    [
+     "MSY:5",
+     0.6481031179428101
+    ],
+    [
+     "ETK:3",
+     0.6450900435447693
+    ],
+    [
+     "TKHK:23",
+     0.6345223784446716
+    ]
+   ],
+   "ilk_skor": 0.6802225112915039,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S21",
+   "tur": "iki_madde",
+   "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+   "dogru": [
+    [
+     "KVKK:11",
+     "KVKK:7"
+    ],
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    3
+   ],
+   "ilk5": [
+    [
+     "KVKK:7",
+     0.6788175106048584
+    ],
+    [
+     "KVKK:11",
+     0.6749236583709717
+    ],
+    [
+     "KVKK:13",
+     0.6634128093719482
+    ],
+    [
+     "KVKK:16",
+     0.6522330045700073
+    ],
+    [
+     "KVKK:12",
+     0.6432507634162903
+    ]
+   ],
+   "ilk_skor": 0.6788175106048584,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S22",
+   "tur": "cevapsiz",
+   "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "TKHK:44",
+     0.572550356388092
+    ],
+    [
+     "MSY:12",
+     0.5536036491394043
+    ],
+    [
+     "TKHK:45",
+     0.5410062670707703
+    ],
+    [
+     "TKHK:34",
+     0.5321866273880005
+    ],
+    [
+     "MSY:13",
+     0.5246506929397583
+    ]
+   ],
+   "ilk_skor": 0.572550356388092,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S23",
+   "tur": "cevapsiz",
+   "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "ETK:Ek 2",
+     0.5407804250717163
+    ],
+    [
+     "ETK:Ek 3",
+     0.5401939153671265
+    ],
+    [
+     "ETK:12",
+     0.5393039584159851
+    ],
+    [
+     "ETK:Tablo-2026",
+     0.5307437181472778
+    ],
+    [
+     "ETK:Ek 4",
+     0.5145682096481323
+    ]
+   ],
+   "ilk_skor": 0.5407804250717163,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S24",
+   "tur": "cevapsiz",
+   "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "KVKK:27",
+     0.5765877962112427
+    ],
+    [
+     "TKHK:Tablo-2026",
+     0.5011875629425049
+    ],
+    [
+     "KVKK:21",
+     0.4830600917339325
+    ],
+    [
+     "TKHK:37",
+     0.4747597575187683
+    ],
+    [
+     "KVKK:18",
+     0.46967044472694397
+    ]
+   ],
+   "ilk_skor": 0.5765877962112427,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S25",
+   "tur": "cevapsiz",
+   "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "TKHK:78",
+     0.6298485398292542
+    ],
+    [
+     "ETK:12",
+     0.5996807813644409
+    ],
+    [
+     "TKHK:77/A",
+     0.5875135660171509
+    ],
+    [
+     "TKHK:77",
+     0.5719908475875854
+    ],
+    [
+     "KVKK:14",
+     0.5546582341194153
+    ]
+   ],
+   "ilk_skor": 0.6298485398292542,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  }
+ ],
+ "bm25": [
+  {
+   "id": "S01",
+   "tur": "madde_dili",
+   "soru": "Mesafeli sözleşmelerde cayma hakkı süresi kaç gündür?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "MSY:10",
+     10.93752558331332
+    ],
+    [
+     "TKHK:48",
+     10.321672650012115
+    ],
+    [
+     "MSY:11",
+     9.797620358178483
+    ],
+    [
+     "MSY:9",
+     9.675847113156614
+    ],
+    [
+     "TKHK:18",
+     9.161746495815953
+    ]
+   ],
+   "ilk_skor": 10.93752558331332,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S02",
+   "tur": "madde_dili",
+   "soru": "Malın ayıplı olması durumunda tüketicinin seçimlik hakları nelerdir?",
+   "dogru": [
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:11",
+     19.127313934318085
+    ],
+    [
+     "TKHK:10",
+     18.42027692102782
+    ],
+    [
+     "TKHK:15",
+     16.329714877001614
+    ],
+    [
+     "TKHK:74",
+     14.69503821416905
+    ],
+    [
+     "TKHK:56",
+     13.635568792152212
+    ]
+   ],
+   "ilk_skor": 19.127313934318085,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S03",
+   "tur": "madde_dili",
+   "soru": "Ayıplı maldan sorumluluk hangi zamanaşımı süresine tabidir?",
+   "dogru": [
+    [
+     "TKHK:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:12",
+     23.637851765680953
+    ],
+    [
+     "TKHK:16",
+     16.828390077399618
+    ],
+    [
+     "TKHK:9",
+     11.573636447787436
+    ],
+    [
+     "TKHK:53",
+     6.9954102783877
+    ],
+    [
+     "TKHK:8",
+     6.345141622356961
+    ]
+   ],
+   "ilk_skor": 23.637851765680953,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S04",
+   "tur": "madde_dili",
+   "soru": "Ticari elektronik iletilerin gönderilmesi için alıcının önceden onayı gerekir mi?",
+   "dogru": [
+    [
+     "ETK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "ETK:6",
+     22.642312923252106
+    ],
+    [
+     "ETK:8",
+     18.302254227366323
+    ],
+    [
+     "ETK:7",
+     11.291455500756136
+    ],
+    [
+     "ETK:4",
+     10.963635062744755
+    ],
+    [
+     "ETK:11",
+     10.437352025318315
+    ]
+   ],
+   "ilk_skor": 22.642312923252106,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S05",
+   "tur": "madde_dili",
+   "soru": "Kişisel verileri işlenen ilgili kişinin veri sorumlusuna karşı hakları nelerdir?",
+   "dogru": [
+    [
+     "KVKK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "KVKK:11",
+     19.494623263798466
+    ],
+    [
+     "KVKK:5",
+     18.63417481627953
+    ],
+    [
+     "KVKK:28",
+     17.826178059378755
+    ],
+    [
+     "KVKK:10",
+     16.312923334158395
+    ],
+    [
+     "KVKK:7",
+     14.846124614497898
+    ]
+   ],
+   "ilk_skor": 19.494623263798466,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S06",
+   "tur": "madde_dili",
+   "soru": "Tüketicinin cayma hakkını kullanamayacağı sözleşmeler hangileridir?",
+   "dogru": [
+    [
+     "MSY:15"
+    ]
+   ],
+   "gereksinim_siralari": [
+    21
+   ],
+   "ilk5": [
+    [
+     "TKHK:18",
+     10.21102971047424
+    ],
+    [
+     "MSY:11",
+     9.902852410217914
+    ],
+    [
+     "TKHK:24",
+     9.567411740485962
+    ],
+    [
+     "MSY:Ek",
+     9.227981264519858
+    ],
+    [
+     "TKHK:43",
+     9.052548826156217
+    ]
+   ],
+   "ilk_skor": 10.21102971047424,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S07",
+   "tur": "madde_dili",
+   "soru": "Taksitle satış sözleşmesinden cayma hakkı kaç gün içinde kullanılabilir?",
+   "dogru": [
+    [
+     "TKHK:18"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:18",
+     15.588540044256806
+    ],
+    [
+     "TKHK:43",
+     12.122878561264994
+    ],
+    [
+     "TKHK:19",
+     11.91538631266011
+    ],
+    [
+     "TKHK:24",
+     11.298117365109656
+    ],
+    [
+     "MSY:9",
+     10.973045878008753
+    ]
+   ],
+   "ilk_skor": 15.588540044256806,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S08",
+   "tur": "gunluk_dil",
+   "soru": "İnternetten aldığım ayakkabıyı beğenmedim, geri verebilir miyim?",
+   "dogru": [
+    [
+     "MSY:9",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:77",
+     7.997187238127802
+    ],
+    [
+     "MSY:9",
+     5.9541574667971
+    ],
+    [
+     "TKHK:45",
+     5.367584201913509
+    ],
+    [
+     "TKHK:20",
+     4.862391874271756
+    ],
+    [
+     "MSY:13",
+     4.860494253346638
+    ]
+   ],
+   "ilk_skor": 7.997187238127802,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S09",
+   "tur": "gunluk_dil",
+   "soru": "Aldığım telefon üç ay sonra bozuldu, satıcı kullanıcı hatası diyor. Bozukluğun baştan olduğunu ben mi kanıtlamalıyım?",
+   "dogru": [
+    [
+     "TKHK:10"
+    ]
+   ],
+   "gereksinim_siralari": [
+    20
+   ],
+   "ilk5": [
+    [
+     "TKHK:45",
+     11.742873187871677
+    ],
+    [
+     "MSY:22",
+     10.414938049272564
+    ],
+    [
+     "MSY:13",
+     10.105519196178836
+    ],
+    [
+     "MSY:18",
+     9.153401442246707
+    ],
+    [
+     "TKHK:47",
+     7.609796890596801
+    ]
+   ],
+   "ilk_skor": 11.742873187871677,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S10",
+   "tur": "gunluk_dil",
+   "soru": "Siparişim bir aydır gelmedi. Satıcının ürünü göndermesi için bir süre sınırı var mı?",
+   "dogru": [
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    5
+   ],
+   "ilk5": [
+    [
+     "MSY:6",
+     11.16960176030147
+    ],
+    [
+     "TKHK:7",
+     9.298366517718753
+    ],
+    [
+     "MSY:Ek",
+     8.843938995828184
+    ],
+    [
+     "ETK:2",
+     7.687934503889373
+    ],
+    [
+     "TKHK:48",
+     7.420926728726713
+    ]
+   ],
+   "ilk_skor": 11.16960176030147,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S11",
+   "tur": "gunluk_dil",
+   "soru": "Benim istemediğim bir ürünü kapıma gönderdiler, şimdi parasını istiyorlar. Ödemek zorunda mıyım?",
+   "dogru": [
+    [
+     "TKHK:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    15
+   ],
+   "ilk5": [
+    [
+     "TKHK:79",
+     7.414400493890579
+    ],
+    [
+     "TKHK:76",
+     7.163188940147377
+    ],
+    [
+     "KVKK:11",
+     6.676714450459509
+    ],
+    [
+     "ETK:9",
+     6.614271594438273
+    ],
+    [
+     "KVKK:15",
+     5.847288677619997
+    ]
+   ],
+   "ilk_skor": 7.414400493890579,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S12",
+   "tur": "gunluk_dil",
+   "soru": "Mağaza vitrinde duran ürünü bana satmak istemiyor. Bunu yapmaya hakları var mı?",
+   "dogru": [
+    [
+     "TKHK:6"
+    ]
+   ],
+   "gereksinim_siralari": [
+    6
+   ],
+   "ilk5": [
+    [
+     "TKHK:79",
+     11.868641241350298
+    ],
+    [
+     "KVKK:11",
+     9.578053902318894
+    ],
+    [
+     "TKHK:11",
+     8.99629802125929
+    ],
+    [
+     "ETK:9",
+     8.428771147464113
+    ],
+    [
+     "TKHK:76",
+     6.262643109414486
+    ]
+   ],
+   "ilk_skor": 11.868641241350298,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S13",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirketten sürekli kampanya mesajı geliyor. Bunları nasıl durdurabilirim?",
+   "dogru": [
+    [
+     "ETK:8"
+    ]
+   ],
+   "gereksinim_siralari": [
+    15
+   ],
+   "ilk5": [
+    [
+     "TKHK:77",
+     7.1320820512467895
+    ],
+    [
+     "MSY:12/A",
+     6.531454767664602
+    ],
+    [
+     "ETK:Ek 2",
+     5.624997781953036
+    ],
+    [
+     "ETK:2",
+     5.447862942170659
+    ],
+    [
+     "TKHK:3",
+     5.420184807600023
+    ]
+   ],
+   "ilk_skor": 7.1320820512467895,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S14",
+   "tur": "gunluk_dil",
+   "soru": "Bir şirkete bilgilerimi ne yaptığını sordum. Bana ne kadar sürede cevap vermek zorunda?",
+   "dogru": [
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    15
+   ],
+   "ilk5": [
+    [
+     "TKHK:29",
+     7.389464720328825
+    ],
+    [
+     "TKHK:38",
+     7.317849850614392
+    ],
+    [
+     "KVKK:12",
+     7.242051521628547
+    ],
+    [
+     "KVKK:15",
+     7.14659477828527
+    ],
+    [
+     "TKHK:47/A",
+     6.604027950135068
+    ]
+   ],
+   "ilk_skor": 7.389464720328825,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S15",
+   "tur": "gunluk_dil",
+   "soru": "Arkadaşım yeni üye getirdikçe para kazanacağımız bir sisteme girmemi istiyor. Bu yasal mı?",
+   "dogru": [
+    [
+     "TKHK:80"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:80",
+     14.309761426042847
+    ],
+    [
+     "TKHK:26",
+     12.419299438681591
+    ],
+    [
+     "TKHK:47/A",
+     11.161169156128924
+    ],
+    [
+     "TKHK:63",
+     10.40970747944911
+    ],
+    [
+     "TKHK:45",
+     7.335205993358652
+    ]
+   ],
+   "ilk_skor": 14.309761426042847,
+   "tumu@1": true,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S16",
+   "tur": "iki_madde",
+   "soru": "İnternetten aldığım ürün için cayma hakkımı kullandım. Ürünü kaç gün içinde geri göndermeliyim, satıcı da paramı kaç gün içinde iade etmeli?",
+   "dogru": [
+    [
+     "MSY:13"
+    ],
+    [
+     "MSY:12"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2,
+    5
+   ],
+   "ilk5": [
+    [
+     "TKHK:43",
+     24.101682589067984
+    ],
+    [
+     "MSY:13",
+     22.58112710963671
+    ],
+    [
+     "MSY:9",
+     21.99608627733887
+    ],
+    [
+     "TKHK:24",
+     21.342533838339232
+    ],
+    [
+     "MSY:12",
+     20.90715639580977
+    ]
+   ],
+   "ilk_skor": 24.101682589067984,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S17",
+   "tur": "iki_madde",
+   "soru": "Garanti süresi içinde onarılan ürün tekrar arızalanırsa hangi haklarımı kullanabilirim?",
+   "dogru": [
+    [
+     "TKHK:56"
+    ],
+    [
+     "TKHK:11"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    5
+   ],
+   "ilk5": [
+    [
+     "TKHK:56",
+     27.88141670778615
+    ],
+    [
+     "TKHK:57",
+     18.273893589699338
+    ],
+    [
+     "TKHK:57/A",
+     14.788500298173178
+    ],
+    [
+     "TKHK:58",
+     14.533682061383011
+    ],
+    [
+     "TKHK:11",
+     12.134138079410466
+    ]
+   ],
+   "ilk_skor": 27.88141670778615,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S18",
+   "tur": "iki_madde",
+   "soru": "Tüketici hakem heyetine hangi tutarın altındaki uyuşmazlıklarda başvurulur, bu tutarın üstünde dava açmadan önce arabulucuya gitmek zorunlu mu?",
+   "dogru": [
+    [
+     "TKHK:68"
+    ],
+    [
+     "TKHK:73/A"
+    ]
+   ],
+   "gereksinim_siralari": [
+    2,
+    1
+   ],
+   "ilk5": [
+    [
+     "TKHK:73/A",
+     38.7908798929229
+    ],
+    [
+     "TKHK:68",
+     25.333814102697616
+    ],
+    [
+     "MSY:5",
+     17.322297315493728
+    ],
+    [
+     "TKHK:66",
+     16.94696844824147
+    ],
+    [
+     "TKHK:70",
+     16.643434898774423
+    ]
+   ],
+   "ilk_skor": 38.7908798929229,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S19",
+   "tur": "iki_madde",
+   "soru": "Kargoda kaybolan üründen kim sorumludur ve satıcı ürünü en geç kaç gün içinde teslim etmek zorundadır?",
+   "dogru": [
+    [
+     "MSY:17"
+    ],
+    [
+     "MSY:16",
+     "TKHK:48"
+    ]
+   ],
+   "gereksinim_siralari": [
+    18,
+    2
+   ],
+   "ilk5": [
+    [
+     "TKHK:76",
+     13.941028218367537
+    ],
+    [
+     "MSY:16",
+     13.568378162900649
+    ],
+    [
+     "MSY:12",
+     12.89918445760264
+    ],
+    [
+     "MSY:12/A",
+     9.435700566589482
+    ],
+    [
+     "TKHK:18",
+     9.408477876572778
+    ]
+   ],
+   "ilk_skor": 13.941028218367537,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": false,
+   "biri@5": true
+  },
+  {
+   "id": "S20",
+   "tur": "iki_madde",
+   "soru": "İnternet satışında satıcı sözleşme kurulmadan önce hangi bilgileri vermek zorundadır ve bu ön bilgilerin alındığı nasıl teyit edilir?",
+   "dogru": [
+    [
+     "MSY:5"
+    ],
+    [
+     "MSY:7"
+    ]
+   ],
+   "gereksinim_siralari": [
+    10,
+    2
+   ],
+   "ilk5": [
+    [
+     "MSY:6",
+     16.94702271601404
+    ],
+    [
+     "MSY:7",
+     16.596628406982795
+    ],
+    [
+     "MSY:11",
+     16.48265035568567
+    ],
+    [
+     "TKHK:40",
+     13.908589383818404
+    ],
+    [
+     "ETK:4",
+     13.274508211339025
+    ]
+   ],
+   "ilk_skor": 16.94702271601404,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": true,
+   "tumu@5": false,
+   "biri@5": true
+  },
+  {
+   "id": "S21",
+   "tur": "iki_madde",
+   "soru": "Kişisel verilerimin silinmesini isteyebilir miyim ve bu talebimi veri sorumlusuna hangi yolla iletirim?",
+   "dogru": [
+    [
+     "KVKK:11",
+     "KVKK:7"
+    ],
+    [
+     "KVKK:13"
+    ]
+   ],
+   "gereksinim_siralari": [
+    1,
+    2
+   ],
+   "ilk5": [
+    [
+     "KVKK:7",
+     18.0986040146006
+    ],
+    [
+     "KVKK:13",
+     13.863613372749832
+    ],
+    [
+     "KVKK:12",
+     11.752878041229803
+    ],
+    [
+     "KVKK:11",
+     11.487753150116617
+    ],
+    [
+     "KVKK:3",
+     11.26861102526799
+    ]
+   ],
+   "ilk_skor": 18.0986040146006,
+   "tumu@1": false,
+   "biri@1": true,
+   "tumu@3": true,
+   "biri@3": true,
+   "tumu@5": true,
+   "biri@5": true
+  },
+  {
+   "id": "S22",
+   "tur": "cevapsiz",
+   "soru": "Kiracının depozitosunu ev sahibi ne zaman iade etmek zorundadır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "MSY:12",
+     8.411388506764467
+    ],
+    [
+     "TKHK:52",
+     6.5408680483132295
+    ],
+    [
+     "MSY:16",
+     6.504511302138152
+    ],
+    [
+     "TKHK:43",
+     6.273809645905681
+    ],
+    [
+     "TKHK:45",
+     5.965520908879247
+    ]
+   ],
+   "ilk_skor": 8.411388506764467,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S23",
+   "tur": "cevapsiz",
+   "soru": "İnternetten yapılan satışlarda KDV oranı yüzde kaç uygulanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "ETK:Ek 4",
+     10.68971513631963
+    ],
+    [
+     "ETK:Ek 2",
+     9.196568855905044
+    ],
+    [
+     "ETK:12",
+     7.212087186020812
+    ],
+    [
+     "TKHK:37",
+     6.570765237758969
+    ],
+    [
+     "TKHK:77",
+     6.316366538711419
+    ]
+   ],
+   "ilk_skor": 10.68971513631963,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S24",
+   "tur": "cevapsiz",
+   "soru": "İşten çıkarılan bir çalışanın kıdem tazminatı nasıl hesaplanır?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "KVKK:27",
+     10.31168021858101
+    ],
+    [
+     "TKHK:37",
+     6.909342108781507
+    ],
+    [
+     "TKHK:31",
+     6.787732498916105
+    ],
+    [
+     "TKHK:1",
+     6.770877759705012
+    ],
+    [
+     "TKHK:64",
+     6.493775250186587
+    ]
+   ],
+   "ilk_skor": 10.31168021858101,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  },
+  {
+   "id": "S25",
+   "tur": "cevapsiz",
+   "soru": "Trafik cezasına itiraz süresi kaç gündür?",
+   "dogru": [],
+   "gereksinim_siralari": [],
+   "ilk5": [
+    [
+     "ETK:12",
+     6.263768063431375
+    ],
+    [
+     "TKHK:70",
+     5.94896950625314
+    ],
+    [
+     "TKHK:77",
+     5.6639113077166
+    ],
+    [
+     "TKHK:77/A",
+     4.887287345165957
+    ],
+    [
+     "MSY:15",
+     4.671169786122779
+    ]
+   ],
+   "ilk_skor": 6.263768063431375,
+   "tumu@1": false,
+   "biri@1": false,
+   "tumu@3": false,
+   "biri@3": false,
+   "tumu@5": false,
+   "biri@5": false
+  }
+ ]
+}
