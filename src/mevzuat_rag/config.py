@@ -19,6 +19,11 @@ INDEX_DIR = ROOT / "index"
 # Bir parçanın gövdesi için üst sınır (kelime). Bunu aşan maddeler fıkra/bent sınırından bölünür.
 MAX_CHUNK_WORDS = 350
 
+# Embedding modeli. bge-m3 8192 token'a kadar destekler; bellek ve hız için sınırı, en uzun
+# parçayı kesmeyecek bir değerde tutuyoruz (build_index.py kesilen parça olursa uyarır).
+EMBED_MODEL = "BAAI/bge-m3"
+EMBED_MAX_TOKENS = 2048
+
 
 @dataclass(frozen=True)
 class DocSpec:

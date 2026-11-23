@@ -49,6 +49,32 @@ python -m venv .venv
 
 Nasıl çalışır: PyMuPDF ile her satırın punto boyutu okunur. Gövde, dipnot ve üst simge dipnot işaretleri farklı puntoda olduğu için dipnotlar madde metninden ayrılır. Dipnot sayfa sonunda bir cümleyi bölse bile metin yeniden birleşir.
 
+## Arama
+
+```powershell
+.venv\Scripts\python scripts\build_index.py          # bge-m3 embedding'leri -> index/ (ilk çalıştırmada model ~2,2 GB iner)
+.venv\Scripts\python search.py "cayma hakkı kaç gün"
+.venv\Scripts\python search.py "6502 m.48" --mode bm25 -k 3
+```
+
+- **Yoğun arama:** `BAAI/bge-m3`, CPU, normalize vektörler, kosinüs benzerliği (numpy matris çarpımı).
+- **BM25:** Türkçe küçük harf + ilk 5 harf kırpma (F5) + küçük bir durak kelime listesi.
+  Madde numaraları özel belirtece çevrilir: `md:48`, `md:47/a`, `md:ek1`, `md:gecici2` ve belge
+  adıyla birleşik `md:tkhk:48`. Bu belirteçler yalnızca sorguda ve parçanın bağlam başlığında
+  üretilir. Gövdedeki "48 inci maddesinin" gibi atıflar belirtece çevrilmez.
+- **Birleştirme:** Reciprocal Rank Fusion, `k=60`, ağırlık yok.
+- Ölçümler: [reports/performans.md](reports/performans.md) (`scripts/benchmark_model.py`).
+
+## Değerlendirme
+
+```powershell
+.venv\Scripts\python scripts\eval_retrieval.py
+```
+
+- `evals/retrieval.yaml`: 25 soruluk geliştirme seti. Sorular arama kodu yazılmadan önce commit'lendi.
+- `evals/holdout.yaml`: holdout seti. Soruları proje sahibi yazar, geliştirme sırasında çalıştırılmaz.
+- Sonuçlar: [evals/RAPOR.md](evals/RAPOR.md).
+
 ## Bilinen sınırlar
 
 - **İdari para cezası tabloları** (6502 m.77 ve 6563 m.12, 2026 tutarları) PDF görüntüleriyle
