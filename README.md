@@ -18,8 +18,9 @@ bilgiyle boşluk doldurmaz.
 | `1.5.6698.pdf` | 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) |
 | `7.5.20237.pdf` | Mesafeli Sözleşmeler Yönetmeliği (MSY) |
 
-Kaynak: mevzuat.gov.tr, **indirme tarihi 2026-11-23**. Bu tarihten sonraki değişiklikler kapsanmaz.
-`docs_raw/` içindeki dosyalar değiştirilmez.
+PDF'ler depoda yer alır. Bunlar resmî mevzuat metinleridir; kaynak mevzuat.gov.tr, **indirme
+tarihi 2026-11-23**. Bu tarihten sonraki değişiklikler kapsanmaz. `docs_raw/` içindeki dosyalar
+değiştirilmez. Bu metinler kodun MIT lisansı kapsamında değildir (bkz. [Lisans](#lisans)).
 
 ## Mimari
 
@@ -132,8 +133,7 @@ kazancı +1 ile eşiğin (+2) altında kaldı ve reddedildi ([evals/ATIF_DENEYI.
 | Maliyet / cevap (arama dahil) | ~$0,002 | ~$0,03 |
 | Süre / cevap | ~2,6 sn | ~4,2 sn |
 
-**Cevap üretimi, holdout** (Haiku 5.5, tek koşu; yalnız otomatik ölçütler, elle okuma ayrıca
-yapılacak). dev2 sütunu aynı sistemin 3 koşusu.
+**Cevap üretimi, holdout** (Haiku 5.5, tek koşu). dev2 sütunu aynı sistemin 3 koşusu.
 
 | Ölçüt | dev2 (15 + 5) | holdout (17 + 3) |
 |---|---|---|
@@ -142,9 +142,23 @@ yapılacak). dev2 sütunu aynı sistemin 3 koşusu.
 | Çıkarılan cümle | 1–2 | 1 (46 cümlede) |
 | Cevapsız soruda reddetme | 5 / 5 | 3 / 3 |
 
-Holdout'ta cevaplı hiçbir soru "bulunamadı" olmadı. Beklenen madde bağlamda değilken (H10, H13,
-H15) model "kısmen cevaplandı" verdi ve başka maddelere dayandı. Bu cevapların doğru olup olmadığı
-elle okumada belirlenecek.
+**Holdout elle okuma** (20 cevabı sohbetteki Claude okudu; [evals/HOLDOUT_RAPOR.md](evals/HOLDOUT_RAPOR.md), bölüm 4):
+
+| Ölçüt | Sonuç |
+|---|---|
+| Beklenen bilgi doğru verildi (cevaplı 17) | **14 / 17** |
+| Yanlış sayı, süre ya da tutar | 0 |
+| Cevapsız soruda reddetme | 3 / 3 |
+| Yanlış rejimin hükmünü uygulama | 1 (H07) |
+| Somut olaya yorum | 1 (H09) |
+
+- **H07:** Devre tatil sorusuna Mesafeli Sözleşmeler Yönetmeliği m.10 uygulandı. Alıntı doğru
+  olduğu için doğrulamadan geçti; mevcut denetimler bu hatayı yakalamıyor.
+- **H09:** Somut olaya yorum yapıldı ("istisna kapsamında değerlendirilebilir"). Ayrıca holdout
+  notunda soru yazarının bir hatası vardı: "aynı konutta yaşayan" kaydı atlanmıştı.
+- **H13:** İstisna maddesi (MSY m.15) bağlama gelmedi. Cevap genel cayma kuralını verdi; istisnanın
+  bulunamadığını yalnız altta belirtti. Cümleler doğru, ama okuyanı yanlış sonuca götürebilir.
+- **H10, H15:** Beklenen madde bağlamda yoktu; model eksiği açıkça belirtti.
 
 Zayıf yanlar:
 
@@ -199,6 +213,23 @@ Zayıf yanlar:
   gösterilmez.
 - Soru en fazla 500 karakter.
 
+**Streamlit Community Cloud'da yayın:**
+
+1. Depoyu bağla. Ana dosya `streamlit_app.py`, bağımlılık dosyası `requirements.txt`.
+2. App settings → Secrets bölümüne şunları gir (TOML):
+
+   ```toml
+   ANTHROPIC_API_KEY = "sk-ant-..."
+   GUNLUK_CAGRI_SINIRI = "200"
+   ```
+
+3. Önerilen günlük sınır: **200 çağrı**. Her soru 2 model çağrısı yapar (yeniden yazım + cevap),
+   yani günde yaklaşık 100 soru.
+   - Haiku 5.5 ile soru başına yaklaşık $0,002 tutar; bu sınırla günde yaklaşık $0,20, ayda
+     yaklaşık $6.
+   - Sayaç bellekte tutulur. Uygulama uykuya geçip yeniden başlarsa sayaç sıfırlanır.
+   - Bu yüzden Anthropic Console'da anahtar için aylık harcama sınırı da ayarlanmalı (ör. $10).
+
 **Yayın ortamı yalnızca `requirements.txt` ile çalışır.** Bu dosyada torch, sentence-transformers
 ve pymupdf yok; hazır `data/chunks.jsonl` kullanılır. Temiz bir ortamda bu dosyayla bütün testler
 geçer (PDF işleme ve embedding testleri atlanır).
@@ -237,6 +268,19 @@ Yerelde anahtar için proje kökünde `.env`: `ANTHROPIC_API_KEY=...`.
 
 ## Bilinen sınırlar
 
+- **Yanlış rejimin hükmü uygulanabilir.** Alıntı kaynakta birebir geçse de alıntının alındığı madde
+  sorunun konusuyla ilgili olmayabilir. Örnek: devre tatil sorusuna (TKHK m.50) mesafeli sözleşme
+  kuralı (MSY m.10) uygulandı (holdout H07). Alıntı, sayı ve uyarı denetimleri bunu yakalamaz.
+- **"Kısmen cevaplandı" durumunda eksik kısım yeterince belirgin değil.** Bulunamayan kısım
+  gösteriliyor, ama genel kural cevap olarak verilip istisna "bulunamadı" diye kenarda kalınca
+  cevap okuyanı yanlış sonuca götürebilir (holdout H13: kişiye özel ürünlerde cayma istisnası).
+- **Arama, görülmemiş sorularda yaklaşık dörtte bir oranında doğru maddeyi bağlama getiremiyor**
+  (holdout bağlam düzeyi %76). Özellikle zor olanlar:
+  - istisna maddeleri (H13, MSY m.15);
+  - numarayla yapılan atıflar (A15: m.77/5 → m.47/2).
+- **Holdout sorularını kullanıcı değil bir yapay zeka yazdı** (sohbetteki Claude). Yazan geliştirme
+  setlerini görmüştü; holdout bu yüzden tam bağımsız değil ve kullanıcıların gerçek sorularını
+  temsil etmeyebilir.
 - **Kavram çevirme.** Günlük dildeki soru bazen yanlış hukuki kavrama çevriliyor. Örnekler:
   - "pazaryeri ödemesi" sorusu, ETK ek m.1 yerine başka hükümlere gidiyor.
   - "kapıdan satış yetkisi" sorusu, "iş yeri dışında kurulan sözleşme" terimiyle eşleşmiyor.
@@ -266,3 +310,26 @@ Yerelde anahtar için proje kökünde `.env`: `ANTHROPIC_API_KEY=...`.
 - **Tarih kapsamı:** 2026-11-23 sonrası değişiklikler yok. AYM iptal kararlarının yürürlük tarihleri
   dipnotlardan gösterilir.
 - **Günlük sınır bellekte** (bkz. Arayüz ve yayın).
+
+## Sonraki sürüm
+
+Uygulanmadı; holdout bulgularından çıkan iş listesi.
+
+1. **Rejim denetimi.** Cümlenin dayandığı maddenin sorunun konusuyla ilgili olduğu denetlenmeli.
+   Alıntı doğru olsa da madde sorunun konusuyla ilgili olmayabilir. Örnek: mesafeli sözleşme kuralı
+   devre tatil sorusunda kullanıldı (H07).
+2. **"Kısmen cevaplandı" görünürlüğü.** Bulunamayan kısım cevabın üstünde ve belirgin gösterilmeli.
+   Özellikle bir istisna bulunamadıysa, genel kural okuyanı yanlış sonuca götürmemeli (H13).
+3. **Arama kapsaması.** Görülmemiş sorularda doğru madde yaklaşık dörtte bir oranında bağlama
+   gelmiyor. Öncelikli alanlar:
+   - istisna maddeleri;
+   - numarayla yapılan atıflar (bu sürümde ölçülen atıf takibi eşiği geçemedi).
+4. **Gerçek holdout.** Yeni bir holdout seti kullanıcılar tarafından ya da geliştirme setlerini
+   görmemiş biri tarafından yazılmalı. Bu sürümün holdout'unu bir yapay zeka yazdı.
+
+## Lisans
+
+Kod [MIT lisansı](LICENSE) ile dağıtılır (© 2026 Muhammed Ahmet Ertemiz).
+
+`docs_raw/` içindeki PDF'ler ve onlardan türetilen `data/chunks.jsonl` resmî mevzuat metinleridir
+(kaynak: mevzuat.gov.tr, indirme tarihi 2026-11-23). Bu metinler MIT lisansının kapsamında değildir.

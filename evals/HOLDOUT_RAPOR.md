@@ -101,3 +101,31 @@ Holdout: tek koşu, 1. arama koşusunun bağlamıyla. dev2: aynı sistem, 3 koş
   ya da yanıltıcı olduğu elle okumada belirlenecek; burada değerlendirilmedi.
 - Holdout sonuçlarına göre hiçbir ayar değiştirilmedi.
 
+## 4. Elle okuma
+
+20 cevabın hepsi sohbetteki Claude tarafından elle okundu (2026-11-23). Bu bölüm o okumanın bulgularını
+aktarır; sistem kodu, prompt'lar ve holdout dosyası bu bulgulara göre değiştirilmedi.
+
+| Ölçüt | Sonuç |
+|---|---|
+| Beklenen bilgi doğru verildi (cevaplı 17) | **14 / 17** |
+| Yanlış sayı, süre ya da tutar | **0** |
+| Cevapsız soruda reddetme | **3 / 3** |
+| Yanlış rejimin hükmünü uygulama | 1 (H07) |
+| Somut olaya yorum | 1 (H09) |
+
+Soru bazında bulgular:
+
+- **H07 – yanlış rejim.** Devre tatil sorusuna Mesafeli Sözleşmeler Yönetmeliği m.10 hükmü
+  (bilgilendirilmeyen tüketicinin on dört günlük süreyle bağlı olmaması) uygulandı. Alıntı MSY
+  m.10'da birebir geçtiği için doğrulamadan geçti. Mevcut denetimler (alıntı, sayı, uyarı dayanağı)
+  bu hata türünü yakalamıyor: alıntı doğru, ama madde sorunun konusuna ait değil.
+- **H09 – somut olaya yorum.** Cevap, kullanıcının durumunun istisna kapsamında
+  "değerlendirilebileceğini" söyleyerek somut olaya yorum yaptı (prompt kural 4'e aykırı). Ayrıca
+  holdout notu KVKK m.28/1(a)'daki "aynı konutta yaşayan" kaydını atlamıştı; bu, soru yazarının hatası.
+- **H13 – istisna bağlama gelmedi.** İstisna maddesi (MSY m.15/1-b, kişiye özel hazırlanan mallar)
+  bağlamda yoktu. Cevap genel cayma kuralını verdi; istisnanın bulunamadığını yalnız altta ("bulunamayan")
+  belirtti. Cümleler tek tek doğru, ama bütün olarak okuyanı "iade edebilirim" sonucuna götürebilir.
+- **H10, H15 – madde bağlamda yok, eksik açıkça belirtildi.** Beklenen madde (KVKK m.8; TKHK m.45)
+  bağlamda değildi; model eksik kısmı açıkça yazdı.
+
