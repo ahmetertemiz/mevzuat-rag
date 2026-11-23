@@ -1,4 +1,4 @@
-# Holdout seti: SORULARI KULLANICI YAZAR.
+# Holdout seti. (Kural: soruları kullanıcı yazar; bu sürümde kullanıcı yazmadı, aşağıdaki nota bakın.)
 #
 # Kurallar:
 #   - Bu set geliştirme sırasında çalıştırılmaz. Hiçbir ayar bu setin sonuçlarına göre yapılmaz.
@@ -17,4 +17,127 @@
 #       - ["BELGE:madde_no"]
 #     not: "..."
 
-sorular: []
+sorular:
+  # Sorular 2026-11-23'te sohbetteki Claude tarafından yazıldı (kullanıcı yazmadı). Doğru maddeler
+  # yalnızca madde metinleri okunarak belirlendi; arama ve cevap üretimi bu sorularla çalıştırılmadı.
+  # Yazan, geliştirme setlerini ve yeniden yazım prompt'unun örnek konularını görmüştü; o konulardan
+  # (abonelik, kredi erken ödeme, fiyat etiketi, paket tur, yurt dışına veri aktarımı) kaçınıldı.
+  - id: H01
+    tur: gunluk_dil
+    soru: "yenilenmiş telefon aldım, bunun garantisi oluyor mu ne kadar"
+    dogru:
+      - ["TKHK:57/A"]
+    not: "m.57/A f.2: asgari bir yıl garanti."
+  - id: H02
+    tur: gunluk_dil
+    soru: "Çamaşır makinem yetkili serviste haftalardır bekliyor. Tamirin bir süre sınırı yok mu?"
+    dogru:
+      - ["TKHK:58"]
+    not: "m.58 f.3: tamir süresi yönetmelikle belirlenen azami süreyi geçemez (süre maddede yazmıyor)."
+  - id: H03
+    tur: gunluk_dil
+    soru: "Banka ihtiyaç kredisi verirken hayat sigortası yaptırmamı şart koştu. Bunu yaptırmak zorunda mıyım?"
+    dogru:
+      - ["TKHK:29", "TKHK:38"]
+    not: "m.29 f.1: açık talep olmaksızın kredi bağlantılı sigorta yaptırılamaz. m.38 konut finansmanı için aynı hüküm."
+  - id: H04
+    tur: gunluk_dil
+    soru: "tüketici hakem heyeti aleyhime karar verdi. buna itiraz edebilir miyim, nereye ve kaç gün içinde"
+    dogru:
+      - ["TKHK:70"]
+    not: "m.70 f.3: tebliğden itibaren iki hafta içinde tüketici mahkemesine itiraz."
+  - id: H05
+    tur: gunluk_dil
+    soru: "Müteahhitten maketten daire aldım. Evi bana en geç ne zaman teslim etmek zorunda?"
+    dogru:
+      - ["TKHK:44"]
+    not: "m.44: sözleşme tarihinden itibaren kırk sekiz ayı geçemez."
+  - id: H06
+    tur: gunluk_dil
+    soru: "Reklamda gösterilen ürünle elime geçen ürünün alakası yok. Yanıltıcı reklam yapmak yasak mı?"
+    dogru:
+      - ["TKHK:61"]
+    not: "m.61 f.3: tüketiciyi aldatıcı ticari reklam yapılamaz."
+  - id: H07
+    tur: gunluk_dil
+    soru: "tatildeyken bize devre tatil sattılar, eve dönünce pişman olduk. vazgeçme hakkımız var mı"
+    dogru:
+      - ["TKHK:50"]
+    not: "m.50 f.6: on dört gün içinde cayma hakkı."
+  - id: H08
+    tur: gunluk_dil
+    soru: "Bir uygulamaya kaydolurken bilgilerimi istiyorlar. Bu bilgileri toplarken bana neleri açıklamak zorundalar?"
+    dogru:
+      - ["KVKK:10"]
+    not: "m.10: aydınlatma yükümlülüğü."
+  - id: H09
+    tur: gunluk_dil
+    soru: "Kendi telefonumda arkadaşlarımın ve ailemin numaralarını, doğum günlerini tutuyorum. Kişisel veri kanunu bana da uygulanır mı?"
+    dogru:
+      - ["KVKK:28"]
+    not: "m.28 f.1 (a): kişinin tamamen kendisiyle veya aile fertleriyle ilgili faaliyetleri kapsam dışı."
+  - id: H10
+    tur: gunluk_dil
+    soru: "üye olduğum mağaza bilgilerimi bana sormadan başka bir şirkete vermiş, buna hakkı var mı"
+    dogru:
+      - ["KVKK:8"]
+    not: "m.8 f.1: açık rıza olmaksızın aktarılamaz; f.2 istisnalar (m.5/2, m.6/3)."
+  - id: H11
+    tur: gunluk_dil
+    soru: "İnternetten verdiğim siparişle ilgili müşteri hizmetlerini aradığımda beni pahalı bir hatta yönlendiriyorlar. Bu arama için ekstra ücret alabilirler mi?"
+    dogru:
+      - ["MSY:18"]
+    not: "m.18: olağan ücret tarifesinden daha yüksek tarife seçilemez."
+  - id: H12
+    tur: gunluk_dil
+    soru: "Otobüs bileti alırken sepete kendiliğinden ek sigorta eklenmiş, fark etmeden ödemişim. Bu parayı geri isteyebilir miyim?"
+    dogru:
+      - ["MSY:19"]
+    not: "m.19: açık onay alınmadan kendiliğinden seçili sunulan ilave ödeme derhal iade edilir."
+  - id: H13
+    tur: gunluk_dil
+    soru: "üzerine ismimi yazdırdığım kolyeyi internetten almıştım, beğenmedim. iade edebilir miyim"
+    dogru:
+      - ["MSY:15"]
+    not: "m.15 f.1 (b): tüketicinin istekleri doğrultusunda hazırlanan mallarda cayma hakkı kullanılamaz. Aynı madde dev1'de S06'nın dayanağıydı (farklı soru)."
+  - id: H14
+    tur: gunluk_dil
+    soru: "İnternet alışverişinden caymak istiyorum. Satıcıyı telefonla arayıp söylesem yeterli olur mu, nasıl bildirmem gerekiyor?"
+    dogru:
+      - ["MSY:11"]
+    not: "m.11 f.1-2: yazılı olarak veya kalıcı veri saklayıcısı ile; form ya da açık beyan."
+  - id: H15
+    tur: iki_madde
+    soru: "Maketten aldığım evden vazgeçmek istiyorum. Hemen cayabilir miyim, cayma süresini kaçırdıysam sözleşmeden dönme hakkım var mı?"
+    dogru:
+      - ["TKHK:43"]
+      - ["TKHK:45"]
+    not: "m.43: on dört gün cayma; m.45: yirmi dört aya kadar dönme."
+  - id: H16
+    tur: iki_madde
+    soru: "Bir firma iznim olmadan reklam mesajı atıyor, üstelik mesajda kim oldukları da yazmıyor. İzin almaları ve mesajda kendilerini tanıtmaları zorunlu mu?"
+    dogru:
+      - ["ETK:6"]
+      - ["ETK:7"]
+    not: "m.6 önceden onay; m.7 iletide tanıtıcı ve iletişim bilgileri. ETK:6 dev1'de S04'ün dayanağıydı."
+  - id: H17
+    tur: madde_dili
+    soru: "Tüketici kanununun 79. maddesi neyi yasaklıyor?"
+    dogru:
+      - ["TKHK:79"]
+    not: "Madde numarasıyla soru; kanun numarası verilmeden. m.79: yiyecek taklidi ürünler."
+  - id: H18
+    tur: cevapsiz
+    soru: "Boşanma davasında nafaka miktarı neye göre belirlenir?"
+    dogru: []
+    not: "Dört belgede yok."
+  - id: H19
+    tur: cevapsiz
+    soru: "Apartman aidatını ödemeyen kat malikine karşı ne yapılabilir?"
+    dogru: []
+    not: "Dört belgede yok."
+  - id: H20
+    tur: cevapsiz
+    soru: "Kullanmadığım eşyalarımı internetten satarsam bu gelir için vergi öder miyim?"
+    dogru: []
+    not: "Alana yakın ama dört belgede vergi hükmü yok."
