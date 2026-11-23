@@ -38,11 +38,10 @@ eşik yapıyor, eşik geçilmeyince Haiku kalıyor. Bu farklar bilgi olarak kayd
     düştü. Kod uyarıları yalnız doğrulanmış dayanak parçalarından üretildiği için `mulga` uyarısı da
     kayboldu (mülga madde bağlamda olduğu hâlde). Bağlamdaki mülga parçalar için dayanaktan bağımsız
     uyarı üretmek bunu kapatır (uygulanmadı; cevap üretimi bu ölçümde değiştirilmedi).
-- **A15'te tablo artık bağlamda, ama iki model de cevap vermiyor.** 1. kod düzeltmesi (tablo
-  eklemesi) arama tarafındaki eksikliği kapattı (bağlam sütunu ✓✓✓). Kalan sorun üretimde: iki model
-  de altı koşunun hepsinde tablodaki tutarı (ve yetkisiz kapıdan satışın hangi fıkraya girdiğini)
-  bağlamaktan kaçınıyor. Nedenini bu ölçüm göstermiyor (bağlamın tam okunması gerekir); sonuç yanlış
-  olgu üretmiyor, yanlış reddetme olarak sayılıyor.
+- **A15'te tablo artık bağlamda, ama iki model de cevap vermiyor.** Sonradan yapılan teşhise göre
+  (evals/A15_teshis.md) neden üretim değil, bağlam: cezayı numarayla bağlayan m.77/5 ve tablo bağlamda,
+  ama yükümlülüğü tanımlayan m.47/2 (yetkilendirme) altı koşunun hiçbirinde yok. Modeller zinciri genel
+  bilgiyle tamamlamadı (kural 1). Bağlam ölçütü bunu göstermedi, çünkü setteki A15 dayanağında m.47 yok.
 
 ## 7. Diğer bulgular
 
